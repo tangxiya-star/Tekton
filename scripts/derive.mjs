@@ -326,7 +326,7 @@ for (const sx of [-1, 1]) {
     const x1 = depthBay / 2, y1 = pbTopY;            // foot at ping beam end
     const y2 = ridgeTopY - 21;                        // under ridge purlin
     const lenD = Math.hypot(x1, y2 - y1);
-    const ang = Math.atan2(y2 - y1, -sz * x1) * 180 / Math.PI;
+    const rotX = Math.atan2(-(y2 - y1), -sz * x1) * 180 / Math.PI;
     comp({
       id: `chashou-${sx > 0 ? "E" : "W"}${sz > 0 ? "S" : "N"}`,
       name_zh: "大叉手", name_en: "Scissor brace",
@@ -334,7 +334,7 @@ for (const sx of [-1, 1]) {
       role: "Pair of inclined braces carrying the ridge purlin directly — the archaic Tang solution, kept alone after the 1975 repair removed the dwarf-post assembly.",
       geometry: { type: "box", w: 15, h: 12, d: lenD },
       position: [x, (y1 + y2) / 2, sz * x1 / 2],
-      rotation_deg: [sz * Math.abs(ang) > 0 ? -Math.sign(sz) * Math.abs(Math.atan2(y2 - y1, x1) * 180 / Math.PI) : 0, 0, 0],
+      rotation_deg: [rotX, 0, 0],
       provenance: "conjecture",
       source: "QI1980 via ZHANG2022 — current config post-repair; original ridge structure uncertain; rise 130 fen itself conjectural (propagated)",
     });
@@ -422,7 +422,7 @@ function slope(id, zh, en, runFrom, runTo, yFrom, yTo, width, axis, prov, src, n
     role: "Tiled roof plane (rafters + sheathing + grey tile, rendered as a surface in v1).",
     geometry: axis === "z" ? { type: "box", w: width, h: THICK, d: len } : { type: "box", w: len, h: THICK, d: width },
     position: axis === "z" ? [0, midY, mid] : [mid, midY, 0],
-    rotation_deg: axis === "z" ? [angle, 0, 0] : [0, 0, -angle],
+    rotation_deg: axis === "z" ? [-angle, 0, 0] : [0, 0, angle],
     provenance: prov, source: src, note,
   });
 }
