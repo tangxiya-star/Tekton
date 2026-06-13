@@ -2,7 +2,7 @@
 
 > Brief for an autonomous **Fable 5 / dynamic-workflow** run. Execute every ticket to completion and **self-verify**. Provenance is the product: **nothing renders without a real, cited source.**
 >
-> Companion to the Notion board (epic **Notre-Dame de Paris — Spire (v1)**, tickets `ND-1`…`ND-21`) and the **Verifier & Acceptance Gate** reference.
+> Companion to the Notion board (epic **Notre-Dame de Paris — Spire (v1)**, tickets `ND-1`…`ND-28`) and the **Verifier & Acceptance Gate** reference.
 
 ---
 
@@ -19,6 +19,7 @@ Ship an interactive 3D reconstruction of **Viollet-le-Duc's 1859 Notre-Dame spir
 - [ ] **Vision-verifier sub-agent** passes in a **fresh context** (soft visual grading), merged into `verifier-report.json`.
 - [ ] **V09 guard:** measured reality is never corrected toward the Gothic ideal. `npm run demo:corrupt` → verify **refuses** (exit 1) → `npm run demo:restore` → green.
 - [ ] Provenance toggle works · drawing→3D reveal works · construction sequence plays · click-to-inspect shows name (FR/EN) + role + citation.
+- [ ] **Build Theater** renders the reconstruction in real time — components stream in derivation order, the reasoning trace streams alongside, and the live verifier HUD ticks checks green (incl. a fail→revise→pass beat).
 - [ ] **No restricted assets** used (Tallon raw scan + CNRS/De Luca data = *cite-only*; only public-domain drawings + factual numbers as assets).
 - [ ] **Live URL** responds · public repo · README with source/rights table + rerun instructions.
 
@@ -71,6 +72,13 @@ On failure: decide **rule engine vs geometry builder**, fix, re-run. **Keep ever
 | ND-20 | README + source/rights table + rerun | Docs | Team | ND-13 | Pitch, problem, method, rights table, why Fable 5, how to rerun, day-of work, demo link |
 | ND-13 | Ship — build gate + live URL | Ship | Team | all | `derive && verify && next build` green; deployed URL responds; public repo |
 | ND-21 | 1-min demo video storyboard | Narrative | Team | ND-13 | Shot list: reveal → provenance → `demo:corrupt` refusal → live spire |
+| ND-22 | **Build Theater** — real-time reconstruction | UI/Demo | Claude | ND-5,16,28 | Press play → spire assembles component-by-component in derivation order, live; scrub/replay; no blank-then-pop |
+| ND-23 | Streaming reasoning trace (the "thinking") | UI/Demo | Claude | ND-22,28 | `derivation-log` lines stream in lockstep with their components; each cites a source |
+| ND-24 | Live verifier HUD — checks tick + fail→revise→pass | UI/Demo | Austin | ND-6 | Checks animate green live; staged corruption shows red CRITICAL → revise → green |
+| ND-25 | Provenance bloom — colors classify live | UI/Demo | Claude | ND-22 | Per-component provenance color on placement; live measured/rule/conjecture tally |
+| ND-26 | Pipeline stage rail | UI/Demo | Claude | ND-22 | Ingest→Derive→Build→Verify→Ship rail advances in sync |
+| ND-27 | Live agent mode — stream a real run (SSE) | Build | Claude | ND-28 | Live pipeline streams components+log+checks to the UI in real time; graceful fallback to replay |
+| ND-28 | Incremental / streaming artifact emission (enabler) | Build | Claude | ND-4 | `derive.mjs` appends components as JSONL + tailable log; SSE bridge `fs.watch`es artifacts → events. Powers the live theater |
 
 ## 6. Rubric → hackathon scoring (Impact 35 / Demo 35 / Autonomy 15 / Orchestration 15)
 
@@ -82,7 +90,7 @@ On failure: decide **rule engine vs geometry builder**, fix, re-run. **Keep ever
 ## 7. The `/goal` command
 
 ```
-/goal Build and ship the Notre-Dame de Paris spire (la flèche) reconstruction per docs/GOAL_NOTRE_DAME_SPIRE.md. Work the backlog ND-1..ND-21 in dependency order. Derive the spire from data/notre-dame-canonical.json + public-domain Viollet-le-Duc drawings and Gothic geometric rules into artifacts/structural-spec.json (every component tagged {provenance, source, url, rights}); render it procedurally in React Three Fiber with no imported meshes; and gate on scripts/verify.mjs — the deterministic geometry + pixel checks AND a vision-verifier sub-agent run in a fresh context. Loop derive -> verify -> screenshot -> vision-verify until green; on failure route the fix to the rule engine or the geometry builder and re-run; keep every failed verifier report. DONE when: npm run build (derive && verify && next build) exits 0 with zero unsourced components (G09 source-registry passes), the provenance toggle + drawing-to-3D reveal + construction sequence + click-to-inspect all work, no restricted assets are used, and a deployed URL responds. Never correct measured reality toward the Gothic ideal (V09); deviations are labeled, not fixed.
+/goal Build and ship the Notre-Dame de Paris spire (la flèche) reconstruction per docs/GOAL_NOTRE_DAME_SPIRE.md. Work the backlog ND-1..ND-28 in dependency order. Derive the spire from data/notre-dame-canonical.json + public-domain Viollet-le-Duc drawings and Gothic geometric rules into artifacts/structural-spec.json (every component tagged {provenance, source, url, rights}); render it procedurally in React Three Fiber with no imported meshes; and gate on scripts/verify.mjs — the deterministic geometry + pixel checks AND a vision-verifier sub-agent run in a fresh context. Loop derive -> verify -> screenshot -> vision-verify until green; on failure route the fix to the rule engine or the geometry builder and re-run; keep every failed verifier report. DONE when: npm run build (derive && verify && next build) exits 0 with zero unsourced components (G09 source-registry passes), the provenance toggle + drawing-to-3D reveal + construction sequence + click-to-inspect + the real-time Build Theater all work, no restricted assets are used, and a deployed URL responds. Never correct measured reality toward the Gothic ideal (V09); deviations are labeled, not fixed.
 ```
 
 ## 8. Orchestration notes
