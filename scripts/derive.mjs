@@ -472,6 +472,148 @@ comp({
   source: "ZHANG2022",
 });
 
+// --- Secondary members: 阑额 / 柱础 / 斗 / 柱头枋 / 正脊·鸱尾 / 今貌围护 ----------
+L(``);
+L(`## 9. Secondary members 阑额 · 柱础 · 散斗 · 柱头枋 · 正脊 · 围护`);
+const LANE_H = 30, LANE_W = 20; // YZFS 卷五: 阑额广加材一倍=30, 厚 2/3
+L(`- 阑额: YZFS 卷五 「凡用阑额…广加材一倍」= ${LANE_H} fen, 厚 ${LANE_W} → rule_derived. Top flush with column top. NO 普拍枋 above — an early-period trait, kept.`);
+let laneIdx = 0;
+function lane(x, z, w, d) {
+  laneIdx++;
+  comp({
+    id: `lane-${laneIdx}`, name_zh: "阑额", name_en: "Architrave (lan'e)", phase: "columns",
+    role: "Tie beam linking the column tops into a ring; Nanchan has no pupai-fang above it — an early-period trait.",
+    geometry: { type: "box", w, h: LANE_H, d },
+    position: [x, Hcol - LANE_H / 2, z],
+    provenance: "rule_derived",
+    source: "YZFS 卷五 (member present in building; section unrecorded in corpus)",
+    material: "zhu",
+  });
+}
+for (let i = 0; i < 3; i++) {
+  const cx = (XS[i] + XS[i + 1]) / 2, lenX = XS[i + 1] - XS[i];
+  for (const sz of [-1, 1]) lane(cx, sz * totalD / 2, lenX, LANE_W);
+  const cz = (ZS[i] + ZS[i + 1]) / 2, lenZ = ZS[i + 1] - ZS[i];
+  for (const sx of [-1, 1]) lane(sx * totalW / 2, cz, LANE_W, lenZ);
+}
+
+// 柱础 plinths — YZFS 卷三 造柱础之制 「方倍柱之径」
+L(`- 柱础: YZFS 卷三 「础方倍柱之径」 → 覆盆 plinth r≈17 fen, rule_derived (present but unrecorded in corpus).`);
+let chuIdx = 0;
+for (const key of Object.keys(columnTop)) {
+  const [x, z] = key.split(",").map(Number);
+  chuIdx++;
+  comp({
+    id: `zhuchu-${chuIdx}`, name_zh: "柱础（覆盆）", name_en: "Column plinth", phase: "platform",
+    role: "Stone plinth isolating the column foot from ground moisture.",
+    geometry: { type: "cylinder", r: 17, h: 9 },
+    position: [x, 2.5, z],
+    provenance: "rule_derived", source: "YZFS 卷三 造柱础之制 「方倍柱之径」",
+    material: "stone",
+  });
+}
+
+// 散斗 blocks on gong ends — articulates the bracket sets
+L(`- 散斗: YZFS 卷四 造斗之制 (corpus lacks explicit dou dims) → rule_derived; placed on 泥道栱 and 令栱 ends.`);
+const DOU = { w: 14, d: 16, h: 10 };
+let douIdx = 0;
+function dou(x, y, z, zh, en) {
+  douIdx++;
+  comp({
+    id: `dou-${douIdx}`, name_zh: zh, name_en: en, phase: "puzuo",
+    role: "Small bearing block transferring load between arm tiers.",
+    geometry: { type: "box", w: DOU.w, h: DOU.h, d: DOU.d },
+    position: [x, y + DOU.h / 2, z],
+    provenance: "rule_derived", source: "YZFS 卷四 造斗之制 (corpus lacks explicit dou dims)",
+    material: "zhu",
+  });
+}
+for (const key of Object.keys(columnTop)) {
+  const [x, z] = key.split(",").map(Number);
+  const top = columnTop[key];
+  const isCorner = Math.abs(x) === totalW / 2 && Math.abs(z) === totalD / 2;
+  if (isCorner) continue;
+  const onFrontRear = Math.abs(z) === totalD / 2;
+  const dir = onFrontRear ? [0, Math.sign(z)] : [Math.sign(x), 0];
+  const wall = [dir[1], dir[0]];
+  const G = GONG_LEN / 2 - 7;
+  for (const s of [-1, 1]) {
+    dou(x + wall[0] * s * G, top + LIFT + CAI_H, z + wall[1] * s * G, "散斗", "San dou block");
+    dou(x + dir[0] * (j1out + j2out) + wall[0] * s * G, top + LIFT + 2 * ZUCAI + CAI_H,
+        z + dir[1] * (j1out + j2out) + wall[1] * s * G, "散斗（令栱头）", "San dou (ling-gong end)");
+  }
+}
+
+// 柱头枋 — wall-plane ties above the nidao gongs
+L(`- 柱头枋: continuous wall-plane ties above the 泥道栱 (the 牛脊枋 rides the 2nd tier) → rule_derived.`);
+for (const [i, [w, d, px, pz]] of [
+  [totalW + 20, ARM_W, 0, totalD / 2], [totalW + 20, ARM_W, 0, -totalD / 2],
+  [ARM_W, totalD + 20, totalW / 2, 0], [ARM_W, totalD + 20, -totalW / 2, 0],
+].entries()) {
+  comp({
+    id: `zhutoufang-${i + 1}`, name_zh: "柱头枋", name_en: "Column-top tie (zhutou fang)", phase: "puzuo",
+    role: "Continuous tie running the wall plane atop the nidao gongs, stitching the bracket sets into a ring beam.",
+    geometry: { type: "box", w, h: CAI_H, d },
+    position: [px, Hcol + LIFT + ZUCAI + CAI_H / 2, pz],
+    provenance: "rule_derived", source: "ZHANG2022 (member noted) + YZFS 卷四 (section)",
+    material: "zhu",
+  });
+}
+
+// 正脊 + 鸱尾 — silhouette; rise-dependent ⇒ conjecture; form cited to Dunhuang murals
+L(`- 正脊/鸱尾: form from Tang-period Dunhuang mural evidence (color-evidence list) — CITED CONJECTURE; height rides the conjectural rise (propagated).`);
+comp({
+  id: "zhengji", name_zh: "正脊", name_en: "Main ridge", phase: "roof",
+  role: "Tiled main ridge capping the roof.",
+  geometry: { type: "box", w: ridgeLen + 24, h: 14, d: 16 },
+  position: [0, ridgeTopY + 7, 0],
+  provenance: "conjecture",
+  source: "Form: Tang practice via Dunhuang murals; height depends on conjectural rise [QI1980]",
+  material: "huiwa",
+});
+for (const sx of [-1, 1]) {
+  comp({
+    id: `chiwei-${sx > 0 ? "E" : "W"}`, name_zh: "鸱尾", name_en: "Chiwei (owl-tail finial)", phase: "roof",
+    role: "Ridge-end finial; the Tang silhouette's signature stroke.",
+    geometry: { type: "box", w: 10, h: 46, d: 22 },
+    position: [sx * (ridgeLen / 2 + 7), ridgeTopY + 14 + 23, 0],
+    provenance: "conjecture",
+    source: "Form from Tang-dynasty Dunhuang murals + Tōshōdai-ji analogy — cited conjecture (PRD color-evidence list)",
+    material: "huiwa",
+  });
+}
+
+// 今貌围护 — non-structural enclosure (walls, door, lattice windows)
+L(`- 围护 (today's fabric): white walls, central-bay double door, side-bay 直棂窗 — present in the building, dimensions NOT in corpus → conjecture (non-structural infill, labeled).`);
+const WALL_T = 24, WALL_H = Hcol - LANE_H;
+const encl = {
+  provenance: "conjecture",
+  source: "Present-day infill (photographic record); dimensions not in survey corpus",
+  phase: "enclosure",
+};
+comp({ ...encl, id: "wall-N", name_zh: "后檐墙", name_en: "Rear wall", role: "Non-structural enclosure.",
+  geometry: { type: "box", w: totalW, h: WALL_H, d: WALL_T }, position: [0, WALL_H / 2, -totalD / 2], material: "bai" });
+for (const sx of [-1, 1]) {
+  comp({ ...encl, id: `wall-${sx > 0 ? "E" : "W"}`, name_zh: "山墙", name_en: "Gable wall", role: "Non-structural enclosure.",
+    geometry: { type: "box", w: WALL_T, h: WALL_H, d: totalD }, position: [sx * totalW / 2, WALL_H / 2, 0], material: "bai" });
+  // front side-bay: sill wall + 直棂窗
+  const cx = sx * (centralBay / 2 + sideBay / 2);
+  comp({ ...encl, id: `sill-${sx > 0 ? "E" : "W"}`, name_zh: "槛墙", name_en: "Sill wall", role: "Low wall under the lattice window.",
+    geometry: { type: "box", w: sideBay, h: 90, d: WALL_T }, position: [cx, 45, totalD / 2], material: "bai" });
+  for (const [ri, ry] of [[0, 94], [1, WALL_H - 8]]) {
+    comp({ ...encl, id: `rail-${sx > 0 ? "E" : "W"}${ri}`, name_zh: "窗额/腰串", name_en: "Window rail", role: "Lattice window frame rail.",
+      geometry: { type: "box", w: sideBay, h: 8, d: 10 }, position: [cx, ry + 4, totalD / 2], material: "sumu" });
+  }
+  for (let k = 1; k <= 11; k++) {
+    const bx = sx * (centralBay / 2) + sx * (k * sideBay / 12);
+    comp({ ...encl, id: `ling-${sx > 0 ? "E" : "W"}${k}`, name_zh: "直棂窗棂条", name_en: "Lattice window bar", role: "Vertical bar of the 直棂窗 — the early straight-mullion window type.",
+      geometry: { type: "box", w: 4, h: WALL_H - 90 - 12, d: 6 }, position: [bx, 90 + (WALL_H - 90 - 12) / 2 + 4, totalD / 2], material: "sumu" });
+  }
+  // central-bay door leaves
+  comp({ ...encl, id: `door-${sx > 0 ? "E" : "W"}`, name_zh: "板门", name_en: "Plank door leaf", role: "Double plank door of the central bay.",
+    geometry: { type: "box", w: 138, h: 200, d: 8 }, position: [sx * 71, 100, totalD / 2], material: "door" });
+}
+
 // --- Assemble & audit --------------------------------------------------------
 const spec = {
   meta: {
@@ -482,7 +624,7 @@ const spec = {
     canonical_source: "data/nanchan-canonical.json",
   },
   units: { fen_mm: FEN_MM, note: "All dimensions/positions in fen. Scene scale: 1 fen = 16.5 mm." },
-  phases: ["platform", "columns", "puzuo", "frame", "roof"],
+  phases: ["platform", "columns", "puzuo", "frame", "roof", "enclosure"],
   key_dimensions: {
     total_width_fen: totalW, total_depth_fen: totalD,
     bay_rhythm: [sideBay, centralBay, sideBay],
@@ -498,11 +640,11 @@ const spec = {
 const counts = {};
 for (const c of components) counts[c.provenance] = (counts[c.provenance] || 0) + 1;
 L(``);
-L(`## 9. Provenance audit`);
+L(`## 10. Provenance audit`);
 L(`- Components: ${components.length} total — ${Object.entries(counts).map(([k, v]) => `${k}: ${v}`).join(", ")}`);
 L(`- Audit gate: every component carries {provenance, source} — enforced at emit time; an unsourced component throws.`);
 L(``);
-L(`## 10. Deviations from the Yingzao Fashi (kept, never corrected)`);
+L(`## 11. Deviations from the Yingzao Fashi (kept, never corrected)`);
 for (const d of C.fashi_deviations_index.items) L(`- ${d}`);
 L(``);
 L(`*The 782 building outranks the 1103 rulebook.*`);

@@ -51,11 +51,19 @@ Frame: 2×四椽栿, 2×平梁, 4×驼峰(conjecture), 4×大叉手(conjecture, 
 
 ## 8. Altar 佛坛 — height 720 mm = 43.6 fen; clearances front 1510 / sides 1265 / rear 1320 mm → 546.7×428.5 fen, offset -5.8 fen rearward [ZHANG2022, measured]
 
-## 9. Provenance audit
-- Components: 105 total — conjecture: 21, reconstructed_design: 73, rule_derived: 10, measured: 1
+## 9. Secondary members 阑额 · 柱础 · 散斗 · 柱头枋 · 正脊 · 围护
+- 阑额: YZFS 卷五 「凡用阑额…广加材一倍」= 30 fen, 厚 20 → rule_derived. Top flush with column top. NO 普拍枋 above — an early-period trait, kept.
+- 柱础: YZFS 卷三 「础方倍柱之径」 → 覆盆 plinth r≈17 fen, rule_derived (present but unrecorded in corpus).
+- 散斗: YZFS 卷四 造斗之制 (corpus lacks explicit dou dims) → rule_derived; placed on 泥道栱 and 令栱 ends.
+- 柱头枋: continuous wall-plane ties above the 泥道栱 (the 牛脊枋 rides the 2nd tier) → rule_derived.
+- 正脊/鸱尾: form from Tang-period Dunhuang mural evidence (color-evidence list) — CITED CONJECTURE; height rides the conjectural rise (propagated).
+- 围护 (today's fabric): white walls, central-bay double door, side-bay 直棂窗 — present in the building, dimensions NOT in corpus → conjecture (non-structural infill, labeled).
+
+## 10. Provenance audit
+- Components: 201 total — conjecture: 57, reconstructed_design: 73, rule_derived: 70, measured: 1
 - Audit gate: every component carries {provenance, source} — enforced at emit time; an unsourced component throws.
 
-## 10. Deviations from the Yingzao Fashi (kept, never corrected)
+## 11. Deviations from the Yingzao Fashi (kept, never corrected)
 - zucai hua-gong width 11 fen (Fashi: uniform)
 - inward jumps 32–35 fen exceed 30-fen cap
 - ludou 29×26×18 fen (Fashi: 32×32×20)

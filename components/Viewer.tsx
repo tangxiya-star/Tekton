@@ -9,6 +9,7 @@ const FEN = 0.0165; // 1 fen = 16.5 mm → scene meters
 
 type Component = (typeof spec.components)[number] & {
   rotation_deg?: number[];
+  material?: string;
   geometry: { type: string; w?: number; h?: number; d?: number; r?: number; axis?: string };
 };
 
@@ -19,12 +20,22 @@ const PROV_COLORS: Record<string, string> = {
   conjecture: "#c0392b",
 };
 
+const MATERIAL_COLORS: Record<string, string> = {
+  zhu: "#8e3b2f",   // 朱
+  bai: "#e8e0d0",   // 白
+  huiwa: "#686c70", // 灰瓦
+  sumu: "#a9845e",  // 素木
+  stone: "#a8a294",
+  door: "#69281f",
+};
+
 const PHASE_COLORS: Record<string, string> = {
   platform: "#a8a294", // stone
   columns: "#8e3b2f",  // 朱
   puzuo: "#8e3b2f",    // 朱
   frame: "#a9845e",    // 素木
   roof: "#686c70",     // 灰瓦
+  enclosure: "#e8e0d0",
 };
 
 function Member({ c, provMode }: { c: Component; provMode: boolean }) {
@@ -32,21 +43,28 @@ function Member({ c, provMode }: { c: Component; provMode: boolean }) {
   const rot = (c.rotation_deg ?? [0, 0, 0]).map((d) => (d * Math.PI) / 180) as [
     number, number, number,
   ];
-  const color = provMode ? PROV_COLORS[c.provenance] : PHASE_COLORS[c.phase] ?? "#888";
+  const color = provMode
+    ? PROV_COLORS[c.provenance]
+    : (c.material && MATERIAL_COLORS[c.material]) || PHASE_COLORS[c.phase] || "#888";
   const pos = c.position as [number, number, number];
 
   if (g.type === "cylinder") {
+    const taper = c.phase === "columns" ? 0.88 : 1; // 卷杀-style gentle taper
     return (
       <group position={pos} rotation={rot}>
-        <mesh rotation={g.axis === "x" ? [0, 0, Math.PI / 2] : [0, 0, 0]}>
-          <cylinderGeometry args={[g.r!, g.r!, g.h!, 16]} />
+        <mesh
+          rotation={g.axis === "x" ? [0, 0, Math.PI / 2] : [0, 0, 0]}
+          castShadow
+          receiveShadow
+        >
+          <cylinderGeometry args={[g.r! * taper, g.r!, g.h!, 20]} />
           <meshStandardMaterial color={color} roughness={0.85} />
         </mesh>
       </group>
     );
   }
   return (
-    <mesh position={pos} rotation={rot}>
+    <mesh position={pos} rotation={rot} castShadow receiveShadow>
       <boxGeometry args={[g.w!, g.h!, g.d!]} />
       <meshStandardMaterial color={color} roughness={0.85} />
     </mesh>
@@ -66,22 +84,40 @@ export default function Viewer() {
 
   return (
     <div style={{ width: "100vw", height: "100vh", position: "relative" }}>
-      <Canvas camera={{ position: [16, 9, 19], fov: 42 }} shadows={false}>
+      <Canvas camera={{ position: [16, 9, 19], fov: 42 }} shadows>
         <color attach="background" args={["#141416"]} />
-        <ambientLight intensity={0.55} />
-        <directionalLight position={[14, 22, 10]} intensity={1.4} />
-        <directionalLight position={[-10, 8, -14]} intensity={0.35} />
+        <fog attach="fog" args={["#141416", 36, 95]} />
+        <hemisphereLight args={["#3a3f4d", "#26211c", 0.6]} />
+        <ambientLight intensity={0.28} />
+        <directionalLight
+          position={[16, 26, 12]}
+          intensity={1.7}
+          color="#ffe8c8"
+          castShadow
+          shadow-mapSize={[2048, 2048]}
+          shadow-camera-left={-14}
+          shadow-camera-right={14}
+          shadow-camera-top={14}
+          shadow-camera-bottom={-14}
+          shadow-bias={-0.0004}
+        />
+        <directionalLight position={[-12, 9, -16]} intensity={0.35} color="#9db4d8" />
         <group scale={FEN}>
           {components.map((c) => (
             <Member key={c.id} c={c} provMode={provMode} />
           ))}
         </group>
         {/* ground reference */}
-        <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.67, 0]}>
-          <planeGeometry args={[80, 80]} />
-          <meshStandardMaterial color="#1c1c1e" roughness={1} />
+        <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.67, 0]} receiveShadow>
+          <circleGeometry args={[60, 64]} />
+          <meshStandardMaterial color="#1b1b1d" roughness={1} />
         </mesh>
-        <OrbitControls target={[0, 3.2, 0]} maxPolarAngle={Math.PI / 2.02} />
+        <OrbitControls
+          target={[0, 3.2, 0]}
+          maxPolarAngle={Math.PI / 2.02}
+          minDistance={4}
+          maxDistance={45}
+        />
       </Canvas>
 
       {/* header */}

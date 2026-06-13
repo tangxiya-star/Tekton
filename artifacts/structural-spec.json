@@ -15,7 +15,8 @@
     "columns",
     "puzuo",
     "frame",
-    "roof"
+    "roof",
+    "enclosure"
   ],
   "key_dimensions": {
     "total_width_fen": 700,
@@ -2393,6 +2394,2010 @@
       ],
       "provenance": "measured",
       "source": "ZHANG2022"
+    },
+    {
+      "id": "lane-1",
+      "name_zh": "阑额",
+      "name_en": "Architrave (lan'e)",
+      "phase": "columns",
+      "role": "Tie beam linking the column tops into a ring; Nanchan has no pupai-fang above it — an early-period trait.",
+      "geometry": {
+        "type": "box",
+        "w": 200,
+        "h": 30,
+        "d": 20
+      },
+      "position": [
+        -250,
+        221.4,
+        -300
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷五 (member present in building; section unrecorded in corpus)",
+      "material": "zhu"
+    },
+    {
+      "id": "lane-2",
+      "name_zh": "阑额",
+      "name_en": "Architrave (lan'e)",
+      "phase": "columns",
+      "role": "Tie beam linking the column tops into a ring; Nanchan has no pupai-fang above it — an early-period trait.",
+      "geometry": {
+        "type": "box",
+        "w": 200,
+        "h": 30,
+        "d": 20
+      },
+      "position": [
+        -250,
+        221.4,
+        300
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷五 (member present in building; section unrecorded in corpus)",
+      "material": "zhu"
+    },
+    {
+      "id": "lane-3",
+      "name_zh": "阑额",
+      "name_en": "Architrave (lan'e)",
+      "phase": "columns",
+      "role": "Tie beam linking the column tops into a ring; Nanchan has no pupai-fang above it — an early-period trait.",
+      "geometry": {
+        "type": "box",
+        "w": 20,
+        "h": 30,
+        "d": 200
+      },
+      "position": [
+        -350,
+        221.4,
+        -200
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷五 (member present in building; section unrecorded in corpus)",
+      "material": "zhu"
+    },
+    {
+      "id": "lane-4",
+      "name_zh": "阑额",
+      "name_en": "Architrave (lan'e)",
+      "phase": "columns",
+      "role": "Tie beam linking the column tops into a ring; Nanchan has no pupai-fang above it — an early-period trait.",
+      "geometry": {
+        "type": "box",
+        "w": 20,
+        "h": 30,
+        "d": 200
+      },
+      "position": [
+        350,
+        221.4,
+        -200
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷五 (member present in building; section unrecorded in corpus)",
+      "material": "zhu"
+    },
+    {
+      "id": "lane-5",
+      "name_zh": "阑额",
+      "name_en": "Architrave (lan'e)",
+      "phase": "columns",
+      "role": "Tie beam linking the column tops into a ring; Nanchan has no pupai-fang above it — an early-period trait.",
+      "geometry": {
+        "type": "box",
+        "w": 300,
+        "h": 30,
+        "d": 20
+      },
+      "position": [
+        0,
+        221.4,
+        -300
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷五 (member present in building; section unrecorded in corpus)",
+      "material": "zhu"
+    },
+    {
+      "id": "lane-6",
+      "name_zh": "阑额",
+      "name_en": "Architrave (lan'e)",
+      "phase": "columns",
+      "role": "Tie beam linking the column tops into a ring; Nanchan has no pupai-fang above it — an early-period trait.",
+      "geometry": {
+        "type": "box",
+        "w": 300,
+        "h": 30,
+        "d": 20
+      },
+      "position": [
+        0,
+        221.4,
+        300
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷五 (member present in building; section unrecorded in corpus)",
+      "material": "zhu"
+    },
+    {
+      "id": "lane-7",
+      "name_zh": "阑额",
+      "name_en": "Architrave (lan'e)",
+      "phase": "columns",
+      "role": "Tie beam linking the column tops into a ring; Nanchan has no pupai-fang above it — an early-period trait.",
+      "geometry": {
+        "type": "box",
+        "w": 20,
+        "h": 30,
+        "d": 200
+      },
+      "position": [
+        -350,
+        221.4,
+        0
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷五 (member present in building; section unrecorded in corpus)",
+      "material": "zhu"
+    },
+    {
+      "id": "lane-8",
+      "name_zh": "阑额",
+      "name_en": "Architrave (lan'e)",
+      "phase": "columns",
+      "role": "Tie beam linking the column tops into a ring; Nanchan has no pupai-fang above it — an early-period trait.",
+      "geometry": {
+        "type": "box",
+        "w": 20,
+        "h": 30,
+        "d": 200
+      },
+      "position": [
+        350,
+        221.4,
+        0
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷五 (member present in building; section unrecorded in corpus)",
+      "material": "zhu"
+    },
+    {
+      "id": "lane-9",
+      "name_zh": "阑额",
+      "name_en": "Architrave (lan'e)",
+      "phase": "columns",
+      "role": "Tie beam linking the column tops into a ring; Nanchan has no pupai-fang above it — an early-period trait.",
+      "geometry": {
+        "type": "box",
+        "w": 200,
+        "h": 30,
+        "d": 20
+      },
+      "position": [
+        250,
+        221.4,
+        -300
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷五 (member present in building; section unrecorded in corpus)",
+      "material": "zhu"
+    },
+    {
+      "id": "lane-10",
+      "name_zh": "阑额",
+      "name_en": "Architrave (lan'e)",
+      "phase": "columns",
+      "role": "Tie beam linking the column tops into a ring; Nanchan has no pupai-fang above it — an early-period trait.",
+      "geometry": {
+        "type": "box",
+        "w": 200,
+        "h": 30,
+        "d": 20
+      },
+      "position": [
+        250,
+        221.4,
+        300
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷五 (member present in building; section unrecorded in corpus)",
+      "material": "zhu"
+    },
+    {
+      "id": "lane-11",
+      "name_zh": "阑额",
+      "name_en": "Architrave (lan'e)",
+      "phase": "columns",
+      "role": "Tie beam linking the column tops into a ring; Nanchan has no pupai-fang above it — an early-period trait.",
+      "geometry": {
+        "type": "box",
+        "w": 20,
+        "h": 30,
+        "d": 200
+      },
+      "position": [
+        -350,
+        221.4,
+        200
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷五 (member present in building; section unrecorded in corpus)",
+      "material": "zhu"
+    },
+    {
+      "id": "lane-12",
+      "name_zh": "阑额",
+      "name_en": "Architrave (lan'e)",
+      "phase": "columns",
+      "role": "Tie beam linking the column tops into a ring; Nanchan has no pupai-fang above it — an early-period trait.",
+      "geometry": {
+        "type": "box",
+        "w": 20,
+        "h": 30,
+        "d": 200
+      },
+      "position": [
+        350,
+        221.4,
+        200
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷五 (member present in building; section unrecorded in corpus)",
+      "material": "zhu"
+    },
+    {
+      "id": "zhuchu-1",
+      "name_zh": "柱础（覆盆）",
+      "name_en": "Column plinth",
+      "phase": "platform",
+      "role": "Stone plinth isolating the column foot from ground moisture.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 17,
+        "h": 9
+      },
+      "position": [
+        -350,
+        2.5,
+        -300
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷三 造柱础之制 「方倍柱之径」",
+      "material": "stone"
+    },
+    {
+      "id": "zhuchu-2",
+      "name_zh": "柱础（覆盆）",
+      "name_en": "Column plinth",
+      "phase": "platform",
+      "role": "Stone plinth isolating the column foot from ground moisture.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 17,
+        "h": 9
+      },
+      "position": [
+        -350,
+        2.5,
+        -100
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷三 造柱础之制 「方倍柱之径」",
+      "material": "stone"
+    },
+    {
+      "id": "zhuchu-3",
+      "name_zh": "柱础（覆盆）",
+      "name_en": "Column plinth",
+      "phase": "platform",
+      "role": "Stone plinth isolating the column foot from ground moisture.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 17,
+        "h": 9
+      },
+      "position": [
+        -350,
+        2.5,
+        100
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷三 造柱础之制 「方倍柱之径」",
+      "material": "stone"
+    },
+    {
+      "id": "zhuchu-4",
+      "name_zh": "柱础（覆盆）",
+      "name_en": "Column plinth",
+      "phase": "platform",
+      "role": "Stone plinth isolating the column foot from ground moisture.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 17,
+        "h": 9
+      },
+      "position": [
+        -350,
+        2.5,
+        300
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷三 造柱础之制 「方倍柱之径」",
+      "material": "stone"
+    },
+    {
+      "id": "zhuchu-5",
+      "name_zh": "柱础（覆盆）",
+      "name_en": "Column plinth",
+      "phase": "platform",
+      "role": "Stone plinth isolating the column foot from ground moisture.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 17,
+        "h": 9
+      },
+      "position": [
+        -150,
+        2.5,
+        -300
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷三 造柱础之制 「方倍柱之径」",
+      "material": "stone"
+    },
+    {
+      "id": "zhuchu-6",
+      "name_zh": "柱础（覆盆）",
+      "name_en": "Column plinth",
+      "phase": "platform",
+      "role": "Stone plinth isolating the column foot from ground moisture.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 17,
+        "h": 9
+      },
+      "position": [
+        -150,
+        2.5,
+        300
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷三 造柱础之制 「方倍柱之径」",
+      "material": "stone"
+    },
+    {
+      "id": "zhuchu-7",
+      "name_zh": "柱础（覆盆）",
+      "name_en": "Column plinth",
+      "phase": "platform",
+      "role": "Stone plinth isolating the column foot from ground moisture.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 17,
+        "h": 9
+      },
+      "position": [
+        150,
+        2.5,
+        -300
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷三 造柱础之制 「方倍柱之径」",
+      "material": "stone"
+    },
+    {
+      "id": "zhuchu-8",
+      "name_zh": "柱础（覆盆）",
+      "name_en": "Column plinth",
+      "phase": "platform",
+      "role": "Stone plinth isolating the column foot from ground moisture.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 17,
+        "h": 9
+      },
+      "position": [
+        150,
+        2.5,
+        300
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷三 造柱础之制 「方倍柱之径」",
+      "material": "stone"
+    },
+    {
+      "id": "zhuchu-9",
+      "name_zh": "柱础（覆盆）",
+      "name_en": "Column plinth",
+      "phase": "platform",
+      "role": "Stone plinth isolating the column foot from ground moisture.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 17,
+        "h": 9
+      },
+      "position": [
+        350,
+        2.5,
+        -300
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷三 造柱础之制 「方倍柱之径」",
+      "material": "stone"
+    },
+    {
+      "id": "zhuchu-10",
+      "name_zh": "柱础（覆盆）",
+      "name_en": "Column plinth",
+      "phase": "platform",
+      "role": "Stone plinth isolating the column foot from ground moisture.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 17,
+        "h": 9
+      },
+      "position": [
+        350,
+        2.5,
+        -100
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷三 造柱础之制 「方倍柱之径」",
+      "material": "stone"
+    },
+    {
+      "id": "zhuchu-11",
+      "name_zh": "柱础（覆盆）",
+      "name_en": "Column plinth",
+      "phase": "platform",
+      "role": "Stone plinth isolating the column foot from ground moisture.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 17,
+        "h": 9
+      },
+      "position": [
+        350,
+        2.5,
+        100
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷三 造柱础之制 「方倍柱之径」",
+      "material": "stone"
+    },
+    {
+      "id": "zhuchu-12",
+      "name_zh": "柱础（覆盆）",
+      "name_en": "Column plinth",
+      "phase": "platform",
+      "role": "Stone plinth isolating the column foot from ground moisture.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 17,
+        "h": 9
+      },
+      "position": [
+        350,
+        2.5,
+        300
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷三 造柱础之制 「方倍柱之径」",
+      "material": "stone"
+    },
+    {
+      "id": "dou-1",
+      "name_zh": "散斗",
+      "name_en": "San dou block",
+      "phase": "puzuo",
+      "role": "Small bearing block transferring load between arm tiers.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 10,
+        "d": 16
+      },
+      "position": [
+        -350,
+        267.4,
+        -72
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷四 造斗之制 (corpus lacks explicit dou dims)",
+      "material": "zhu"
+    },
+    {
+      "id": "dou-2",
+      "name_zh": "散斗（令栱头）",
+      "name_en": "San dou (ling-gong end)",
+      "phase": "puzuo",
+      "role": "Small bearing block transferring load between arm tiers.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 10,
+        "d": 16
+      },
+      "position": [
+        -397,
+        309.4,
+        -72
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷四 造斗之制 (corpus lacks explicit dou dims)",
+      "material": "zhu"
+    },
+    {
+      "id": "dou-3",
+      "name_zh": "散斗",
+      "name_en": "San dou block",
+      "phase": "puzuo",
+      "role": "Small bearing block transferring load between arm tiers.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 10,
+        "d": 16
+      },
+      "position": [
+        -350,
+        267.4,
+        -128
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷四 造斗之制 (corpus lacks explicit dou dims)",
+      "material": "zhu"
+    },
+    {
+      "id": "dou-4",
+      "name_zh": "散斗（令栱头）",
+      "name_en": "San dou (ling-gong end)",
+      "phase": "puzuo",
+      "role": "Small bearing block transferring load between arm tiers.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 10,
+        "d": 16
+      },
+      "position": [
+        -397,
+        309.4,
+        -128
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷四 造斗之制 (corpus lacks explicit dou dims)",
+      "material": "zhu"
+    },
+    {
+      "id": "dou-5",
+      "name_zh": "散斗",
+      "name_en": "San dou block",
+      "phase": "puzuo",
+      "role": "Small bearing block transferring load between arm tiers.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 10,
+        "d": 16
+      },
+      "position": [
+        -350,
+        267.4,
+        128
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷四 造斗之制 (corpus lacks explicit dou dims)",
+      "material": "zhu"
+    },
+    {
+      "id": "dou-6",
+      "name_zh": "散斗（令栱头）",
+      "name_en": "San dou (ling-gong end)",
+      "phase": "puzuo",
+      "role": "Small bearing block transferring load between arm tiers.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 10,
+        "d": 16
+      },
+      "position": [
+        -397,
+        309.4,
+        128
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷四 造斗之制 (corpus lacks explicit dou dims)",
+      "material": "zhu"
+    },
+    {
+      "id": "dou-7",
+      "name_zh": "散斗",
+      "name_en": "San dou block",
+      "phase": "puzuo",
+      "role": "Small bearing block transferring load between arm tiers.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 10,
+        "d": 16
+      },
+      "position": [
+        -350,
+        267.4,
+        72
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷四 造斗之制 (corpus lacks explicit dou dims)",
+      "material": "zhu"
+    },
+    {
+      "id": "dou-8",
+      "name_zh": "散斗（令栱头）",
+      "name_en": "San dou (ling-gong end)",
+      "phase": "puzuo",
+      "role": "Small bearing block transferring load between arm tiers.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 10,
+        "d": 16
+      },
+      "position": [
+        -397,
+        309.4,
+        72
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷四 造斗之制 (corpus lacks explicit dou dims)",
+      "material": "zhu"
+    },
+    {
+      "id": "dou-9",
+      "name_zh": "散斗",
+      "name_en": "San dou block",
+      "phase": "puzuo",
+      "role": "Small bearing block transferring load between arm tiers.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 10,
+        "d": 16
+      },
+      "position": [
+        -122,
+        267.4,
+        -300
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷四 造斗之制 (corpus lacks explicit dou dims)",
+      "material": "zhu"
+    },
+    {
+      "id": "dou-10",
+      "name_zh": "散斗（令栱头）",
+      "name_en": "San dou (ling-gong end)",
+      "phase": "puzuo",
+      "role": "Small bearing block transferring load between arm tiers.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 10,
+        "d": 16
+      },
+      "position": [
+        -122,
+        309.4,
+        -347
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷四 造斗之制 (corpus lacks explicit dou dims)",
+      "material": "zhu"
+    },
+    {
+      "id": "dou-11",
+      "name_zh": "散斗",
+      "name_en": "San dou block",
+      "phase": "puzuo",
+      "role": "Small bearing block transferring load between arm tiers.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 10,
+        "d": 16
+      },
+      "position": [
+        -178,
+        267.4,
+        -300
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷四 造斗之制 (corpus lacks explicit dou dims)",
+      "material": "zhu"
+    },
+    {
+      "id": "dou-12",
+      "name_zh": "散斗（令栱头）",
+      "name_en": "San dou (ling-gong end)",
+      "phase": "puzuo",
+      "role": "Small bearing block transferring load between arm tiers.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 10,
+        "d": 16
+      },
+      "position": [
+        -178,
+        309.4,
+        -347
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷四 造斗之制 (corpus lacks explicit dou dims)",
+      "material": "zhu"
+    },
+    {
+      "id": "dou-13",
+      "name_zh": "散斗",
+      "name_en": "San dou block",
+      "phase": "puzuo",
+      "role": "Small bearing block transferring load between arm tiers.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 10,
+        "d": 16
+      },
+      "position": [
+        -178,
+        267.4,
+        300
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷四 造斗之制 (corpus lacks explicit dou dims)",
+      "material": "zhu"
+    },
+    {
+      "id": "dou-14",
+      "name_zh": "散斗（令栱头）",
+      "name_en": "San dou (ling-gong end)",
+      "phase": "puzuo",
+      "role": "Small bearing block transferring load between arm tiers.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 10,
+        "d": 16
+      },
+      "position": [
+        -178,
+        309.4,
+        347
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷四 造斗之制 (corpus lacks explicit dou dims)",
+      "material": "zhu"
+    },
+    {
+      "id": "dou-15",
+      "name_zh": "散斗",
+      "name_en": "San dou block",
+      "phase": "puzuo",
+      "role": "Small bearing block transferring load between arm tiers.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 10,
+        "d": 16
+      },
+      "position": [
+        -122,
+        267.4,
+        300
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷四 造斗之制 (corpus lacks explicit dou dims)",
+      "material": "zhu"
+    },
+    {
+      "id": "dou-16",
+      "name_zh": "散斗（令栱头）",
+      "name_en": "San dou (ling-gong end)",
+      "phase": "puzuo",
+      "role": "Small bearing block transferring load between arm tiers.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 10,
+        "d": 16
+      },
+      "position": [
+        -122,
+        309.4,
+        347
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷四 造斗之制 (corpus lacks explicit dou dims)",
+      "material": "zhu"
+    },
+    {
+      "id": "dou-17",
+      "name_zh": "散斗",
+      "name_en": "San dou block",
+      "phase": "puzuo",
+      "role": "Small bearing block transferring load between arm tiers.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 10,
+        "d": 16
+      },
+      "position": [
+        178,
+        267.4,
+        -300
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷四 造斗之制 (corpus lacks explicit dou dims)",
+      "material": "zhu"
+    },
+    {
+      "id": "dou-18",
+      "name_zh": "散斗（令栱头）",
+      "name_en": "San dou (ling-gong end)",
+      "phase": "puzuo",
+      "role": "Small bearing block transferring load between arm tiers.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 10,
+        "d": 16
+      },
+      "position": [
+        178,
+        309.4,
+        -347
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷四 造斗之制 (corpus lacks explicit dou dims)",
+      "material": "zhu"
+    },
+    {
+      "id": "dou-19",
+      "name_zh": "散斗",
+      "name_en": "San dou block",
+      "phase": "puzuo",
+      "role": "Small bearing block transferring load between arm tiers.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 10,
+        "d": 16
+      },
+      "position": [
+        122,
+        267.4,
+        -300
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷四 造斗之制 (corpus lacks explicit dou dims)",
+      "material": "zhu"
+    },
+    {
+      "id": "dou-20",
+      "name_zh": "散斗（令栱头）",
+      "name_en": "San dou (ling-gong end)",
+      "phase": "puzuo",
+      "role": "Small bearing block transferring load between arm tiers.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 10,
+        "d": 16
+      },
+      "position": [
+        122,
+        309.4,
+        -347
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷四 造斗之制 (corpus lacks explicit dou dims)",
+      "material": "zhu"
+    },
+    {
+      "id": "dou-21",
+      "name_zh": "散斗",
+      "name_en": "San dou block",
+      "phase": "puzuo",
+      "role": "Small bearing block transferring load between arm tiers.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 10,
+        "d": 16
+      },
+      "position": [
+        122,
+        267.4,
+        300
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷四 造斗之制 (corpus lacks explicit dou dims)",
+      "material": "zhu"
+    },
+    {
+      "id": "dou-22",
+      "name_zh": "散斗（令栱头）",
+      "name_en": "San dou (ling-gong end)",
+      "phase": "puzuo",
+      "role": "Small bearing block transferring load between arm tiers.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 10,
+        "d": 16
+      },
+      "position": [
+        122,
+        309.4,
+        347
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷四 造斗之制 (corpus lacks explicit dou dims)",
+      "material": "zhu"
+    },
+    {
+      "id": "dou-23",
+      "name_zh": "散斗",
+      "name_en": "San dou block",
+      "phase": "puzuo",
+      "role": "Small bearing block transferring load between arm tiers.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 10,
+        "d": 16
+      },
+      "position": [
+        178,
+        267.4,
+        300
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷四 造斗之制 (corpus lacks explicit dou dims)",
+      "material": "zhu"
+    },
+    {
+      "id": "dou-24",
+      "name_zh": "散斗（令栱头）",
+      "name_en": "San dou (ling-gong end)",
+      "phase": "puzuo",
+      "role": "Small bearing block transferring load between arm tiers.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 10,
+        "d": 16
+      },
+      "position": [
+        178,
+        309.4,
+        347
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷四 造斗之制 (corpus lacks explicit dou dims)",
+      "material": "zhu"
+    },
+    {
+      "id": "dou-25",
+      "name_zh": "散斗",
+      "name_en": "San dou block",
+      "phase": "puzuo",
+      "role": "Small bearing block transferring load between arm tiers.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 10,
+        "d": 16
+      },
+      "position": [
+        350,
+        267.4,
+        -128
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷四 造斗之制 (corpus lacks explicit dou dims)",
+      "material": "zhu"
+    },
+    {
+      "id": "dou-26",
+      "name_zh": "散斗（令栱头）",
+      "name_en": "San dou (ling-gong end)",
+      "phase": "puzuo",
+      "role": "Small bearing block transferring load between arm tiers.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 10,
+        "d": 16
+      },
+      "position": [
+        397,
+        309.4,
+        -128
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷四 造斗之制 (corpus lacks explicit dou dims)",
+      "material": "zhu"
+    },
+    {
+      "id": "dou-27",
+      "name_zh": "散斗",
+      "name_en": "San dou block",
+      "phase": "puzuo",
+      "role": "Small bearing block transferring load between arm tiers.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 10,
+        "d": 16
+      },
+      "position": [
+        350,
+        267.4,
+        -72
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷四 造斗之制 (corpus lacks explicit dou dims)",
+      "material": "zhu"
+    },
+    {
+      "id": "dou-28",
+      "name_zh": "散斗（令栱头）",
+      "name_en": "San dou (ling-gong end)",
+      "phase": "puzuo",
+      "role": "Small bearing block transferring load between arm tiers.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 10,
+        "d": 16
+      },
+      "position": [
+        397,
+        309.4,
+        -72
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷四 造斗之制 (corpus lacks explicit dou dims)",
+      "material": "zhu"
+    },
+    {
+      "id": "dou-29",
+      "name_zh": "散斗",
+      "name_en": "San dou block",
+      "phase": "puzuo",
+      "role": "Small bearing block transferring load between arm tiers.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 10,
+        "d": 16
+      },
+      "position": [
+        350,
+        267.4,
+        72
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷四 造斗之制 (corpus lacks explicit dou dims)",
+      "material": "zhu"
+    },
+    {
+      "id": "dou-30",
+      "name_zh": "散斗（令栱头）",
+      "name_en": "San dou (ling-gong end)",
+      "phase": "puzuo",
+      "role": "Small bearing block transferring load between arm tiers.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 10,
+        "d": 16
+      },
+      "position": [
+        397,
+        309.4,
+        72
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷四 造斗之制 (corpus lacks explicit dou dims)",
+      "material": "zhu"
+    },
+    {
+      "id": "dou-31",
+      "name_zh": "散斗",
+      "name_en": "San dou block",
+      "phase": "puzuo",
+      "role": "Small bearing block transferring load between arm tiers.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 10,
+        "d": 16
+      },
+      "position": [
+        350,
+        267.4,
+        128
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷四 造斗之制 (corpus lacks explicit dou dims)",
+      "material": "zhu"
+    },
+    {
+      "id": "dou-32",
+      "name_zh": "散斗（令栱头）",
+      "name_en": "San dou (ling-gong end)",
+      "phase": "puzuo",
+      "role": "Small bearing block transferring load between arm tiers.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 10,
+        "d": 16
+      },
+      "position": [
+        397,
+        309.4,
+        128
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷四 造斗之制 (corpus lacks explicit dou dims)",
+      "material": "zhu"
+    },
+    {
+      "id": "zhutoufang-1",
+      "name_zh": "柱头枋",
+      "name_en": "Column-top tie (zhutou fang)",
+      "phase": "puzuo",
+      "role": "Continuous tie running the wall plane atop the nidao gongs, stitching the bracket sets into a ring beam.",
+      "geometry": {
+        "type": "box",
+        "w": 720,
+        "h": 15,
+        "d": 10
+      },
+      "position": [
+        0,
+        275.9,
+        300
+      ],
+      "provenance": "rule_derived",
+      "source": "ZHANG2022 (member noted) + YZFS 卷四 (section)",
+      "material": "zhu"
+    },
+    {
+      "id": "zhutoufang-2",
+      "name_zh": "柱头枋",
+      "name_en": "Column-top tie (zhutou fang)",
+      "phase": "puzuo",
+      "role": "Continuous tie running the wall plane atop the nidao gongs, stitching the bracket sets into a ring beam.",
+      "geometry": {
+        "type": "box",
+        "w": 720,
+        "h": 15,
+        "d": 10
+      },
+      "position": [
+        0,
+        275.9,
+        -300
+      ],
+      "provenance": "rule_derived",
+      "source": "ZHANG2022 (member noted) + YZFS 卷四 (section)",
+      "material": "zhu"
+    },
+    {
+      "id": "zhutoufang-3",
+      "name_zh": "柱头枋",
+      "name_en": "Column-top tie (zhutou fang)",
+      "phase": "puzuo",
+      "role": "Continuous tie running the wall plane atop the nidao gongs, stitching the bracket sets into a ring beam.",
+      "geometry": {
+        "type": "box",
+        "w": 10,
+        "h": 15,
+        "d": 620
+      },
+      "position": [
+        350,
+        275.9,
+        0
+      ],
+      "provenance": "rule_derived",
+      "source": "ZHANG2022 (member noted) + YZFS 卷四 (section)",
+      "material": "zhu"
+    },
+    {
+      "id": "zhutoufang-4",
+      "name_zh": "柱头枋",
+      "name_en": "Column-top tie (zhutou fang)",
+      "phase": "puzuo",
+      "role": "Continuous tie running the wall plane atop the nidao gongs, stitching the bracket sets into a ring beam.",
+      "geometry": {
+        "type": "box",
+        "w": 10,
+        "h": 15,
+        "d": 620
+      },
+      "position": [
+        -350,
+        275.9,
+        0
+      ],
+      "provenance": "rule_derived",
+      "source": "ZHANG2022 (member noted) + YZFS 卷四 (section)",
+      "material": "zhu"
+    },
+    {
+      "id": "zhengji",
+      "name_zh": "正脊",
+      "name_en": "Main ridge",
+      "phase": "roof",
+      "role": "Tiled main ridge capping the roof.",
+      "geometry": {
+        "type": "box",
+        "w": 424,
+        "h": 14,
+        "d": 16
+      },
+      "position": [
+        0,
+        468.4,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Form: Tang practice via Dunhuang murals; height depends on conjectural rise [QI1980]",
+      "material": "huiwa"
+    },
+    {
+      "id": "chiwei-W",
+      "name_zh": "鸱尾",
+      "name_en": "Chiwei (owl-tail finial)",
+      "phase": "roof",
+      "role": "Ridge-end finial; the Tang silhouette's signature stroke.",
+      "geometry": {
+        "type": "box",
+        "w": 10,
+        "h": 46,
+        "d": 22
+      },
+      "position": [
+        -207,
+        498.4,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Form from Tang-dynasty Dunhuang murals + Tōshōdai-ji analogy — cited conjecture (PRD color-evidence list)",
+      "material": "huiwa"
+    },
+    {
+      "id": "chiwei-E",
+      "name_zh": "鸱尾",
+      "name_en": "Chiwei (owl-tail finial)",
+      "phase": "roof",
+      "role": "Ridge-end finial; the Tang silhouette's signature stroke.",
+      "geometry": {
+        "type": "box",
+        "w": 10,
+        "h": 46,
+        "d": 22
+      },
+      "position": [
+        207,
+        498.4,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Form from Tang-dynasty Dunhuang murals + Tōshōdai-ji analogy — cited conjecture (PRD color-evidence list)",
+      "material": "huiwa"
+    },
+    {
+      "provenance": "conjecture",
+      "source": "Present-day infill (photographic record); dimensions not in survey corpus",
+      "phase": "enclosure",
+      "id": "wall-N",
+      "name_zh": "后檐墙",
+      "name_en": "Rear wall",
+      "role": "Non-structural enclosure.",
+      "geometry": {
+        "type": "box",
+        "w": 700,
+        "h": 206.4,
+        "d": 24
+      },
+      "position": [
+        0,
+        103.2,
+        -300
+      ],
+      "material": "bai"
+    },
+    {
+      "provenance": "conjecture",
+      "source": "Present-day infill (photographic record); dimensions not in survey corpus",
+      "phase": "enclosure",
+      "id": "wall-W",
+      "name_zh": "山墙",
+      "name_en": "Gable wall",
+      "role": "Non-structural enclosure.",
+      "geometry": {
+        "type": "box",
+        "w": 24,
+        "h": 206.4,
+        "d": 600
+      },
+      "position": [
+        -350,
+        103.2,
+        0
+      ],
+      "material": "bai"
+    },
+    {
+      "provenance": "conjecture",
+      "source": "Present-day infill (photographic record); dimensions not in survey corpus",
+      "phase": "enclosure",
+      "id": "sill-W",
+      "name_zh": "槛墙",
+      "name_en": "Sill wall",
+      "role": "Low wall under the lattice window.",
+      "geometry": {
+        "type": "box",
+        "w": 200,
+        "h": 90,
+        "d": 24
+      },
+      "position": [
+        -250,
+        45,
+        300
+      ],
+      "material": "bai"
+    },
+    {
+      "provenance": "conjecture",
+      "source": "Present-day infill (photographic record); dimensions not in survey corpus",
+      "phase": "enclosure",
+      "id": "rail-W0",
+      "name_zh": "窗额/腰串",
+      "name_en": "Window rail",
+      "role": "Lattice window frame rail.",
+      "geometry": {
+        "type": "box",
+        "w": 200,
+        "h": 8,
+        "d": 10
+      },
+      "position": [
+        -250,
+        98,
+        300
+      ],
+      "material": "sumu"
+    },
+    {
+      "provenance": "conjecture",
+      "source": "Present-day infill (photographic record); dimensions not in survey corpus",
+      "phase": "enclosure",
+      "id": "rail-W1",
+      "name_zh": "窗额/腰串",
+      "name_en": "Window rail",
+      "role": "Lattice window frame rail.",
+      "geometry": {
+        "type": "box",
+        "w": 200,
+        "h": 8,
+        "d": 10
+      },
+      "position": [
+        -250,
+        202.4,
+        300
+      ],
+      "material": "sumu"
+    },
+    {
+      "provenance": "conjecture",
+      "source": "Present-day infill (photographic record); dimensions not in survey corpus",
+      "phase": "enclosure",
+      "id": "ling-W1",
+      "name_zh": "直棂窗棂条",
+      "name_en": "Lattice window bar",
+      "role": "Vertical bar of the 直棂窗 — the early straight-mullion window type.",
+      "geometry": {
+        "type": "box",
+        "w": 4,
+        "h": 104.4,
+        "d": 6
+      },
+      "position": [
+        -166.66666666666666,
+        146.2,
+        300
+      ],
+      "material": "sumu"
+    },
+    {
+      "provenance": "conjecture",
+      "source": "Present-day infill (photographic record); dimensions not in survey corpus",
+      "phase": "enclosure",
+      "id": "ling-W2",
+      "name_zh": "直棂窗棂条",
+      "name_en": "Lattice window bar",
+      "role": "Vertical bar of the 直棂窗 — the early straight-mullion window type.",
+      "geometry": {
+        "type": "box",
+        "w": 4,
+        "h": 104.4,
+        "d": 6
+      },
+      "position": [
+        -183.33333333333334,
+        146.2,
+        300
+      ],
+      "material": "sumu"
+    },
+    {
+      "provenance": "conjecture",
+      "source": "Present-day infill (photographic record); dimensions not in survey corpus",
+      "phase": "enclosure",
+      "id": "ling-W3",
+      "name_zh": "直棂窗棂条",
+      "name_en": "Lattice window bar",
+      "role": "Vertical bar of the 直棂窗 — the early straight-mullion window type.",
+      "geometry": {
+        "type": "box",
+        "w": 4,
+        "h": 104.4,
+        "d": 6
+      },
+      "position": [
+        -200,
+        146.2,
+        300
+      ],
+      "material": "sumu"
+    },
+    {
+      "provenance": "conjecture",
+      "source": "Present-day infill (photographic record); dimensions not in survey corpus",
+      "phase": "enclosure",
+      "id": "ling-W4",
+      "name_zh": "直棂窗棂条",
+      "name_en": "Lattice window bar",
+      "role": "Vertical bar of the 直棂窗 — the early straight-mullion window type.",
+      "geometry": {
+        "type": "box",
+        "w": 4,
+        "h": 104.4,
+        "d": 6
+      },
+      "position": [
+        -216.66666666666669,
+        146.2,
+        300
+      ],
+      "material": "sumu"
+    },
+    {
+      "provenance": "conjecture",
+      "source": "Present-day infill (photographic record); dimensions not in survey corpus",
+      "phase": "enclosure",
+      "id": "ling-W5",
+      "name_zh": "直棂窗棂条",
+      "name_en": "Lattice window bar",
+      "role": "Vertical bar of the 直棂窗 — the early straight-mullion window type.",
+      "geometry": {
+        "type": "box",
+        "w": 4,
+        "h": 104.4,
+        "d": 6
+      },
+      "position": [
+        -233.33333333333331,
+        146.2,
+        300
+      ],
+      "material": "sumu"
+    },
+    {
+      "provenance": "conjecture",
+      "source": "Present-day infill (photographic record); dimensions not in survey corpus",
+      "phase": "enclosure",
+      "id": "ling-W6",
+      "name_zh": "直棂窗棂条",
+      "name_en": "Lattice window bar",
+      "role": "Vertical bar of the 直棂窗 — the early straight-mullion window type.",
+      "geometry": {
+        "type": "box",
+        "w": 4,
+        "h": 104.4,
+        "d": 6
+      },
+      "position": [
+        -250,
+        146.2,
+        300
+      ],
+      "material": "sumu"
+    },
+    {
+      "provenance": "conjecture",
+      "source": "Present-day infill (photographic record); dimensions not in survey corpus",
+      "phase": "enclosure",
+      "id": "ling-W7",
+      "name_zh": "直棂窗棂条",
+      "name_en": "Lattice window bar",
+      "role": "Vertical bar of the 直棂窗 — the early straight-mullion window type.",
+      "geometry": {
+        "type": "box",
+        "w": 4,
+        "h": 104.4,
+        "d": 6
+      },
+      "position": [
+        -266.6666666666667,
+        146.2,
+        300
+      ],
+      "material": "sumu"
+    },
+    {
+      "provenance": "conjecture",
+      "source": "Present-day infill (photographic record); dimensions not in survey corpus",
+      "phase": "enclosure",
+      "id": "ling-W8",
+      "name_zh": "直棂窗棂条",
+      "name_en": "Lattice window bar",
+      "role": "Vertical bar of the 直棂窗 — the early straight-mullion window type.",
+      "geometry": {
+        "type": "box",
+        "w": 4,
+        "h": 104.4,
+        "d": 6
+      },
+      "position": [
+        -283.33333333333337,
+        146.2,
+        300
+      ],
+      "material": "sumu"
+    },
+    {
+      "provenance": "conjecture",
+      "source": "Present-day infill (photographic record); dimensions not in survey corpus",
+      "phase": "enclosure",
+      "id": "ling-W9",
+      "name_zh": "直棂窗棂条",
+      "name_en": "Lattice window bar",
+      "role": "Vertical bar of the 直棂窗 — the early straight-mullion window type.",
+      "geometry": {
+        "type": "box",
+        "w": 4,
+        "h": 104.4,
+        "d": 6
+      },
+      "position": [
+        -300,
+        146.2,
+        300
+      ],
+      "material": "sumu"
+    },
+    {
+      "provenance": "conjecture",
+      "source": "Present-day infill (photographic record); dimensions not in survey corpus",
+      "phase": "enclosure",
+      "id": "ling-W10",
+      "name_zh": "直棂窗棂条",
+      "name_en": "Lattice window bar",
+      "role": "Vertical bar of the 直棂窗 — the early straight-mullion window type.",
+      "geometry": {
+        "type": "box",
+        "w": 4,
+        "h": 104.4,
+        "d": 6
+      },
+      "position": [
+        -316.66666666666663,
+        146.2,
+        300
+      ],
+      "material": "sumu"
+    },
+    {
+      "provenance": "conjecture",
+      "source": "Present-day infill (photographic record); dimensions not in survey corpus",
+      "phase": "enclosure",
+      "id": "ling-W11",
+      "name_zh": "直棂窗棂条",
+      "name_en": "Lattice window bar",
+      "role": "Vertical bar of the 直棂窗 — the early straight-mullion window type.",
+      "geometry": {
+        "type": "box",
+        "w": 4,
+        "h": 104.4,
+        "d": 6
+      },
+      "position": [
+        -333.33333333333337,
+        146.2,
+        300
+      ],
+      "material": "sumu"
+    },
+    {
+      "provenance": "conjecture",
+      "source": "Present-day infill (photographic record); dimensions not in survey corpus",
+      "phase": "enclosure",
+      "id": "door-W",
+      "name_zh": "板门",
+      "name_en": "Plank door leaf",
+      "role": "Double plank door of the central bay.",
+      "geometry": {
+        "type": "box",
+        "w": 138,
+        "h": 200,
+        "d": 8
+      },
+      "position": [
+        -71,
+        100,
+        300
+      ],
+      "material": "door"
+    },
+    {
+      "provenance": "conjecture",
+      "source": "Present-day infill (photographic record); dimensions not in survey corpus",
+      "phase": "enclosure",
+      "id": "wall-E",
+      "name_zh": "山墙",
+      "name_en": "Gable wall",
+      "role": "Non-structural enclosure.",
+      "geometry": {
+        "type": "box",
+        "w": 24,
+        "h": 206.4,
+        "d": 600
+      },
+      "position": [
+        350,
+        103.2,
+        0
+      ],
+      "material": "bai"
+    },
+    {
+      "provenance": "conjecture",
+      "source": "Present-day infill (photographic record); dimensions not in survey corpus",
+      "phase": "enclosure",
+      "id": "sill-E",
+      "name_zh": "槛墙",
+      "name_en": "Sill wall",
+      "role": "Low wall under the lattice window.",
+      "geometry": {
+        "type": "box",
+        "w": 200,
+        "h": 90,
+        "d": 24
+      },
+      "position": [
+        250,
+        45,
+        300
+      ],
+      "material": "bai"
+    },
+    {
+      "provenance": "conjecture",
+      "source": "Present-day infill (photographic record); dimensions not in survey corpus",
+      "phase": "enclosure",
+      "id": "rail-E0",
+      "name_zh": "窗额/腰串",
+      "name_en": "Window rail",
+      "role": "Lattice window frame rail.",
+      "geometry": {
+        "type": "box",
+        "w": 200,
+        "h": 8,
+        "d": 10
+      },
+      "position": [
+        250,
+        98,
+        300
+      ],
+      "material": "sumu"
+    },
+    {
+      "provenance": "conjecture",
+      "source": "Present-day infill (photographic record); dimensions not in survey corpus",
+      "phase": "enclosure",
+      "id": "rail-E1",
+      "name_zh": "窗额/腰串",
+      "name_en": "Window rail",
+      "role": "Lattice window frame rail.",
+      "geometry": {
+        "type": "box",
+        "w": 200,
+        "h": 8,
+        "d": 10
+      },
+      "position": [
+        250,
+        202.4,
+        300
+      ],
+      "material": "sumu"
+    },
+    {
+      "provenance": "conjecture",
+      "source": "Present-day infill (photographic record); dimensions not in survey corpus",
+      "phase": "enclosure",
+      "id": "ling-E1",
+      "name_zh": "直棂窗棂条",
+      "name_en": "Lattice window bar",
+      "role": "Vertical bar of the 直棂窗 — the early straight-mullion window type.",
+      "geometry": {
+        "type": "box",
+        "w": 4,
+        "h": 104.4,
+        "d": 6
+      },
+      "position": [
+        166.66666666666666,
+        146.2,
+        300
+      ],
+      "material": "sumu"
+    },
+    {
+      "provenance": "conjecture",
+      "source": "Present-day infill (photographic record); dimensions not in survey corpus",
+      "phase": "enclosure",
+      "id": "ling-E2",
+      "name_zh": "直棂窗棂条",
+      "name_en": "Lattice window bar",
+      "role": "Vertical bar of the 直棂窗 — the early straight-mullion window type.",
+      "geometry": {
+        "type": "box",
+        "w": 4,
+        "h": 104.4,
+        "d": 6
+      },
+      "position": [
+        183.33333333333334,
+        146.2,
+        300
+      ],
+      "material": "sumu"
+    },
+    {
+      "provenance": "conjecture",
+      "source": "Present-day infill (photographic record); dimensions not in survey corpus",
+      "phase": "enclosure",
+      "id": "ling-E3",
+      "name_zh": "直棂窗棂条",
+      "name_en": "Lattice window bar",
+      "role": "Vertical bar of the 直棂窗 — the early straight-mullion window type.",
+      "geometry": {
+        "type": "box",
+        "w": 4,
+        "h": 104.4,
+        "d": 6
+      },
+      "position": [
+        200,
+        146.2,
+        300
+      ],
+      "material": "sumu"
+    },
+    {
+      "provenance": "conjecture",
+      "source": "Present-day infill (photographic record); dimensions not in survey corpus",
+      "phase": "enclosure",
+      "id": "ling-E4",
+      "name_zh": "直棂窗棂条",
+      "name_en": "Lattice window bar",
+      "role": "Vertical bar of the 直棂窗 — the early straight-mullion window type.",
+      "geometry": {
+        "type": "box",
+        "w": 4,
+        "h": 104.4,
+        "d": 6
+      },
+      "position": [
+        216.66666666666669,
+        146.2,
+        300
+      ],
+      "material": "sumu"
+    },
+    {
+      "provenance": "conjecture",
+      "source": "Present-day infill (photographic record); dimensions not in survey corpus",
+      "phase": "enclosure",
+      "id": "ling-E5",
+      "name_zh": "直棂窗棂条",
+      "name_en": "Lattice window bar",
+      "role": "Vertical bar of the 直棂窗 — the early straight-mullion window type.",
+      "geometry": {
+        "type": "box",
+        "w": 4,
+        "h": 104.4,
+        "d": 6
+      },
+      "position": [
+        233.33333333333331,
+        146.2,
+        300
+      ],
+      "material": "sumu"
+    },
+    {
+      "provenance": "conjecture",
+      "source": "Present-day infill (photographic record); dimensions not in survey corpus",
+      "phase": "enclosure",
+      "id": "ling-E6",
+      "name_zh": "直棂窗棂条",
+      "name_en": "Lattice window bar",
+      "role": "Vertical bar of the 直棂窗 — the early straight-mullion window type.",
+      "geometry": {
+        "type": "box",
+        "w": 4,
+        "h": 104.4,
+        "d": 6
+      },
+      "position": [
+        250,
+        146.2,
+        300
+      ],
+      "material": "sumu"
+    },
+    {
+      "provenance": "conjecture",
+      "source": "Present-day infill (photographic record); dimensions not in survey corpus",
+      "phase": "enclosure",
+      "id": "ling-E7",
+      "name_zh": "直棂窗棂条",
+      "name_en": "Lattice window bar",
+      "role": "Vertical bar of the 直棂窗 — the early straight-mullion window type.",
+      "geometry": {
+        "type": "box",
+        "w": 4,
+        "h": 104.4,
+        "d": 6
+      },
+      "position": [
+        266.6666666666667,
+        146.2,
+        300
+      ],
+      "material": "sumu"
+    },
+    {
+      "provenance": "conjecture",
+      "source": "Present-day infill (photographic record); dimensions not in survey corpus",
+      "phase": "enclosure",
+      "id": "ling-E8",
+      "name_zh": "直棂窗棂条",
+      "name_en": "Lattice window bar",
+      "role": "Vertical bar of the 直棂窗 — the early straight-mullion window type.",
+      "geometry": {
+        "type": "box",
+        "w": 4,
+        "h": 104.4,
+        "d": 6
+      },
+      "position": [
+        283.33333333333337,
+        146.2,
+        300
+      ],
+      "material": "sumu"
+    },
+    {
+      "provenance": "conjecture",
+      "source": "Present-day infill (photographic record); dimensions not in survey corpus",
+      "phase": "enclosure",
+      "id": "ling-E9",
+      "name_zh": "直棂窗棂条",
+      "name_en": "Lattice window bar",
+      "role": "Vertical bar of the 直棂窗 — the early straight-mullion window type.",
+      "geometry": {
+        "type": "box",
+        "w": 4,
+        "h": 104.4,
+        "d": 6
+      },
+      "position": [
+        300,
+        146.2,
+        300
+      ],
+      "material": "sumu"
+    },
+    {
+      "provenance": "conjecture",
+      "source": "Present-day infill (photographic record); dimensions not in survey corpus",
+      "phase": "enclosure",
+      "id": "ling-E10",
+      "name_zh": "直棂窗棂条",
+      "name_en": "Lattice window bar",
+      "role": "Vertical bar of the 直棂窗 — the early straight-mullion window type.",
+      "geometry": {
+        "type": "box",
+        "w": 4,
+        "h": 104.4,
+        "d": 6
+      },
+      "position": [
+        316.66666666666663,
+        146.2,
+        300
+      ],
+      "material": "sumu"
+    },
+    {
+      "provenance": "conjecture",
+      "source": "Present-day infill (photographic record); dimensions not in survey corpus",
+      "phase": "enclosure",
+      "id": "ling-E11",
+      "name_zh": "直棂窗棂条",
+      "name_en": "Lattice window bar",
+      "role": "Vertical bar of the 直棂窗 — the early straight-mullion window type.",
+      "geometry": {
+        "type": "box",
+        "w": 4,
+        "h": 104.4,
+        "d": 6
+      },
+      "position": [
+        333.33333333333337,
+        146.2,
+        300
+      ],
+      "material": "sumu"
+    },
+    {
+      "provenance": "conjecture",
+      "source": "Present-day infill (photographic record); dimensions not in survey corpus",
+      "phase": "enclosure",
+      "id": "door-E",
+      "name_zh": "板门",
+      "name_en": "Plank door leaf",
+      "role": "Double plank door of the central bay.",
+      "geometry": {
+        "type": "box",
+        "w": 138,
+        "h": 200,
+        "d": 8
+      },
+      "position": [
+        71,
+        100,
+        300
+      ],
+      "material": "door"
     }
   ]
 }
