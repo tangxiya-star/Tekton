@@ -5,6 +5,64 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { OrbitControls, useGLTF, Environment, useTexture } from "@react-three/drei";
 import * as THREE from "three";
 import spec from "../artifacts/structural-spec.json";
+import PlaybackControls, { PlaybackControlsProps } from "./PlaybackControls";
+
+/** First-person camera controller with WASD movement and mouse look. */
+function FirstPersonController({ enabled }: { enabled: boolean }) {
+  const { camera } = useThree();
+  const keysPressed = useRef<Record<string, boolean>>({});
+  const pitchRef = useRef(0);
+  const yawRef = useRef(0);
+  const velocity = useRef(new THREE.Vector3());
+  const moveSpeed = 0.12;
+  const mouseSpeed = 0.005;
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      keysPressed.current[e.key.toLowerCase()] = true;
+    };
+    const handleKeyUp = (e: KeyboardEvent) => {
+      keysPressed.current[e.key.toLowerCase()] = false;
+    };
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!enabled) return;
+      yawRef.current -= e.movementX * mouseSpeed;
+      pitchRef.current -= e.movementY * mouseSpeed;
+      pitchRef.current = Math.max(-Math.PI / 2, Math.min(Math.PI / 2, pitchRef.current));
+
+      const qx = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(1, 0, 0), pitchRef.current);
+      const qy = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), yawRef.current);
+      camera.quaternion.multiplyQuaternions(qy, qx);
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    window.addEventListener("keyup", handleKeyUp);
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("keyup", handleKeyUp);
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, [camera, enabled]);
+
+  useFrame(() => {
+    if (!enabled) return;
+
+    velocity.current.set(0, 0, 0);
+    if (keysPressed.current["w"]) velocity.current.z -= moveSpeed;
+    if (keysPressed.current["s"]) velocity.current.z += moveSpeed;
+    if (keysPressed.current["a"]) velocity.current.x -= moveSpeed;
+    if (keysPressed.current["d"]) velocity.current.x += moveSpeed;
+    if (keysPressed.current[" "]) velocity.current.y += moveSpeed;
+    if (keysPressed.current["shift"]) velocity.current.y -= moveSpeed;
+
+    velocity.current.applyQuaternion(camera.quaternion);
+    camera.position.add(velocity.current);
+  });
+
+  return null;
+}
 
 const FEN = 0.0165; // 1 fen = 16.5 mm → scene meters
 
@@ -448,12 +506,15 @@ function Scene({
   mode,
   doorRefs,
   onEnter,
+  spec: specOverride,
 }: {
   mode: ViewMode;
   doorRefs: React.MutableRefObject<DoorRegistry>;
   onEnter: () => void;
+  spec?: typeof spec;
 }) {
-  const components = useMemo(() => spec.components as Component[], []);
+  const currentSpec = specOverride || spec;
+  const components = useMemo(() => currentSpec.components as Component[], [currentSpec]);
   const tex: TexKit = {
     wood: usePbr("rough_wood", [1, 1]),
     woodR: usePbr("rough_wood", [1, 1], true),
@@ -541,8 +602,37 @@ const MODE_BLURB: Record<ViewMode, string> = {
 
 export default function Viewer() {
   const [mode, setMode] = useState<ViewMode>("today");
+  const [firstPerson, setFirstPerson] = useState(false);
+  const [playbackMode, setPlaybackMode] = useState(false);
+  const [playbackIndex, setPlaybackIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [playbackSpeed, setPlaybackSpeed] = useState(1);
+  const [loadedSpec, setLoadedSpec] = useState<typeof spec>(spec);
+  const [playbackMeta, setPlaybackMeta] = useState<any>(null);
+
+  // Load playback state when index changes in playback mode
+  useEffect(() => {
+    if (!playbackMode) return;
+    const filename = `state-${String(playbackIndex).padStart(3, "0")}.json`;
+    fetch(`/playback-states/${filename}`)
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.json();
+      })
+      .then((data) => {
+        // Force state update to trigger re-renders
+        setLoadedSpec(data);
+        setPlaybackMeta(data.playback);
+        console.log(`[Playback] Loaded state ${playbackIndex}: ${data.playback.description} (${data.components.length} components)`);
+      })
+      .catch((err) => {
+        console.error(`[Playback] Failed to load state-${String(playbackIndex).padStart(3, "0")}.json:`, err);
+      });
+  }, [playbackIndex, playbackMode]);
+
   const prov = mode === "prov";
-  const components = useMemo(() => spec.components as Component[], []);
+  const currentSpec = playbackMode ? loadedSpec : spec;
+  const components = useMemo(() => currentSpec.components as Component[], [currentSpec]);
   const cam = useMemo(() => {
     const key = new URLSearchParams(window.location.search).get("cam") ?? "default";
     return CAMS[key] ?? CAMS.default;
@@ -580,26 +670,29 @@ export default function Viewer() {
           {!prov && (
             <Environment files="/hdri/kloofendal_overcast_puresky_1k.hdr" environmentIntensity={1.0} />
           )}
-          <Scene mode={mode} doorRefs={doorRefs} onEnter={() => setEntered(true)} />
+          <Scene mode={mode} doorRefs={doorRefs} onEnter={() => setEntered(true)} spec={currentSpec} />
         </Suspense>
         <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.67, 0]} receiveShadow>
           <circleGeometry args={[60, 64]} />
           <meshStandardMaterial color="#191a1c" roughness={1} />
         </mesh>
-        <OrbitControls
-          makeDefault
-          onStart={() => {
-            flyingRef.current = false; // any user input instantly cancels the fly-in
-          }}
-          maxPolarAngle={Math.PI / 2.02}
-          minDistance={2.4}
-          maxDistance={45}
-        />
+        {!firstPerson && (
+          <OrbitControls
+            makeDefault
+            onStart={() => {
+              flyingRef.current = false; // any user input instantly cancels the fly-in
+            }}
+            maxPolarAngle={Math.PI / 2.02}
+            minDistance={2.4}
+            maxDistance={45}
+          />
+        )}
+        {firstPerson && <FirstPersonController enabled={firstPerson} />}
         <CameraRig goal={goal} entered={entered} doorRefs={doorRefs} flyingRef={flyingRef} />
       </Canvas>
 
-      {/* enter / exit the hall */}
-      <div style={{ position: "absolute", top: 24, right: 28 }}>
+      {/* enter / exit the hall + first-person toggle + playback mode */}
+      <div style={{ position: "absolute", top: 24, right: 28, display: "flex", gap: 12, flexDirection: "column", alignItems: "flex-end" }}>
         <button
           onClick={() => setEntered((v) => !v)}
           style={{
@@ -614,6 +707,40 @@ export default function Viewer() {
           }}
         >
           {entered ? "← 退出 Exit" : "入殿礼佛 Enter ⊙"}
+        </button>
+        <button
+          onClick={() => setFirstPerson((v) => !v)}
+          style={{
+            background: firstPerson ? "var(--ink)" : "transparent",
+            color: firstPerson ? "#141416" : "var(--ink)",
+            border: "1px solid var(--ink-dim)",
+            padding: "9px 18px",
+            fontSize: 14,
+            fontFamily: "inherit",
+            letterSpacing: 2,
+            cursor: "pointer",
+          }}
+        >
+          {firstPerson ? "↔ 轨道视角 Orbit" : "⊕ 第一视角 FPS"}
+        </button>
+        <button
+          onClick={() => {
+            setPlaybackMode((v) => !v);
+            setIsPlaying(false);
+            setPlaybackIndex(0);
+          }}
+          style={{
+            background: playbackMode ? "var(--ink)" : "transparent",
+            color: playbackMode ? "#141416" : "var(--ink)",
+            border: "1px solid var(--ink-dim)",
+            padding: "9px 18px",
+            fontSize: 14,
+            fontFamily: "inherit",
+            letterSpacing: 2,
+            cursor: "pointer",
+          }}
+        >
+          {playbackMode ? "🔴 回放中 Playback" : "⏺ 回放模式 Playback"}
         </button>
       </div>
 
@@ -667,6 +794,23 @@ export default function Viewer() {
           </div>
         )}
       </div>
+
+      {/* Playback controls */}
+      {playbackMode && playbackMeta && (
+        <PlaybackControls
+          currentState={{
+            index: playbackIndex,
+            phase: playbackMeta.phase,
+            description: playbackMeta.description,
+            totalStates: playbackMeta.totalStates,
+          }}
+          onStateChange={setPlaybackIndex}
+          isPlaying={isPlaying}
+          onPlayPauseChange={setIsPlaying}
+          speed={playbackSpeed}
+          onSpeedChange={setPlaybackSpeed}
+        />
+      )}
     </div>
   );
 }
