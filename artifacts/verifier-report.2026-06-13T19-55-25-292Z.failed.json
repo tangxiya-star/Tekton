@@ -1,0 +1,261 @@
+{
+  "generated_at": "2026-06-13T19:55:25.292Z",
+  "spec": "artifacts/structural-spec.json",
+  "screenshot_refresh": {
+    "refreshed": false,
+    "note": "viewer not reachable at http://localhost:3003; grading existing PNGs"
+  },
+  "summary": {
+    "total": 20,
+    "pass": 19,
+    "fail": 1,
+    "critical_failures": []
+  },
+  "checks": [
+    {
+      "id": "V01",
+      "assert": "bay rhythm facade = 200:300:200 fen (±2%)",
+      "method": "spec-geometry",
+      "pass": true,
+      "measured": [
+        "200:300:200",
+        "200:300:200"
+      ],
+      "expected": "200:300:200 (both eave walls)"
+    },
+    {
+      "id": "V02",
+      "assert": "depth bays equal, 200 fen each (±2%)",
+      "method": "spec-geometry",
+      "pass": true,
+      "measured": [
+        "200:200:200",
+        "200:200:200"
+      ],
+      "expected": "200:200:200 (both gable walls)"
+    },
+    {
+      "id": "V03",
+      "assert": "central bay : side bay = 3:2",
+      "method": "spec-geometry",
+      "pass": true,
+      "measured": 1.5,
+      "expected": 1.5
+    },
+    {
+      "id": "V04",
+      "assert": "pingzhu height = 13 chi; corner columns +2 fen rise",
+      "method": "spec-geometry",
+      "pass": true,
+      "measured": {
+        "pingzhu_fen": 236.4,
+        "corner_fen": 238.4,
+        "corner_count": 4
+      },
+      "expected": {
+        "pingzhu_fen": 236.36,
+        "corner_rise_fen": 2
+      }
+    },
+    {
+      "id": "V05",
+      "assert": "puzuo = 5-puzuo, 2 hua-gong tiers, column-top only, no intercolumnar sets",
+      "method": "spec-geometry",
+      "pass": true,
+      "measured": {
+        "sets": 12,
+        "problems": []
+      },
+      "expected": "12 sets × {ludou, hg1, hg2, nidao}, each on a column axis"
+    },
+    {
+      "id": "V06",
+      "assert": "outward jumps 27+20 fen; liaoyan offset from niuji = 47 fen",
+      "method": "spec-geometry",
+      "pass": true,
+      "measured": {
+        "liaoyan_offsets": [
+          47,
+          47,
+          47,
+          47
+        ],
+        "ling_offsets": [
+          47
+        ]
+      },
+      "expected": "47 fen (27 + 20) on all four liaoyan fang and every ling arm"
+    },
+    {
+      "id": "V07",
+      "assert": "puzuo stack height = 95 fen from ludou underside to liaoyan top",
+      "method": "spec-geometry",
+      "pass": true,
+      "measured": [
+        95
+      ],
+      "expected": 95
+    },
+    {
+      "id": "V08",
+      "assert": "purlin intervals = 150 fen × 4; liaoyan span = 694 fen",
+      "method": "spec-geometry",
+      "pass": true,
+      "measured": {
+        "purlin_intervals": [
+          150,
+          150,
+          150,
+          150
+        ],
+        "liaoyan_spans": [
+          694
+        ]
+      },
+      "expected": {
+        "purlin_intervals": "150 × 4",
+        "liaoyan_span": 694
+      }
+    },
+    {
+      "id": "V09",
+      "assert": "roof rise ≈ 130 fen (ratio ≈ 1:2.67), GENTLER than Fashi 1:3 — must NOT be 'corrected'",
+      "method": "spec-geometry",
+      "pass": true,
+      "critical": true,
+      "measured": {
+        "rise_fen": 130,
+        "half_span_fen": 347,
+        "ratio": "1:2.67"
+      },
+      "expected": {
+        "rise_fen": 130,
+        "ratio": "1:2.67"
+      },
+      "note": "measured deviation from Fashi 1:3 preserved, as required"
+    },
+    {
+      "id": "V10",
+      "assert": "hip-gable roof form; open interior, zero interior columns",
+      "method": "spec-geometry",
+      "pass": true,
+      "measured": {
+        "hip_planes": 2,
+        "gable_planes": 2,
+        "interior_columns": []
+      },
+      "expected": {
+        "hip_planes": 2,
+        "gable_planes": 2,
+        "interior_columns": []
+      }
+    },
+    {
+      "id": "V11",
+      "assert": "provenance audit: every component classed+sourced; eave projection, ridge members, square columns = conjecture",
+      "method": "spec-geometry",
+      "pass": true,
+      "measured": {
+        "total": 388,
+        "unsourced": [],
+        "conjecture_required": 144,
+        "misclassed": []
+      },
+      "expected": "0 unsourced, 0 misclassed"
+    },
+    {
+      "id": "V12",
+      "assert": "load-bearing hua-gong 11 fen wide vs 10 fen elsewhere (zucai visible)",
+      "method": "spec-geometry",
+      "pass": true,
+      "measured": {
+        "violations": [],
+        "strengthened_2nd_jumps": 4
+      },
+      "expected": "hg1=11 everywhere; hg2=11 on the 4 central-bay eave-wall sets, 10 elsewhere; nidao/ling=10"
+    },
+    {
+      "id": "P01",
+      "assert": "all six canonical views rendered",
+      "method": "pixels",
+      "pass": true,
+      "measured": {
+        "missing": []
+      }
+    },
+    {
+      "id": "P02-default",
+      "assert": "render is not blank (>3% non-background pixels)",
+      "method": "pixels",
+      "pass": true,
+      "measured": {
+        "non_background": "72.1%"
+      },
+      "note": "PNG predates structural-spec.json — re-run screenshots"
+    },
+    {
+      "id": "P02-front",
+      "assert": "render is not blank (>3% non-background pixels)",
+      "method": "pixels",
+      "pass": true,
+      "measured": {
+        "non_background": "60.3%"
+      },
+      "note": "PNG predates structural-spec.json — re-run screenshots"
+    },
+    {
+      "id": "P02-bracket",
+      "assert": "render is not blank (>3% non-background pixels)",
+      "method": "pixels",
+      "pass": true,
+      "measured": {
+        "non_background": "98.6%"
+      },
+      "note": "PNG predates structural-spec.json — re-run screenshots"
+    },
+    {
+      "id": "P02-eave",
+      "assert": "render is not blank (>3% non-background pixels)",
+      "method": "pixels",
+      "pass": true,
+      "measured": {
+        "non_background": "89.4%"
+      },
+      "note": "PNG predates structural-spec.json — re-run screenshots"
+    },
+    {
+      "id": "P02-altar",
+      "assert": "render is not blank (>3% non-background pixels)",
+      "method": "pixels",
+      "pass": true,
+      "measured": {
+        "non_background": "95.4%"
+      },
+      "note": "PNG predates structural-spec.json — re-run screenshots"
+    },
+    {
+      "id": "P02-provenance",
+      "assert": "render is not blank (>3% non-background pixels)",
+      "method": "pixels",
+      "pass": true,
+      "measured": {
+        "non_background": "56.8%"
+      },
+      "note": "PNG predates structural-spec.json — re-run screenshots"
+    },
+    {
+      "id": "P03",
+      "assert": "provenance view shows all four evidence-class colors",
+      "method": "pixels",
+      "pass": false,
+      "measured": {
+        "class_pixel_pct": {
+          "measured": 0.011,
+          "reconstructed_design": 0.011,
+          "rule_derived": 0.057,
+          "conjecture": 0
+        }
+      }
+    }
+  ]
+}

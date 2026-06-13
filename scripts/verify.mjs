@@ -37,6 +37,9 @@ if (BUILDING === "notre-dame" || BUILDING === "notredame") {
 
 const SPEC_PATH = "artifacts/structural-spec.json";
 const REPORT_PATH = "artifacts/verifier-report.json";
+// Namespaced Nanchan report (INT-07): written alongside the canonical report so
+// each building's viewer HUD can fetch its own. ND keeps verifier-report.notre-dame.json.
+const NANCHAN_REPORT_PATH = "artifacts/verifier-report.nanchan.json";
 const spec = JSON.parse(readFileSync(SPEC_PATH, "utf8"));
 const comps = spec.components;
 
@@ -444,6 +447,8 @@ const report = {
   checks: all,
 };
 writeFileSync(REPORT_PATH, JSON.stringify(report, null, 2));
+// INT-07: also emit the namespaced Nanchan report (additive; canonical path unchanged).
+writeFileSync(NANCHAN_REPORT_PATH, JSON.stringify(report, null, 2));
 // PRD §7.4: reports are kept, including failures — a logged fail→revise→pass
 // cycle is evidence, not a blemish. Failed runs get an immutable copy.
 if (failures.length) {

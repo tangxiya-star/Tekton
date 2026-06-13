@@ -5,6 +5,66 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { OrbitControls, useGLTF, Environment, useTexture } from "@react-three/drei";
 import * as THREE from "three";
 import spec from "../artifacts/structural-spec.json";
+import PlaybackControls, { PlaybackControlsProps } from "./PlaybackControls";
+import { AnnotationPanel, AnnotationData } from "./AnnotationPanel";
+import { ClickHandler } from "./ClickHandler";
+
+/** First-person camera controller with WASD movement and mouse look. */
+function FirstPersonController({ enabled }: { enabled: boolean }) {
+  const { camera } = useThree();
+  const keysPressed = useRef<Record<string, boolean>>({});
+  const pitchRef = useRef(0);
+  const yawRef = useRef(0);
+  const velocity = useRef(new THREE.Vector3());
+  const moveSpeed = 0.12;
+  const mouseSpeed = 0.005;
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      keysPressed.current[e.key.toLowerCase()] = true;
+    };
+    const handleKeyUp = (e: KeyboardEvent) => {
+      keysPressed.current[e.key.toLowerCase()] = false;
+    };
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!enabled) return;
+      yawRef.current -= e.movementX * mouseSpeed;
+      pitchRef.current -= e.movementY * mouseSpeed;
+      pitchRef.current = Math.max(-Math.PI / 2, Math.min(Math.PI / 2, pitchRef.current));
+
+      const qx = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(1, 0, 0), pitchRef.current);
+      const qy = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), yawRef.current);
+      camera.quaternion.multiplyQuaternions(qy, qx);
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    window.addEventListener("keyup", handleKeyUp);
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("keyup", handleKeyUp);
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, [camera, enabled]);
+
+  useFrame(() => {
+    if (!enabled) return;
+
+    velocity.current.set(0, 0, 0);
+    if (keysPressed.current["w"]) velocity.current.z -= moveSpeed;
+    if (keysPressed.current["s"]) velocity.current.z += moveSpeed;
+    if (keysPressed.current["a"]) velocity.current.x -= moveSpeed;
+    if (keysPressed.current["d"]) velocity.current.x += moveSpeed;
+    if (keysPressed.current[" "]) velocity.current.y += moveSpeed;
+    if (keysPressed.current["shift"]) velocity.current.y -= moveSpeed;
+
+    velocity.current.applyQuaternion(camera.quaternion);
+    camera.position.add(velocity.current);
+  });
+
+  return null;
+}
 
 const FEN = 0.0165; // 1 fen = 16.5 mm → scene meters
 
@@ -165,11 +225,13 @@ type TexKit = {
   woodR: PbrSet;  // rotated 90° — grain along U for horizontal box members
   roof: PbrSet;
   plaster: PbrSet;
+  cleanPlaster: PbrSet;  // clean white plaster for recon mode
   stone: PbrSet;
 };
 
 const TIMBER_MATS = new Set(["zhu", "sumu", "door", "lv"]);
 const TIMBER_PHASES = new Set(["columns", "puzuo", "frame"]);
+const RECON_ZHU_PHASES = new Set(["columns", "puzuo", "frame"]);
 
 /** Photo-derived statue mesh: scaled so its height equals the measured chi value. */
 function GltfMember({ c, mode }: { c: Component; mode: ViewMode }) {
@@ -191,9 +253,10 @@ function GltfMember({ c, mode }: { c: Component; mode: ViewMode }) {
       const mesh = o as THREE.Mesh;
       if (mesh.isMesh) {
         mesh.castShadow = mesh.receiveShadow = true;
+        mesh.userData.componentId = c.id;
         if (provMode) {
           // unlit + tone-mapping off → the pixel equals PROV_COLORS exactly,
-          // so the render matches the legend swatches (and the vision verifier).
+          // matching the legend swatches and the P03 vision verifier histogram.
           mesh.material = new THREE.MeshBasicMaterial({
             color: PROV_COLORS[c.provenance],
             toneMapped: false,
@@ -286,9 +349,15 @@ function Member({
       tintKey = "huiwa";
     } else if (isTimber) {
       set = g.type === "cylinder" || g.type === "lathe" ? tex.wood : tex.woodR;
-      tintKey = c.material && RECON_TINTS[c.material] ? c.material : "sumu";
+      tintKey =
+        c.material && RECON_TINTS[c.material]
+          ? c.material
+          : mode === "recon" && RECON_ZHU_PHASES.has(c.phase)
+            ? "zhu"
+            : "sumu";
     } else if (c.material === "bai") {
-      set = tex.plaster;
+      // Use appropriate plaster texture based on mode
+      set = mode === "recon" ? tex.cleanPlaster : tex.plaster;
       tintKey = "bai";
     } else if (c.material === "stone" || c.phase === "platform") {
       set = tex.stone;
@@ -311,23 +380,30 @@ function Member({
     return col;
   }, [provMode, mode, c.provenance, c.material, c.phase, c.id, tintKey]);
 
-  const side = g.type === "poly" ? THREE.DoubleSide : THREE.FrontSide;
+  const isReconWhiteWall = mode === "recon" && c.material === "bai" && !provMode;
+
   // provenance mode: unlit + tone-mapping off so the rendered pixel equals
-  // PROV_COLORS exactly, matching the legend swatches and the vision verifier.
+  // PROV_COLORS exactly, matching the legend swatches and the P03 vision verifier.
   const mat = provMode ? (
-    <meshBasicMaterial color={color} toneMapped={false} side={side} />
+    <meshBasicMaterial
+      key={`prov-${c.material ?? c.phase}`}
+      color={color}
+      toneMapped={false}
+      side={g.type === "poly" ? THREE.DoubleSide : THREE.FrontSide}
+    />
   ) : (
     <meshStandardMaterial
+      key={`${mode}-${c.material ?? c.phase}`}
       color={color}
-      map={set?.map}
-      normalMap={set?.normalMap}
-      normalScale={set ? new THREE.Vector2(0.9, 0.9) : undefined}
-      aoMap={set?.arm}
-      roughnessMap={set?.arm}
+      map={isReconWhiteWall ? null : set?.map ?? null}
+      normalMap={isReconWhiteWall ? null : set?.normalMap ?? null}
+      normalScale={isReconWhiteWall ? undefined : set ? new THREE.Vector2(0.9, 0.9) : undefined}
+      aoMap={isReconWhiteWall ? null : set?.arm ?? null}
+      roughnessMap={isReconWhiteWall ? null : set?.arm ?? null}
       metalness={0}
-      roughness={0.97}
+      roughness={isReconWhiteWall ? 0.5 : 0.97}
       envMapIntensity={0.35}
-      side={side}
+      side={g.type === "poly" ? THREE.DoubleSide : THREE.FrontSide}
     />
   );
 
@@ -346,6 +422,7 @@ function Member({
           position={[pos[0] - hingeX, 0, 0]}
           castShadow
           receiveShadow
+          userData={{ componentId: c.id }}
           onClick={(e) => {
             e.stopPropagation();
             onEnter();
@@ -374,6 +451,7 @@ function Member({
         geometry={customGeo!}
         castShadow
         receiveShadow
+        userData={{ componentId: c.id }}
       >
         {mat}
       </mesh>
@@ -382,7 +460,7 @@ function Member({
 
   if (g.type === "capsule") {
     return (
-      <mesh position={pos} rotation={rot} castShadow receiveShadow>
+      <mesh position={pos} rotation={rot} castShadow receiveShadow userData={{ componentId: c.id }}>
         <capsuleGeometry args={[g.r!, g.h!, 6, 14]} />
         {mat}
       </mesh>
@@ -391,7 +469,7 @@ function Member({
 
   if (g.type === "torus") {
     return (
-      <mesh position={pos} rotation={rot} castShadow receiveShadow>
+      <mesh position={pos} rotation={rot} castShadow receiveShadow userData={{ componentId: c.id }}>
         <torusGeometry args={[g.r!, g.rt!, 12, 28]} />
         {mat}
       </mesh>
@@ -400,7 +478,7 @@ function Member({
 
   if (g.type === "poly") {
     return (
-      <mesh geometry={customGeo!} castShadow receiveShadow>
+      <mesh geometry={customGeo!} castShadow receiveShadow userData={{ componentId: c.id }}>
         {mat}
       </mesh>
     );
@@ -414,6 +492,7 @@ function Member({
         scale={(g.scale ?? [1, 1, 1]) as [number, number, number]}
         castShadow
         receiveShadow
+        userData={{ componentId: c.id }}
       >
         <sphereGeometry args={[g.r!, 24, 18]} />
         {mat}
@@ -423,7 +502,7 @@ function Member({
 
   if (g.type === "cone") {
     return (
-      <mesh position={pos} rotation={rot} castShadow receiveShadow>
+      <mesh position={pos} rotation={rot} castShadow receiveShadow userData={{ componentId: c.id }}>
         <cylinderGeometry args={[g.rTop ?? 0.01, g.r!, g.h!, 18]} />
         {mat}
       </mesh>
@@ -436,7 +515,7 @@ function Member({
       g.axis === "x" ? [0, 0, Math.PI / 2] : g.axis === "z" ? [Math.PI / 2, 0, 0] : [0, 0, 0];
     return (
       <group position={pos} rotation={rot}>
-        <mesh rotation={axisRot} castShadow receiveShadow>
+        <mesh rotation={axisRot} castShadow receiveShadow userData={{ componentId: c.id }}>
           <cylinderGeometry args={[g.r! * taper, g.r!, g.h!, 14]} />
           {mat}
         </mesh>
@@ -444,7 +523,7 @@ function Member({
     );
   }
   return (
-    <mesh position={pos} rotation={rot} castShadow receiveShadow>
+    <mesh position={pos} rotation={rot} castShadow receiveShadow userData={{ componentId: c.id }}>
       <boxGeometry args={[g.w!, g.h!, g.d!]} />
       {mat}
     </mesh>
@@ -455,25 +534,38 @@ function Scene({
   mode,
   doorRefs,
   onEnter,
+  spec: specOverride,
+  raycaster,
+  mouse,
+  onComponentClick,
 }: {
   mode: ViewMode;
   doorRefs: React.MutableRefObject<DoorRegistry>;
   onEnter: () => void;
+  spec?: typeof spec;
+  raycaster: React.MutableRefObject<THREE.Raycaster>;
+  mouse: React.MutableRefObject<THREE.Vector2>;
+  onComponentClick: (componentId: string, screenPos: { x: number; y: number }) => void;
 }) {
-  const components = useMemo(() => spec.components as Component[], []);
+  const currentSpec = specOverride || spec;
+  const components = useMemo(() => currentSpec.components as Component[], [currentSpec]);
   const tex: TexKit = {
     wood: usePbr("rough_wood", [1, 1]),
     woodR: usePbr("rough_wood", [1, 1], true),
     roof: usePbr("roof_tiles_14", [6, 3]),
     plaster: usePbr("worn_plaster_wall", [2, 1]),
+    cleanPlaster: usePbr("clean_plaster_wall", [2, 1]),
     stone: usePbr("granite_tile", [4, 1]),
   };
   return (
-    <group scale={FEN}>
-      {components.map((c) => (
-        <Member key={c.id} c={c} mode={mode} tex={tex} doorRefs={doorRefs} onEnter={onEnter} />
-      ))}
-    </group>
+    <>
+      <ClickHandler raycaster={raycaster} mouse={mouse} onComponentClick={onComponentClick} />
+      <group scale={FEN}>
+        {components.map((c) => (
+          <Member key={c.id} c={c} mode={mode} tex={tex} doorRefs={doorRefs} onEnter={onEnter} />
+        ))}
+      </group>
+    </>
   );
 }
 
@@ -548,8 +640,49 @@ const MODE_BLURB: Record<ViewMode, string> = {
 
 export default function Viewer() {
   const [mode, setMode] = useState<ViewMode>("today");
+  const [firstPerson, setFirstPerson] = useState(false);
+  const [playbackMode, setPlaybackMode] = useState(false);
+  const [playbackIndex, setPlaybackIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [playbackSpeed, setPlaybackSpeed] = useState(1);
+  const [loadedSpec, setLoadedSpec] = useState<typeof spec>(spec);
+  const [playbackMeta, setPlaybackMeta] = useState<any>(null);
+  const [selectedComponent, setSelectedComponent] = useState<(Component & { annotation?: AnnotationData }) | null>(null);
+  const [annotationPos, setAnnotationPos] = useState({ x: 0, y: 0 });
+  const raycasterRef = useRef<THREE.Raycaster>(new THREE.Raycaster());
+  const mouseRef = useRef(new THREE.Vector2());
+
+  // Load playback state when index changes in playback mode
+  useEffect(() => {
+    if (!playbackMode) return;
+    const abortController = new AbortController();
+    const filename = `state-${String(playbackIndex).padStart(3, "0")}.json`;
+    fetch(`/playback-states/${filename}`, { signal: abortController.signal })
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.json();
+      })
+      .then((data) => {
+        // Validate fetched data structure
+        if (!data.playback || !data.components || !Array.isArray(data.components)) {
+          throw new Error("Invalid playback state structure: missing playback or components");
+        }
+        // Force state update to trigger re-renders
+        setLoadedSpec(data);
+        setPlaybackMeta(data.playback);
+        console.log(`[Playback] Loaded state ${playbackIndex}: ${data.playback.description} (${data.components.length} components)`);
+      })
+      .catch((err) => {
+        if (err.name !== "AbortError") {
+          console.error(`[Playback] Failed to load state-${String(playbackIndex).padStart(3, "0")}.json:`, err);
+        }
+      });
+    return () => abortController.abort();
+  }, [playbackIndex, playbackMode]);
+
   const prov = mode === "prov";
-  const components = useMemo(() => spec.components as Component[], []);
+  const currentSpec = playbackMode ? loadedSpec : spec;
+  const components = useMemo(() => currentSpec.components as Component[], [currentSpec]);
   const cam = useMemo(() => {
     const key = new URLSearchParams(window.location.search).get("cam") ?? "default";
     return CAMS[key] ?? CAMS.default;
@@ -558,6 +691,15 @@ export default function Viewer() {
   const flyingRef = useRef(true);
   const [entered, setEntered] = useState(false);
   const goal = entered ? CAMS.altarfront : cam;
+
+  const handleComponentClick = (componentId: string, screenPos: { x: number; y: number }) => {
+    const comp = components.find((c) => c.id === componentId);
+    if (comp && comp.annotation) {
+      setSelectedComponent(comp as Component & { annotation: AnnotationData });
+      setAnnotationPos(screenPos);
+    }
+  };
+
   return (
     <div style={{ width: "100vw", height: "100vh", position: "relative" }}>
       <Canvas camera={{ position: cam.pos, fov: 42 }} shadows>
@@ -587,26 +729,38 @@ export default function Viewer() {
           {!prov && (
             <Environment files="/hdri/kloofendal_overcast_puresky_1k.hdr" environmentIntensity={1.0} />
           )}
-          <Scene mode={mode} doorRefs={doorRefs} onEnter={() => setEntered(true)} />
+          <Scene
+            mode={mode}
+            doorRefs={doorRefs}
+            onEnter={() => setEntered(true)}
+            spec={currentSpec}
+            raycaster={raycasterRef}
+            mouse={mouseRef}
+            onComponentClick={handleComponentClick}
+          />
         </Suspense>
         <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.67, 0]} receiveShadow>
           <circleGeometry args={[60, 64]} />
           <meshStandardMaterial color="#191a1c" roughness={1} />
         </mesh>
-        <OrbitControls
-          makeDefault
-          onStart={() => {
-            flyingRef.current = false; // any user input instantly cancels the fly-in
-          }}
-          maxPolarAngle={Math.PI / 2.02}
-          minDistance={2.4}
-          maxDistance={45}
-        />
+        {!firstPerson && (
+          <OrbitControls
+            makeDefault
+            onStart={() => {
+              flyingRef.current = false; // any user input instantly cancels the fly-in
+            }}
+            maxPolarAngle={Math.PI / 2.02}
+            minDistance={2.4}
+            maxDistance={45}
+          />
+        )}
+        {firstPerson && <FirstPersonController enabled={firstPerson} />}
         <CameraRig goal={goal} entered={entered} doorRefs={doorRefs} flyingRef={flyingRef} />
+        {/* ClickHandler is rendered once inside <Scene>; the duplicate here was removed during integration. */}
       </Canvas>
 
-      {/* enter / exit the hall */}
-      <div style={{ position: "absolute", top: 24, right: 28 }}>
+      {/* enter / exit the hall + first-person toggle + playback mode */}
+      <div style={{ position: "absolute", top: 24, right: 28, display: "flex", gap: 12, flexDirection: "column", alignItems: "flex-end" }}>
         <button
           onClick={() => setEntered((v) => !v)}
           style={{
@@ -621,6 +775,40 @@ export default function Viewer() {
           }}
         >
           {entered ? "← 退出 Exit" : "入殿礼佛 Enter ⊙"}
+        </button>
+        <button
+          onClick={() => setFirstPerson((v) => !v)}
+          style={{
+            background: firstPerson ? "var(--ink)" : "transparent",
+            color: firstPerson ? "#141416" : "var(--ink)",
+            border: "1px solid var(--ink-dim)",
+            padding: "9px 18px",
+            fontSize: 14,
+            fontFamily: "inherit",
+            letterSpacing: 2,
+            cursor: "pointer",
+          }}
+        >
+          {firstPerson ? "↔ 轨道视角 Orbit" : "⊕ 第一视角 FPS"}
+        </button>
+        <button
+          onClick={() => {
+            setPlaybackMode((v) => !v);
+            setIsPlaying(false);
+            setPlaybackIndex(0);
+          }}
+          style={{
+            background: playbackMode ? "var(--ink)" : "transparent",
+            color: playbackMode ? "#141416" : "var(--ink)",
+            border: "1px solid var(--ink-dim)",
+            padding: "9px 18px",
+            fontSize: 14,
+            fontFamily: "inherit",
+            letterSpacing: 2,
+            cursor: "pointer",
+          }}
+        >
+          {playbackMode ? "🔴 回放中 Playback" : "⏺ 回放模式 Playback"}
         </button>
       </div>
 
@@ -674,6 +862,37 @@ export default function Viewer() {
           </div>
         )}
       </div>
+
+      {/* Playback controls */}
+      {playbackMode && playbackMeta && (
+        <PlaybackControls
+          currentState={{
+            index: playbackIndex,
+            phase: playbackMeta.phase,
+            description: playbackMeta.description,
+            totalStates: playbackMeta.totalStates,
+          }}
+          onStateChange={setPlaybackIndex}
+          isPlaying={isPlaying}
+          onPlayPauseChange={setIsPlaying}
+          speed={playbackSpeed}
+          onSpeedChange={setPlaybackSpeed}
+        />
+      )}
+
+      {/* Annotation panel */}
+      {selectedComponent && selectedComponent.annotation && (
+        <AnnotationPanel
+          title_zh={selectedComponent.annotation.title_zh}
+          title_en={selectedComponent.annotation.title_en}
+          desc_zh={selectedComponent.annotation.desc_zh}
+          desc_en={selectedComponent.annotation.desc_en}
+          reference_image={selectedComponent.annotation.reference_image}
+          reference_label={selectedComponent.annotation.reference_label}
+          position={annotationPos}
+          onClose={() => setSelectedComponent(null)}
+        />
+      )}
     </div>
   );
 }

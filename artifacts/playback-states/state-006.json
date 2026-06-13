@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "building": "南禅寺大殿",
+    "building_en": "Main Hall of Nanchan Temple",
+    "date_built": "唐建中三年 (782 CE)",
+    "generated_by": "scripts/derive.mjs (Yingzao Rule Engine)",
+    "canonical_source": "data/nanchan-canonical.json"
+  },
+  "units": {
+    "fen_mm": 16.5,
+    "note": "All dimensions/positions in fen. Scene scale: 1 fen = 16.5 mm."
+  },
+  "phases": [
+    "platform",
+    "columns",
+    "puzuo",
+    "frame",
+    "roof",
+    "enclosure",
+    "statues"
+  ],
+  "key_dimensions": {
+    "total_width_fen": 700,
+    "total_depth_fen": 600,
+    "bay_rhythm": [
+      200,
+      300,
+      200
+    ],
+    "pingzhu_height_fen": 236.4,
+    "puzuo_stack_fen": 95,
+    "liaoyan_top_y": 331.4,
+    "ridge_top_y": 461.4,
+    "rise_fen": 130,
+    "rise_ratio": "1:2.67",
+    "purlin_interval_fen": 150,
+    "liaoyan_span_fen": 694,
+    "outward_jumps_fen": [
+      27,
+      20
+    ]
+  },
+  "components": [
+    {
+      "id": "platform",
+      "name_zh": "台基",
+      "name_en": "Platform",
+      "phase": "platform",
+      "role": "Raised earthen-core masonry platform carrying the entire timber frame.",
+      "geometry": {
+        "type": "box",
+        "w": 960,
+        "h": 40,
+        "d": 860
+      },
+      "position": [
+        0,
+        -20,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "No published dimension in corpus — sized for visual context only"
+    },
+    {
+      "id": "altar",
+      "name_zh": "佛坛",
+      "name_en": "Buddhist altar",
+      "phase": "platform",
+      "role": "U-shaped low altar holding the 14 extant Tang statues; the column-free interior exists to serve it (右绕礼佛 circumambulation ring).",
+      "geometry": {
+        "type": "box",
+        "w": 546.7,
+        "h": 43.6,
+        "d": 428.5
+      },
+      "position": [
+        0,
+        21.8,
+        5.8
+      ],
+      "provenance": "measured",
+      "source": "ZHANG2022"
+    },
+    {
+      "id": "zhuchu-1",
+      "name_zh": "柱础（覆盆）",
+      "name_en": "Column plinth",
+      "phase": "platform",
+      "role": "Stone plinth isolating the column foot from ground moisture.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 17,
+        "h": 9
+      },
+      "position": [
+        -350,
+        2.5,
+        -300
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷三 造柱础之制 「方倍柱之径」",
+      "material": "stone"
+    },
+    {
+      "id": "zhuchu-2",
+      "name_zh": "柱础（覆盆）",
+      "name_en": "Column plinth",
+      "phase": "platform",
+      "role": "Stone plinth isolating the column foot from ground moisture.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 17,
+        "h": 9
+      },
+      "position": [
+        -350,
+        2.5,
+        -100
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷三 造柱础之制 「方倍柱之径」",
+      "material": "stone"
+    },
+    {
+      "id": "zhuchu-3",
+      "name_zh": "柱础（覆盆）",
+      "name_en": "Column plinth",
+      "phase": "platform",
+      "role": "Stone plinth isolating the column foot from ground moisture.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 17,
+        "h": 9
+      },
+      "position": [
+        -350,
+        2.5,
+        100
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷三 造柱础之制 「方倍柱之径」",
+      "material": "stone"
+    },
+    {
+      "id": "zhuchu-4",
+      "name_zh": "柱础（覆盆）",
+      "name_en": "Column plinth",
+      "phase": "platform",
+      "role": "Stone plinth isolating the column foot from ground moisture.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 17,
+        "h": 9
+      },
+      "position": [
+        -350,
+        2.5,
+        300
+      ],
+      "provenance": "rule_derived",
+      "source": "YZFS 卷三 造柱础之制 「方倍柱之径」",
+      "material": "stone"
+    }
+  ],
+  "playback": {
+    "index": 6,
+    "phase": "platform",
+    "description": "platform: +柱础（覆盆）",
+    "totalStates": 339
+  }
+}
