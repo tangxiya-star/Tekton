@@ -428,6 +428,7 @@ function Member({
         geometry={customGeo!}
         castShadow
         receiveShadow
+        userData={{ componentId: c.id }}
       >
         {mat}
       </mesh>
@@ -436,7 +437,7 @@ function Member({
 
   if (g.type === "capsule") {
     return (
-      <mesh position={pos} rotation={rot} castShadow receiveShadow>
+      <mesh position={pos} rotation={rot} castShadow receiveShadow userData={{ componentId: c.id }}>
         <capsuleGeometry args={[g.r!, g.h!, 6, 14]} />
         {mat}
       </mesh>
@@ -445,7 +446,7 @@ function Member({
 
   if (g.type === "torus") {
     return (
-      <mesh position={pos} rotation={rot} castShadow receiveShadow>
+      <mesh position={pos} rotation={rot} castShadow receiveShadow userData={{ componentId: c.id }}>
         <torusGeometry args={[g.r!, g.rt!, 12, 28]} />
         {mat}
       </mesh>
@@ -454,7 +455,7 @@ function Member({
 
   if (g.type === "poly") {
     return (
-      <mesh geometry={customGeo!} castShadow receiveShadow>
+      <mesh geometry={customGeo!} castShadow receiveShadow userData={{ componentId: c.id }}>
         {mat}
       </mesh>
     );
@@ -468,6 +469,7 @@ function Member({
         scale={(g.scale ?? [1, 1, 1]) as [number, number, number]}
         castShadow
         receiveShadow
+        userData={{ componentId: c.id }}
       >
         <sphereGeometry args={[g.r!, 24, 18]} />
         {mat}
@@ -477,7 +479,7 @@ function Member({
 
   if (g.type === "cone") {
     return (
-      <mesh position={pos} rotation={rot} castShadow receiveShadow>
+      <mesh position={pos} rotation={rot} castShadow receiveShadow userData={{ componentId: c.id }}>
         <cylinderGeometry args={[g.rTop ?? 0.01, g.r!, g.h!, 18]} />
         {mat}
       </mesh>
@@ -490,7 +492,7 @@ function Member({
       g.axis === "x" ? [0, 0, Math.PI / 2] : g.axis === "z" ? [Math.PI / 2, 0, 0] : [0, 0, 0];
     return (
       <group position={pos} rotation={rot}>
-        <mesh rotation={axisRot} castShadow receiveShadow>
+        <mesh rotation={axisRot} castShadow receiveShadow userData={{ componentId: c.id }}>
           <cylinderGeometry args={[g.r! * taper, g.r!, g.h!, 14]} />
           {mat}
         </mesh>
@@ -498,7 +500,7 @@ function Member({
     );
   }
   return (
-    <mesh position={pos} rotation={rot} castShadow receiveShadow>
+    <mesh position={pos} rotation={rot} castShadow receiveShadow userData={{ componentId: c.id }}>
       <boxGeometry args={[g.w!, g.h!, g.d!]} />
       {mat}
     </mesh>
@@ -510,11 +512,17 @@ function Scene({
   doorRefs,
   onEnter,
   spec: specOverride,
+  raycaster,
+  mouse,
+  onComponentClick,
 }: {
   mode: ViewMode;
   doorRefs: React.MutableRefObject<DoorRegistry>;
   onEnter: () => void;
   spec?: typeof spec;
+  raycaster: React.MutableRefObject<THREE.Raycaster>;
+  mouse: React.MutableRefObject<THREE.Vector2>;
+  onComponentClick: (componentId: string, screenPos: { x: number; y: number }) => void;
 }) {
   const currentSpec = specOverride || spec;
   const components = useMemo(() => currentSpec.components as Component[], [currentSpec]);
@@ -526,11 +534,14 @@ function Scene({
     stone: usePbr("granite_tile", [4, 1]),
   };
   return (
-    <group scale={FEN}>
-      {components.map((c) => (
-        <Member key={c.id} c={c} mode={mode} tex={tex} doorRefs={doorRefs} onEnter={onEnter} />
-      ))}
-    </group>
+    <>
+      <ClickHandler raycaster={raycaster} mouse={mouse} onComponentClick={onComponentClick} />
+      <group scale={FEN}>
+        {components.map((c) => (
+          <Member key={c.id} c={c} mode={mode} tex={tex} doorRefs={doorRefs} onEnter={onEnter} />
+        ))}
+      </group>
+    </>
   );
 }
 
@@ -694,7 +705,15 @@ export default function Viewer() {
           {!prov && (
             <Environment files="/hdri/kloofendal_overcast_puresky_1k.hdr" environmentIntensity={1.0} />
           )}
-          <Scene mode={mode} doorRefs={doorRefs} onEnter={() => setEntered(true)} spec={currentSpec} />
+          <Scene
+            mode={mode}
+            doorRefs={doorRefs}
+            onEnter={() => setEntered(true)}
+            spec={currentSpec}
+            raycaster={raycasterRef}
+            mouse={mouseRef}
+            onComponentClick={handleComponentClick}
+          />
         </Suspense>
         <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.67, 0]} receiveShadow>
           <circleGeometry args={[60, 64]} />

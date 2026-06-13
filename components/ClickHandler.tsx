@@ -1,8 +1,8 @@
 "use client";
 
-import { useFrame, useThree } from "@react-three/fiber";
+import { useThree } from "@react-three/fiber";
 import * as THREE from "three";
-import { useRef, useCallback, useEffect } from "react";
+import { useCallback, useEffect } from "react";
 
 interface ClickHandlerProps {
   raycaster: React.MutableRefObject<THREE.Raycaster>;
@@ -11,7 +11,7 @@ interface ClickHandlerProps {
 }
 
 export function ClickHandler({ raycaster, mouse, onComponentClick }: ClickHandlerProps) {
-  const { camera, gl } = useThree();
+  const { camera, gl, scene } = useThree();
 
   // Set up event listener on canvas
   const handleCanvasClick = useCallback(
@@ -28,7 +28,7 @@ export function ClickHandler({ raycaster, mouse, onComponentClick }: ClickHandle
 
       // Raycast against all objects in the scene
       const allObjects: THREE.Object3D[] = [];
-      gl.scene.traverse((obj) => {
+      scene.traverse((obj: any) => {
         if (obj instanceof THREE.Mesh) allObjects.push(obj);
       });
 
@@ -51,7 +51,7 @@ export function ClickHandler({ raycaster, mouse, onComponentClick }: ClickHandle
         }
       }
     },
-    [raycaster, mouse, camera, gl, onComponentClick]
+    [raycaster, mouse, camera, scene, onComponentClick]
   );
 
   // Attach click listener
