@@ -613,21 +613,29 @@ export default function Viewer() {
   // Load playback state when index changes in playback mode
   useEffect(() => {
     if (!playbackMode) return;
+    const abortController = new AbortController();
     const filename = `state-${String(playbackIndex).padStart(3, "0")}.json`;
-    fetch(`/playback-states/${filename}`)
+    fetch(`/playback-states/${filename}`, { signal: abortController.signal })
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return res.json();
       })
       .then((data) => {
+        // Validate fetched data structure
+        if (!data.playback || !data.components || !Array.isArray(data.components)) {
+          throw new Error("Invalid playback state structure: missing playback or components");
+        }
         // Force state update to trigger re-renders
         setLoadedSpec(data);
         setPlaybackMeta(data.playback);
         console.log(`[Playback] Loaded state ${playbackIndex}: ${data.playback.description} (${data.components.length} components)`);
       })
       .catch((err) => {
-        console.error(`[Playback] Failed to load state-${String(playbackIndex).padStart(3, "0")}.json:`, err);
+        if (err.name !== "AbortError") {
+          console.error(`[Playback] Failed to load state-${String(playbackIndex).padStart(3, "0")}.json:`, err);
+        }
       });
+    return () => abortController.abort();
   }, [playbackIndex, playbackMode]);
 
   const prov = mode === "prov";
