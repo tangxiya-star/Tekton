@@ -360,6 +360,8 @@ function Member({
     }
   }
 
+  const isReconWhiteWall = mode === "recon" && c.material === "bai" && !provMode;
+
   const color = useMemo(() => {
     if (provMode) return new THREE.Color(PROV_COLORS[c.provenance]);
     if (tintKey) {
@@ -375,14 +377,22 @@ function Member({
     return col;
   }, [provMode, mode, c.provenance, c.material, c.phase, c.id, tintKey]);
 
-  const mat = (
+  const mat = isReconWhiteWall ? (
     <meshStandardMaterial
       color={color}
-      map={!provMode && mode === "recon" && c.material === "bai" ? undefined : set?.map}
-      normalMap={!provMode && mode === "recon" && c.material === "bai" ? undefined : set?.normalMap}
-      normalScale={!provMode && mode === "recon" && c.material === "bai" ? undefined : set ? new THREE.Vector2(0.9, 0.9) : undefined}
-      aoMap={!provMode && mode === "recon" && c.material === "bai" ? undefined : set?.arm}
-      roughnessMap={!provMode && mode === "recon" && c.material === "bai" ? undefined : set?.arm}
+      metalness={0}
+      roughness={0.7}
+      envMapIntensity={0.35}
+      side={g.type === "poly" ? THREE.DoubleSide : THREE.FrontSide}
+    />
+  ) : (
+    <meshStandardMaterial
+      color={color}
+      map={set?.map}
+      normalMap={set?.normalMap}
+      normalScale={set ? new THREE.Vector2(0.9, 0.9) : undefined}
+      aoMap={set?.arm}
+      roughnessMap={set?.arm}
       metalness={0}
       roughness={provMode ? 1 : 0.97}
       envMapIntensity={0.35}
