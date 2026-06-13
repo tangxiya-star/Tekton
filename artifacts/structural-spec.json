@@ -2086,294 +2086,474 @@
       "source": "ZHANG2022 — stack height 95 fen; span 694 fen"
     },
     {
+      "id": "roof-eave-N",
+      "name_zh": "檐口（1975 年复原出檐）",
+      "name_en": "Eave strip (1975 restoration)",
+      "phase": "roof",
+      "role": "Tiled roof plane (rafters + sheathing + tile), derived as a surface between purlin lines.",
+      "geometry": {
+        "type": "poly",
+        "pts": [
+          [
+            -538.8,
+            292.36294269957136,
+            -488.8
+          ],
+          [
+            538.8,
+            292.36294269957136,
+            -488.8
+          ],
+          [
+            397,
+            331.4,
+            -347
+          ],
+          [
+            -397,
+            331.4,
+            -347
+          ]
+        ]
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Pre-repair rafters were short (clearly not Tang appearance); 2340mm is the 1974–75 restoration estimate from platform/column-height ratios. Explicitly unusable as design evidence — MUST render in conjecture color. [QI1980]",
+      "material": "huiwa"
+    },
+    {
+      "id": "roof-eave-W",
+      "name_zh": "山面檐口（1975 年复原出檐）",
+      "name_en": "Gable eave strip",
+      "phase": "roof",
+      "role": "Tiled roof plane (rafters + sheathing + tile), derived as a surface between purlin lines.",
+      "geometry": {
+        "type": "poly",
+        "pts": [
+          [
+            -538.8,
+            292.36294269957136,
+            -488.8
+          ],
+          [
+            -538.8,
+            292.36294269957136,
+            488.8
+          ],
+          [
+            -397,
+            331.4,
+            347
+          ],
+          [
+            -397,
+            331.4,
+            -347
+          ]
+        ]
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Same 1975 restoration projection [QI1980]",
+      "material": "huiwa"
+    },
+    {
       "id": "roof-lower-N",
       "name_zh": "下架屋面（檐步）",
       "name_en": "Lower roof slope",
       "phase": "roof",
-      "role": "Tiled roof plane (rafters + sheathing + grey tile, rendered as a surface in v1).",
+      "role": "Tiled roof plane (rafters + sheathing + tile), derived as a surface between purlin lines.",
       "geometry": {
-        "type": "box",
-        "w": 774,
-        "h": 8,
-        "d": 207.07475661933773
+        "type": "poly",
+        "pts": [
+          [
+            -397,
+            331.4,
+            -347
+          ],
+          [
+            397,
+            331.4,
+            -347
+          ],
+          [
+            200,
+            395.2040345821325,
+            -150
+          ],
+          [
+            -200,
+            395.2040345821325,
+            -150
+          ]
+        ]
       },
       "position": [
         0,
-        363.30201729106625,
-        -248.5
-      ],
-      "rotation_deg": [
-        -17.946016129654183,
         0,
         0
       ],
       "provenance": "rule_derived",
-      "source": "Geometry from purlin positions [ZHANG2022] + surface inferred"
+      "source": "Geometry from purlin positions [ZHANG2022]",
+      "material": "huiwa"
+    },
+    {
+      "id": "roof-hip-W",
+      "name_zh": "山面屋面",
+      "name_en": "Hip slope",
+      "phase": "roof",
+      "role": "Tiled roof plane (rafters + sheathing + tile), derived as a surface between purlin lines.",
+      "geometry": {
+        "type": "poly",
+        "pts": [
+          [
+            -397,
+            331.4,
+            -347
+          ],
+          [
+            -397,
+            331.4,
+            347
+          ],
+          [
+            -200,
+            395.2040345821325,
+            150
+          ],
+          [
+            -200,
+            395.2040345821325,
+            -150
+          ]
+        ]
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "provenance": "rule_derived",
+      "source": "Hip-gable side from 撩檐枋 to 收山 line [ZHANG2022 + YZFS]",
+      "material": "huiwa"
     },
     {
       "id": "roof-upper-N",
       "name_zh": "上架屋面（脊步）",
       "name_en": "Upper roof slope",
       "phase": "roof",
-      "role": "Tiled roof plane (rafters + sheathing + grey tile, rendered as a surface in v1).",
+      "role": "Tiled roof plane (rafters + sheathing + tile), derived as a surface between purlin lines.",
       "geometry": {
-        "type": "box",
-        "w": 520,
-        "h": 8,
-        "d": 163.95702436188427
+        "type": "poly",
+        "pts": [
+          [
+            -200,
+            395.2040345821325,
+            -150
+          ],
+          [
+            200,
+            395.2040345821325,
+            -150
+          ],
+          [
+            200,
+            461.4,
+            0
+          ],
+          [
+            -200,
+            461.4,
+            0
+          ]
+        ]
       },
       "position": [
         0,
-        428.30201729106625,
-        -75
-      ],
-      "rotation_deg": [
-        -23.812176475409846,
         0,
         0
       ],
       "provenance": "conjecture",
-      "source": "Depends on conjectural rise 130 fen (propagated) [QI1980]"
-    },
-    {
-      "id": "roof-eave-N",
-      "name_zh": "檐口（1975 年复原出檐）",
-      "name_en": "Eave extension (1975 restoration)",
-      "phase": "roof",
-      "role": "Tiled roof plane (rafters + sheathing + grey tile, rendered as a surface in v1).",
-      "geometry": {
-        "type": "box",
-        "w": 1057.6,
-        "h": 8,
-        "d": 147.0752591113711
-      },
-      "position": [
-        0,
-        311.88147134978567,
-        -417.9
-      ],
-      "rotation_deg": [
-        164.6079510474489,
-        0,
-        0
-      ],
-      "provenance": "conjecture",
-      "source": "Pre-repair rafters were short (clearly not Tang appearance); 2340mm is the 1974–75 restoration estimate from platform/column-height ratios. Explicitly unusable as design evidence — MUST render in conjecture color. [QI1980]"
-    },
-    {
-      "id": "roof-hip-W",
-      "name_zh": "山面屋面",
-      "name_en": "Gable-side hip slope",
-      "phase": "roof",
-      "role": "Tiled roof plane (rafters + sheathing + grey tile, rendered as a surface in v1).",
-      "geometry": {
-        "type": "box",
-        "w": 207.07475661933773,
-        "h": 8,
-        "d": 430.28
-      },
-      "position": [
-        -298.5,
-        363.30201729106625,
-        0
-      ],
-      "rotation_deg": [
-        0,
-        0,
-        17.946016129654183
-      ],
-      "provenance": "rule_derived",
-      "source": "Hip-gable side plane from 撩檐枋 to 收山 line (simplified v1)"
-    },
-    {
-      "id": "roof-hip-eave-W",
-      "name_zh": "山面檐口（1975 年复原出檐）",
-      "name_en": "Gable eave extension",
-      "phase": "roof",
-      "role": "Tiled roof plane (rafters + sheathing + grey tile, rendered as a surface in v1).",
-      "geometry": {
-        "type": "box",
-        "w": 147.07525911137105,
-        "h": 8,
-        "d": 485.79999999999995
-      },
-      "position": [
-        -467.9,
-        311.88147134978567,
-        0
-      ],
-      "rotation_deg": [
-        0,
-        0,
-        -164.6079510474489
-      ],
-      "provenance": "conjecture",
-      "source": "Same 1975 restoration projection [QI1980]"
+      "source": "Depends on conjectural rise 130 fen (propagated) [QI1980]",
+      "material": "huiwa"
     },
     {
       "id": "gable-W",
       "name_zh": "山花",
       "name_en": "Gable face",
       "phase": "roof",
-      "role": "Vertical gable triangle of the hip-gable roof above the 收山 line.",
+      "role": "Tiled roof plane (rafters + sheathing + tile), derived as a surface between purlin lines.",
       "geometry": {
-        "type": "box",
-        "w": 6,
-        "h": 66.19596541786746,
-        "d": 320
+        "type": "poly",
+        "pts": [
+          [
+            -200,
+            395.2040345821325,
+            -150
+          ],
+          [
+            -200,
+            395.2040345821325,
+            150
+          ],
+          [
+            -200,
+            461.4,
+            0
+          ]
+        ]
       },
       "position": [
-        -200,
-        420.30201729106625,
+        0,
+        0,
         0
       ],
       "provenance": "conjecture",
-      "source": "Form rule-typical; height depends on conjectural rise (propagated) [QI1980]"
+      "source": "Form rule-typical; height depends on conjectural rise (propagated) [QI1980]",
+      "material": "huiwa"
+    },
+    {
+      "id": "roof-eave-S",
+      "name_zh": "檐口（1975 年复原出檐）",
+      "name_en": "Eave strip (1975 restoration)",
+      "phase": "roof",
+      "role": "Tiled roof plane (rafters + sheathing + tile), derived as a surface between purlin lines.",
+      "geometry": {
+        "type": "poly",
+        "pts": [
+          [
+            -538.8,
+            292.36294269957136,
+            488.8
+          ],
+          [
+            538.8,
+            292.36294269957136,
+            488.8
+          ],
+          [
+            397,
+            331.4,
+            347
+          ],
+          [
+            -397,
+            331.4,
+            347
+          ]
+        ]
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Pre-repair rafters were short (clearly not Tang appearance); 2340mm is the 1974–75 restoration estimate from platform/column-height ratios. Explicitly unusable as design evidence — MUST render in conjecture color. [QI1980]",
+      "material": "huiwa"
+    },
+    {
+      "id": "roof-eave-E",
+      "name_zh": "山面檐口（1975 年复原出檐）",
+      "name_en": "Gable eave strip",
+      "phase": "roof",
+      "role": "Tiled roof plane (rafters + sheathing + tile), derived as a surface between purlin lines.",
+      "geometry": {
+        "type": "poly",
+        "pts": [
+          [
+            538.8,
+            292.36294269957136,
+            -488.8
+          ],
+          [
+            538.8,
+            292.36294269957136,
+            488.8
+          ],
+          [
+            397,
+            331.4,
+            347
+          ],
+          [
+            397,
+            331.4,
+            -347
+          ]
+        ]
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Same 1975 restoration projection [QI1980]",
+      "material": "huiwa"
     },
     {
       "id": "roof-lower-S",
       "name_zh": "下架屋面（檐步）",
       "name_en": "Lower roof slope",
       "phase": "roof",
-      "role": "Tiled roof plane (rafters + sheathing + grey tile, rendered as a surface in v1).",
+      "role": "Tiled roof plane (rafters + sheathing + tile), derived as a surface between purlin lines.",
       "geometry": {
-        "type": "box",
-        "w": 774,
-        "h": 8,
-        "d": 207.07475661933773
+        "type": "poly",
+        "pts": [
+          [
+            -397,
+            331.4,
+            347
+          ],
+          [
+            397,
+            331.4,
+            347
+          ],
+          [
+            200,
+            395.2040345821325,
+            150
+          ],
+          [
+            -200,
+            395.2040345821325,
+            150
+          ]
+        ]
       },
       "position": [
         0,
-        363.30201729106625,
-        248.5
-      ],
-      "rotation_deg": [
-        -162.05398387034583,
         0,
         0
       ],
       "provenance": "rule_derived",
-      "source": "Geometry from purlin positions [ZHANG2022] + surface inferred"
+      "source": "Geometry from purlin positions [ZHANG2022]",
+      "material": "huiwa"
+    },
+    {
+      "id": "roof-hip-E",
+      "name_zh": "山面屋面",
+      "name_en": "Hip slope",
+      "phase": "roof",
+      "role": "Tiled roof plane (rafters + sheathing + tile), derived as a surface between purlin lines.",
+      "geometry": {
+        "type": "poly",
+        "pts": [
+          [
+            397,
+            331.4,
+            -347
+          ],
+          [
+            397,
+            331.4,
+            347
+          ],
+          [
+            200,
+            395.2040345821325,
+            150
+          ],
+          [
+            200,
+            395.2040345821325,
+            -150
+          ]
+        ]
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "provenance": "rule_derived",
+      "source": "Hip-gable side from 撩檐枋 to 收山 line [ZHANG2022 + YZFS]",
+      "material": "huiwa"
     },
     {
       "id": "roof-upper-S",
       "name_zh": "上架屋面（脊步）",
       "name_en": "Upper roof slope",
       "phase": "roof",
-      "role": "Tiled roof plane (rafters + sheathing + grey tile, rendered as a surface in v1).",
+      "role": "Tiled roof plane (rafters + sheathing + tile), derived as a surface between purlin lines.",
       "geometry": {
-        "type": "box",
-        "w": 520,
-        "h": 8,
-        "d": 163.95702436188427
+        "type": "poly",
+        "pts": [
+          [
+            -200,
+            395.2040345821325,
+            150
+          ],
+          [
+            200,
+            395.2040345821325,
+            150
+          ],
+          [
+            200,
+            461.4,
+            0
+          ],
+          [
+            -200,
+            461.4,
+            0
+          ]
+        ]
       },
       "position": [
         0,
-        428.30201729106625,
-        75
-      ],
-      "rotation_deg": [
-        -156.18782352459016,
         0,
         0
       ],
       "provenance": "conjecture",
-      "source": "Depends on conjectural rise 130 fen (propagated) [QI1980]"
-    },
-    {
-      "id": "roof-eave-S",
-      "name_zh": "檐口（1975 年复原出檐）",
-      "name_en": "Eave extension (1975 restoration)",
-      "phase": "roof",
-      "role": "Tiled roof plane (rafters + sheathing + grey tile, rendered as a surface in v1).",
-      "geometry": {
-        "type": "box",
-        "w": 1057.6,
-        "h": 8,
-        "d": 147.0752591113711
-      },
-      "position": [
-        0,
-        311.88147134978567,
-        417.9
-      ],
-      "rotation_deg": [
-        15.392048952551084,
-        0,
-        0
-      ],
-      "provenance": "conjecture",
-      "source": "Pre-repair rafters were short (clearly not Tang appearance); 2340mm is the 1974–75 restoration estimate from platform/column-height ratios. Explicitly unusable as design evidence — MUST render in conjecture color. [QI1980]"
-    },
-    {
-      "id": "roof-hip-E",
-      "name_zh": "山面屋面",
-      "name_en": "Gable-side hip slope",
-      "phase": "roof",
-      "role": "Tiled roof plane (rafters + sheathing + grey tile, rendered as a surface in v1).",
-      "geometry": {
-        "type": "box",
-        "w": 207.07475661933773,
-        "h": 8,
-        "d": 430.28
-      },
-      "position": [
-        298.5,
-        363.30201729106625,
-        0
-      ],
-      "rotation_deg": [
-        0,
-        0,
-        162.05398387034583
-      ],
-      "provenance": "rule_derived",
-      "source": "Hip-gable side plane from 撩檐枋 to 收山 line (simplified v1)"
-    },
-    {
-      "id": "roof-hip-eave-E",
-      "name_zh": "山面檐口（1975 年复原出檐）",
-      "name_en": "Gable eave extension",
-      "phase": "roof",
-      "role": "Tiled roof plane (rafters + sheathing + grey tile, rendered as a surface in v1).",
-      "geometry": {
-        "type": "box",
-        "w": 147.07525911137105,
-        "h": 8,
-        "d": 485.79999999999995
-      },
-      "position": [
-        467.9,
-        311.88147134978567,
-        0
-      ],
-      "rotation_deg": [
-        0,
-        0,
-        -15.39204895255109
-      ],
-      "provenance": "conjecture",
-      "source": "Same 1975 restoration projection [QI1980]"
+      "source": "Depends on conjectural rise 130 fen (propagated) [QI1980]",
+      "material": "huiwa"
     },
     {
       "id": "gable-E",
       "name_zh": "山花",
       "name_en": "Gable face",
       "phase": "roof",
-      "role": "Vertical gable triangle of the hip-gable roof above the 收山 line.",
+      "role": "Tiled roof plane (rafters + sheathing + tile), derived as a surface between purlin lines.",
       "geometry": {
-        "type": "box",
-        "w": 6,
-        "h": 66.19596541786746,
-        "d": 320
+        "type": "poly",
+        "pts": [
+          [
+            200,
+            395.2040345821325,
+            -150
+          ],
+          [
+            200,
+            395.2040345821325,
+            150
+          ],
+          [
+            200,
+            461.4,
+            0
+          ]
+        ]
       },
       "position": [
-        200,
-        420.30201729106625,
+        0,
+        0,
         0
       ],
       "provenance": "conjecture",
-      "source": "Form rule-typical; height depends on conjectural rise (propagated) [QI1980]"
+      "source": "Form rule-typical; height depends on conjectural rise (propagated) [QI1980]",
+      "material": "huiwa"
     },
     {
       "id": "chuan-N-0",

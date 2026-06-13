@@ -44,10 +44,10 @@ Frame: 2×四椽栿, 2×平梁, 4×驼峰(conjecture), 4×大叉手(conjecture, 
 
 ## 6. Purlins — 脊槫(conjecture-height) / 平槫×2 / 牛脊枋×2 / 撩檐枋×4 placed; intervals 150 fen ✓.
 
-## 7. Roof surfaces 歇山顶
-- Lower slope: 撩檐枋背 331.4 → 平槫 395.2 over run 197 fen; upper slope: → 脊槫 461.4 over 150 fen (steeper — 举折 curvature visible).
-- Eave projection 2340 mm = 141.8 fen beyond 撩檐枋 — 1974–75 restoration estimate, explicitly unusable as design evidence → CONJECTURE [QI1980].
-- 歇山收山 simplified v1: ridge length 400 fen, gable triangles at x=±200; refine later.
+## 7. Roof surfaces 歇山顶 — derived as watertight planes between purlin lines
+- Lower slope: 撩檐枋背 331.4 → 平槫 395.2 over run 197 fen; upper slope: → 脊槫 461.4 over 150 fen (steeper — 举折 curvature visible at the 平槫 kink).
+- Eave projection 2340 mm = 141.8 fen beyond 撩檐枋, dropping 39 fen (85% of slope — slight 檐口微翘) — 1974–75 restoration estimate → CONJECTURE [QI1980].
+- 歇山收山 simplified: at 平槫 level the roof footprint is x=±200, z=±150; hips run from the eave corners to that break rectangle; 山花 vertical above it.
 
 - 檐椽: YZFS 卷五 用椽之制 椽径≈9 分, 一椽一档 (spacing 18 fen). The exposed eave portion embodies the 1975 conjectural projection → conjecture (propagated). Eave drop 39 fen with slight 檐口微翘.
 - 檐椽 placed: 134 rafters (front/rear + gable rows).

@@ -404,59 +404,54 @@ L(``);
 // --- Roof surfaces -----------------------------------------------------------
 const EAVE_MM = RF.eave_projection.mm;            // 2340 — conjecture (1975 restoration)
 const EAVE = r1(EAVE_MM / FEN_MM);                // ≈141.8 fen
-const THICK = 8;
-L(`## 7. Roof surfaces 歇山顶`);
-L(`- Lower slope: 撩檐枋背 ${r1(liaoyanTopY)} → 平槫 ${r1(pingY)} over run ${liaoyanZ - totalD / 4} fen; upper slope: → 脊槫 ${r1(ridgeTopY)} over ${totalD / 4} fen (steeper — 举折 curvature visible).`);
-L(`- Eave projection ${EAVE_MM} mm = ${EAVE} fen beyond 撩檐枋 — 1974–75 restoration estimate, explicitly unusable as design evidence → CONJECTURE [QI1980].`);
-L(`- 歇山收山 simplified v1: ridge length ${ridgeLen} fen, gable triangles at x=±${ridgeLen / 2}; refine later.`);
+const eaveDrop = 0.85 * EAVE * (pingY - liaoyanTopY) / (liaoyanZ - totalD / 4);
+L(`## 7. Roof surfaces 歇山顶 — derived as watertight planes between purlin lines`);
+L(`- Lower slope: 撩檐枋背 ${r1(liaoyanTopY)} → 平槫 ${r1(pingY)} over run ${liaoyanZ - totalD / 4} fen; upper slope: → 脊槫 ${r1(ridgeTopY)} over ${totalD / 4} fen (steeper — 举折 curvature visible at the 平槫 kink).`);
+L(`- Eave projection ${EAVE_MM} mm = ${EAVE} fen beyond 撩檐枋, dropping ${r1(eaveDrop)} fen (85% of slope — slight 檐口微翘) — 1974–75 restoration estimate → CONJECTURE [QI1980].`);
+L(`- 歇山收山 simplified: at 平槫 level the roof footprint is x=±${ridgeLen / 2}, z=±${totalD / 4}; hips run from the eave corners to that break rectangle; 山花 vertical above it.`);
 L(``);
 
-function slope(id, zh, en, runFrom, runTo, yFrom, yTo, width, axis, prov, src, note) {
-  // axis "z": slope along z at constant x-extent `width`; axis "x": along x.
-  const run = Math.abs(runTo - runFrom);
-  const len = Math.hypot(run, yTo - yFrom);
-  const angle = Math.atan2(yTo - yFrom, runTo - runFrom) * 180 / Math.PI;
-  const mid = (runFrom + runTo) / 2, midY = (yFrom + yTo) / 2;
+const XE = totalW / 2 + liaoyanOff + EAVE; // eave edge, gable dir
+const ZE = liaoyanZ + EAVE;                // eave edge, front/rear
+const XL = totalW / 2 + liaoyanOff;        // 撩檐枋 line
+const ZL = liaoyanZ;
+const XP = ridgeLen / 2;                   // 收山 break
+const ZP = totalD / 4;
+const yE = liaoyanTopY - eaveDrop, yL = liaoyanTopY, yP = pingY, yR = ridgeTopY;
+
+function roofPoly(id, zh, en, pts, prov, src2, note) {
   comp({
     id, name_zh: zh, name_en: en, phase: "roof",
-    role: "Tiled roof plane (rafters + sheathing + grey tile, rendered as a surface in v1).",
-    geometry: axis === "z" ? { type: "box", w: width, h: THICK, d: len } : { type: "box", w: len, h: THICK, d: width },
-    position: axis === "z" ? [0, midY, mid] : [mid, midY, 0],
-    rotation_deg: axis === "z" ? [-angle, 0, 0] : [0, 0, angle],
-    provenance: prov, source: src, note,
+    role: "Tiled roof plane (rafters + sheathing + tile), derived as a surface between purlin lines.",
+    geometry: { type: "poly", pts },
+    position: [0, 0, 0],
+    provenance: prov, source: src2, note, material: "huiwa",
   });
 }
-const fullW = liaoyanSpan + 2 * 40;
 for (const s of [-1, 1]) {
-  const tag = s > 0 ? "S" : "N";
-  slope(`roof-lower-${tag}`, "下架屋面（檐步）", "Lower roof slope", s * liaoyanZ, s * totalD / 4, liaoyanTopY, pingY, fullW, "z",
-    "rule_derived", "Geometry from purlin positions [ZHANG2022] + surface inferred");
-  slope(`roof-upper-${tag}`, "上架屋面（脊步）", "Upper roof slope", s * totalD / 4, s * 0, pingY, ridgeTopY, ridgeLen + 120, "z",
-    "conjecture", "Depends on conjectural rise 130 fen (propagated) [QI1980]");
-  slope(`roof-eave-${tag}`, "檐口（1975 年复原出檐）", "Eave extension (1975 restoration)", s * liaoyanZ, s * (liaoyanZ + EAVE), liaoyanTopY, liaoyanTopY - 0.85 * EAVE * (pingY - liaoyanTopY) / (liaoyanZ - totalD / 4), fullW + 2 * EAVE, "z",
+  const t = s > 0 ? "S" : "N", tg = s > 0 ? "E" : "W";
+  roofPoly(`roof-eave-${t}`, "檐口（1975 年复原出檐）", "Eave strip (1975 restoration)",
+    [[-XE, yE, s * ZE], [XE, yE, s * ZE], [XL, yL, s * ZL], [-XL, yL, s * ZL]],
     "conjecture", RF.eave_projection.note + " [QI1980]");
-  // gable-side hips
-  const hipFromX = s * (totalW / 2 + liaoyanOff);
-  slope(`roof-hip-${s > 0 ? "E" : "W"}`, "山面屋面", "Gable-side hip slope", hipFromX, s * ridgeLen / 2, liaoyanTopY, pingY, liaoyanSpan * 0.62, "x",
-    "rule_derived", "Hip-gable side plane from 撩檐枋 to 收山 line (simplified v1)");
-  slope(`roof-hip-eave-${s > 0 ? "E" : "W"}`, "山面檐口（1975 年复原出檐）", "Gable eave extension", hipFromX, s * (totalW / 2 + liaoyanOff + EAVE), liaoyanTopY, liaoyanTopY - 0.85 * EAVE * (pingY - liaoyanTopY) / (liaoyanZ - totalD / 4), liaoyanSpan * 0.7, "x",
+  roofPoly(`roof-eave-${tg}`, "山面檐口（1975 年复原出檐）", "Gable eave strip",
+    [[s * XE, yE, -ZE], [s * XE, yE, ZE], [s * XL, yL, ZL], [s * XL, yL, -ZL]],
     "conjecture", "Same 1975 restoration projection [QI1980]");
-  // gable triangle 山花
-  comp({
-    id: `gable-${s > 0 ? "E" : "W"}`,
-    name_zh: "山花", name_en: "Gable face",
-    phase: "roof",
-    role: "Vertical gable triangle of the hip-gable roof above the 收山 line.",
-    geometry: { type: "box", w: 6, h: ridgeTopY - pingY, d: depthBay * 2 * 0.8 },
-    position: [s * ridgeLen / 2, (ridgeTopY + pingY) / 2 - THICK, 0],
-    provenance: "conjecture",
-    source: "Form rule-typical; height depends on conjectural rise (propagated) [QI1980]",
-  });
+  roofPoly(`roof-lower-${t}`, "下架屋面（檐步）", "Lower roof slope",
+    [[-XL, yL, s * ZL], [XL, yL, s * ZL], [XP, yP, s * ZP], [-XP, yP, s * ZP]],
+    "rule_derived", "Geometry from purlin positions [ZHANG2022]");
+  roofPoly(`roof-hip-${tg}`, "山面屋面", "Hip slope",
+    [[s * XL, yL, -ZL], [s * XL, yL, ZL], [s * XP, yP, ZP], [s * XP, yP, -ZP]],
+    "rule_derived", "Hip-gable side from 撩檐枋 to 收山 line [ZHANG2022 + YZFS]");
+  roofPoly(`roof-upper-${t}`, "上架屋面（脊步）", "Upper roof slope",
+    [[-XP, yP, s * ZP], [XP, yP, s * ZP], [XP, yR, 0], [-XP, yR, 0]],
+    "conjecture", "Depends on conjectural rise 130 fen (propagated) [QI1980]");
+  roofPoly(`gable-${tg}`, "山花", "Gable face",
+    [[s * XP, yP, -ZP], [s * XP, yP, ZP], [s * XP, yR, 0]],
+    "conjecture", "Form rule-typical; height depends on conjectural rise (propagated) [QI1980]");
 }
 
 // --- 檐椽 eave rafters ---------------------------------------------------------
 const RAF_R = 4.5, RAF_SPACING = 18; // YZFS 卷五 用椽之制: 椽径≈9分, 一椽一档
-const eaveDrop = 0.85 * EAVE * (pingY - liaoyanTopY) / (liaoyanZ - totalD / 4);
 L(`- 檐椽: YZFS 卷五 用椽之制 椽径≈${RAF_R * 2} 分, 一椽一档 (spacing ${RAF_SPACING} fen). The exposed eave portion embodies the 1975 conjectural projection → conjecture (propagated). Eave drop ${r1(eaveDrop)} fen with slight 檐口微翘.`);
 let rafIdx = 0;
 // front/rear rows (along z), then gable rows (along x)
