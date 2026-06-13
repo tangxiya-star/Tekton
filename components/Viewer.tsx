@@ -251,6 +251,7 @@ function GltfMember({ c, mode }: { c: Component; mode: ViewMode }) {
       const mesh = o as THREE.Mesh;
       if (mesh.isMesh) {
         mesh.castShadow = mesh.receiveShadow = true;
+        mesh.userData.componentId = c.id;
         if (provMode) {
           mesh.material = new THREE.MeshStandardMaterial({
             color: PROV_COLORS[c.provenance],
