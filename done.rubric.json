@@ -36,6 +36,54 @@
     { "id": "public_repo", "category": "orchestration", "required": true, "critical": false, "requirement": "Public repo (hackathon rule — private = DQ)", "check": "github.com/tangxiya-star/yingzao visibility == public" },
     { "id": "readme", "category": "impact", "required": true, "critical": false, "requirement": "README with pitch, problem, method, source/rights table, why Fable 5, rerun instructions", "check": "README.md present with those sections + the rights table" },
     { "id": "autonomy_log", "category": "autonomy", "required": true, "critical": false, "requirement": "Session log shows long autonomous stretches; human interventions are new-information only (not course-corrections)", "check": "review the session log; interventions limited to credentials/new info" },
-    { "id": "rerunnable", "category": "orchestration", "required": false, "critical": false, "requirement": "Rerunnable: npm run goal works from a clean checkout and is building-parameterized; Nanchan stays green as the regression anchor", "check": "fresh clone + npm run goal reaches green; --building nanchan still passes" }
-  ]
+    { "id": "rerunnable", "category": "orchestration", "required": false, "critical": false, "requirement": "Rerunnable: npm run goal works from a clean checkout and is building-parameterized; Nanchan stays green as the regression anchor", "check": "fresh clone + npm run goal reaches green; --building nanchan still passes" },
+
+    { "id": "towers_facade_width", "tier": "towers", "category": "impact", "required": false, "critical": false, "requirement": "v2 towers tier — west façade total width = 43.5 m (measured anchor, multiply confirmed), recomputed from component coords", "check": "verifier-report.notre-dame-towers T01 passes" },
+    { "id": "towers_height", "tier": "towers", "category": "impact", "required": false, "critical": false, "requirement": "v2 towers tier — towers culminate at 69 m (measured anchor); not idealized toward an ad-quadratum/triangulum ideal (measured-reality guard)", "check": "verifier-report.notre-dame-towers T02 passes" },
+    { "id": "gallery_of_kings_28", "tier": "towers", "category": "impact", "required": false, "critical": false, "requirement": "v2 towers tier — Gallery of Kings = exactly 28 king figures across the façade band (measured count)", "check": "verifier-report.notre-dame-towers T03 passes" },
+    { "id": "towers_three_portals", "tier": "towers", "category": "impact", "required": false, "critical": false, "requirement": "v2 towers tier — three west portals present, centre portal the widest (Last Judgment)", "check": "verifier-report.notre-dame-towers T04 passes" },
+    { "id": "towers_rose", "tier": "towers", "category": "impact", "required": false, "critical": false, "requirement": "v2 towers tier — west rose diameter ≈ 9.6 m (measured), radial tracery present", "check": "verifier-report.notre-dame-towers T05 passes" },
+    { "id": "towers_zero_unsourced", "tier": "towers", "category": "impact", "required": false, "critical": false, "requirement": "v2 towers tier — zero unsourced components; every component {provenance,source,url,rights} resolves to the rights-cleared registry; no fabrication (chimeras/GAPs never measured)", "check": "verifier-report.notre-dame-towers T07 + T08 pass" },
+    { "id": "towers_textures", "tier": "towers", "category": "demo", "required": false, "critical": false, "requirement": "v2 towers tier — materials sourced (Lutetian limestone TYPE measured; exact RGB stays GAP, never invented); procedural-only textures, no imported assets", "check": "verifier-report.notre-dame-towers T09 passes" },
+
+    { "id": "wc_total_length", "tier": "whole-cathedral", "category": "impact", "required": false, "critical": false, "requirement": "PASS 1 massing: cathedral total length 128 m (extreme X span of cathedral components) ±2%", "check": "verifier-report.notre-dame-whole C01 passes" },
+    { "id": "wc_transept_width", "tier": "whole-cathedral", "category": "impact", "required": false, "critical": false, "requirement": "PASS 1 massing: max width across transept 48 m (Z span) ±2% + transept arm thickness 14 m", "check": "verifier-report.notre-dame-whole C02 passes" },
+    { "id": "wc_west_facade", "tier": "whole-cathedral", "category": "impact", "required": false, "critical": false, "requirement": "PASS 1 massing: west façade width 43.5 m ±2% + façade body height ≈45 m", "check": "verifier-report.notre-dame-whole C03 passes" },
+    { "id": "wc_towers", "tier": "whole-cathedral", "category": "impact", "required": false, "critical": false, "requirement": "PASS 1 massing: west towers reach 69 m ±2%", "check": "verifier-report.notre-dame-whole C04 passes" },
+    { "id": "wc_vault_crown", "tier": "whole-cathedral", "category": "impact", "required": false, "critical": false, "requirement": "PASS 1 massing: nave high-vault crown 33 m (measured-reality guard: not 35 m, not 43 m)", "check": "verifier-report.notre-dame-whole C05 passes" },
+    { "id": "wc_spire_composed", "tier": "whole-cathedral", "category": "demo", "required": false, "critical": false, "requirement": "Spire group composes UNCHANGED on the crossing (x≈0,z≈0): total 96 m, base 30 m, 8 faces, 16 statues; V08–V14 stay green", "check": "verifier-report.notre-dame-whole C06 passes (and V08–V14 still pass)" },
+    { "id": "wc_provenance_audit", "tier": "whole-cathedral", "category": "impact", "required": false, "critical": false, "requirement": "Every massing block {provenance,source,url,rights}; 0 unsourced; all four evidence classes; massing renders measured/rule_derived, the spire full fidelity (honesty gradient)", "check": "verifier-report.notre-dame-whole C-PROV passes + P01–P03" }
+  ],
+  "tiers": {
+    "towers": {
+      "pass": "T01–T09",
+      "required": false,
+      "note": "v2 west-façade tier (notre-dame-towers), a SEPARATE building behind the selector with its own structural-spec.notre-dame-towers.json / verifier-report.notre-dame-towers.json. required:false so the spire (V08–V14 / P01–P03) verdict is unaffected. Each T-check is recomputed FROM COMPONENT COORDINATES.",
+      "checks": {
+        "T01": "west façade total width 43.5 m ±2%",
+        "T02": "towers culminate at 69 m ±2% (measured-reality guard)",
+        "T03": "Gallery of Kings = exactly 28 figures",
+        "T04": "three west portals; centre portal widest",
+        "T05": "west rose diameter ≈ 9.6 m; radial tracery present",
+        "T06": "four façade buttresses (count exact)",
+        "T07": "provenance audit — every component sourced; 0 unsourced; all four classes",
+        "T08": "no-invention guard — chimeras/GAPs never measured",
+        "T09": "materials sourced; procedural-only textures"
+      }
+    },
+    "whole-cathedral": {
+      "pass": "C01–C06 + C-PROV (MASSING)",
+      "required": false,
+      "note": "PASS 1 whole-cathedral massing (notre-dame-whole), a SEPARATE building behind the selector with its own structural-spec.notre-dame-whole.json / verifier-report.notre-dame-whole.json. The focused spire (notre-dame) is left untouched and stays spire-only. required:false so the spire (V08–V14 / P01–P03) verdict is unaffected — partial fidelity is honest, the provenance toggle shows the gradient. Each C-check is recomputed FROM COMPONENT COORDINATES, never from spec.key_dimensions.",
+      "checks": {
+        "C01": "total length 128 m — extreme X span of cathedral components ±2%",
+        "C02": "max width across transept 48 m — Z span ±2% + arm thickness 14 m",
+        "C03": "west façade width 43.5 m ±2% + façade body ≈45 m",
+        "C04": "west towers reach 69 m ±2%",
+        "C05": "nave vault crown 33 m (guard: not 35 m / not 43 m)",
+        "C06": "spire composes unchanged on the crossing (x≈0,z≈0); V08–V14 intact; 8 faces, 16 statues",
+        "C-PROV": "massing provenance audit (every block sourced; all four classes; fidelity gradient massing/full)"
+      }
+    }
+  }
 }

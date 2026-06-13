@@ -30,6 +30,14 @@ function argBuilding() {
   return "nanchan";
 }
 const BUILDING = argBuilding();
+if (BUILDING === "notre-dame-towers" || BUILDING === "towers") {
+  await import("./verify-notre-dame-towers.mjs");
+  process.exit(process.exitCode ?? 0);
+}
+if (BUILDING === "notre-dame-whole" || BUILDING === "cathedral" || BUILDING === "whole") {
+  await import("./verify-notre-dame-whole.mjs");
+  process.exit(process.exitCode ?? 0);
+}
 if (BUILDING === "notre-dame" || BUILDING === "notredame") {
   await import("./verify-notre-dame.mjs");
   process.exit(process.exitCode ?? 0);

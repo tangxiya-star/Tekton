@@ -1,0 +1,247 @@
+{
+  "generated_at": "2026-06-13T23:29:07.569Z",
+  "building": "notre-dame-towers",
+  "spec": "artifacts/structural-spec.notre-dame-towers.json",
+  "screenshot_refresh": {
+    "refreshed": false,
+    "note": "viewer not reachable at http://localhost:59999; grading existing PNGs"
+  },
+  "summary": {
+    "total": 15,
+    "pass": 15,
+    "fail": 0,
+    "critical_failures": []
+  },
+  "vision": {
+    "status": "pending",
+    "note": "vision-verifier sub-agent runs in a fresh context; merged by orchestrate."
+  },
+  "checks": [
+    {
+      "id": "T01",
+      "assert": "Façade total width = 43.5 m (±2%): extreme X span of the façade/tower/buttress components",
+      "method": "spec-geometry",
+      "pass": true,
+      "measured": {
+        "facade_span_m": 43.87,
+        "facade_body_width_m": 43.5,
+        "x_range": [
+          -22.12,
+          21.75
+        ]
+      },
+      "expected": {
+        "width_m": 43.5,
+        "tolerance": "±2%"
+      }
+    },
+    {
+      "id": "T02",
+      "assert": "Tower culmination = 69 m (±2%, critical); façade body ≈ 45 m — measured-reality guard: NOT idealized toward ad-quadratum/triangulum",
+      "method": "spec-geometry",
+      "critical": true,
+      "pass": true,
+      "measured": {
+        "tower_top_m": 69,
+        "facade_body_h_m": 45,
+        "tower_count": 2,
+        "ad_triangulum_m": 37.672,
+        "ad_quadratum_x2_m": 61.518
+      },
+      "expected": {
+        "tower_top_m": 69,
+        "facade_body_h_m": 45,
+        "tower_count": 2,
+        "tolerance": "±2%, no idealization"
+      },
+      "note": "measured 69 m / 45 m preserved, not idealized"
+    },
+    {
+      "id": "T03",
+      "assert": "Gallery of Kings = exactly 28 king figures across the façade band",
+      "method": "spec-geometry",
+      "pass": true,
+      "measured": {
+        "king_figures": 28,
+        "king_heads": 28,
+        "figure_h_m": [
+          3.535
+        ]
+      },
+      "expected": {
+        "king_figures": 28,
+        "figure_h_m": 3.5
+      }
+    },
+    {
+      "id": "T04",
+      "assert": "Three west portals present; centre portal is the widest (recomputed from box widths)",
+      "method": "spec-geometry",
+      "pass": true,
+      "measured": {
+        "portals": [
+          {
+            "id": "portal-left",
+            "w": 6.305
+          },
+          {
+            "id": "portal-centre",
+            "w": 8.407
+          },
+          {
+            "id": "portal-right",
+            "w": 6.305
+          }
+        ],
+        "arches": 3,
+        "centre_widest": true
+      },
+      "expected": {
+        "portals": 3,
+        "centre_widest": true,
+        "arches": 3
+      }
+    },
+    {
+      "id": "T05",
+      "assert": "West rose diameter ≈ 9.6 m (±5%), recomputed from ray-tip span; radial tracery present",
+      "method": "spec-geometry",
+      "pass": true,
+      "measured": {
+        "ray_tip_diameter_m": 9.601,
+        "ring_outer_diameter_m": 9.8,
+        "ray_count": 24
+      },
+      "expected": {
+        "diameter_m": 9.6,
+        "tolerance": "±5%",
+        "radial_rays": ">=12"
+      }
+    },
+    {
+      "id": "T06",
+      "assert": "Four façade buttresses dividing the tripartite bays (count exact)",
+      "method": "spec-geometry",
+      "pass": true,
+      "measured": {
+        "buttress_count": 4,
+        "buttress_x": [
+          -20.55,
+          -7.98,
+          7.98,
+          20.55
+        ]
+      },
+      "expected": {
+        "buttress_count": 4
+      }
+    },
+    {
+      "id": "T07",
+      "assert": "Provenance audit: every component classed + sourced {provenance,source,url,rights}; 0 unsourced; source resolves to the registry (use/use-data); all four classes present",
+      "method": "spec-geometry",
+      "pass": true,
+      "measured": {
+        "total": 122,
+        "unsourced": [],
+        "missing_url": [],
+        "missing_rights": [],
+        "unregistered_source": [],
+        "classes_present": [
+          "measured",
+          "reconstructed_design",
+          "rule_derived",
+          "conjecture"
+        ]
+      },
+      "expected": "0 unsourced, every component {provenance,source,url,rights} resolving to a use/use-data registry source, all four classes present"
+    },
+    {
+      "id": "T08",
+      "assert": "No-invention guard: no `measured` component cites a restricted/cite-only/single source; chimeras are reconstructed_design/conjecture, never measured; GAPs never rendered",
+      "method": "spec-geometry",
+      "pass": true,
+      "measured": {
+        "violations": [],
+        "chimera_classes": [
+          "conjecture"
+        ]
+      },
+      "expected": "0 violations"
+    },
+    {
+      "id": "T09",
+      "assert": "Materials sourced: every surface carries a material whose canonical class resolves to a use/use-data source; Lutetian limestone measured; exact colour conjecture not measured",
+      "method": "spec-geometry",
+      "pass": true,
+      "measured": {
+        "materials_used": [
+          "limestone"
+        ],
+        "offenders": [],
+        "limestone_type": "Lutetian limestone (calcaire lutétien)",
+        "exact_rgb": "GAP"
+      },
+      "expected": "every material resolves to a use/use-data source; limestone TYPE measured; exact RGB stays GAP (never invented)"
+    },
+    {
+      "id": "P01",
+      "assert": "all towers canonical views rendered",
+      "method": "pixels",
+      "pass": true,
+      "measured": {
+        "missing": []
+      }
+    },
+    {
+      "id": "P02-default",
+      "assert": "render is not blank (>3% non-background pixels)",
+      "method": "pixels",
+      "pass": true,
+      "measured": {
+        "non_background": "48.5%"
+      }
+    },
+    {
+      "id": "P02-front",
+      "assert": "render is not blank (>3% non-background pixels)",
+      "method": "pixels",
+      "pass": true,
+      "measured": {
+        "non_background": "42.7%"
+      }
+    },
+    {
+      "id": "P02-detail",
+      "assert": "render is not blank (>3% non-background pixels)",
+      "method": "pixels",
+      "pass": true,
+      "measured": {
+        "non_background": "99.3%"
+      }
+    },
+    {
+      "id": "P02-provenance",
+      "assert": "render is not blank (>3% non-background pixels)",
+      "method": "pixels",
+      "pass": true,
+      "measured": {
+        "non_background": "42.1%"
+      }
+    },
+    {
+      "id": "P03",
+      "assert": "provenance view shows all four evidence-class colors",
+      "method": "pixels",
+      "pass": true,
+      "measured": {
+        "class_pixel_pct": {
+          "measured": 13.338,
+          "reconstructed_design": 8.809,
+          "rule_derived": 1.747,
+          "conjecture": 0.084
+        }
+      }
+    }
+  ]
+}

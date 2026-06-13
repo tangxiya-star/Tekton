@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-13T21:59:52.786Z",
+  "generated_at": "2026-06-13T23:29:06.859Z",
   "building": "notre-dame",
   "spec": "artifacts/structural-spec.notre-dame.json",
   "screenshot_refresh": {
     "refreshed": false,
-    "note": "viewer not reachable at http://localhost:5057; grading existing PNGs"
+    "note": "viewer not reachable at http://localhost:59999; grading existing PNGs"
   },
   "summary": {
     "total": 13,
@@ -174,7 +174,7 @@
       "method": "pixels",
       "pass": true,
       "measured": {
-        "non_background": "6.3%"
+        "non_background": "6.8%"
       }
     },
     {
@@ -183,7 +183,7 @@
       "method": "pixels",
       "pass": true,
       "measured": {
-        "non_background": "5.5%"
+        "non_background": "6.0%"
       }
     },
     {
@@ -192,7 +192,7 @@
       "method": "pixels",
       "pass": true,
       "measured": {
-        "non_background": "48.7%"
+        "non_background": "47.6%"
       }
     },
     {
@@ -201,7 +201,7 @@
       "method": "pixels",
       "pass": true,
       "measured": {
-        "non_background": "5.9%"
+        "non_background": "6.4%"
       }
     },
     {
@@ -211,9 +211,9 @@
       "pass": true,
       "measured": {
         "class_pixel_pct": {
-          "measured": 0.222,
-          "reconstructed_design": 2.494,
-          "rule_derived": 0.199,
+          "measured": 0.215,
+          "reconstructed_design": 2.489,
+          "rule_derived": 0.208,
           "conjecture": 0.157
         }
       }

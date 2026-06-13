@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-06-13T19:57:19.490Z",
+  "generated_at": "2026-06-13T23:29:06.192Z",
   "spec": "artifacts/structural-spec.json",
   "screenshot_refresh": {
     "refreshed": false,
-    "note": "viewer not reachable at http://localhost:3003; grading existing PNGs"
+    "note": "viewer not reachable at http://localhost:59999; grading existing PNGs"
   },
   "summary": {
     "total": 20,
-    "pass": 19,
-    "fail": 1,
+    "pass": 20,
+    "fail": 0,
     "critical_failures": []
   },
   "checks": [
@@ -189,7 +189,7 @@
       "method": "pixels",
       "pass": true,
       "measured": {
-        "non_background": "72.1%"
+        "non_background": "6.8%"
       },
       "note": "PNG predates structural-spec.json — re-run screenshots"
     },
@@ -199,7 +199,7 @@
       "method": "pixels",
       "pass": true,
       "measured": {
-        "non_background": "60.3%"
+        "non_background": "6.0%"
       },
       "note": "PNG predates structural-spec.json — re-run screenshots"
     },
@@ -209,7 +209,7 @@
       "method": "pixels",
       "pass": true,
       "measured": {
-        "non_background": "98.6%"
+        "non_background": "6.8%"
       },
       "note": "PNG predates structural-spec.json — re-run screenshots"
     },
@@ -219,7 +219,7 @@
       "method": "pixels",
       "pass": true,
       "measured": {
-        "non_background": "89.4%"
+        "non_background": "6.8%"
       },
       "note": "PNG predates structural-spec.json — re-run screenshots"
     },
@@ -229,7 +229,7 @@
       "method": "pixels",
       "pass": true,
       "measured": {
-        "non_background": "95.4%"
+        "non_background": "6.8%"
       },
       "note": "PNG predates structural-spec.json — re-run screenshots"
     },
@@ -239,7 +239,7 @@
       "method": "pixels",
       "pass": true,
       "measured": {
-        "non_background": "56.8%"
+        "non_background": "64.1%"
       },
       "note": "PNG predates structural-spec.json — re-run screenshots"
     },
@@ -247,13 +247,13 @@
       "id": "P03",
       "assert": "provenance view shows all four evidence-class colors",
       "method": "pixels",
-      "pass": false,
+      "pass": true,
       "measured": {
         "class_pixel_pct": {
           "measured": 0.011,
-          "reconstructed_design": 0.011,
-          "rule_derived": 0.057,
-          "conjecture": 0
+          "reconstructed_design": 0.548,
+          "rule_derived": 3.063,
+          "conjecture": 17.433
         }
       }
     }

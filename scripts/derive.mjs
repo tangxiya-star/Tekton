@@ -29,6 +29,14 @@ function argBuilding() {
   return "nanchan";
 }
 const BUILDING = argBuilding();
+if (BUILDING === "notre-dame-towers" || BUILDING === "towers") {
+  await import("./derive-notre-dame-towers.mjs");
+  process.exit(0);
+}
+if (BUILDING === "notre-dame-whole" || BUILDING === "cathedral" || BUILDING === "whole") {
+  await import("./derive-notre-dame-whole.mjs");
+  process.exit(0);
+}
 if (BUILDING === "notre-dame" || BUILDING === "notredame") {
   await import("./derive-notre-dame.mjs");
   process.exit(0);
