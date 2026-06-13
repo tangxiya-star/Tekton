@@ -45,6 +45,17 @@ Ship an interactive 3D reconstruction of **Viollet-le-Duc's 1859 Notre-Dame spir
 3. **Uncertainty propagates:** a conjectural input makes every dependent component conjectural.
 4. **DQ-avoidance:** unauthorized assets = disqualification. Use only public-domain drawings + factual numeric data as assets. Cite restricted sources; never ingest them.
 
+## Research guardrails (anti-hallucination) — for the research agents (Phase 0 / `--mode=live`)
+
+The anti-hallucination thesis IS the product (PRD §3: *"nothing renders without a source; what can't cite, shows red"*). The build side enforces it via the verifier (G09 source-registry, V12/V13 no-invention guard, ingest validation). These rules extend the **same discipline to the research side** so data can't be fabricated at the source:
+
+1. **Cite-or-gap.** Every dimensional claim must carry a **real, resolvable source URL**. No source → it is a **GAP**, never a value. The verified corpus ships **40 explicit gaps** as the model — emulate it; never fill a gap with a guess.
+2. **Adversarial verification (fresh context).** Every candidate `measured` / `reconstructed_design` value is checked by a **second agent in a fresh context whose job is to REFUTE it**. Only independently corroborated claims survive as measured; the rest become `conjecture` or are dropped. (This produced the corpus's 16 verdicts, including the 35 m→43 m correction.)
+3. **≥ 2 independent sources for "measured."** A single-source number is `cited-uncertain` at best. The *most dangerous values are the most precise-looking ones* — e.g. the blog's 1.948 m pier Ø / "148 pied-du-roi," falsely attributed to a Tallon/Bork laser scan. Require corroboration; default to gap.
+4. **Rights gate.** Every source is classified **use / cite-only / neither**. Restricted data (Tallon raw scan, CNRS/AGP, self-published blogs) is **cite-only — never ingested as a value.** Feeds the G09 registry.
+5. **No source-laundering.** A value may never be re-attributed to a more authoritative source than where it actually came from. Provenance traces to the real origin.
+6. **Defense in depth — even if a research agent slips, the build refuses to ship it:** ingest validation (every node needs provenance + source + url + rights), G09 source-registry (source must resolve to the rights-cleared list), and the verifier's V12/V13 no-invention guard each re-check independently. A fabricated value cannot reach the render.
+
 ## 4. The build loop ("check the work")
 
 For every change:
