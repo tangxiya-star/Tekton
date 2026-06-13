@@ -1,0 +1,18 @@
+{"seq":0,"type":"phase_start","phase":1,"name":"RESEARCH — verified replay (cite-or-gap, adversarial corpus)"}
+{"seq":1,"type":"gate","phase":1,"name":"RESEARCH","ok":true,"verdicts":16,"gaps":40}
+{"seq":2,"type":"phase_start","phase":2,"name":"INGEST — provenance + rights gate (every node {provenance,source,url,rights})"}
+{"seq":3,"type":"gate","phase":2,"name":"INGEST","ok":true}
+{"seq":4,"type":"phase_start","phase":3,"name":"DERIVE — Gothic ruleset → structural-spec (comp() audit: no unsourced component)"}
+{"seq":5,"type":"gate","phase":3,"name":"DERIVE","ok":true}
+{"seq":6,"type":"phase_start","phase":4,"name":"BUILD — next build of the procedural R3F scene → static export out/"}
+{"seq":7,"type":"gate","phase":4,"name":"BUILD","ok":true}
+{"seq":8,"type":"phase_start","phase":5,"name":"VERIFY — V-checks from component coords + pixel checks + vision sub-agent"}
+{"seq":9,"type":"gate","phase":5,"name":"VERIFY","ok":true,"deterministic":true,"vision":"pass","soft":true}
+{"seq":10,"type":"phase_start","phase":6,"name":"LOOP — autonomy spine: re-derive on red + the scripted V08 corrupt→refuse→restore beat"}
+{"seq":11,"type":"v08_beat","refused":true,"corruptCritical":["V08"],"restoredGreen":true}
+{"seq":12,"type":"gate","phase":6,"name":"LOOP","ok":true,"restored_green":true,"v08_refused":true,"failed_reports_kept":12}
+{"seq":13,"type":"phase_start","phase":7,"name":"RECORD — Playwright recordVideo of the full run → artifacts/run-*.webm"}
+{"seq":14,"type":"gate","phase":7,"name":"RECORD","ok":true,"webm":"run-2026-06-13_21-59-39.webm","soft":true}
+{"seq":15,"type":"phase_start","phase":8,"name":"SHIP — assert the live URL returns HTTP 200"}
+{"seq":16,"type":"gate","phase":8,"name":"SHIP","ok":true,"url":"http://localhost:5057/?building=notre-dame","http_status":200,"soft":true}
+{"seq":17,"type":"finalize","verdict":"PARTIAL","rubric":{"green":22,"total":23,"required_green":21,"required_total":22,"critical_fails":[]}}

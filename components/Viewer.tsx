@@ -255,9 +255,11 @@ function GltfMember({ c, mode }: { c: Component; mode: ViewMode }) {
         mesh.castShadow = mesh.receiveShadow = true;
         mesh.userData.componentId = c.id;
         if (provMode) {
-          mesh.material = new THREE.MeshStandardMaterial({
+          // unlit + tone-mapping off → the pixel equals PROV_COLORS exactly,
+          // matching the legend swatches and the P03 vision verifier histogram.
+          mesh.material = new THREE.MeshBasicMaterial({
             color: PROV_COLORS[c.provenance],
-            roughness: 1,
+            toneMapped: false,
             side: THREE.DoubleSide,
           });
         } else {
@@ -380,7 +382,16 @@ function Member({
 
   const isReconWhiteWall = mode === "recon" && c.material === "bai" && !provMode;
 
-  const mat = (
+  // provenance mode: unlit + tone-mapping off so the rendered pixel equals
+  // PROV_COLORS exactly, matching the legend swatches and the P03 vision verifier.
+  const mat = provMode ? (
+    <meshBasicMaterial
+      key={`prov-${c.material ?? c.phase}`}
+      color={color}
+      toneMapped={false}
+      side={g.type === "poly" ? THREE.DoubleSide : THREE.FrontSide}
+    />
+  ) : (
     <meshStandardMaterial
       key={`${mode}-${c.material ?? c.phase}`}
       color={color}
@@ -390,7 +401,7 @@ function Member({
       aoMap={isReconWhiteWall ? null : set?.arm ?? null}
       roughnessMap={isReconWhiteWall ? null : set?.arm ?? null}
       metalness={0}
-      roughness={isReconWhiteWall ? 0.5 : provMode ? 1 : 0.97}
+      roughness={isReconWhiteWall ? 0.5 : 0.97}
       envMapIntensity={0.35}
       side={g.type === "poly" ? THREE.DoubleSide : THREE.FrontSide}
     />
@@ -745,7 +756,7 @@ export default function Viewer() {
         )}
         {firstPerson && <FirstPersonController enabled={firstPerson} />}
         <CameraRig goal={goal} entered={entered} doorRefs={doorRefs} flyingRef={flyingRef} />
-        <ClickHandler raycaster={raycasterRef} mouse={mouseRef} onComponentClick={handleComponentClick} />
+        {/* ClickHandler is rendered once inside <Scene>; the duplicate here was removed during integration. */}
       </Canvas>
 
       {/* enter / exit the hall + first-person toggle + playback mode */}

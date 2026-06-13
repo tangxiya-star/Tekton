@@ -1,0 +1,221 @@
+{
+  "generated_at": "2026-06-13T20:56:58.088Z",
+  "building": "notre-dame",
+  "spec": "artifacts/structural-spec.notre-dame.json",
+  "screenshot_refresh": {
+    "refreshed": true
+  },
+  "summary": {
+    "total": 13,
+    "pass": 11,
+    "fail": 2,
+    "critical_failures": [
+      "V08"
+    ]
+  },
+  "vision": {
+    "status": "pending",
+    "note": "vision-verifier sub-agent runs in a fresh context (ND-15); merged by orchestrate."
+  },
+  "checks": [
+    {
+      "id": "V08",
+      "assert": "Spire total height = 96 m, base ~30 m (30–33), visible ≈ 66 m — measured-reality guard: NOT idealized toward a geometric ideal",
+      "method": "spec-geometry",
+      "critical": true,
+      "pass": false,
+      "measured": {
+        "total_m": 85.617,
+        "base_m": 30,
+        "visible_m": 55.617,
+        "base_width_m": 8.5
+      },
+      "expected": {
+        "total_m": 96,
+        "base_m": "30–33",
+        "visible_m": 66
+      },
+      "note": "FAILED THE PROVENANCE CONTRACT: spire height normalized toward an ad-triangulum/Roriczer ideal away from the measured 96 m. Measured reality wins."
+    },
+    {
+      "id": "V09",
+      "assert": "Spire octagonal (8 faces) on the ~14 m crossing footprint; six-part profile present",
+      "method": "spec-geometry",
+      "pass": true,
+      "measured": {
+        "faces": 8,
+        "profile_parts": [
+          "tabouret",
+          "souche",
+          "fut",
+          "gallery1",
+          "gallery2",
+          "aiguille"
+        ],
+        "base_across_flats_m": 8.5
+      },
+      "expected": {
+        "faces": 8,
+        "profile_parts": [
+          "tabouret",
+          "souche",
+          "fut",
+          "gallery1",
+          "gallery2",
+          "aiguille"
+        ],
+        "footprint_m": "≤14 (inscribed in crossing)"
+      }
+    },
+    {
+      "id": "V10",
+      "assert": "16 statues = 12 apostles (4 groups of 3) + 4 evangelist symbols; apostle ≈3.40 m, evangelist ≈2.0 m; St Thomas faces inward",
+      "method": "spec-geometry",
+      "pass": false,
+      "measured": {
+        "total": 16,
+        "apostles": 12,
+        "evangelists": 4,
+        "apostle_h_m": [
+          2.983,
+          2.982
+        ],
+        "evangelist_h_m": [
+          1.755
+        ],
+        "faces_inward": [
+          "apostle-thomas"
+        ]
+      },
+      "expected": {
+        "total": 16,
+        "apostles": 12,
+        "evangelists": 4,
+        "apostle_h_m": 3.4,
+        "evangelist_h_m": 2,
+        "inward": [
+          "apostle-thomas"
+        ]
+      }
+    },
+    {
+      "id": "V11",
+      "assert": "Taper monotonic: octagon width strictly decreases souche→aiguille (no bulge); rooster is the single topmost component",
+      "method": "spec-geometry",
+      "pass": true,
+      "measured": {
+        "taper_across_flats_m": [
+          7.945,
+          4.804,
+          4.712,
+          2.772,
+          0.148
+        ],
+        "topmost": "coq"
+      },
+      "expected": {
+        "monotonic_decreasing": true,
+        "topmost": "coq"
+      }
+    },
+    {
+      "id": "V12",
+      "assert": "Provenance audit: every component classed + sourced; 0 unsourced; GAP-class never rendered; all four classes present",
+      "method": "spec-geometry",
+      "pass": true,
+      "measured": {
+        "total": 93,
+        "unsourced": [],
+        "missing_url": [],
+        "missing_rights": [],
+        "classes_present": [
+          "conjecture",
+          "reconstructed_design",
+          "rule_derived",
+          "measured"
+        ]
+      },
+      "expected": "0 unsourced, every component {provenance,source,url,rights}, all four classes present"
+    },
+    {
+      "id": "V13",
+      "assert": "No-invention guard: no `measured` component cites a restricted source or a cited-uncertain value; rooster is NOT measured",
+      "method": "spec-geometry",
+      "pass": true,
+      "measured": {
+        "violations": []
+      },
+      "expected": "0 violations"
+    },
+    {
+      "id": "V14",
+      "assert": "Rights gate (G09): every component source resolves to the rights-cleared registry with a use/use-data verdict",
+      "method": "spec-geometry",
+      "pass": true,
+      "measured": {
+        "offenders": [],
+        "registry_size": 14
+      },
+      "expected": "0 components from excluded/unknown sources"
+    },
+    {
+      "id": "P01",
+      "assert": "all spire canonical views rendered",
+      "method": "pixels",
+      "pass": true,
+      "measured": {
+        "missing": []
+      }
+    },
+    {
+      "id": "P02-default",
+      "assert": "render is not blank (>3% non-background pixels)",
+      "method": "pixels",
+      "pass": true,
+      "measured": {
+        "non_background": "5.5%"
+      }
+    },
+    {
+      "id": "P02-front",
+      "assert": "render is not blank (>3% non-background pixels)",
+      "method": "pixels",
+      "pass": true,
+      "measured": {
+        "non_background": "4.8%"
+      }
+    },
+    {
+      "id": "P02-detail",
+      "assert": "render is not blank (>3% non-background pixels)",
+      "method": "pixels",
+      "pass": true,
+      "measured": {
+        "non_background": "40.0%"
+      }
+    },
+    {
+      "id": "P02-provenance",
+      "assert": "render is not blank (>3% non-background pixels)",
+      "method": "pixels",
+      "pass": true,
+      "measured": {
+        "non_background": "5.1%"
+      }
+    },
+    {
+      "id": "P03",
+      "assert": "provenance view shows all four evidence-class colors",
+      "method": "pixels",
+      "pass": true,
+      "measured": {
+        "class_pixel_pct": {
+          "measured": 0.161,
+          "reconstructed_design": 2.152,
+          "rule_derived": 0.168,
+          "conjecture": 0.132
+        }
+      }
+    }
+  ]
+}

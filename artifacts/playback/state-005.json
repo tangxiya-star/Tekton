@@ -1,0 +1,22 @@
+{
+  "step": 5,
+  "total": 12,
+  "phase": "aiguille",
+  "visible_component_ids": [
+    "spire-tabouret",
+    "spire-souche",
+    "spire-fut",
+    "spire-gallery1",
+    "spire-gallery2",
+    "spire-aiguille"
+  ],
+  "added_ids": [
+    "spire-aiguille"
+  ],
+  "counts": {
+    "measured": 0,
+    "reconstructed_design": 5,
+    "rule_derived": 0,
+    "conjecture": 1
+  }
+}

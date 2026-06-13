@@ -844,7 +844,15 @@
       ],
       "yzfs_ref": "YZFS: 栌斗 32×32 fen, height 20 fen (耳8平4欹8)",
       "deviation_from_fashi": true,
-      "note": "Smaller than Fashi spec in all dimensions — documented deviation."
+      "note": "Smaller than Fashi spec in all dimensions — documented deviation.",
+      "annotation": {
+        "title_zh": "栌斗",
+        "title_en": "Ludou Capital Block",
+        "desc_zh": "位于柱头的方形垫块，是斗拱体系的基座，用来将上层斗拱的荷载均匀分散到柱子上。",
+        "desc_en": "Square capital block at the column head. Distributes bracket loads uniformly to the column.",
+        "reference_image": "references/details/dougong-bracket-detail.svg",
+        "reference_label": "底层栌斗（第1层）"
+      }
     },
     {
       "phase": "puzuo",
@@ -872,7 +880,15 @@
       ],
       "yzfs_ref": "YZFS: 「每跳之长，心不过三十分°」 — jump 1 complies",
       "deviation_from_fashi": true,
-      "note": "Corner set simplified: diagonal arm only (v1); full 转角铺作 composition deferred."
+      "note": "Corner set simplified: diagonal arm only (v1); full 转角铺作 composition deferred.",
+      "annotation": {
+        "title_zh": "华栱（第一跳）",
+        "title_en": "Hua-gong Arm, Jump 1",
+        "desc_zh": "水平向外伸出的构件，承载上层斗拱。加宽至11分以增加强度，说明工匠为结构力学做出的主动调整。",
+        "desc_en": "Horizontal projecting arm. Widened to 11 fen for structural strength—builders adapted the modular system for mechanics.",
+        "reference_image": "references/details/dougong-bracket-detail.svg",
+        "reference_label": "第二层华栱"
+      }
     },
     {
       "phase": "puzuo",
@@ -899,7 +915,15 @@
         0
       ],
       "deviation_from_fashi": true,
-      "note": "Corner set simplified: diagonal arm only (v1); full 转角铺作 composition deferred."
+      "note": "Corner set simplified: diagonal arm only (v1); full 转角铺作 composition deferred.",
+      "annotation": {
+        "title_zh": "华栱（第二跳）",
+        "title_en": "Hua-gong Arm, Jump 2",
+        "desc_zh": "继续向外扩展，逐级阶跃式地延伸斗拱的支撑范围。宽度收窄，形成层级递进的视觉效果。",
+        "desc_en": "Upper projecting arm continuing the outward extension. Width reduces to create visual hierarchy.",
+        "reference_image": "references/details/dougong-bracket-detail.svg",
+        "reference_label": "第三层华栱"
+      }
     },
     {
       "phase": "puzuo",
@@ -922,7 +946,15 @@
       ],
       "yzfs_ref": "YZFS spec: 62 / 72 / 92 fen",
       "deviation_from_fashi": true,
-      "note": "70 fen — equals the ling gong, breaking the usual early pattern (YZFS: 62)."
+      "note": "70 fen — equals the ling gong, breaking the usual early pattern (YZFS: 62).",
+      "annotation": {
+        "title_zh": "泥道栱",
+        "title_en": "Nidao Gong (Wall-plane Arm)",
+        "desc_zh": "垂直于前后方向，位于墙面平面内。与华栱垂直交叉，形成网格式结构，增强横向稳定性。",
+        "desc_en": "Transverse arm in the wall plane. Perpendicular to hua-gong, creating grid-like bracing.",
+        "reference_image": "references/details/dougong-bracket-detail.svg",
+        "reference_label": "泥道栱细部"
+      }
     },
     {
       "phase": "puzuo",
@@ -945,7 +977,15 @@
       ],
       "yzfs_ref": "YZFS: 栌斗 32×32 fen, height 20 fen (耳8平4欹8)",
       "deviation_from_fashi": true,
-      "note": "Smaller than Fashi spec in all dimensions — documented deviation."
+      "note": "Smaller than Fashi spec in all dimensions — documented deviation.",
+      "annotation": {
+        "title_zh": "栌斗",
+        "title_en": "Ludou Capital Block",
+        "desc_zh": "位于柱头的方形垫块，是斗拱体系的基座，用来将上层斗拱的荷载均匀分散到柱子上。",
+        "desc_en": "Square capital block at the column head. Distributes bracket loads uniformly to the column.",
+        "reference_image": "references/details/dougong-bracket-detail.svg",
+        "reference_label": "底层栌斗（第1层）"
+      }
     },
     {
       "phase": "puzuo",
@@ -967,7 +1007,15 @@
         -100
       ],
       "yzfs_ref": "YZFS: 「每跳之长，心不过三十分°」 — jump 1 complies",
-      "deviation_from_fashi": true
+      "deviation_from_fashi": true,
+      "annotation": {
+        "title_zh": "华栱（第一跳）",
+        "title_en": "Hua-gong Arm, Jump 1",
+        "desc_zh": "水平向外伸出的构件，承载上层斗拱。加宽至11分以增加强度，说明工匠为结构力学做出的主动调整。",
+        "desc_en": "Horizontal projecting arm. Widened to 11 fen for structural strength—builders adapted the modular system for mechanics.",
+        "reference_image": "references/details/dougong-bracket-detail.svg",
+        "reference_label": "第二层华栱"
+      }
     },
     {
       "phase": "puzuo",
@@ -987,7 +1035,15 @@
         -362.5,
         278.9,
         -100
-      ]
+      ],
+      "annotation": {
+        "title_zh": "华栱（第二跳）",
+        "title_en": "Hua-gong Arm, Jump 2",
+        "desc_zh": "继续向外扩展，逐级阶跃式地延伸斗拱的支撑范围。宽度收窄，形成层级递进的视觉效果。",
+        "desc_en": "Upper projecting arm continuing the outward extension. Width reduces to create visual hierarchy.",
+        "reference_image": "references/details/dougong-bracket-detail.svg",
+        "reference_label": "第三层华栱"
+      }
     },
     {
       "phase": "puzuo",
@@ -1010,7 +1066,15 @@
       ],
       "yzfs_ref": "YZFS spec: 62 / 72 / 92 fen",
       "deviation_from_fashi": true,
-      "note": "70 fen — equals the ling gong, breaking the usual early pattern (YZFS: 62)."
+      "note": "70 fen — equals the ling gong, breaking the usual early pattern (YZFS: 62).",
+      "annotation": {
+        "title_zh": "泥道栱",
+        "title_en": "Nidao Gong (Wall-plane Arm)",
+        "desc_zh": "垂直于前后方向，位于墙面平面内。与华栱垂直交叉，形成网格式结构，增强横向稳定性。",
+        "desc_en": "Transverse arm in the wall plane. Perpendicular to hua-gong, creating grid-like bracing.",
+        "reference_image": "references/details/dougong-bracket-detail.svg",
+        "reference_label": "泥道栱细部"
+      }
     },
     {
       "phase": "puzuo",
@@ -1032,7 +1096,15 @@
         -100
       ],
       "deviation_from_fashi": true,
-      "note": "70 fen, not shorter than the nidao gong (YZFS expects 72>62 the other way)."
+      "note": "70 fen, not shorter than the nidao gong (YZFS expects 72>62 the other way).",
+      "annotation": {
+        "title_zh": "令栱",
+        "title_en": "Ling Gong (Eave-purlin Arm)",
+        "desc_zh": "最外层的斗拱臂，直接支撑檐角。在唐代，令栱与泥道栱同等长度，打破了后来规则的严格比例关系。",
+        "desc_en": "Outermost bracket arm supporting the eave edge. In Tang dynasty, ling-gong and nidao-gong were equal length.",
+        "reference_image": "references/details/dougong-bracket-detail.svg",
+        "reference_label": "令栱与出檐"
+      }
     },
     {
       "phase": "puzuo",
@@ -1055,7 +1127,15 @@
       ],
       "yzfs_ref": "YZFS: 栌斗 32×32 fen, height 20 fen (耳8平4欹8)",
       "deviation_from_fashi": true,
-      "note": "Smaller than Fashi spec in all dimensions — documented deviation."
+      "note": "Smaller than Fashi spec in all dimensions — documented deviation.",
+      "annotation": {
+        "title_zh": "栌斗",
+        "title_en": "Ludou Capital Block",
+        "desc_zh": "位于柱头的方形垫块，是斗拱体系的基座，用来将上层斗拱的荷载均匀分散到柱子上。",
+        "desc_en": "Square capital block at the column head. Distributes bracket loads uniformly to the column.",
+        "reference_image": "references/details/dougong-bracket-detail.svg",
+        "reference_label": "底层栌斗（第1层）"
+      }
     },
     {
       "phase": "puzuo",
@@ -1077,7 +1157,15 @@
         100
       ],
       "yzfs_ref": "YZFS: 「每跳之长，心不过三十分°」 — jump 1 complies",
-      "deviation_from_fashi": true
+      "deviation_from_fashi": true,
+      "annotation": {
+        "title_zh": "华栱（第一跳）",
+        "title_en": "Hua-gong Arm, Jump 1",
+        "desc_zh": "水平向外伸出的构件，承载上层斗拱。加宽至11分以增加强度，说明工匠为结构力学做出的主动调整。",
+        "desc_en": "Horizontal projecting arm. Widened to 11 fen for structural strength—builders adapted the modular system for mechanics.",
+        "reference_image": "references/details/dougong-bracket-detail.svg",
+        "reference_label": "第二层华栱"
+      }
     },
     {
       "phase": "puzuo",
@@ -1097,7 +1185,15 @@
         -362.5,
         278.9,
         100
-      ]
+      ],
+      "annotation": {
+        "title_zh": "华栱（第二跳）",
+        "title_en": "Hua-gong Arm, Jump 2",
+        "desc_zh": "继续向外扩展，逐级阶跃式地延伸斗拱的支撑范围。宽度收窄，形成层级递进的视觉效果。",
+        "desc_en": "Upper projecting arm continuing the outward extension. Width reduces to create visual hierarchy.",
+        "reference_image": "references/details/dougong-bracket-detail.svg",
+        "reference_label": "第三层华栱"
+      }
     },
     {
       "phase": "puzuo",
@@ -1120,7 +1216,15 @@
       ],
       "yzfs_ref": "YZFS spec: 62 / 72 / 92 fen",
       "deviation_from_fashi": true,
-      "note": "70 fen — equals the ling gong, breaking the usual early pattern (YZFS: 62)."
+      "note": "70 fen — equals the ling gong, breaking the usual early pattern (YZFS: 62).",
+      "annotation": {
+        "title_zh": "泥道栱",
+        "title_en": "Nidao Gong (Wall-plane Arm)",
+        "desc_zh": "垂直于前后方向，位于墙面平面内。与华栱垂直交叉，形成网格式结构，增强横向稳定性。",
+        "desc_en": "Transverse arm in the wall plane. Perpendicular to hua-gong, creating grid-like bracing.",
+        "reference_image": "references/details/dougong-bracket-detail.svg",
+        "reference_label": "泥道栱细部"
+      }
     },
     {
       "phase": "puzuo",
@@ -1142,7 +1246,15 @@
         100
       ],
       "deviation_from_fashi": true,
-      "note": "70 fen, not shorter than the nidao gong (YZFS expects 72>62 the other way)."
+      "note": "70 fen, not shorter than the nidao gong (YZFS expects 72>62 the other way).",
+      "annotation": {
+        "title_zh": "令栱",
+        "title_en": "Ling Gong (Eave-purlin Arm)",
+        "desc_zh": "最外层的斗拱臂，直接支撑檐角。在唐代，令栱与泥道栱同等长度，打破了后来规则的严格比例关系。",
+        "desc_en": "Outermost bracket arm supporting the eave edge. In Tang dynasty, ling-gong and nidao-gong were equal length.",
+        "reference_image": "references/details/dougong-bracket-detail.svg",
+        "reference_label": "令栱与出檐"
+      }
     },
     {
       "phase": "puzuo",
@@ -1165,7 +1277,15 @@
       ],
       "yzfs_ref": "YZFS: 栌斗 32×32 fen, height 20 fen (耳8平4欹8)",
       "deviation_from_fashi": true,
-      "note": "Smaller than Fashi spec in all dimensions — documented deviation."
+      "note": "Smaller than Fashi spec in all dimensions — documented deviation.",
+      "annotation": {
+        "title_zh": "栌斗",
+        "title_en": "Ludou Capital Block",
+        "desc_zh": "位于柱头的方形垫块，是斗拱体系的基座，用来将上层斗拱的荷载均匀分散到柱子上。",
+        "desc_en": "Square capital block at the column head. Distributes bracket loads uniformly to the column.",
+        "reference_image": "references/details/dougong-bracket-detail.svg",
+        "reference_label": "底层栌斗（第1层）"
+      }
     },
     {
       "phase": "puzuo",
@@ -1193,13 +1313,21 @@
       ],
       "yzfs_ref": "YZFS: 「每跳之长，心不过三十分°」 — jump 1 complies",
       "deviation_from_fashi": true,
-      "note": "Corner set simplified: diagonal arm only (v1); full 转角铺作 composition deferred."
+      "note": "Corner set simplified: diagonal arm only (v1); full 转角铺作 composition deferred.",
+      "annotation": {
+        "title_zh": "华栱（第一跳）",
+        "title_en": "Hua-gong Arm, Jump 1",
+        "desc_zh": "水平向外伸出的构件，承载上层斗拱。加宽至11分以增加强度，说明工匠为结构力学做出的主动调整。",
+        "desc_en": "Horizontal projecting arm. Widened to 11 fen for structural strength—builders adapted the modular system for mechanics.",
+        "reference_image": "references/details/dougong-bracket-detail.svg",
+        "reference_label": "第二层华栱"
+      }
     }
   ],
   "playback": {
     "index": 54,
     "phase": "puzuo",
     "description": "puzuo: +角华栱（第一跳，足材加宽）",
-    "totalStates": 339
+    "totalStates": 389
   }
 }

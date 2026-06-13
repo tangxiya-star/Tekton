@@ -20,8 +20,34 @@
 import { readFileSync, writeFileSync, existsSync, statSync } from "node:fs";
 import { spawnSync } from "node:child_process";
 
+// --- multi-building dispatch (ND-6) ----------------------------------------
+function argBuilding() {
+  const av = process.argv.slice(2);
+  const eq = av.find((a) => a.startsWith("--building="));
+  if (eq) return eq.split("=")[1];
+  const i = av.indexOf("--building");
+  if (i >= 0 && av[i + 1]) return av[i + 1];
+  return "nanchan";
+}
+const BUILDING = argBuilding();
+if (BUILDING === "notre-dame-towers" || BUILDING === "towers") {
+  await import("./verify-notre-dame-towers.mjs");
+  process.exit(process.exitCode ?? 0);
+}
+if (BUILDING === "notre-dame-whole" || BUILDING === "cathedral" || BUILDING === "whole") {
+  await import("./verify-notre-dame-whole.mjs");
+  process.exit(process.exitCode ?? 0);
+}
+if (BUILDING === "notre-dame" || BUILDING === "notredame") {
+  await import("./verify-notre-dame.mjs");
+  process.exit(process.exitCode ?? 0);
+}
+
 const SPEC_PATH = "artifacts/structural-spec.json";
 const REPORT_PATH = "artifacts/verifier-report.json";
+// Namespaced Nanchan report (INT-07): written alongside the canonical report so
+// each building's viewer HUD can fetch its own. ND keeps verifier-report.notre-dame.json.
+const NANCHAN_REPORT_PATH = "artifacts/verifier-report.nanchan.json";
 const spec = JSON.parse(readFileSync(SPEC_PATH, "utf8"));
 const comps = spec.components;
 
@@ -351,12 +377,20 @@ async function pixelChecks() {
         for (let i = 0; i < d.length; i += 4) {
           const [r, g2, b] = [d[i], d[i + 1], d[i + 2]];
           if (Math.abs(r - bg[0]) + Math.abs(g2 - bg[1]) + Math.abs(b - bg[2]) > 30) nonBg++;
+          // assign each pixel to its NEAREST palette color within tolerance — not
+          // the first match. conjecture (#b34a38) and reconstructed_design (#a3812f)
+          // are only 80 apart, so a first-match-within-90 scan aliases conjecture
+          // pixels into whichever of the two iterates first.
+          let best = null;
+          let bd = 90;
           for (const [k, [pr, pg, pb]] of Object.entries(palette)) {
-            if (Math.abs(r - pr) + Math.abs(g2 - pg) + Math.abs(b - pb) < 90) {
-              counts[k]++;
-              break;
+            const dd = Math.abs(r - pr) + Math.abs(g2 - pg) + Math.abs(b - pb);
+            if (dd < bd) {
+              bd = dd;
+              best = k;
             }
           }
+          if (best) counts[best]++;
         }
         return { total, nonBg, counts };
       },
@@ -421,6 +455,8 @@ const report = {
   checks: all,
 };
 writeFileSync(REPORT_PATH, JSON.stringify(report, null, 2));
+// INT-07: also emit the namespaced Nanchan report (additive; canonical path unchanged).
+writeFileSync(NANCHAN_REPORT_PATH, JSON.stringify(report, null, 2));
 // PRD §7.4: reports are kept, including failures — a logged fail→revise→pass
 // cycle is evidence, not a blemish. Failed runs get an immutable copy.
 if (failures.length) {

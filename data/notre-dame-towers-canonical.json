@@ -1,0 +1,145 @@
+{
+  "$schema_notes": {
+    "purpose": "Canonical spec for the WEST TOWERS + FACADE of Notre-Dame de Paris — tier v2. Built on the same Yingzao pipeline as the spire (tier v1) and Nanchan: every dimensional/material/ornament node carries {provenance, source, url, rights}; nothing renders without a rights-cleared source; undocumented = GAP/conjecture, never invented. Prior tiers (Nanchan, the spire) are UNAFFECTED — this is a separate building key 'notre-dame-towers'.",
+    "data_source": "Every value traces to artifacts/towers-research-findings.json (adversarial cite-or-gap research, >=2 independent sources for 'measured', 68 datums: 43 measured / 11 reconstructed_design / 4 conjecture / 10 GAP). Public-domain drawings (Dehio-Bezold 1887, Viollet-le-Duc facade plates) are the asset sources; modern photos / paywalled papers are cite-only.",
+    "provenance_classes": {
+      "measured": "Multiply-confirmed published dimension/count (>=2 independent sources). Facts, uncopyrightable.",
+      "reconstructed_design": "From the 19th-c Viollet-le-Duc/Lassus restoration or PD drawings (Dehio-Bezold) — incl. the restored Gallery of Kings figures and the entirely-19th-c chimeras; or a single-source published figure.",
+      "rule_derived": "Derived by OUR engine from a Gothic geometry rule (ad quadratum/triangulum, two-centred arch, rose radial geometry, Roriczer pinnacle). Must cite the rule.",
+      "conjecture": "Flagged uncertain: contested estimate, exact colour, or fine modeling. Renders in conjecture colour; never presented as measured.",
+      "GAP": "Could not source. NEVER filled with a number."
+    },
+    "units": { "module": "pied du roi = 324.8 mm (= 0.3248 m); the cai-fen analog. Component positions/dimensions emitted in METRES so the verifier reads 43.5 m / 69 m / 9.6 m directly.", "pied_du_roi_mm": 324.8, "scene_unit": "metre", "scene_scale_m_per_unit": 1 },
+    "provenance_colors": { "measured": "#d9a843", "reconstructed_design": "#a3812f", "rule_derived": "#5e6ca8", "conjecture": "#b34a38" },
+    "material_classes": {
+      "_note": "The material-hypothesis toggle (ND spec point 4): as-built vs today are BOTH cited conjecture for exact colour (exact RGB is a documented GAP). The stone TYPE (Lutetian limestone) is measured; only its precise colour is conjecture.",
+      "limestone": { "type": "Lutetian limestone (calcaire lutétien)", "provenance": "measured", "source": "EN-WIKI-LUTETIAN", "as_built_descriptor": "pale cream / ivory", "today_descriptor": "cleaned cream (post-restoration)", "sooted_descriptor": "soot-blackened grey (pre-1990s)", "exact_rgb": "GAP" },
+      "lead": { "type": "lead sheet roofing over oak", "provenance": "measured", "source": "EN-WIKI-SPIRE", "descriptor": "dull blue-grey lead" },
+      "oak": { "type": "oak belfry framing", "provenance": "measured", "source": "ARTNEWSPAPER-OAK-ROOF", "descriptor": "aged oak brown" },
+      "copper_bronze": { "type": "bronze/copper bells", "provenance": "measured", "source": "CULTURE-GOUV-EMMANUEL", "descriptor": "bronze" }
+    }
+  },
+
+  "source_registry": {
+    "_note": "Rights-cleared registry. G09 (verify) HARD-FAILS any component whose source is not here with a use/use-data verdict. cite-only sources may be referenced in prose but never back a rendered value.",
+    "VLD-FACADE": { "citation": "Viollet-le-Duc, Dictionnaire raisonné de l'architecture française — west-facade plates/elevations.", "url": "https://commons.wikimedia.org/wiki/Category:Drawings_by_Eug%C3%A8ne_Viollet-le-Duc", "rights": "public_domain", "verdict": "use", "reason": "Author d.1879 → PD. The 19th-c restoration design drawings — the asset for facade form/ornament. reconstructed_design when scaled." },
+    "DEHIO-BEZOLD": { "citation": "Dehio & von Bezold, Die kirchliche Baukunst des Abendlandes (atlas, 1887) — NDP facade plans/sections.", "url": "https://digi.ub.uni-heidelberg.de/diglit/dehio1887ga", "rights": "public_domain", "verdict": "use", "reason": "PD Mark 1.0 (UB Heidelberg). The cleanest open PD source for facade plans/sections; scaled dims = reconstructed_design." },
+    "FRIENDS-WEST-FACADE": { "citation": "Friends of Notre-Dame de Paris — West Facade page.", "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/west-facade/", "rights": "facts_uncopyrightable", "verdict": "use-data", "reason": "Facade 43.5 m wide, 45 m high, 69 m with towers; rose 9.6 m. Numbers only." },
+    "TECHNO-SCIENCE": { "citation": "techno-science.net — NDP exterior architectural elements (FR-Wikipedia mirror, independent stream).", "url": "https://www.techno-science.net/glossaire-definition/Cathedrale-Notre-Dame-de-Paris-page-3.html", "rights": "facts_uncopyrightable", "verdict": "use-data", "reason": "Independent confirmation of 43.5 m / 45 m / 9.60 m. Numbers only." },
+    "BNF-FACADE-9POINTS": { "citation": "BnF Passerelles — 'La façade de Notre-Dame de Paris en 9 points'.", "url": "https://passerelles.essentiels.bnf.fr/fr/article/e854492c-8458-4685-9bd0-d211156adb0f-facade-notre-dame-paris-en-9-points", "rights": "facts_uncopyrightable", "verdict": "use-data", "reason": "Institutional (BnF) confirmation of 43.5 m / 45 m / 69 m / rose 9.60 m / 28 kings / registers. Numbers/counts only." },
+    "EN-WIKI-NDP": { "citation": "Wikipedia — Notre-Dame de Paris.", "url": "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris", "rights": "facts_uncopyrightable", "verdict": "use-data", "reason": "Cross-check for facade/towers facts. Numbers only." },
+    "PANORAMA-GALERIE-ROIS": { "citation": "Panorama de l'art — Galerie des rois de la cathédrale Notre-Dame.", "url": "https://panoramadelart.com/analyse/galerie-des-rois-de-la-cathedrale-notre-dame-de-paris", "rights": "facts_uncopyrightable", "verdict": "use-data", "reason": "28 kings of Judah, ~3.5 m, the band; 19th-c restoration. Facts only." },
+    "CLUNY-HEADS": { "citation": "Musée de Cluny — Heads of the Kings of Judah.", "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html", "rights": "facts_uncopyrightable", "verdict": "use-data", "reason": "21 original heads rediscovered 1977, held at Cluny; originals decapitated 1793. Facts only." },
+    "FRIENDS-ROSE-WINDOWS": { "citation": "Friends of Notre-Dame de Paris — Rose Windows.", "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/rose-windows/", "rights": "facts_uncopyrightable", "verdict": "use-data", "reason": "West rose 9.6 m, c.1225, radial tracery. Facts only." },
+    "FRIENDS-PORTALS": { "citation": "Friends of Notre-Dame de Paris — Portals.", "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/portals/", "rights": "facts_uncopyrightable", "verdict": "use-data", "reason": "3 portals: Virgin (L), Last Judgment (centre, widest), St-Anne (R). Facts only." },
+    "FR-WIKI-CHIMERES": { "citation": "Wikipédia — Chimères de Notre-Dame de Paris.", "url": "https://fr.wikipedia.org/wiki/Chim%C3%A8res_de_Notre-Dame_de_Paris", "rights": "facts_uncopyrightable", "verdict": "use-data", "reason": "Galerie des chimères = 19th-c Viollet-le-Duc/Lassus invention; Le Stryge; ~54 figures. Facts only." },
+    "FRIENDS-GARGOYLES": { "citation": "Friends of Notre-Dame de Paris — Gargoyles.", "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/gargoyles/", "rights": "facts_uncopyrightable", "verdict": "use-data", "reason": "Functional waterspouts vs decorative chimeras; largely 19th-c replacements. Facts only." },
+    "APOLLO-VLD": { "citation": "Apollo Magazine — Viollet-le-Duc and the Gothic Revival restoration of Notre-Dame.", "url": "https://apollo-magazine.com/viollet-le-duc-notre-dame-gothic-revival-restoration", "rights": "facts_uncopyrightable", "verdict": "use-data", "reason": "Context: the chimeras/gargoyles seen today are VLD additions. Facts/context." },
+    "EN-WIKI-LUTETIAN": { "citation": "Wikipedia — Lutetian limestone.", "url": "https://en.wikipedia.org/wiki/Lutetian_limestone", "rights": "facts_uncopyrightable", "verdict": "use-data", "reason": "The building stone is Lutetian limestone (Paris-basin Eocene). Facts only." },
+    "CNRS-MATERIALS": { "citation": "CNRS News — Unveiling the secrets of Notre-Dame's materials.", "url": "https://news.cnrs.fr/articles/unveiling-the-secrets-of-notre-dames-materials", "rights": "facts_uncopyrightable", "verdict": "use-data", "reason": "Stone/lead/oak material facts. Facts only (article prose cite-only)." },
+    "EN-WIKI-SPIRE": { "citation": "Wikipedia — Spire of Notre-Dame de Paris.", "url": "https://en.wikipedia.org/wiki/Spire_of_Notre-Dame_de_Paris", "rights": "facts_uncopyrightable", "verdict": "use-data", "reason": "Lead roofing facts. Facts only." },
+    "ARTNEWSPAPER-OAK-ROOF": { "citation": "The Art Newspaper — green wood, axes and oaks (NDP oak framing).", "url": "https://www.theartnewspaper.com/2024/12/02/green-wood-axes-and-oaks-how-ancient", "rights": "facts_uncopyrightable", "verdict": "use-data", "reason": "Oak belfry/roof framing. Facts only." },
+    "CULTURE-GOUV-EMMANUEL": { "citation": "Ministère de la Culture — Le bourdon Emmanuel.", "url": "https://notre-dame-de-paris.culture.gouv.fr/fr/le-bourdon-emmanuel", "rights": "facts_uncopyrightable", "verdict": "use-data", "reason": "Emmanuel bourdon ~13.3 t, south tower. Facts only." },
+    "FRIENDS-BELLS": { "citation": "Friends of Notre-Dame de Paris — Bells.", "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/bells/", "rights": "facts_uncopyrightable", "verdict": "use-data", "reason": "Bell programme (Emmanuel S tower; 8 bells N tower 2013). Facts only." },
+    "AD-QUADRATUM": { "citation": "Ad quadratum: successive square side ratio 1/√2 (Salama et al. 2016; pure Euclid).", "url": "https://www.researchgate.net/publication/304352380", "rights": "rule", "verdict": "use", "reason": "Pure geometry rule for facade proportion + pinnacle insets." },
+    "AD-TRIANGULUM": { "citation": "Ad triangulum: triangle height = base × √3/2 (Hiscock; pure geometry).", "url": "https://www.taylorfrancis.com/chapters/mono/10.4324/9781315236872-10/ad-triangulum-nigel-hiscock", "rights": "rule", "verdict": "use", "reason": "Pure geometry; elevation from width where no measured value exists (never overrides a sourced value)." },
+    "TWO-CENTRED-ARCH": { "citation": "Two-centred (Gothic) arch construction (Brick Development Association).", "url": "https://www.brick.org.uk/uploads/downloads/d-brick-arch.pdf", "rights": "rule", "verdict": "use", "reason": "Pure geometry for the portal arches (struck from springing points)." },
+    "ROSE-RADIAL": { "citation": "Rose-window radial wheel geometry (Wikipedia 'Rose window').", "url": "https://en.wikipedia.org/wiki/Rose_window", "rights": "rule", "verdict": "use", "reason": "Radial spokes/tracery from the centre — pure geometry; the 24-ray count is from the cited tracery datum." }
+  },
+
+  "rights_excluded": {
+    "_note": "Restricted / cite-only — never back a rendered component. Carried from the spire tier + the towers research's cite-only sources.",
+    "TALLON-SCAN": { "verdict": "neither", "reason": "Tallon laser cloud — no open license.", "url": "https://en.wikipedia.org/wiki/Andrew_Tallon" },
+    "BORK-JSAH": { "verdict": "cite-only", "reason": "Bork JSAH 81(1) facade design-geometry — paywalled; cite the analysis, never ingest its derived numbers as measured.", "url": "https://online.ucpress.edu/jsah/article/81/1/21/120426" },
+    "NDP-OFFICIAL-FACADE-FR": { "verdict": "cite-only", "reason": "Official page prose/images — cite, don't ingest images.", "url": "https://www.notredamedeparis.fr/comprendre/architecture/la-facade-occidentale/" },
+    "MODERN-PHOTOS": { "verdict": "cite-only", "reason": "Any modern reference photograph of the facade/ornament is cite-only — never ingested as a texture/asset; procedural textures only.", "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/west-facade/" }
+  },
+
+  "meta": {
+    "name_fr": "Façade occidentale et tours de Notre-Dame de Paris",
+    "name_en": "West facade & towers of Notre-Dame de Paris",
+    "tier": "v2",
+    "build_state": "The 'harmonic facade' (c.1200–1250), restored by Viollet-le-Duc & Lassus (1844–64); cleaned 1990s; post-2019-fire restoration completed 2024. The two towers were never given their planned spires.",
+    "scope_note": "WEST TOWERS + FACADE only. The spire (v1) and Nanchan are separate building keys and untouched."
+  },
+
+  "facade": {
+    "total_width": { "m": 43.5, "pied_du_roi": 134, "provenance": "measured", "source": "FRIENDS-WEST-FACADE", "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/west-facade/", "corroborating_sources": ["TECHNO-SCIENCE", "BNF-FACADE-9POINTS"], "note": "VERIFIER ANCHOR. 43.5 m wide, multiply confirmed (3 independent streams)." },
+    "body_height_no_towers": { "m": 45, "pied_du_roi": 138.5, "provenance": "measured", "source": "FRIENDS-WEST-FACADE", "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/west-facade/", "corroborating_sources": ["TECHNO-SCIENCE", "BNF-FACADE-9POINTS"], "note": "Facade body below the towers, ~141 pieds. Precise terminating register has a minor source spread (flagged in research)." },
+    "register_scheme": { "value": "bottom→top: (1) three portals; (2) Gallery of Kings (28 statues); (3) rose-window zone with the Gallery of the Virgin terrace + geminated bays; (4) Gallery of Chimères colonnade linking the towers; (5) the two square belfry towers", "provenance": "measured", "source": "BNF-FACADE-9POINTS", "url": "https://passerelles.essentiels.bnf.fr/fr/article/e854492c-8458-4685-9bd0-d211156adb0f-facade-notre-dame-paris-en-9-points", "corroborating_sources": ["TECHNO-SCIENCE", "FRIENDS-WEST-FACADE"], "note": "The harmonic-facade register sequence, corroborated across 3 streams." },
+    "buttress_count": { "value": 4, "provenance": "measured", "source": "FRIENDS-WEST-FACADE", "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/west-facade/", "corroborating_sources": ["EN-WIKI-NDP"], "note": "Four vertical buttresses divide the facade into the tripartite bays." },
+    "_GAP_height_to_top_of_gallery_of_kings": { "provenance": "GAP", "note": "DO NOT FILL. No clean published metric height to the TOP of the Gallery of Kings band (distinct from 43.5 m width / 45 m body). Must be scaled off the Dehio-Bezold PD section (rule_derived) or stay conjecture. A single unattributed '~20 m above ground' for the band exists (see gallery_of_kings.band_height_m, single-source → reconstructed_design)." }
+  },
+
+  "towers": {
+    "height": { "m": 69, "pied_du_roi": 212.4, "provenance": "measured", "source": "FRIENDS-WEST-FACADE", "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/west-facade/", "corroborating_sources": ["BNF-FACADE-9POINTS"], "note": "VERIFIER ANCHOR. Both towers culminate at 69 m." },
+    "north_south_differ": { "value": "yes — the north tower is slightly wider than the south (visible asymmetry)", "provenance": "measured", "source": "EN-WIKI-NDP", "url": "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris", "corroborating_sources": ["FRENCHMOMENTS-WEST-FACADE"], "note": "Documented asymmetry." },
+    "north_tower_width": { "m": 14.91, "provenance": "reconstructed_design", "source": "EN-WIKI-NDP", "url": "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris", "note": "CITED-UNCERTAIN single source → reconstructed_design (not measured per the >=2-source rule)." },
+    "south_tower_width": { "m": 13.69, "provenance": "reconstructed_design", "source": "EN-WIKI-NDP", "url": "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris", "note": "CITED-UNCERTAIN single source → reconstructed_design." },
+    "spires_never_built": { "value": "the two west towers were never given their intended spires (flat-topped belfries)", "provenance": "measured", "source": "BNF-FACADE-9POINTS", "url": "https://passerelles.essentiels.bnf.fr/fr/article/e854492c-8458-4685-9bd0-d211156adb0f-facade-notre-dame-paris-en-9-points", "corroborating_sources": ["EN-WIKI-NDP"] },
+    "belfry_oak_framing": { "value": "solid-oak bell yokes/belfry framing in the towers", "provenance": "measured", "source": "ARTNEWSPAPER-OAK-ROOF", "url": "https://www.theartnewspaper.com/2024/12/02/green-wood-axes-and-oaks-how-ancient", "corroborating_sources": ["CNRS-MATERIALS"] },
+    "emmanuel_bourdon": { "mass_t": 13.32, "tower": "south", "provenance": "measured", "source": "CULTURE-GOUV-EMMANUEL", "url": "https://notre-dame-de-paris.culture.gouv.fr/fr/le-bourdon-emmanuel", "corroborating_sources": ["FRIENDS-BELLS"], "note": "The great bourdon Emmanuel (~13.3 t) in the south tower." },
+    "north_tower_bell_set": { "value": "8 bells installed in the north tower in 2013", "provenance": "measured", "source": "FRIENDS-BELLS", "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/bells/", "corroborating_sources": ["EN-WIKI-BELLS"] }
+  },
+
+  "gallery_of_kings": {
+    "figure_count": { "value": 28, "provenance": "measured", "source": "PANORAMA-GALERIE-ROIS", "url": "https://panoramadelart.com/analyse/galerie-des-rois-de-la-cathedrale-notre-dame-de-paris", "corroborating_sources": ["BNF-FACADE-9POINTS", "EN-WIKI-NDP", "FRIENDS-WEST-FACADE"], "note": "VERIFIER ANCHOR. 28 figures across the facade." },
+    "identity": { "value": "Kings of Judah (and Israel) — the royal ancestry of the Virgin/Christ; NOT the kings of France (a myth that led to their 1793 destruction)", "provenance": "measured", "source": "PANORAMA-GALERIE-ROIS", "url": "https://panoramadelart.com/analyse/galerie-des-rois-de-la-cathedrale-notre-dame-de-paris", "corroborating_sources": ["CLUNY-HEADS", "EN-WIKI-NDP"] },
+    "figure_height": { "m": 3.5, "provenance": "measured", "source": "PANORAMA-GALERIE-ROIS", "url": "https://panoramadelart.com/analyse/galerie-des-rois-de-la-cathedrale-notre-dame-de-paris", "corroborating_sources": ["BNF-FACADE-9POINTS"], "note": "~3.5 m monumental figures." },
+    "band_height_m": { "m": 20, "provenance": "reconstructed_design", "source": "PANORAMA-GALERIE-ROIS", "url": "https://panoramadelart.com/analyse/galerie-des-rois-de-la-cathedrale-notre-dame-de-paris", "note": "CITED-UNCERTAIN (~20 m above ground, single/weak source) → reconstructed_design; used to place the band, not asserted as surveyed." },
+    "current_figures_origin": { "value": "the figures on the facade today are Viollet-le-Duc's 19th-c restorations (Geoffroi-Dechaume workshop); 21 original heads, decapitated 1793, were rediscovered 1977 and are at the Musée de Cluny", "provenance": "reconstructed_design", "source": "CLUNY-HEADS", "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html", "corroborating_sources": ["PANORAMA-GALERIE-ROIS"], "note": "So the rendered figures are reconstructed_design (19th-c), not medieval fabric." }
+  },
+
+  "rose_window": {
+    "diameter": { "m": 9.6, "pied_du_roi": 29.6, "provenance": "measured", "source": "FRIENDS-ROSE-WINDOWS", "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/rose-windows/", "corroborating_sources": ["TECHNO-SCIENCE", "BNF-FACADE-9POINTS"], "note": "VERIFIER ANCHOR. West rose 9.6 m (9.60 m), multiply confirmed; corpus high-end 9.7 m is one source's spread." },
+    "date": { "value": "c. 1220–1225", "provenance": "measured", "source": "BNF-FACADE-9POINTS", "url": "https://passerelles.essentiels.bnf.fr/fr/article/e854492c-8458-4685-9bd0-d211156adb0f-facade-notre-dame-paris-en-9-points", "corroborating_sources": ["FRIENDS-ROSE-WINDOWS"] },
+    "tracery": { "value": "radial wheel tracery: ~24 radial spokes/rays in concentric rings", "rays": 24, "provenance": "measured", "source": "FRIENDS-ROSE-WINDOWS", "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/rose-windows/", "corroborating_sources": ["EN-WIKI-ROSE-WINDOW"], "note": "Radial geometry is rule_derived from the 24-ray count (cited)." }
+  },
+
+  "portals": {
+    "left_virgin": { "value": "Portal of the Virgin (north/left)", "provenance": "measured", "source": "FRIENDS-PORTALS", "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/portals/", "corroborating_sources": ["EN-WIKI-NDP"] },
+    "centre_last_judgment": { "value": "Portal of the Last Judgment (centre, the widest)", "provenance": "measured", "source": "FRIENDS-PORTALS", "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/portals/", "corroborating_sources": ["EN-WIKI-NDP", "BNF-FACADE-9POINTS"] },
+    "right_st_anne": { "value": "Portal of St-Anne (south/right)", "provenance": "measured", "source": "FRIENDS-PORTALS", "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/portals/", "corroborating_sources": ["EN-WIKI-NDP"] },
+    "central_widest": { "value": true, "provenance": "measured", "source": "FRIENDS-PORTALS", "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/portals/", "corroborating_sources": ["EN-WIKI-NDP", "BNF-FACADE-9POINTS"] },
+    "_GAP_portal_widths_m": { "provenance": "GAP", "note": "DO NOT FILL. No published per-portal width in metres found (multiple sources confirm the centre is widest, but give no number). Bay widths are rule_derived by dividing the 43.5 m facade across the tripartite buttressed bays; never asserted as surveyed." }
+  },
+
+  "ornament": {
+    "chimeras": { "approx_count": 54, "provenance": "conjecture", "source": "FR-WIKI-CHIMERES", "url": "https://fr.wikipedia.org/wiki/Chim%C3%A8res_de_Notre-Dame_de_Paris", "corroborating_sources": ["APOLLO-VLD"], "note": "~54 chimères on the Galerie des Chimères — count is conjecture (varies by source). The chimeras are ENTIRELY 19th-c Viollet-le-Duc/Lassus inventions (NOT medieval) → render reconstructed_design (form) at conjecture count; Le Stryge is the famous one." },
+    "chimeras_are_19c": { "value": "the Galerie des Chimères is a wholesale 19th-c Viollet-le-Duc/Lassus creation, not medieval fabric", "provenance": "reconstructed_design", "source": "FR-WIKI-CHIMERES", "url": "https://fr.wikipedia.org/wiki/Chim%C3%A8res_de_Notre-Dame_de_Paris", "corroborating_sources": ["APOLLO-VLD", "FRIENDS-GROTESQUES"] },
+    "gargoyles_19c_replacements": { "value": "the gargoyles (functional waterspouts) seen today are largely 19th-c replacements; medieval ones eroded/removed", "provenance": "reconstructed_design", "source": "FRIENDS-GARGOYLES", "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/gargoyles/", "corroborating_sources": ["19THC-ARTWORLDWIDE-GARGOYLES", "APOLLO-VLD"] },
+    "chimera_form_source": { "value": "fine chimera/gargoyle modeling must come from the public-domain Viollet-le-Duc drawings; exact form beyond that is conjecture", "provenance": "reconstructed_design", "source": "VLD-FACADE", "url": "https://commons.wikimedia.org/wiki/Category:Drawings_by_Eug%C3%A8ne_Viollet-le-Duc", "corroborating_sources": ["APOLLO-VLD"] },
+    "_GAP_gargoyle_count": { "provenance": "GAP", "note": "DO NOT FILL. No reliable total gargoyle count published (estimates vary wildly). Rendered gargoyles are a representative few flagged conjecture, never a sourced count." },
+    "_GAP_pinnacle_dims": { "provenance": "GAP", "note": "DO NOT FILL. Tower buttress pinnacle dimensions not published; set out by the Roriczer rule (rule_derived), proportions conjecture." },
+    "_GAP_chimera_gallery_height": { "provenance": "GAP", "note": "DO NOT FILL. Exact height of the Galerie des Chimères above ground not cleanly published." }
+  },
+
+  "verifier_targets": {
+    "_note": "Recomputed by verify from component coordinates (never key_dimensions). T-prefixed for the towers tier. Metric tolerances.",
+    "checks": [
+      { "id": "T01", "assert": "Facade total width = 43.5 m (extreme facade component span in X)", "tolerance": "±2%" },
+      { "id": "T02", "assert": "Tower height = 69 m (top of the two tower components); facade body ≈ 45 m", "tolerance": "±2%", "priority": "critical" },
+      { "id": "T03", "assert": "Gallery of Kings = exactly 28 king figures across the facade band", "tolerance": "count exact" },
+      { "id": "T04", "assert": "Three west portals present (left Virgin, centre Last Judgment widest, right St-Anne)", "tolerance": "count exact; centre widest" },
+      { "id": "T05", "assert": "West rose window diameter ≈ 9.6 m, radial tracery present", "tolerance": "±5%" },
+      { "id": "T06", "assert": "Four facade buttresses dividing the tripartite bays", "tolerance": "count exact" },
+      { "id": "T07", "assert": "Provenance audit: every component classed + sourced to the rights-cleared registry (use/use-data); 0 unsourced; all four classes present; every component {provenance,source,url,rights}", "tolerance": "0 unsourced" },
+      { "id": "T08", "assert": "No-invention guard: no measured component cites a restricted/cite-only/single source; chimeras are reconstructed_design (19th-c), never measured; GAP-class never rendered with a number", "tolerance": "hard-fail on violation" },
+      { "id": "T09", "assert": "Materials sourced: every facade/tower surface carries a material whose canonical entry resolves to a use/use-data source (Lutetian limestone measured; lead; oak); exact colour is conjecture not measured", "tolerance": "0 unsourced material" },
+      { "id": "P01", "assert": "All canonical views render (non-missing)", "tolerance": "per spire" },
+      { "id": "P02", "assert": "Each view non-blank (>3% non-background)", "tolerance": ">3%" },
+      { "id": "P03", "assert": "Provenance view shows all four evidence-class colours", "tolerance": "all four" }
+    ]
+  },
+
+  "ideal_deviations_index": {
+    "_note": "Where the real facade disagrees with a generic ideal — kept, never corrected.",
+    "items": [
+      "Facade 43.5 m / towers 69 m / rose 9.6 m are MEASURED — never recomputed from an ad-quadratum/triangulum ideal (T02 critical).",
+      "North and south towers DIFFER in width (asymmetric) — not normalized to identical twins.",
+      "The towers were never given spires — rendered flat-topped, not 'completed' to a Gothic ideal.",
+      "Gallery-of-Kings figures + the chimeras are 19th-c restoration/invention (reconstructed_design), never presented as medieval fabric.",
+      "Exact stone colour (as-built vs cleaned vs sooted) is conjecture; exact RGB is a GAP — never invented."
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "steps": 12,
+  "phases": [
+    "base",
+    "souche",
+    "fut",
+    "gallery1",
+    "gallery2",
+    "aiguille",
+    "armature",
+    "ornament",
+    "gallery2",
+    "ornament",
+    "statuary",
+    "summit"
+  ],
+  "generated_from": "structural-spec.notre-dame.json"
+}

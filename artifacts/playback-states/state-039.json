@@ -844,13 +844,21 @@
       ],
       "yzfs_ref": "YZFS: 栌斗 32×32 fen, height 20 fen (耳8平4欹8)",
       "deviation_from_fashi": true,
-      "note": "Smaller than Fashi spec in all dimensions — documented deviation."
+      "note": "Smaller than Fashi spec in all dimensions — documented deviation.",
+      "annotation": {
+        "title_zh": "栌斗",
+        "title_en": "Ludou Capital Block",
+        "desc_zh": "位于柱头的方形垫块，是斗拱体系的基座，用来将上层斗拱的荷载均匀分散到柱子上。",
+        "desc_en": "Square capital block at the column head. Distributes bracket loads uniformly to the column.",
+        "reference_image": "references/details/dougong-bracket-detail.svg",
+        "reference_label": "底层栌斗（第1层）"
+      }
     }
   ],
   "playback": {
     "index": 39,
     "phase": "puzuo",
     "description": "puzuo: +栌斗（转角铺作）",
-    "totalStates": 339
+    "totalStates": 389
   }
 }

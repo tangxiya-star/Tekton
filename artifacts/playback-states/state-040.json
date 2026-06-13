@@ -844,7 +844,15 @@
       ],
       "yzfs_ref": "YZFS: 栌斗 32×32 fen, height 20 fen (耳8平4欹8)",
       "deviation_from_fashi": true,
-      "note": "Smaller than Fashi spec in all dimensions — documented deviation."
+      "note": "Smaller than Fashi spec in all dimensions — documented deviation.",
+      "annotation": {
+        "title_zh": "栌斗",
+        "title_en": "Ludou Capital Block",
+        "desc_zh": "位于柱头的方形垫块，是斗拱体系的基座，用来将上层斗拱的荷载均匀分散到柱子上。",
+        "desc_en": "Square capital block at the column head. Distributes bracket loads uniformly to the column.",
+        "reference_image": "references/details/dougong-bracket-detail.svg",
+        "reference_label": "底层栌斗（第1层）"
+      }
     },
     {
       "phase": "puzuo",
@@ -872,13 +880,21 @@
       ],
       "yzfs_ref": "YZFS: 「每跳之长，心不过三十分°」 — jump 1 complies",
       "deviation_from_fashi": true,
-      "note": "Corner set simplified: diagonal arm only (v1); full 转角铺作 composition deferred."
+      "note": "Corner set simplified: diagonal arm only (v1); full 转角铺作 composition deferred.",
+      "annotation": {
+        "title_zh": "华栱（第一跳）",
+        "title_en": "Hua-gong Arm, Jump 1",
+        "desc_zh": "水平向外伸出的构件，承载上层斗拱。加宽至11分以增加强度，说明工匠为结构力学做出的主动调整。",
+        "desc_en": "Horizontal projecting arm. Widened to 11 fen for structural strength—builders adapted the modular system for mechanics.",
+        "reference_image": "references/details/dougong-bracket-detail.svg",
+        "reference_label": "第二层华栱"
+      }
     }
   ],
   "playback": {
     "index": 40,
     "phase": "puzuo",
     "description": "puzuo: +角华栱（第一跳，足材加宽）",
-    "totalStates": 339
+    "totalStates": 389
   }
 }

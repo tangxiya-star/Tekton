@@ -1,0 +1,282 @@
+{
+  "generated_at": "2026-06-13T22:01:06.815Z",
+  "run_id": "run-2026-06-13_21-59-39",
+  "building": "notre-dame",
+  "verdict": "PARTIAL",
+  "note": null,
+  "phases": [
+    {
+      "phase": 1,
+      "name": "RESEARCH",
+      "ok": true,
+      "verdicts": 16,
+      "gaps": 40
+    },
+    {
+      "phase": 2,
+      "name": "INGEST",
+      "ok": true
+    },
+    {
+      "phase": 3,
+      "name": "DERIVE",
+      "ok": true
+    },
+    {
+      "phase": 4,
+      "name": "BUILD",
+      "ok": true
+    },
+    {
+      "phase": 5,
+      "name": "VERIFY",
+      "ok": true,
+      "deterministic": true,
+      "vision": "pass",
+      "soft": true
+    },
+    {
+      "phase": 6,
+      "name": "LOOP",
+      "ok": true,
+      "restored_green": true,
+      "v08_refused": true,
+      "failed_reports_kept": 12
+    },
+    {
+      "phase": 7,
+      "name": "RECORD",
+      "ok": true,
+      "webm": "run-2026-06-13_21-59-39.webm",
+      "soft": true
+    },
+    {
+      "phase": 8,
+      "name": "SHIP",
+      "ok": true,
+      "url": "http://localhost:5057/?building=notre-dame",
+      "http_status": 200,
+      "soft": true
+    }
+  ],
+  "rubric": {
+    "criteria": [
+      {
+        "id": "goal_green",
+        "category": "orchestration",
+        "required": true,
+        "critical": true,
+        "requirement": "npm run goal runs the full 8-phase flow (research→ingest→derive→build→verify→loop→record→ship) and exits 0",
+        "check": "run-summary.json verdict == 'pass' AND process exit 0",
+        "status": "green"
+      },
+      {
+        "id": "build_green",
+        "category": "orchestration",
+        "required": true,
+        "critical": false,
+        "requirement": "npm run build (= research && derive && verify && next build) exits 0",
+        "check": "npm run build exit code 0",
+        "status": "green"
+      },
+      {
+        "id": "research_pipe",
+        "category": "orchestration",
+        "required": true,
+        "critical": false,
+        "requirement": "Research Phase 0 emits the canonical + findings as one deterministic pipe",
+        "check": "artifacts/research-findings.json has 16 verdicts + 40 gaps AND data/notre-dame-canonical.json present; byte-stable across two replay runs",
+        "status": "green"
+      },
+      {
+        "id": "every_node_sourced",
+        "category": "impact",
+        "required": true,
+        "critical": true,
+        "requirement": "Every dimension carries {provenance, source, url, rights}",
+        "check": "research ingest gate reports 0 problems",
+        "status": "green"
+      },
+      {
+        "id": "zero_unsourced",
+        "category": "impact",
+        "required": true,
+        "critical": true,
+        "requirement": "Zero unsourced components — G09 source-registry passes (a source must resolve to the rights-cleared registry, not merely be non-empty)",
+        "check": "verifier V12 + V14 pass",
+        "status": "green"
+      },
+      {
+        "id": "no_fabrication",
+        "category": "impact",
+        "required": true,
+        "critical": false,
+        "requirement": "No fabrication: no measured/reconstructed_design node cites a non-registry source; GAP fields left unfilled (no invented numbers)",
+        "check": "every source cross-refs the rights table; GAP-marked fields contain no value",
+        "status": "green"
+      },
+      {
+        "id": "no_restricted_assets",
+        "category": "orchestration",
+        "required": true,
+        "critical": true,
+        "requirement": "No restricted assets ingested (Tallon/AGP/CNRS/blog = cite-only)",
+        "check": "verifier V13 + V14 pass",
+        "status": "green"
+      },
+      {
+        "id": "deterministic_verifier",
+        "category": "autonomy",
+        "required": true,
+        "critical": true,
+        "requirement": "Deterministic verifier (V-checks recomputed from component coords, never spec.key_dimensions, + pixel checks) passes",
+        "check": "verifier-report exit 0; V08–V14 + P01–P03 all pass",
+        "status": "green"
+      },
+      {
+        "id": "vision_verifier",
+        "category": "autonomy",
+        "required": true,
+        "critical": false,
+        "requirement": "Vision-verifier sub-agent passes in a fresh context",
+        "check": "verifier-report.vision.status == 'pass'",
+        "status": "green"
+      },
+      {
+        "id": "v08_guard",
+        "category": "impact",
+        "required": true,
+        "critical": true,
+        "requirement": "Measured-reality guard (V08 for the spire; the V09-analog from Nanchan): demo:corrupt → verify refuses (exit 1) → demo:restore → green. The build cannot ship geometry idealized toward the rulebook",
+        "check": "orchestrate LOOP recorded a corrupt→refuse(exit 1)→restore→green beat",
+        "status": "green"
+      },
+      {
+        "id": "fail_revise_pass",
+        "category": "autonomy",
+        "required": true,
+        "critical": false,
+        "requirement": "≥1 logged fail→revise→pass cycle; failed reports kept",
+        "check": "≥1 artifacts/verifier-report.*.failed.json present alongside the passing report",
+        "status": "green"
+      },
+      {
+        "id": "spec_emitted",
+        "category": "demo",
+        "required": true,
+        "critical": false,
+        "requirement": "Derive emits structural-spec + derivation-log; the comp() unsourced-component audit threw nothing",
+        "check": "artifacts/structural-spec.notre-dame.json + derivation-log present; derive exit 0",
+        "status": "green"
+      },
+      {
+        "id": "no_imported_meshes",
+        "category": "demo",
+        "required": true,
+        "critical": false,
+        "requirement": "All geometry is procedural — no imported meshes",
+        "check": "no .glb/.gltf/.obj/.fbx import in components/ or the scene module",
+        "status": "green"
+      },
+      {
+        "id": "provenance_toggle",
+        "category": "demo",
+        "required": true,
+        "critical": false,
+        "requirement": "Provenance toggle works (colour by evidence class)",
+        "check": "P03 shows all four evidence-class colours",
+        "status": "green"
+      },
+      {
+        "id": "click_to_inspect",
+        "category": "demo",
+        "required": true,
+        "critical": false,
+        "requirement": "Click-to-inspect shows FR/EN name + role + citation",
+        "check": "SpireViewer Inspector present + components carry name_fr/en, role, source, url, rights",
+        "status": "green"
+      },
+      {
+        "id": "construction_sequence",
+        "category": "demo",
+        "required": true,
+        "critical": false,
+        "requirement": "Construction-sequence animation plays (real-time Build Theater)",
+        "check": "derivation-stream.notre-dame.jsonl present + SpireViewer scrubber present",
+        "status": "green"
+      },
+      {
+        "id": "drawing_reveal",
+        "category": "demo",
+        "required": true,
+        "critical": false,
+        "requirement": "Drawing → 3D reveal works",
+        "check": "DrawingReveal overlay present",
+        "status": "green"
+      },
+      {
+        "id": "recorded_video",
+        "category": "demo",
+        "required": true,
+        "critical": false,
+        "requirement": "A recorded artifacts/run-*.webm exists",
+        "check": "glob artifacts/run-*.webm matches ≥1 non-empty file",
+        "status": "green"
+      },
+      {
+        "id": "live_url",
+        "category": "orchestration",
+        "required": true,
+        "critical": true,
+        "requirement": "Live URL responds 200",
+        "check": "run-summary ship.http_status == 200",
+        "status": "green"
+      },
+      {
+        "id": "public_repo",
+        "category": "orchestration",
+        "required": true,
+        "critical": false,
+        "requirement": "Public repo (hackathon rule — private = DQ)",
+        "check": "github.com/tangxiya-star/yingzao visibility == public",
+        "status": "red"
+      },
+      {
+        "id": "readme",
+        "category": "impact",
+        "required": true,
+        "critical": false,
+        "requirement": "README with pitch, problem, method, source/rights table, why Fable 5, rerun instructions",
+        "check": "README.md present with those sections + the rights table",
+        "status": "green"
+      },
+      {
+        "id": "autonomy_log",
+        "category": "autonomy",
+        "required": true,
+        "critical": false,
+        "requirement": "Session log shows long autonomous stretches; human interventions are new-information only (not course-corrections)",
+        "check": "review the session log; interventions limited to credentials/new info",
+        "status": "green"
+      },
+      {
+        "id": "rerunnable",
+        "category": "orchestration",
+        "required": false,
+        "critical": false,
+        "requirement": "Rerunnable: npm run goal works from a clean checkout and is building-parameterized; Nanchan stays green as the regression anchor",
+        "check": "fresh clone + npm run goal reaches green; --building nanchan still passes",
+        "status": "green"
+      }
+    ],
+    "green": 22,
+    "total": 23,
+    "required_green": 21,
+    "required_total": 22,
+    "critical_fails": []
+  },
+  "ship": {
+    "url": "http://localhost:5057/?building=notre-dame",
+    "http_status": 200
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "step": 7,
+  "total": 12,
+  "phase": "ornament",
+  "visible_component_ids": [
+    "spire-tabouret",
+    "spire-souche",
+    "spire-fut",
+    "spire-gallery1",
+    "spire-gallery2",
+    "spire-aiguille",
+    "ring-souche",
+    "ring-fut",
+    "ring-gallery1",
+    "ring-gallery2",
+    "ring-aiguille",
+    "quadrilobe-0",
+    "quadrilobe-1",
+    "quadrilobe-2",
+    "quadrilobe-3",
+    "quadrilobe-4",
+    "quadrilobe-5",
+    "quadrilobe-6",
+    "quadrilobe-7"
+  ],
+  "added_ids": [
+    "quadrilobe-0",
+    "quadrilobe-1",
+    "quadrilobe-2",
+    "quadrilobe-3",
+    "quadrilobe-4",
+    "quadrilobe-5",
+    "quadrilobe-6",
+    "quadrilobe-7"
+  ],
+  "counts": {
+    "measured": 0,
+    "reconstructed_design": 13,
+    "rule_derived": 5,
+    "conjecture": 1
+  }
+}

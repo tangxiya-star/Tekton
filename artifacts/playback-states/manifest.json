@@ -1,5 +1,5 @@
 {
-  "totalStates": 339,
+  "totalStates": 389,
   "phases": [
     "platform",
     "columns",
@@ -2041,8 +2041,308 @@
     {
       "index": 338,
       "phase": "statues",
-      "description": "statues: +文殊骑狮（照片建模，东侧）",
+      "description": "statues: +象·腿",
       "componentCount": 338
+    },
+    {
+      "index": 339,
+      "phase": "statues",
+      "description": "statues: +象·腿",
+      "componentCount": 339
+    },
+    {
+      "index": 340,
+      "phase": "statues",
+      "description": "statues: +象·腿",
+      "componentCount": 340
+    },
+    {
+      "index": 341,
+      "phase": "statues",
+      "description": "statues: +象·腿",
+      "componentCount": 341
+    },
+    {
+      "index": 342,
+      "phase": "statues",
+      "description": "statues: +象·躯体",
+      "componentCount": 342
+    },
+    {
+      "index": 343,
+      "phase": "statues",
+      "description": "statues: +象·头",
+      "componentCount": 343
+    },
+    {
+      "index": 344,
+      "phase": "statues",
+      "description": "statues: +象·耳",
+      "componentCount": 344
+    },
+    {
+      "index": 345,
+      "phase": "statues",
+      "description": "statues: +象·牙",
+      "componentCount": 345
+    },
+    {
+      "index": 346,
+      "phase": "statues",
+      "description": "statues: +象·耳",
+      "componentCount": 346
+    },
+    {
+      "index": 347,
+      "phase": "statues",
+      "description": "statues: +象·牙",
+      "componentCount": 347
+    },
+    {
+      "index": 348,
+      "phase": "statues",
+      "description": "statues: +象·鼻（上段）",
+      "componentCount": 348
+    },
+    {
+      "index": 349,
+      "phase": "statues",
+      "description": "statues: +象·鼻（下段）",
+      "componentCount": 349
+    },
+    {
+      "index": 350,
+      "phase": "statues",
+      "description": "statues: +象·尾",
+      "componentCount": 350
+    },
+    {
+      "index": 351,
+      "phase": "statues",
+      "description": "statues: +普贤·莲座鞍",
+      "componentCount": 351
+    },
+    {
+      "index": 352,
+      "phase": "statues",
+      "description": "statues: +普贤菩萨·结跏趺坐",
+      "componentCount": 352
+    },
+    {
+      "index": 353,
+      "phase": "statues",
+      "description": "statues: +普贤菩萨·躯干",
+      "componentCount": 353
+    },
+    {
+      "index": 354,
+      "phase": "statues",
+      "description": "statues: +普贤菩萨·肩",
+      "componentCount": 354
+    },
+    {
+      "index": 355,
+      "phase": "statues",
+      "description": "statues: +普贤菩萨·臂",
+      "componentCount": 355
+    },
+    {
+      "index": 356,
+      "phase": "statues",
+      "description": "statues: +普贤菩萨·耳",
+      "componentCount": 356
+    },
+    {
+      "index": 357,
+      "phase": "statues",
+      "description": "statues: +普贤菩萨·臂",
+      "componentCount": 357
+    },
+    {
+      "index": 358,
+      "phase": "statues",
+      "description": "statues: +普贤菩萨·耳",
+      "componentCount": 358
+    },
+    {
+      "index": 359,
+      "phase": "statues",
+      "description": "statues: +普贤菩萨·禅定印",
+      "componentCount": 359
+    },
+    {
+      "index": 360,
+      "phase": "statues",
+      "description": "statues: +普贤菩萨·颈",
+      "componentCount": 360
+    },
+    {
+      "index": 361,
+      "phase": "statues",
+      "description": "statues: +普贤菩萨·头",
+      "componentCount": 361
+    },
+    {
+      "index": 362,
+      "phase": "statues",
+      "description": "statues: +普贤菩萨·发",
+      "componentCount": 362
+    },
+    {
+      "index": 363,
+      "phase": "statues",
+      "description": "statues: +普贤菩萨·宝冠",
+      "componentCount": 363
+    },
+    {
+      "index": 364,
+      "phase": "statues",
+      "description": "statues: +普贤菩萨·发髻",
+      "componentCount": 364
+    },
+    {
+      "index": 365,
+      "phase": "statues",
+      "description": "statues: +普贤菩萨·头光",
+      "componentCount": 365
+    },
+    {
+      "index": 366,
+      "phase": "statues",
+      "description": "statues: +普贤·背光",
+      "componentCount": 366
+    },
+    {
+      "index": 367,
+      "phase": "statues",
+      "description": "statues: +胁侍菩萨·莲座",
+      "componentCount": 367
+    },
+    {
+      "index": 368,
+      "phase": "statues",
+      "description": "statues: +胁侍菩萨·长裙",
+      "componentCount": 368
+    },
+    {
+      "index": 369,
+      "phase": "statues",
+      "description": "statues: +胁侍菩萨·肩",
+      "componentCount": 369
+    },
+    {
+      "index": 370,
+      "phase": "statues",
+      "description": "statues: +胁侍菩萨·臂",
+      "componentCount": 370
+    },
+    {
+      "index": 371,
+      "phase": "statues",
+      "description": "statues: +胁侍菩萨·臂",
+      "componentCount": 371
+    },
+    {
+      "index": 372,
+      "phase": "statues",
+      "description": "statues: +胁侍菩萨·合十",
+      "componentCount": 372
+    },
+    {
+      "index": 373,
+      "phase": "statues",
+      "description": "statues: +胁侍菩萨·头",
+      "componentCount": 373
+    },
+    {
+      "index": 374,
+      "phase": "statues",
+      "description": "statues: +胁侍菩萨·发",
+      "componentCount": 374
+    },
+    {
+      "index": 375,
+      "phase": "statues",
+      "description": "statues: +胁侍菩萨·宝冠",
+      "componentCount": 375
+    },
+    {
+      "index": 376,
+      "phase": "statues",
+      "description": "statues: +胁侍菩萨·发髻",
+      "componentCount": 376
+    },
+    {
+      "index": 377,
+      "phase": "statues",
+      "description": "statues: +胁侍菩萨·头光",
+      "componentCount": 377
+    },
+    {
+      "index": 378,
+      "phase": "statues",
+      "description": "statues: +胁侍菩萨·莲座",
+      "componentCount": 378
+    },
+    {
+      "index": 379,
+      "phase": "statues",
+      "description": "statues: +胁侍菩萨·长裙",
+      "componentCount": 379
+    },
+    {
+      "index": 380,
+      "phase": "statues",
+      "description": "statues: +胁侍菩萨·肩",
+      "componentCount": 380
+    },
+    {
+      "index": 381,
+      "phase": "statues",
+      "description": "statues: +胁侍菩萨·臂",
+      "componentCount": 381
+    },
+    {
+      "index": 382,
+      "phase": "statues",
+      "description": "statues: +胁侍菩萨·臂",
+      "componentCount": 382
+    },
+    {
+      "index": 383,
+      "phase": "statues",
+      "description": "statues: +胁侍菩萨·合十",
+      "componentCount": 383
+    },
+    {
+      "index": 384,
+      "phase": "statues",
+      "description": "statues: +胁侍菩萨·头",
+      "componentCount": 384
+    },
+    {
+      "index": 385,
+      "phase": "statues",
+      "description": "statues: +胁侍菩萨·发",
+      "componentCount": 385
+    },
+    {
+      "index": 386,
+      "phase": "statues",
+      "description": "statues: +胁侍菩萨·宝冠",
+      "componentCount": 386
+    },
+    {
+      "index": 387,
+      "phase": "statues",
+      "description": "statues: +胁侍菩萨·发髻",
+      "componentCount": 387
+    },
+    {
+      "index": 388,
+      "phase": "statues",
+      "description": "statues: +胁侍菩萨·头光",
+      "componentCount": 388
     }
   ]
 }

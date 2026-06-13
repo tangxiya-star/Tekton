@@ -1,204 +1,83 @@
+> ⚠️ **STRUCTURE-ONLY DOCUMENT — DO NOT TRUST ANY DATA HERE (ticket ND-12).** This document's data layer was originally **FABRICATED**: it conflated Notre-Dame de **Reims** with the build target and cited a **non-existent "Nohesive 2019" survey**. Even where prose now reads "Paris," **none of the dimensions, sources, citations, or example values in this file may be used** — treat every number here as untrustworthy. This file is retained **ONLY** for pipeline / code structure (how to adapt `derive.mjs` / `verify.mjs` / `Viewer.tsx`). The **single source of truth for ALL Notre-Dame dimensions and sources is `docs/NOTRE_DAME_VERIFIED_CORPUS.md`** (the adversarially-verified, cited ND-1 corpus). When in doubt, use the corpus; never copy a value from here.
+
 # Notre-Dame Implementation Guide — Code Pattern Reuse from Nanchan
+
+**Building:** Notre-Dame de **Paris** (begun c.1163; the spire — *la flèche* — is Viollet-le-Duc's 1859 design; the spire and the medieval roof were lost in the fire of 15 April 2019; the cathedral reopened 7–8 December 2024).
+**Scope:** the **spire (la flèche)** is the PRIMARY target; one nave bay/cross-section is the STRETCH; the lost 13th-c. oak roof (*la forêt*) is the VISION shot.
+
+This file is a **code-pattern / implementation guide** — how to adapt the Nanchan pipeline (`derive.mjs` / `verify.mjs` / `Viewer.tsx`) to Notre-Dame. **It is not a data source.** Every dimension, source, and verifier target lives in **`docs/NOTRE_DAME_VERIFIED_CORPUS.md`** — that file is the single source of truth. Where this guide shows a number, it is illustrative and traceable to the corpus; for the full cited tables, read the corpus.
 
 ## 1. Data Source Mapping
 
 ### Nanchan → Notre-Dame
 
-| Dimension | Nanchan | Notre-Dame |
+| Dimension | Nanchan | Notre-Dame (Paris) |
 |-----------|---------|-----------|
-| **Primary Survey** | ZHANG2022 (Tsinghua laser + field measurement) | Nohesive point cloud (2019) + Viollet-le-Duc high-precision drawings |
-| **Rule Text** | Yingzao Fashi (1103) | Viollet-le-Duc *Dictionnaire* Vol.1-5 (1868-1875) + Delbrueck Gothic analysis |
-| **Repair Records** | QI1980 (1975 restoration report) | Mercier 2015 (modification chronology) |
-| **Reference Drawings** | Liang Sicheng measured drawings | Viollet-le-Duc original plates (Vol.1 floor plan, Vol.2-3 sections) |
-| **Supplementary** | Site photos, architectural surveys | Pre-fire photo archive, XRF material analysis, core samples |
+| **Primary measured-drawing asset** | ZHANG2022 (Tsinghua laser + field measurement) | Viollet-le-Duc *Dictionnaire raisonné*, art. "Flèche" — "Élévation et plans de la flèche" plate, **public domain** (author d.1879), via BnF (ark `mm320202712p`) |
+| **Rule text** | Yingzao Fashi (1103) | Reconstructed Gothic ruleset — *ad quadratum* / *ad triangulum*, two-centred (pointed) arch, Roriczer 1486 pinnacle rule. No single Gothic "building code" exists; the ruleset is assembled from treatises + geometry (see corpus §3 `design_ruleset`) |
+| **PD dimensional cross-check** | Liang Sicheng measured drawings | Bell's Handbook (Charles Hiatt, *Notre Dame de Paris*), Project Gutenberg #60213 — fully PD verbatim set |
+| **Factual dimension sources** | Site photos, architectural surveys | Friends of Notre-Dame de Paris; Ministère de la Culture (culture.gouv); official notredamedeparis.fr (numbers are uncopyrightable facts — ingest numbers, cite text) |
+| **Lost-fabric relevé (*la forêt*)** | QI1980 (1975 restoration report) | Fromont & Trentesaux relevé 2014–15 (via culture.gouv) + Vannucci et al. arXiv:2005.12584 (sections photo-deduced) |
+
+> **Restricted — cite only, never ingest:** Andrew Tallon's ~1-billion-point laser scan, AGP's ~50-billion-point surveys, and the CNRS/De Luca digital twin all lack an open license. Their facts (point counts, etc.) are citable; the data is **not** an asset. See the corpus Rights Table.
 
 ---
 
 ## 2. Code Adaptation Checklist
 
-### 2.1 `data/notre-dame-canonical.json` Template
+### 2.1 `data/notre-dame-canonical.json` — author from the corpus, not from this file
 
 **Maps to:** `data/nanchan-canonical.json`
 
-```json
+**Do not template a data file here.** Author `data/notre-dame-canonical.json` by transcribing the **canonical data skeleton in `docs/NOTRE_DAME_VERIFIED_CORPUS.md` §3** — every node already carries `{provenance, source, url}` and only verified / cited-uncertain values appear there. Refuted values are dropped; unsourced fields are marked `GAP` and **must not be filled**.
+
+The schema mirrors Nanchan exactly — same four provenance classes and the same colors (from `components/Viewer.tsx`):
+
+```jsonc
 {
-  "building": {
-    "name_en": "Notre-Dame Cathedral, Reims",
-    "name_fr": "Cathédrale Notre-Dame de Reims",
-    "location": "Reims, France",
-    "period": "1211-1430 CE",
-    "construction_phases": [
-      "1211-1275: initial Gothic (nave, aisles)",
-      "1340-1400: flying buttress reinforcement",
-      "1405-1430: vault height increase"
-    ]
+  "provenance_classes": {
+    "measured":             "Published survey or multiply-confirmed published dimension (factual).",
+    "reconstructed_design": "19th-c. design intent off Viollet-le-Duc / Lassus PD drawings (the flèche is NOT medieval fabric).",
+    "rule_derived":         "Derived by OUR engine from the Gothic ruleset (must cite the rule).",
+    "conjecture":           "Contested / photo-deduced / lost fabric. Renders in conjecture color; never presented as measured."
   },
-  "modular_system": {
-    "base_unit": "meter",
-    "primary_medieval_measure": "toise",
-    "toise_mm": 1949.0,
-    "toise_to_meter": 1.949,
-    "note": "13c Gothic used toise (6 pieds); modern survey in meters"
-  },
-  "floor_plan": {
-    "nave_span": {
-      "value": 12.3,
-      "unit": "m",
-      "provenance": "measured",
-      "source": "Nohesive 2019 point cloud, centerline column-to-column width"
-    },
-    "nave_bay_length": {
-      "value": 9.5,
-      "unit": "m",
-      "provenance": "measured",
-      "source": "Nohesive; average of 11 consecutive bays"
-    },
-    "aisle_span": {
-      "value": 4.8,
-      "unit": "m",
-      "provenance": "measured",
-      "source": "Nohesive; center-of-aisle depth from centerline"
-    },
-    "total_nave_length": {
-      "value": 104.5,
-      "unit": "m",
-      "provenance": "measured",
-      "source": "Nohesive; westwork to transept crossing"
-    },
-    "column_grid_count": {
-      "value": "6 bays × 2 aisles × 4 rows = 48 columns",
-      "provenance": "measured",
-      "source": "Viollet-le-Duc Vol.1 floor plan"
-    }
-  },
-  "elevation": {
-    "nave_vault_crown_height": {
-      "value": 37.5,
-      "unit": "m",
-      "provenance": "measured",
-      "source": "Nohesive laser survey; vault crown to platform datum"
-    },
-    "nave_column_height": {
-      "value": 26.8,
-      "unit": "m",
-      "provenance": "measured",
-      "source": "Nohesive; base of capital to springing point"
-    },
-    "arcade_height": {
-      "value": 10.5,
-      "unit": "m",
-      "provenance": "measured",
-      "source": "Nohesive; arcade springer to arch crown"
-    },
-    "clerestory_window_sill": {
-      "value": 15.7,
-      "unit": "m",
-      "provenance": "measured",
-      "source": "Nohesive; window sill elevation"
-    },
-    "vault_rise": {
-      "value": 27.0,
-      "unit": "m",
-      "provenance": "computed",
-      "source": "vault_crown_height - arcade_height"
-    }
-  },
-  "structural_members": {
-    "nave_column_diameter": {
-      "value": 1.1,
-      "unit": "m",
-      "provenance": "measured",
-      "source": "Nohesive point cloud bundle width at base"
-    },
-    "pier_buttress_width": {
-      "value": 2.8,
-      "unit": "m",
-      "provenance": "measured",
-      "source": "Nohesive; perpendicular pier depth (E-W at nave centerline)"
-    },
-    "flying_buttress_arm_length": {
-      "value": 7.2,
-      "unit": "m",
-      "provenance": "measured",
-      "source": "Viollet-le-Duc Vol.2 section diagram; Nohesive confirms ±0.1m"
-    },
-    "rib_width_at_haunch": {
-      "value": 0.6,
-      "unit": "m",
-      "provenance": "measured",
-      "source": "Nohesive; diagonal and transverse rib thickness at vault haunches"
-    },
-    "capital_height": {
-      "value": 1.2,
-      "unit": "m",
-      "provenance": "measured",
-      "source": "Nohesive; base of abacus to top of molding"
-    }
-  },
-  "material_evidence": {
-    "ashlar_stone": {
-      "type": "limestone",
-      "provenance": "reconstructed_design",
-      "source": "XRF analysis matches Courville-sur-Eure quarry (primary source for 13c nave)",
-      "citation": "Mercier 2015 §2.4; Blanc et al. 2008 petrography"
-    },
-    "mortar_composition": {
-      "binder": "lime + quartz sand + crushed brick (pozzolana)",
-      "provenance": "reconstructed_design",
-      "source": "Drilling samples from arcade spandrels; 13c composition confirmed by ArcheoSci Lab",
-      "citation": "Bruyère et al. 2019 §3.2"
-    }
-  },
-  "modification_history": [
-    {
-      "period": "1211-1275",
-      "phase": "Initial construction",
-      "changes": "Complete Gothic plan: nave, aisles, flying buttresses",
-      "provenance": "measured",
-      "source": "Original masonry tool marks; Mercier chronology §2"
-    },
-    {
-      "period": "1340-1360",
-      "phase": "Flying buttress reinforcement",
-      "changes": "Buttress arms lengthened; offset increased 0.3m",
-      "evidence": "Joint texture discontinuities in ashlar; architectural logic (thrust increase)",
-      "provenance": "reconstructed_design",
-      "source": "Mercier 2015 §3.2; Delbrueck 1898 comparative Gothic analysis"
-    },
-    {
-      "period": "1405-1430",
-      "phase": "Vault elevation",
-      "changes": "Vault crown raised ~2m; ribs recut with later chisel marks",
-      "evidence": "Tool mark sequences; Tsinghua documentation 2011",
-      "provenance": "reconstructed_design",
-      "source": "Mercier et al. 2011 Tsinghua laser report, §4.1"
-    }
-  ],
-  "gothic_proportions": {
-    "ideal_height_to_span_ratio": {
-      "value": 3.0,
-      "source": "Delbrueck 1898 'Gothische Baukunst' rule; Viollet-le-Duc Vol.3 p.89",
-      "note": "1:3 is the aesthetic ideal; real buildings vary"
-    },
-    "measured_height_to_span_ratio": {
-      "value": 3.05,
-      "computation": "37.5m vault height / 12.3m nave span",
-      "provenance": "measured",
-      "note": "Slightly exceeds ideal, consistent with 15c aspiration (higher vaults)"
-    },
-    "flying_buttress_to_span_ratio": {
-      "value": 0.585,
-      "source": "Viollet-le-Duc Vol.2 structural logic; arm length / nave span",
-      "measured_value": 0.585,
-      "computation": "7.2m / 12.3m"
-    },
-    "pier_to_span_ratio": {
-      "value": 0.228,
-      "source": "Viollet-le-Duc Vol.3 proportion rule",
-      "measured_value": 0.228,
-      "computation": "2.8m / 12.3m"
-    }
+  "provenance_colors": {
+    "measured": "#d9a843", "reconstructed_design": "#a3812f",
+    "rule_derived": "#5e6ca8", "conjecture": "#b34a38"
   }
+}
+```
+
+**Units.** The base module is the **pied du roi (royal foot) = 324.8 mm** — the French-Gothic analog of Nanchan's *fen*. The cai-fen analog is the **bay module**. `mm = pied × 324.8`.
+
+**The verified anchors you will key the build off** (full citations + URLs in corpus §3; do not duplicate the corpus, transcribe it):
+
+| Anchor | Value | Provenance | Where in corpus |
+|---|---|---|---|
+| Spire total height (to rooster) | **96 m** (≈295.6 pied du roi) | measured (multi-source) | `spire.total_height` |
+| Spire base level (above crossing) | **~30 m** (one source gives 33 m) | measured | `spire.base_level` |
+| Spire base footprint (irregular trapezoid) | **~15 × 13 m** | measured | `spire.base_footprint` |
+| Cathedral total length | **128 m** | measured | `cathedral_geometry.total_length` |
+| Max width across transept | **48 m**; transept arm width **14 m** | measured | `cathedral_geometry.transept` |
+| West facade width / height (no towers) | **43.5 m** / **45 m** | measured | `cathedral_geometry.west_facade_width`, `facade_height_no_towers` |
+| West tower height | **69 m** | measured | `cathedral_geometry.west_tower_height` |
+| Nave vessel clear width | **~13 m**; side aisle **5.9 m** | measured | `cathedral_geometry.nave_vessel_width`, `side_aisle_width` |
+| High-vault crown height | **33 m** (accept 32.5–33) | measured | `cathedral_geometry.vault_crown_height` |
+| Height under nave roof | **43 m** | measured | `cathedral_geometry.height_under_roof` |
+| Spire oak framework / lead | **500 t / 250 t** | measured | `spire.oak_framework`, `lead_cladding` |
+| Spire statuary | **16 copper statues** (12 apostles ≈3.40 m + 4 evangelist symbols ≈2.0 m) | measured | `spire.statues` |
+
+> **Do NOT regress two corrected facts:** (1) vault crown is **33 m** and height-under-roof is **43 m** — the old "~35 m" label is **REFUTED** (it was only a loose "general interior height"). (2) The north-tower "297 steps" figure is **REFUTED** and dropped.
+
+**Fields that stay `GAP` (do not invent a number, do not cite to a laser survey):**
+
+```jsonc
+{
+  "_GAP_nave_pier_diameter":  "No published nave pier Ø. The 1.948/1.377/0.974 m set is mis-attributed (a blog's ad-quadratum derivation, NOT Bork/Tallon measured).",
+  "_GAP_chevet_radii":        "6.65/12.42/18.18/23.94 m + the '148 pied-du-roi' conversion trace to one self-published blog — cited-uncertain; verify Bork 2014/2022 before any use.",
+  "_GAP_vault_rib_widths":    "Sexpartite topology is confirmed; metric rib widths (~0.48 / ~0.36–0.38 m) are paywalled/unverified.",
+  "_GAP_per_section_spire_heights": "Souche / fût / each gallery / aiguille heights are NOT published — scale them off the PD VLD 'Flèche' plate (rule_derived) or leave conjecture.",
+  "_GAP_aisle_vault_heights": "Inner/outer aisle + tribune vault crown heights not published numerically."
 }
 ```
 
@@ -215,74 +94,63 @@
 const FEN_PER_CHI = 300 / spec.units.fen_mm;  // fen-to-chi conversion
 const pingzhuHeight = C.columns.pingzhu_height.mm;
 
-// AFTER (Notre-Dame)
-const METER = 1.0;  // base unit
-const naveVaultSpan = C.floor_plan.nave_span.value; // 12.3 meters
-const naveVaultHeight = C.elevation.nave_vault_crown_height.value; // 37.5 meters
+// AFTER (Notre-Dame de Paris)
+const PIED_DU_ROI_MM = C.modular_system.pied_du_roi_mm.value; // 324.8 — the metrological anchor (fen analog)
+const spireTotalHeight = C.spire.total_height.m;              // 96 m   (measured, multi-source)
+const spireBaseLevel   = C.spire.base_level.m;                // ~30 m  (measured)
+const naveVesselWidth  = C.cathedral_geometry.nave_vessel_width.m; // 13 m (measured)
+const vaultCrownHeight = C.cathedral_geometry.vault_crown_height.m_range[1]; // 33 m (NOT 35)
 ```
 
-**Rule engine derivation logic (Gothic proportion rules):**
+**Rule engine derivation logic (Gothic geometry — derive from the ruleset, anchor on measured facts):**
 
 ```javascript
-L(`# Derivation Log — Notre-Dame Cathedral, Reims`);
+L(`# Derivation Log — Notre-Dame de Paris (la flèche)`);
 L(``);
-L(`Rule Engine run. Inputs: canonical.json (Nohesive 2019, Viollet-le-Duc 1868-75) + Gothic architectural rules.`);
-L(`Precedence: measured/reconstructed_design → Gothic rule → flagged conjecture. Deviations are historical data.`);
-L(``);
-
-L(`## 1. Nave Proportions — Gothic 1:3 ideal vs. measured reality`);
+L(`Rule Engine run. Inputs: notre-dame-canonical.json (verified corpus) + the Gothic ruleset.`);
+L(`Precedence: measured / reconstructed_design → rule_derived → conjecture. A sourced value is NEVER overridden by a rule.`);
 L(``);
 
-const idealHeightSpanRatio = 3.0;  // Delbrueck rule
-const measuredHeightSpanRatio = naveVaultHeight / naveVaultSpan;  // 37.5 / 12.3 = 3.05
-const ratioWithinIdeal = within(measuredHeightSpanRatio, idealHeightSpanRatio, 2);
-
-L(`- Measured height:span = ${naveVaultHeight}m : ${naveVaultSpan}m = 1:${(naveVaultSpan/naveVaultHeight).toFixed(2)}`);
-L(`- Gothic ideal (Delbrueck 1898 'Gothische Baukunst'): 1:3 for aesthetic harmony`);
-L(`- Match: ${ratioWithinIdeal ? 'YES' : 'EXCEEDS'} (3.05× = 1.67% above ideal)`);
-L(`- Decision: KEEP measured reality. 15c raises heights intentionally. [Mercier 2015 §3.3]`);
+L(`## 1. Spire taper — anchored on measured facts, profile scaled off the PD drawing`);
 L(``);
 
-L(`## 2. Structural Thrust Containment`);
+const spireVisibleExtent = spireTotalHeight - spireBaseLevel; // 96 - 30 = 66 m (reconstructed_design)
+L(`- Measured anchors (HARD): total height = ${spireTotalHeight} m; base level = ${spireBaseLevel} m`);
+L(`- Visible extent (derived): ${spireTotalHeight} - ${spireBaseLevel} = ${spireVisibleExtent} m`);
+L(`- Octagon built on the ~15×13 m crossing footprint; angles on roof ridges + 4 valleys`);
+L(`- Per-section heights (souche / fût / galleries / aiguille) are a GAP → scaled off the PD VLD 'Flèche' plate`);
+L(`  (BnF ark mm320202712p) and tagged rule_derived ("scaled from PD plate, ratio×96 m"). NEVER an invented number.`);
 L(``);
 
-const fbArmLength = C.structural_members.flying_buttress_arm_length.value; // 7.2m
-const expectedFBLengthByRule = naveVaultSpan * 0.58;  // Viollet-le-Duc structural rule
-const fbRuleMatch = within(fbArmLength, expectedFBLengthByRule, 3);
-
-L(`### Flying buttress arm length (thrust transfer)`);
-L(`- Measured: ${fbArmLength}m`);
-L(`- Viollet-le-Duc rule (Vol.2 §buttressing): arm ≥ 0.58 × nave_span to balance outward thrust`);
-L(`- Expected by rule: ${naveVaultSpan}m × 0.58 = ${expectedFBLengthByRule.toFixed(1)}m`);
-L(`- Match: ${fbRuleMatch ? 'YES' : 'SHORTER by ' + (expectedFBLengthByRule - fbArmLength).toFixed(1) + 'm'}`);
-L(`- Interpretation: ${fbRuleMatch ? 'Rule-derived' : 'suggests earlier, shorter-span design; may evidence pre-1340 state'}`);
-L(`- Decision: ${fbRuleMatch ? 'rule_derived' : 'measured (annotation: possible 13c phase predecessor)'}`);
+L(`## 2. Pointed arches struck from springing points (two-centred arch rule)`);
 L(``);
 
-const pierWidth = C.structural_members.pier_buttress_width.value; // 2.8m
-const expectedPierWidth = naveVaultSpan / 4.4;  // Viollet-le-Duc proportion
-const pierMatch = within(pierWidth, expectedPierWidth, 2);
-
-L(`### Pier width (thrust containment, Viollet rule)`);
-L(`- Measured: ${pierWidth}m`);
-L(`- Viollet-le-Duc (Vol.3, p.89): pier width ≥ nave_span / 4.4 for stability`);
-L(`- Expected: ${naveVaultSpan} / 4.4 = ${expectedPierWidth.toFixed(2)}m`);
-L(`- Match: ${pierMatch ? 'YES' : 'UNDERSIZED'}`);
-L(`- Decision: ${pierMatch ? 'rule_derived' : 'CRITICAL DEVIATION: measured piers are too narrow. Suggests load-redistribution via flying buttress (15c reinforcement).'} [Mercier 2015]`);
+// Two-centred arch (Brick Development Association, verbatim): equilateral = radius=span,
+// centres at the two springing points, rise = span × 0.866.
+const arcadeSpan = C.modular_system.bay_module.single_span_m; // ~6 m arcade interval (rule_derived module)
+const equilateralRise = arcadeSpan * 0.866;
+L(`- Arch class = equilateral (default High-Gothic): radius = span, rise = span × 0.866`);
+L(`- Arcade interval ≈ ${arcadeSpan} m → rise ≈ ${equilateralRise.toFixed(2)} m`);
+L(`- Every arch curve is COMPUTED from springing points, never hand-drawn. [rule_derived: BDA 'Gothic Arch']`);
 L(``);
 ```
 
-**Key constraint (same as Nanchan, but Gothic rules):**
+**Key constraint (same precedence contract as Nanchan, retargeted to Gothic geometry):**
 
 ```javascript
 /**
  * Precedence contract (adapted from Yingzao):
- *   measured / reconstructed_design  >  Gothic rule  >  conjecture
- * 
- * CRITICAL: do NOT normalize toward Gothic ideals.
+ *   measured / reconstructed_design  >  rule_derived  >  conjecture
+ *
+ * CRITICAL — measured reality wins (V08-analog, critical):
+ * Do NOT normalize the spire toward any ad-triangulum / Roriczer ideal.
  * Nanchan kept its 1:2.67 roof (gentler than Fashi 1:3).
- * Notre-Dame keeps its 1:3.05 ratio (taller than Delbrueck ideal).
- * Measured reality always wins. The verifier must NOT "correct" toward ideals.
+ * The flèche keeps Viollet-le-Duc's ACTUAL 96 m total / ~30 m base.
+ * A rule that overrides the sourced 96 m / 30 m is a CRITICAL failure.
+ * Deviations are DATA, not errors — annotate, never "correct."
+ *
+ * Uncertainty propagates: a conjectural input (e.g. la forêt tree count)
+ * makes every dependent component conjectural.
  */
 ```
 
@@ -292,177 +160,44 @@ L(``);
 
 **Maps to:** Nanchan's 12+6 checks
 
-**Notre-Dame verifier checklist (12 geometry checks):**
+The Notre-Dame verifier targets are **V01–V14** plus pixel checks **P01–P03**. **The authoritative list (assertions + tolerances) is the table in `docs/NOTRE_DAME_VERIFIED_CORPUS.md` §5 — read it there; do not duplicate it.** Summary of what each gate covers:
+
+- **V01–V06** — cathedral envelope from component coords: total length 128 m, transept 48 m / arm 14 m, nave vessel 13 m / aisle 5.9 m, bay rhythm (10 arcade intervals ≈6 m, paired into 5 sexpartite double-bays), **vault crown 33 m** (hard-reject 35 m and 43 m), **height under roof 43 m**.
+- **V07** — pointed arches are two-centred (centres on the springing line, `rise ≈ span × 0.866` for the equilateral class); rib vault is **sexpartite** (6 cells, 2 diagonal + 3 transverse ribs) over each double-bay.
+- **V08 (critical)** — spire total height **96 m**, base **~30 m**, visible extent ≈66 m, with the **measured-reality guard**: a spire "corrected" away from 96 m / 30 m toward any Gothic ideal is a CRITICAL failure.
+- **V09** — spire is **octagonal** on the ~15×13 m crossing footprint with the **six-part profile** (tabouret → souche → fût → 2 openwork galleries → aiguille + coq), 8 faces, angles on ridges + 4 valleys.
+- **V10** — spire statuary: **16 copper statues** (12 apostles in 4 staggered groups of 3 + 4 evangelist symbols), apostle ≈3.40 m, evangelist ≈2.0 m, St Thomas faces inward.
+- **V11** — *la forêt*: 57 nave frames at 0.71 m entraxe; medieval (nave+choir) frames kept distinct from the 19th-c. crossing/spire frames.
+- **V12** — **provenance audit:** every component has a class + non-empty source; **0 unsourced**; the conjecture-required set is conjecture-colored.
+- **V13** — **no-invention guard:** nave pier Ø, chevet radii, and rib widths must be `conjecture`/`GAP`, **never** `measured` and never attributed to "Bork/Tallon laser survey."
+- **V14** — *la forêt* uncertainty propagation: tree count renders **both** ~1,000 (Épaud) and 2,000–3,400 (Corvol) as conjecture.
+- **P01–P03** — canonical views non-blank (>3% non-bg); provenance view shows all four evidence-class colors; spire + nave bay + *la forêt* each visible.
+
+**The reusable code pattern** — every `Vnn` recomputes its assertion **from `components[]` geometry, never from the engine's own `key_dimensions`.** Two examples:
 
 ```javascript
-// =========== GEOMETRY CHECKS ===========
+// =========== GEOMETRY CHECKS (recompute from component coords) ===========
 
-check("G01", "nave bay spacing = 9.5m ±2%", () => {
-  const naveColsZ = comps
-    .filter(c => /^nave-col-\d+$/.test(c.id))
-    .map(c => c.position[2])
-    .sort((a, b) => a - b);
-  const spacings = naveColsZ.slice(1).map((z, i) => z - naveColsZ[i]);
-  const pass = spacings.length > 0 && spacings.every(s => within(s, 9.5, 2));
+// V08 (CRITICAL): spire total height = 96 m; base anchored ~30 m; measured-reality guard
+check("V08", "spire total height = 96m ±1%, base ~30m, no idealization", () => {
+  const spireComps = comps.filter(c => /^spire-/.test(c.id));
+  const ys = spireComps.flatMap(c => [c.position[1], c.position[1] + (c.geometry?.h ?? 0)]);
+  const summit = Math.max(...ys);
+  const base   = Math.min(...comps.filter(c => /^spire-base|tabouret/.test(c.id)).map(c => c.position[1]));
+  const heightPass = within(summit, 96, 1);
+  const basePass   = base >= 30 && base <= 33;        // corpus: 30 m, one source 33 m
+  const pass = heightPass && basePass;
   return {
     pass,
-    measured: spacings.map(r2),
-    expected: "9.5m (all 11 bays)"
-  };
-});
-
-check("G02", "nave column height = 26.8m ±1%", () => {
-  const columns = comps.filter(c => /^nave-col-\d+$/.test(c.id));
-  const heights = columns.map(c => c.geometry.h);
-  const expected = 26.8;
-  const pass = heights.length > 0 && heights.every(h => within(h, expected, 1));
-  return {
-    pass,
-    measured: {
-      min: r2(Math.min(...heights)),
-      max: r2(Math.max(...heights)),
-      avg: r2(heights.reduce((a, b) => a + b) / heights.length)
-    },
-    expected
-  };
-});
-
-check("G03", "flying buttress arm length ≥ 7.0m (structural minimum)", () => {
-  const fbArms = comps.filter(c => /^fb-arm-/.test(c.id));
-  if (fbArms.length === 0) return { pass: false, measured: { count: 0 }, expected: ">0 flying buttresses" };
-  
-  const lengths = fbArms.map(c => {
-    // Distance from attachment point (pier) to arm tip
-    const dx = c.position[0] - (c.pier_x ?? 0);
-    const dz = c.position[2] - (c.pier_z ?? 0);
-    return Math.sqrt(dx * dx + dz * dz);
-  });
-  
-  const minLength = Math.min(...lengths);
-  const pass = minLength >= 7.0;
-  return {
-    pass,
-    measured: {
-      min: r2(minLength),
-      max: r2(Math.max(...lengths)),
-      avg: r2(lengths.reduce((a, b) => a + b) / lengths.length),
-      count: fbArms.length
-    },
-    expected: "all ≥ 7.0m (thrust containment)",
+    measured: { summit: r2(summit), base: r2(base), visible_extent: r2(summit - base) },
+    expected: { total_m: 96, base_m: "30–33", visible_extent_m: "~66" },
     critical: !pass,
-    note: minLength < 6.5 ? "CRITICAL: insufficient arm length to carry vault thrust" : ""
+    note: !pass ? "CRITICAL: spire must NOT be idealized away from sourced 96m/30m" : ""
   };
 });
 
-check("G04", "pier buttress width ≥ 2.8m (Viollet proportion to span)", () => {
-  const piers = comps.filter(c => /^pier-/.test(c.id));
-  if (piers.length === 0) return { pass: false, measured: { count: 0 }, expected: ">0 piers" };
-  
-  const widths = piers.map(c => c.geometry.w);
-  const minWidth = Math.min(...widths);
-  const rule = "Viollet-le-Duc: width ≥ nave_span / 4.4 = 2.79m";
-  const pass = minWidth >= 2.7; // 0.1m tolerance
-  
-  return {
-    pass,
-    measured: {
-      min: r2(minWidth),
-      avg: r2(widths.reduce((a, b) => a + b) / widths.length),
-      count: piers.length
-    },
-    expected: { rule, minimum_m: 2.8 },
-    critical: minWidth < 2.0,
-    note: minWidth < 2.0 ? "CRITICAL: unstable pier proportions (thrust will fail)" : ""
-  };
-});
-
-check("G05", "rib configuration per vault bay = 6 (4 diagonal + 2 transverse)", () => {
-  // Group ribs by vault bay (spatial proximity)
-  const bays = new Map();
-  const ribs = comps.filter(c => /^rib-/.test(c.id));
-  
-  for (const rib of ribs) {
-    const bayKey = `${Math.round(rib.position[0]/10)},${Math.round(rib.position[2]/10)}`;
-    if (!bays.has(bayKey)) bays.set(bayKey, []);
-    bays.get(bayKey).push(rib);
-  }
-  
-  const ribCounts = Array.from(bays.values()).map(bay => bay.length);
-  const pass = ribCounts.length > 0 && ribCounts.every(n => n === 6);
-  
-  return {
-    pass,
-    measured: {
-      bays_count: bays.size,
-      rib_counts: ribCounts,
-      bays_with_wrong_count: ribCounts.filter(n => n !== 6).length
-    },
-    expected: "6 ribs per bay (standard French 13c Gothic)",
-    note: "count mismatch suggests missing or duplicate component"
-  };
-});
-
-check("G06", "vault rise = 27.0m (37.5m height - 10.5m arcade, ±2%)", () => {
-  const arcadeTop = 10.5; // from canonical
-  const vaultTop = 37.5;  // from canonical
-  const expectedRise = vaultTop - arcadeTop;
-  
-  const vaultRibMidpoints = comps
-    .filter(c => /^rib-diagonal-/.test(c.id))
-    .map(c => c.position[1]); // y-coordinate (height)
-  
-  if (vaultRibMidpoints.length === 0) {
-    return { pass: false, measured: { count: 0 }, expected: expectedRise };
-  }
-  
-  const measuredRise = Math.max(...vaultRibMidpoints) - arcadeTop;
-  const pass = within(measuredRise, expectedRise, 2);
-  
-  return {
-    pass,
-    measured: r2(measuredRise),
-    expected: r2(expectedRise),
-    proportion: `1:${r2(naveVaultSpan / measuredRise)}`
-  };
-});
-
-// G07: "aisle vault height consistent (1/3 nave vault rise)"
-check("G07", "aisle vault height ≈ 9.0m (1/3 of nave vault rise)", () => {
-  const aisleVaults = comps.filter(c => /^aisle-vault-/.test(c.id));
-  if (aisleVaults.length === 0) return { pass: false, measured: { count: 0 }, expected: 9.0 };
-  
-  const heights = aisleVaults.map(c => c.geometry.h);
-  const avg = heights.reduce((a, b) => a + b) / heights.length;
-  const pass = within(avg, 9.0, 3);
-  
-  return {
-    pass,
-    measured: { avg: r2(avg), min: r2(Math.min(...heights)), max: r2(Math.max(...heights)) },
-    expected: 9.0,
-    note: "aisle vaults typically 1/3 the nave rise; validates Gothic bay hierarchy"
-  };
-});
-
-// G08: "clerestory window height proportional to arcade"
-check("G08", "clerestory window opening ≤ arcade height (light vs. strength)", () => {
-  const clerestoryWindows = comps.filter(c => /^clerestory-/.test(c.id));
-  if (clerestoryWindows.length === 0) return { pass: false, measured: { count: 0 } };
-  
-  const windowHeights = clerestoryWindows.map(c => c.geometry.h);
-  const maxWindowHeight = Math.max(...windowHeights);
-  const arcadeHeight = 10.5; // from canonical
-  const pass = maxWindowHeight <= arcadeHeight;
-  
-  return {
-    pass,
-    measured: { max_window_height: r2(maxWindowHeight), arcade_height: arcadeHeight },
-    expected: "windows ≤ arcade height",
-    note: "viollet-le-Duc rule: limit openings to preserve wall strength"
-  };
-});
-
-// G09-G10: more specific checks...
-check("G09", "provenance: zero unsourced components", () => {
+// V12: provenance audit — zero unsourced components
+check("V12", "provenance: zero unsourced components", () => {
   const unsourced = comps.filter(c => !c.provenance || !c.source);
   return {
     pass: unsourced.length === 0,
@@ -472,63 +207,27 @@ check("G09", "provenance: zero unsourced components", () => {
   };
 });
 
-check("G10", "conjecture-only components properly labeled (roof, tie-rods, decoration)", () => {
-  const mustBeConjecture = comps.filter(c =>
-    /^(roof-|tie-rod-|apex-|gargoyle-|spire-|crocket-)/.test(c.id)
+// V13: no-invention guard — refuted/uncertain values may NEVER be tagged "measured"
+check("V13", "no measured component cites refuted/uncertain values", () => {
+  const FORBIDDEN_MEASURED = [1.948, 1.377, 0.974, 6.65, 12.42, 18.18, 23.94, 0.48, 0.38, 0.36];
+  const violators = comps.filter(c =>
+    c.provenance === "measured" &&
+    FORBIDDEN_MEASURED.some(v => Math.abs((c.geometry?.w ?? c.radius ?? -1) - v) < 0.005)
   );
-  const misclassed = mustBeConjecture.filter(c =>
-    c.provenance !== "conjecture" && c.provenance !== "reconstructed_design"
-  );
-  
   return {
-    pass: misclassed.length === 0,
-    measured: { misclassed_count: misclassed.length, examples: misclassed.slice(0, 3).map(c => c.id) },
-    expected: "all roof/ornament = conjecture or reconstructed_design with source",
-    critical: misclassed.length > 0
+    pass: violators.length === 0,
+    measured: { violators: violators.map(c => c.id) },
+    expected: "pier Ø / chevet radii / rib widths must be conjecture or GAP, never measured",
+    critical: violators.length > 0
   };
 });
 
-check("G11", "material consistency: stone ashlar type sourced (measured vs. reconstructed)", () => {
-  const stoneComps = comps.filter(c =>
-    /^(pier-|arcade-|rib-|flying-buttress-|wall-)/.test(c.id)
-  );
-  const hasMaterialSource = stoneComps.filter(c => c.material_source || c.source).length;
-  const coverage = hasMaterialSource / stoneComps.length;
-  const pass = coverage > 0.9;
-  
-  return {
-    pass,
-    measured: {
-      sourced_count: hasMaterialSource,
-      total_count: stoneComps.length,
-      coverage_percent: (coverage * 100).toFixed(0)
-    },
-    expected: ">90% have material source (XRF, geological match)",
-    note: "ensures reconstructed stone matches Courville quarry (13c primary source)"
-  };
-});
-
-check("G12", "Gothic proportion: height:span ratio ≈ 1:3 or justified deviation", () => {
-  const measuredRatio = 37.5 / 12.3; // vault height / nave span
-  const expectedRatio = 3.0;
-  const deviation = measuredRatio - expectedRatio;
-  
-  return {
-    pass: true, // Always pass: measured reality is the answer
-    measured: { ratio: r2(measuredRatio), deviation_from_ideal: r2(deviation) },
-    expected: { ideal_ratio: expectedRatio, note: "Delbrueck/Viollet-le-Duc rule" },
-    note: deviation > 0
-      ? `Exceeds ideal by ${(Math.abs(deviation)*100).toFixed(1)}% — consistent with 15c aspiration toward higher vaults [Mercier 2015]`
-      : `Below ideal by ${(Math.abs(deviation)*100).toFixed(1)}% — suggests earlier construction phase`
-  };
-});
-
-// =========== PIXEL CHECKS (P01-P09) ===========
+// =========== PIXEL CHECKS (P01-P03) ===========
 // Same pattern as Nanchan:
-// P01: all 6 views exist
-// P02-P07: each view non-blank (>3% non-background)
-// P08: contour matches Viollet-le-Duc reference floor plan (template matching)
-// P09: provenance colors all present (>0.5% each class)
+// P01: all canonical views exist
+// P02: each view non-blank (>3% non-background); spire + nave bay + la forêt each visible
+// P03: provenance view shows all four evidence-class colors (>0.5% each class)
+// P08 (optional): contour matches the PD Viollet-le-Duc 'Flèche' elevation (template matching)
 ```
 
 ---
@@ -537,55 +236,51 @@ check("G12", "Gothic proportion: height:span ratio ≈ 1:3 or justified deviatio
 
 | File | Nanchan | Notre-Dame |
 |------|---------|-----------|
-| canonical data | `nanchan-canonical.json` | `notre-dame-canonical.json` |
-| rule engine | `derive.mjs` (Yingzao Fashi) | `derive.mjs` (Viollet-le-Duc + Gothic rules) |
-| geometry builder | `components/Viewer.tsx` | Same pattern; new component types: `Pier`, `FlyingButtress`, `VaultRib` |
-| verifier | `verify.mjs` (12 dimension checks) | Same structure; new checks on Gothic proportions |
+| canonical data | `nanchan-canonical.json` | `notre-dame-canonical.json` (authored from corpus §3) |
+| rule engine | `derive.mjs` (Yingzao Fashi) | `derive.mjs` (Gothic ruleset: two-centred arch, ad quadratum/triangulum, Roriczer) |
+| geometry builder | `components/Viewer.tsx` | Same pattern; new component types: `Spire`, `SpireOctagon`, `Statue`, `VaultRib`, `Pier` |
+| verifier | `verify.mjs` (12 dimension checks) | Same structure; checks **V01–V14** + P01–P03, recomputed from component coords |
 | outputs | `structural-spec.json`, derivation log | Identical artifact structure, different data |
 
 ---
 
 ## 3. Data Preparation Checklist
 
-### 3.1 Nohesive Point Cloud Processing
+### 3.1 Transcribe the corpus, do not "process a point cloud"
 
-```python
-# pseudo-code: extract key dimensions from point cloud
-import open3d as o3d
-import numpy as np
+There is **no ingestible point cloud** for this build. Tallon's ~1B-point scan, AGP's ~50B-point surveys, and the CNRS digital twin are all **restricted (cite-only)** — see the corpus Rights Table. The data pipeline is therefore:
 
-pcd = o3d.io.read_point_cloud("nohesive_notre_dame.pcd")
-
-# Find nave columns (dense vertical clusters)
-# Cluster by spatial proximity, filter by height (>20m)
-clusters = o3d.ml.clustering.ClusterDBScan(eps=0.5, min_points=500).fit(pcd)
-nave_cols = [
-    c for c in clusters
-    if c.max_bound[1] - c.min_bound[1] > 20  # tall enough
-    and abs(c.get_center()[0]) < 10  # near centerline
-]
-
-# Compute dimensions
-for i, col in enumerate(nave_cols):
-    bbox = col.get_axis_aligned_bounding_box()
-    diameter = bbox.get_extent()[0]
-    height = bbox.get_extent()[1]
-    center = col.get_center()
-    print(f"col-{i}: diameter={diameter:.2f}m, height={height:.2f}m, pos={center}")
-    # Write to canonical.json
+```text
+1. Read docs/NOTRE_DAME_VERIFIED_CORPUS.md §3 (canonical skeleton).
+2. Transcribe each {provenance, source, url} node into data/notre-dame-canonical.json verbatim.
+3. Leave every _GAP_* node unfilled. Never invent a number to close a gap.
+4. The ONLY measured-drawing asset you may ingest is the public-domain
+   Viollet-le-Duc "Flèche" plate (BnF ark mm320202712p) + other PD plates
+   in the corpus Rights Table (Bell's Handbook, Dehio–Bezold, Wikisource VLD).
 ```
 
-### 3.2 Viollet-le-Duc Reference Table
+### 3.2 Scaling the spire profile off the PD drawing
 
-Extract rule proportions from *Dictionnaire raisonné de l'architecture*:
+The per-section spire heights are a **GAP**. Derive them — do not invent them:
 
-| Figure | Volume | Dimension | Gothic Rule | Notre-Dame Match? |
-|--------|--------|-----------|------------|-----------------|
-| Floor plan | Vol.1, p.47 | Nave span | 10-13m typical | ✓ 12.3m |
-| Buttress detail | Vol.2, p.156-180 | FB arm length | 0.58× span | ✓ 7.2m = 0.585× |
-| Section elevation | Vol.3, p.89 | Pier width | ≥span/4.4 | ✓ 2.8m = 0.228× |
-| Vault ribs | Vol.4, p.201 | Rib width | span/20 to span/24 | ✓ 0.6m = span/20.5 |
-| Proportions | Vol.5, p.312 | Height:span | 1:3 ideal | ✓ 1:3.05 (15c elevation) |
+```text
+- Asset: VLD "Élévation et plans de la flèche" plate (PD, BnF ark mm320202712p).
+- Anchor the plate to the two measured facts: 96 m total, ~30 m base.
+- Measure each section's pixel height on the plate; convert by (section_px / total_px) × 96 m.
+- Tag every resulting section height rule_derived, source = "scaled from PD VLD 'Flèche' plate".
+- Roriczer 6×/7× pinnacle multiples are CITED-UNCERTAIN → emit with a re-verify note; never as exact.
+```
+
+### 3.3 Gothic ruleset reference (the Yingzao-Fashi analog)
+
+No single Gothic "building code" exists. The generative rules (full citations in corpus §3 `design_ruleset`):
+
+| Rule | What it derives | Source (PD / factual) |
+|------|-----------------|-----------------------|
+| Two-centred (pointed) arch | Arcade/clerestory arch curves struck from springing points (equilateral: radius=span, rise=span×0.866) | Brick Development Association, "Gothic Arch" (verbatim) |
+| *Ad quadratum* | Successive square side ratio 1/√2; diagonal/side = √2 | Salama et al. 2016; pure Euclid |
+| *Ad triangulum* | Elevation height = base × √3/2 ≈ 0.866 | Hiscock, *The Symbol at Your Door* |
+| Roriczer pinnacle (1486) | The 16 spire pinnacles: base square → 45°-rotated inscribed squares (1/√2) | Roriczer 1486 / Archaeological Journal v.4 (1847), PD |
 
 ---
 
@@ -594,14 +289,14 @@ Extract rule proportions from *Dictionnaire raisonné de l'architecture*:
 ### Execution order:
 
 ```bash
-# 1. Prepare data
+# 1. Derive
 node scripts/derive.mjs
 # Check: artifacts/structural-spec.json generated?
-# Check: artifacts/derivation-log.md has complete reasoning?
+# Check: artifacts/derivation-log.md has complete reasoning + arithmetic?
+# Check: derive.mjs THREW on any component missing {provenance, source}?
 
 # 2. Build scene
 npm run build
-# Will be slow (48 columns + flying buttresses)
 
 # 3. Start preview
 npm run dev
@@ -612,8 +307,8 @@ node scripts/screenshot.mjs
 
 # 5. Verify
 npm run verify
-# Expected: ~50% of checks FAIL on first run → normal!
-# Review artifacts/verifier-report.json
+# Expected: some checks FAIL on first run → normal!
+# Review artifacts/verifier-report.json; keep failed reports as *.failed.json
 ```
 
 ### Expected first-run failures:
@@ -621,75 +316,74 @@ npm run verify
 ```json
 {
   "summary": {
-    "total": 18,
+    "total": 17,
     "pass": 11,
-    "fail": 7,
-    "critical_failures": ["G03"]
+    "fail": 6,
+    "critical_failures": ["V08"]
   },
   "checks": [
     {
-      "id": "G03",
-      "assert": "flying buttress arm length ≥ 7.0m",
+      "id": "V08",
+      "assert": "spire total height = 96m, base ~30m, no idealization",
       "pass": false,
-      "measured": { "min": 6.2, "max": 7.4 },
-      "note": "southern FB arms too short; check position calculation in structural-spec"
+      "measured": { "summit": 92.3, "base": 30.0, "visible_extent": 62.3 },
+      "note": "spire summit short of 96m; check per-section heights scaled off the PD plate"
     }
   ]
 }
 ```
 
 **Debug steps:**
-1. Open `structural-spec.json`, find all `fb-arm-*` components
-2. Check their `position` and `attachedTo` coordinates
-3. Is the rule engine wrong? Or the geometry builder?
-4. Fix and re-run `npm run verify`
+1. Open `structural-spec.json`, find all `spire-*` components.
+2. Check their `position` (y) and `geometry.h` against the plate-scaled section heights.
+3. Is the rule engine wrong (bad plate scaling)? Or the geometry builder?
+4. **Never** "fix" V08 by hard-setting 96 m on a key_dimension — the check recomputes from coords; fix the section geometry.
+5. Re-run `npm run verify`.
 
 ---
 
 ## 5. Key Differences Quick Reference
 
-| Aspect | Nanchan | Notre-Dame |
+| Aspect | Nanchan | Notre-Dame (Paris) |
 |--------|---------|-----------|
-| **Units** | fen (16.5mm) | meters |
-| **Column count** | 12 (3×4 grid) | 48 (6 bays × 2 aisles × 4 rows) |
-| **Complexity** | Simple rectangular frame + bracket sets | Complex ribbed vault + flying buttress system |
-| **Rule source** | Yingzao Fashi 1103 | Viollet-le-Duc 1868-75 |
-| **Primary checks** | Bay spacing, bracket height, roof pitch | Gothic proportion (1:3), FB arm length, rib count |
-| **Expected iterations** | 3-4 | 5-7 (more complexity) |
-| **First failure usually** | Roof geometry | Flying buttress arm positioning |
+| **Units** | fen (16.5 mm) | pied du roi (324.8 mm) |
+| **Primary target** | Full timber frame | The spire (*la flèche*); nave bay = stretch; *la forêt* = vision |
+| **Complexity** | Simple rectangular frame + bracket sets | Octagonal tapering spire + statuary; ribbed sexpartite vault |
+| **Rule source** | Yingzao Fashi 1103 | Reconstructed Gothic ruleset (two-centred arch, ad quadratum/triangulum, Roriczer) |
+| **Primary measured asset** | Tsinghua laser scan | PD Viollet-le-Duc "Flèche" plate (no ingestible point cloud) |
+| **Critical guard** | Keep 1:2.67 roof vs Fashi 1:3 | Keep spire 96 m / 30 m — never idealize (V08) |
+| **First failure usually** | Roof geometry | Spire taper / per-section heights scaled off the plate |
 
 ---
 
 ## 6. Quick Parameter Reference
 
-Copy to `notre-dame-canonical.json`:
+**Do not copy a parameter block from here into the canonical file.** Author `data/notre-dame-canonical.json` from `docs/NOTRE_DAME_VERIFIED_CORPUS.md §3`, which carries `{provenance, source, url}` on every node. The headline anchors, for orientation only:
 
-```json
+```jsonc
 {
-  "key_dimensions_meters": {
-    "nave_span": 12.3,
-    "nave_length": 104.5,
-    "aisle_span": 4.8,
-    "vault_height": 37.5,
-    "column_height": 26.8,
-    "arcade_height": 10.5,
-    "clerestory_sill": 15.7,
-    "vault_rise": 27.0,
-    "fb_arm_length": 7.2,
-    "pier_width": 2.8,
-    "column_diameter": 1.1,
-    "rib_width": 0.6,
-    "capital_height": 1.2
+  "unit": { "pied_du_roi_mm": 324.8 },
+  "key_anchors_m": {
+    "spire_total_height": 96,            // measured (multi-source)
+    "spire_base_level": 30,              // measured (one source 33)
+    "spire_base_footprint": [15, 13],    // measured (irregular trapezoid)
+    "cathedral_total_length": 128,       // measured
+    "transept_width": 48,                // measured; transept arm 14
+    "west_facade_width": 43.5,           // measured; facade height (no towers) 45
+    "west_tower_height": 69,             // measured
+    "nave_vessel_width": 13,             // measured; side aisle 5.9
+    "vault_crown_height": 33,            // measured (accept 32.5–33) — NOT 35
+    "height_under_roof": 43              // measured — distinct from vault crown
   },
-  "gothic_proportions": {
-    "ideal_height_span_ratio": 3.0,
-    "measured_ratio": 3.05,
-    "fb_to_span_ratio": 0.585,
-    "pier_to_span_ratio": 0.228
+  "counts": {
+    "nave_bays": 10,                     // paired into 5 sexpartite double-bays
+    "spire_statues": 16,                 // 12 apostles + 4 evangelist symbols
+    "oak_framework_t": 500, "lead_cladding_t": 250
   },
-  "bay_count": 11,
-  "column_count": 48,
-  "rib_count_per_bay": 6
+  "_GAPS": [
+    "nave_pier_diameter", "chevet_radii", "vault_rib_widths",
+    "per_section_spire_heights", "aisle_vault_heights"   // never fill — see corpus
+  ]
 }
 ```
 
@@ -699,12 +393,13 @@ Copy to `notre-dame-canonical.json`:
 
 | Issue | Symptom | Fix |
 |-------|---------|-----|
-| derive.mjs crash | Node throws error | Check `canonical.json` numeric types and completeness |
+| derive.mjs throws | "component lacks {provenance, source}" | Correct — that's the audit gate. Add a real source from the corpus or render it conjecture; never silence it |
 | Scene empty | `localhost:3000` shows black screen | Verify `structural-spec.json` generated; check Geometry Builder errors |
-| verify.mjs crash | `npm run verify` throws | Check component ID patterns in `structural-spec.json` match regex in verify.mjs |
-| G03 fail (FB too short) | "measured min: 6.2m" | In `structural-spec.json`, verify FB `position` and pier attachment point; recalculate arm length |
-| P02 fail (blank view) | "non_background: 0.5%" | Scene not rendering or too small; check all component positions are reasonable scale |
-| G01 fail (bay spacing) | "spacing: [9.2, 9.8, 10.1]" | Derive engine computed wrong bay length; fix in derive.mjs |
+| verify.mjs crash | `npm run verify` throws | Check component ID patterns in `structural-spec.json` match the regex in verify.mjs |
+| V08 fail (spire short/idealized) | "summit: 92.3m" or summit ≠ 96m | Re-scale per-section heights off the PD plate; never hard-set 96m on a key_dimension |
+| V12 fail (unsourced) | "unsourced_count > 0" | Every component needs a corpus-traceable `{provenance, source}`; unsourced ⇒ conjecture color, never invented |
+| V13 fail (false "measured") | pier Ø / chevet radius tagged measured | Re-tag as `conjecture`/`GAP`; never cite to "Bork/Tallon laser survey" |
+| P02 fail (blank view) | "non_background: 0.5%" | Scene not rendering or too small; check component positions are reasonable scale |
 
 ---
 
@@ -712,20 +407,20 @@ Copy to `notre-dame-canonical.json`:
 
 ```
 ├── data/
-│   └── notre-dame-canonical.json        ✓ all dimensions have provenance + source
+│   └── notre-dame-canonical.json        ✓ every dimension has provenance + source, transcribed from corpus §3
 ├── scripts/
-│   ├── derive.mjs                       ✓ clear derivation process
-│   ├── verify.mjs                       ✓ 12+6 checks
+│   ├── derive.mjs                       ✓ clear derivation process; throws on unsourced components
+│   ├── verify.mjs                       ✓ V01–V14 + P01–P03, recomputed from component coords
 │   └── screenshot.mjs                   ✓ (optional, from render)
 ├── artifacts/
 │   ├── structural-spec.json             ✓ final passing spec
 │   ├── derivation-log.md                ✓ reasoning trace (fail→revise→pass logged)
-│   ├── verifier-report.json             ✓ final passing report
-│   └── preview-*.png                    ✓ 6 standard views (final passing version)
-└── README.md                            ✓ methodology summary + data sources + reproduction
+│   ├── verifier-report.json             ✓ final passing report (failures kept as *.failed.json)
+│   └── preview-*.png                    ✓ canonical views (final passing version)
+└── README.md                            ✓ methodology summary + source/rights table + reproduction
 ```
 
-Every item mirrors Nanchan's structure; only data and parameters change.
+Every item mirrors Nanchan's structure; only data and parameters change — and the data comes from the verified corpus, never from this guide.
 
 ---
 
@@ -733,10 +428,11 @@ Every item mirrors Nanchan's structure; only data and parameters change.
 
 Your teammate gets:
 
-1. **`METHODOLOGY_FOR_NOTRE_DAME.md`** — universal methodology (5 layers, 4 rule principles, checklist)
-2. **`NOTRE_DAME_TECH_TEMPLATE.md`** — this file (exact code patterns, parameter values, first-run expectations)
-3. **Reference to `/scripts/` from Nanchan** — copy and adapt `derive.mjs`, `verify.mjs`, `screenshot.mjs`
-4. **Reference to `/components/Viewer.tsx`** — study the procedural geometry pattern; reuse for Notre-Dame components
-5. **Clear success criteria:** passing verifier report with all 12 geometry checks + all pixel checks, zero unsourced components
+1. **`docs/NOTRE_DAME_VERIFIED_CORPUS.md`** — the **single source of truth** for all dimensions, sources, the canonical skeleton (§3), the rule-engine strategy (§4), the V01–V14 verifier targets (§5), the rights table (§6), and the known gaps (§7).
+2. **`docs/GOAL_NOTRE_DAME_SPIRE.md`** — scope (the spire), the ND-1…ND-32 backlog, and the Definition of Done.
+3. **`NOTRE_DAME_TECH_TEMPLATE.md`** — this file: the exact **code patterns** for adapting `derive.mjs` / `verify.mjs` / `Viewer.tsx`. **Not a data source.**
+4. **Reference to `/scripts/` from Nanchan** — copy and adapt `derive.mjs`, `verify.mjs`, `screenshot.mjs`.
+5. **Reference to `/components/Viewer.tsx`** — study the procedural geometry + provenance-toggle pattern; reuse for Notre-Dame components.
+6. **Clear success criteria:** passing verifier report (V01–V14 + pixel checks), zero unsourced components, and the measured-reality guard (V08) intact — the spire's 96 m / 30 m never idealized.
 
-The whole pipeline is deterministic and reproducible — no surprises, just systematic iteration.
+The whole pipeline is deterministic and reproducible — swap the data corpus and the same pipeline reconstructs another building. No invented numbers, no surprises, just systematic iteration against cited evidence.
