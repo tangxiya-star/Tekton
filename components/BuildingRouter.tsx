@@ -13,11 +13,13 @@ import BrandMark from "./BrandMark";
 
 const SpireViewer = dynamic(() => import("./SpireViewer"), { ssr: false });
 const TowersViewer = dynamic(() => import("./TowersViewer"), { ssr: false });
+const CathedralViewer = dynamic(() => import("./CathedralViewer"), { ssr: false });
 const NanchanViewer = dynamic(() => import("./Viewer"), { ssr: false });
 
 const BUILDINGS: { key: string; label: string }[] = [
   { key: "notre-dame", label: "Notre-Dame · Spire" },
   { key: "notre-dame-towers", label: "Notre-Dame · Towers" },
+  { key: "notre-dame-whole", label: "Notre-Dame · Cathedral" },
   { key: "nanchan", label: "Nanchan Temple" },
 ];
 
@@ -43,7 +45,7 @@ export default function BuildingRouter() {
     window.history.pushState({}, "", url);
   };
 
-  const Active = building === "nanchan" ? NanchanViewer : building === "notre-dame-towers" ? TowersViewer : SpireViewer;
+  const Active = building === "nanchan" ? NanchanViewer : building === "notre-dame-towers" ? TowersViewer : building === "notre-dame-whole" ? CathedralViewer : SpireViewer;
 
   return (
     <>
