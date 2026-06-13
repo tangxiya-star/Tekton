@@ -38,7 +38,9 @@ Run the **entire flow end-to-end** — research → acquire → derive → build
 
 ## 2. Scope
 
-**The spire (la flèche) ONLY.** Nave, vaults, and the lost medieval roof ("la forêt") are out of scope for v1. Flawless first, then expand.
+**The spire (la flèche) ONLY for v1.** Flawless first, then expand.
+
+**Planned roadmap (post-v1, not this run):** ① the **west towers + facade** (the iconic twin-tower massing — confirmed dims: 69 m towers, 43.5 m facade) → ② the **nave / vaults / transept** → ③ the lost medieval roof (*la forêt*) as the conjecture/inference tier → ultimately the **whole building**. The pipeline is built to expand — each is just more components in the canonical + derive, gated by the same verifier; the spire is the flawless proof-of-method the rest builds on.
 
 ## 3. Hard rules (inherited from the verifier — do not violate)
 
