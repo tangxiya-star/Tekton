@@ -49,6 +49,8 @@ Frame: 2×四椽栿, 2×平梁, 4×驼峰(conjecture), 4×大叉手(conjecture, 
 - Eave projection 2340 mm = 141.8 fen beyond 撩檐枋 — 1974–75 restoration estimate, explicitly unusable as design evidence → CONJECTURE [QI1980].
 - 歇山收山 simplified v1: ridge length 400 fen, gable triangles at x=±200; refine later.
 
+- 檐椽: YZFS 卷五 用椽之制 椽径≈9 分, 一椽一档 (spacing 18 fen). The exposed eave portion embodies the 1975 conjectural projection → conjecture (propagated). Eave drop 39 fen with slight 檐口微翘.
+- 檐椽 placed: 134 rafters (front/rear + gable rows).
 ## 8. Altar 佛坛 — height 720 mm = 43.6 fen; clearances front 1510 / sides 1265 / rear 1320 mm → 546.7×428.5 fen, offset -5.8 fen rearward [ZHANG2022, measured]
 
 ## 9. Secondary members 阑额 · 柱础 · 散斗 · 柱头枋 · 正脊 · 围护
@@ -60,7 +62,7 @@ Frame: 2×四椽栿, 2×平梁, 4×驼峰(conjecture), 4×大叉手(conjecture, 
 - 围护 (today's fabric): white walls, central-bay double door, side-bay 直棂窗 — present in the building, dimensions NOT in corpus → conjecture (non-structural infill, labeled).
 
 ## 10. Provenance audit
-- Components: 201 total — conjecture: 57, reconstructed_design: 73, rule_derived: 70, measured: 1
+- Components: 335 total — conjecture: 191, reconstructed_design: 73, rule_derived: 70, measured: 1
 - Audit gate: every component carries {provenance, source} — enforced at emit time; an unsourced component throws.
 
 ## 11. Deviations from the Yingzao Fashi (kept, never corrected)

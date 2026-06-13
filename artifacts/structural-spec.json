@@ -2145,15 +2145,15 @@
         "type": "box",
         "w": 1057.6,
         "h": 8,
-        "d": 149.0517791300614
+        "d": 147.0752591113711
       },
       "position": [
         0,
-        354.36297488260504,
+        311.88147134978567,
         -417.9
       ],
       "rotation_deg": [
-        -162.0539838703458,
+        164.6079510474489,
         0,
         0
       ],
@@ -2193,19 +2193,19 @@
       "role": "Tiled roof plane (rafters + sheathing + grey tile, rendered as a surface in v1).",
       "geometry": {
         "type": "box",
-        "w": 148.88324746592542,
+        "w": 147.07525911137105,
         "h": 8,
         "d": 485.79999999999995
       },
       "position": [
         -467.9,
-        308.712,
+        311.88147134978567,
         0
       ],
       "rotation_deg": [
         0,
         0,
-        -162.25532837494308
+        -164.6079510474489
       ],
       "provenance": "conjecture",
       "source": "Same 1975 restoration projection [QI1980]"
@@ -2290,15 +2290,15 @@
         "type": "box",
         "w": 1057.6,
         "h": 8,
-        "d": 149.0517791300614
+        "d": 147.0752591113711
       },
       "position": [
         0,
-        354.36297488260504,
+        311.88147134978567,
         417.9
       ],
       "rotation_deg": [
-        -17.946016129654186,
+        15.392048952551084,
         0,
         0
       ],
@@ -2338,19 +2338,19 @@
       "role": "Tiled roof plane (rafters + sheathing + grey tile, rendered as a surface in v1).",
       "geometry": {
         "type": "box",
-        "w": 148.88324746592542,
+        "w": 147.07525911137105,
         "h": 8,
         "d": 485.79999999999995
       },
       "position": [
         467.9,
-        308.712,
+        311.88147134978567,
         0
       ],
       "rotation_deg": [
         0,
         0,
-        -17.74467162505693
+        -15.39204895255109
       ],
       "provenance": "conjecture",
       "source": "Same 1975 restoration projection [QI1980]"
@@ -2374,6 +2374,3356 @@
       ],
       "provenance": "conjecture",
       "source": "Form rule-typical; height depends on conjectural rise (propagated) [QI1980]"
+    },
+    {
+      "id": "chuan-N-0",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -382,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-1",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -364,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-2",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -346,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-3",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -328,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-4",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -310,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-5",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -292,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-6",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -274,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-7",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -256,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-8",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -238,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-9",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -220,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-10",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -202,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-11",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -184,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-12",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -166,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-13",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -148,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-14",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -130,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-15",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -112,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-16",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -94,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-17",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -76,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-18",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -58,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-19",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -40,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-20",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -22,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-21",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -4,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-22",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        14,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-23",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        32,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-24",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        50,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-25",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        68,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-26",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        86,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-27",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        104,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-28",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        122,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-29",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        140,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-30",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        158,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-31",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        176,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-32",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        194,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-33",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        212,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-34",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        230,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-35",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        248,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-36",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        266,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-37",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        284,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-38",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        302,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-39",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        320,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-40",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        338,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-41",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        356,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-N-42",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        374,
+        320.6855059319182,
+        -392.273
+      ],
+      "rotation_deg": [
+        162.93649171025683,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-W-0",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        -442.273,
+        320.6855059319182,
+        -215.14
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -162.93649171025683
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-W-1",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        -442.273,
+        320.6855059319182,
+        -197.14
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -162.93649171025683
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-W-2",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        -442.273,
+        320.6855059319182,
+        -179.14
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -162.93649171025683
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-W-3",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        -442.273,
+        320.6855059319182,
+        -161.14
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -162.93649171025683
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-W-4",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        -442.273,
+        320.6855059319182,
+        -143.14
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -162.93649171025683
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-W-5",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        -442.273,
+        320.6855059319182,
+        -125.13999999999999
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -162.93649171025683
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-W-6",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        -442.273,
+        320.6855059319182,
+        -107.13999999999999
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -162.93649171025683
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-W-7",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        -442.273,
+        320.6855059319182,
+        -89.13999999999999
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -162.93649171025683
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-W-8",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        -442.273,
+        320.6855059319182,
+        -71.13999999999999
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -162.93649171025683
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-W-9",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        -442.273,
+        320.6855059319182,
+        -53.139999999999986
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -162.93649171025683
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-W-10",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        -442.273,
+        320.6855059319182,
+        -35.139999999999986
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -162.93649171025683
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-W-11",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        -442.273,
+        320.6855059319182,
+        -17.139999999999986
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -162.93649171025683
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-W-12",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        -442.273,
+        320.6855059319182,
+        0.8600000000000136
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -162.93649171025683
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-W-13",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        -442.273,
+        320.6855059319182,
+        18.860000000000014
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -162.93649171025683
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-W-14",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        -442.273,
+        320.6855059319182,
+        36.860000000000014
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -162.93649171025683
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-W-15",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        -442.273,
+        320.6855059319182,
+        54.860000000000014
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -162.93649171025683
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-W-16",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        -442.273,
+        320.6855059319182,
+        72.86000000000001
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -162.93649171025683
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-W-17",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        -442.273,
+        320.6855059319182,
+        90.86000000000001
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -162.93649171025683
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-W-18",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        -442.273,
+        320.6855059319182,
+        108.86000000000001
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -162.93649171025683
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-W-19",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        -442.273,
+        320.6855059319182,
+        126.86000000000001
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -162.93649171025683
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-W-20",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        -442.273,
+        320.6855059319182,
+        144.86
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -162.93649171025683
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-W-21",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        -442.273,
+        320.6855059319182,
+        162.86
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -162.93649171025683
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-W-22",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        -442.273,
+        320.6855059319182,
+        180.86
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -162.93649171025683
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-W-23",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        -442.273,
+        320.6855059319182,
+        198.86
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -162.93649171025683
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-0",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -382,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-1",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -364,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-2",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -346,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-3",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -328,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-4",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -310,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-5",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -292,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-6",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -274,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-7",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -256,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-8",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -238,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-9",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -220,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-10",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -202,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-11",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -184,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-12",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -166,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-13",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -148,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-14",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -130,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-15",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -112,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-16",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -94,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-17",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -76,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-18",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -58,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-19",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -40,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-20",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -22,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-21",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        -4,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-22",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        14,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-23",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        32,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-24",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        50,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-25",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        68,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-26",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        86,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-27",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        104,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-28",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        122,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-29",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        140,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-30",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        158,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-31",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        176,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-32",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        194,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-33",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        212,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-34",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        230,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-35",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        248,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-36",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        266,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-37",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        284,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-38",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        302,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-39",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        320,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-40",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        338,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-41",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        356,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-S-42",
+      "name_zh": "檐椽",
+      "name_en": "Eave rafter",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "z"
+      },
+      "position": [
+        374,
+        320.6855059319182,
+        392.273
+      ],
+      "rotation_deg": [
+        17.063508289743172,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-E-0",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        442.273,
+        320.6855059319182,
+        -215.14
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -17.063508289743172
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-E-1",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        442.273,
+        320.6855059319182,
+        -197.14
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -17.063508289743172
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-E-2",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        442.273,
+        320.6855059319182,
+        -179.14
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -17.063508289743172
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-E-3",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        442.273,
+        320.6855059319182,
+        -161.14
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -17.063508289743172
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-E-4",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        442.273,
+        320.6855059319182,
+        -143.14
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -17.063508289743172
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-E-5",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        442.273,
+        320.6855059319182,
+        -125.13999999999999
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -17.063508289743172
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-E-6",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        442.273,
+        320.6855059319182,
+        -107.13999999999999
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -17.063508289743172
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-E-7",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        442.273,
+        320.6855059319182,
+        -89.13999999999999
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -17.063508289743172
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-E-8",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        442.273,
+        320.6855059319182,
+        -71.13999999999999
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -17.063508289743172
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-E-9",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        442.273,
+        320.6855059319182,
+        -53.139999999999986
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -17.063508289743172
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-E-10",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        442.273,
+        320.6855059319182,
+        -35.139999999999986
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -17.063508289743172
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-E-11",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        442.273,
+        320.6855059319182,
+        -17.139999999999986
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -17.063508289743172
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-E-12",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        442.273,
+        320.6855059319182,
+        0.8600000000000136
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -17.063508289743172
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-E-13",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        442.273,
+        320.6855059319182,
+        18.860000000000014
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -17.063508289743172
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-E-14",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        442.273,
+        320.6855059319182,
+        36.860000000000014
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -17.063508289743172
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-E-15",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        442.273,
+        320.6855059319182,
+        54.860000000000014
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -17.063508289743172
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-E-16",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        442.273,
+        320.6855059319182,
+        72.86000000000001
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -17.063508289743172
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-E-17",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        442.273,
+        320.6855059319182,
+        90.86000000000001
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -17.063508289743172
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-E-18",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        442.273,
+        320.6855059319182,
+        108.86000000000001
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -17.063508289743172
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-E-19",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        442.273,
+        320.6855059319182,
+        126.86000000000001
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -17.063508289743172
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-E-20",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        442.273,
+        320.6855059319182,
+        144.86
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -17.063508289743172
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-E-21",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        442.273,
+        320.6855059319182,
+        162.86
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -17.063508289743172
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-E-22",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        442.273,
+        320.6855059319182,
+        180.86
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -17.063508289743172
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
+    },
+    {
+      "id": "chuan-E-23",
+      "name_zh": "檐椽（山面）",
+      "name_en": "Eave rafter (gable side)",
+      "phase": "roof",
+      "role": "Round rafter carrying the deep eave on the hip-gable side.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 4.5,
+        "h": 193.04376827082808,
+        "axis": "x"
+      },
+      "position": [
+        442.273,
+        320.6855059319182,
+        198.86
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -17.063508289743172
+      ],
+      "provenance": "conjecture",
+      "source": "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制"
     },
     {
       "id": "altar",

@@ -433,13 +433,13 @@ for (const s of [-1, 1]) {
     "rule_derived", "Geometry from purlin positions [ZHANG2022] + surface inferred");
   slope(`roof-upper-${tag}`, "上架屋面（脊步）", "Upper roof slope", s * totalD / 4, s * 0, pingY, ridgeTopY, ridgeLen + 120, "z",
     "conjecture", "Depends on conjectural rise 130 fen (propagated) [QI1980]");
-  slope(`roof-eave-${tag}`, "檐口（1975 年复原出檐）", "Eave extension (1975 restoration)", s * liaoyanZ, s * (liaoyanZ + EAVE), liaoyanTopY, liaoyanTopY - EAVE * (pingY - liaoyanTopY) / (totalD / 4 - liaoyanZ), fullW + 2 * EAVE, "z",
+  slope(`roof-eave-${tag}`, "檐口（1975 年复原出檐）", "Eave extension (1975 restoration)", s * liaoyanZ, s * (liaoyanZ + EAVE), liaoyanTopY, liaoyanTopY - 0.85 * EAVE * (pingY - liaoyanTopY) / (liaoyanZ - totalD / 4), fullW + 2 * EAVE, "z",
     "conjecture", RF.eave_projection.note + " [QI1980]");
   // gable-side hips
   const hipFromX = s * (totalW / 2 + liaoyanOff);
   slope(`roof-hip-${s > 0 ? "E" : "W"}`, "山面屋面", "Gable-side hip slope", hipFromX, s * ridgeLen / 2, liaoyanTopY, pingY, liaoyanSpan * 0.62, "x",
     "rule_derived", "Hip-gable side plane from 撩檐枋 to 收山 line (simplified v1)");
-  slope(`roof-hip-eave-${s > 0 ? "E" : "W"}`, "山面檐口（1975 年复原出檐）", "Gable eave extension", hipFromX, s * (totalW / 2 + liaoyanOff + EAVE), liaoyanTopY, liaoyanTopY - EAVE * 0.32, liaoyanSpan * 0.7, "x",
+  slope(`roof-hip-eave-${s > 0 ? "E" : "W"}`, "山面檐口（1975 年复原出檐）", "Gable eave extension", hipFromX, s * (totalW / 2 + liaoyanOff + EAVE), liaoyanTopY, liaoyanTopY - 0.85 * EAVE * (pingY - liaoyanTopY) / (liaoyanZ - totalD / 4), liaoyanSpan * 0.7, "x",
     "conjecture", "Same 1975 restoration projection [QI1980]");
   // gable triangle 山花
   comp({
@@ -453,6 +453,58 @@ for (const s of [-1, 1]) {
     source: "Form rule-typical; height depends on conjectural rise (propagated) [QI1980]",
   });
 }
+
+// --- 檐椽 eave rafters ---------------------------------------------------------
+const RAF_R = 4.5, RAF_SPACING = 18; // YZFS 卷五 用椽之制: 椽径≈9分, 一椽一档
+const eaveDrop = 0.85 * EAVE * (pingY - liaoyanTopY) / (liaoyanZ - totalD / 4);
+L(`- 檐椽: YZFS 卷五 用椽之制 椽径≈${RAF_R * 2} 分, 一椽一档 (spacing ${RAF_SPACING} fen). The exposed eave portion embodies the 1975 conjectural projection → conjecture (propagated). Eave drop ${r1(eaveDrop)} fen with slight 檐口微翘.`);
+let rafIdx = 0;
+// front/rear rows (along z), then gable rows (along x)
+for (const s of [-1, 1]) {
+  // front/rear
+  {
+    const r1z = totalD / 2, y1 = niujiY;
+    const r2z = liaoyanZ + EAVE * 0.97, y2 = liaoyanTopY - eaveDrop;
+    const len = Math.hypot(r2z - r1z, y2 - y1);
+    const rotX = Math.atan2(-(y2 - y1), s * (r2z - r1z)) * 180 / Math.PI;
+    const half = liaoyanSpan / 2 + 35;
+    const n = Math.floor((2 * half) / RAF_SPACING);
+    for (let k = 0; k <= n; k++) {
+      rafIdx++;
+      comp({
+        id: `chuan-${s > 0 ? "S" : "N"}-${k}`, name_zh: "檐椽", name_en: "Eave rafter", phase: "roof",
+        role: "Round rafter carrying the deep eave — the exposed rafter row is the signature of 出檐深远.",
+        geometry: { type: "cylinder", r: RAF_R, h: len, axis: "z" },
+        position: [-half + k * RAF_SPACING, (y1 + y2) / 2, s * (r1z + r2z) / 2],
+        rotation_deg: [rotX, 0, 0],
+        provenance: "conjecture",
+        source: "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制",
+      });
+    }
+  }
+  // gables
+  {
+    const r1x = totalW / 2, y1 = niujiY;
+    const r2x = totalW / 2 + liaoyanOff + EAVE * 0.97, y2 = liaoyanTopY - eaveDrop;
+    const len = Math.hypot(r2x - r1x, y2 - y1);
+    const rotZ = Math.atan2(y2 - y1, s * (r2x - r1x)) * 180 / Math.PI;
+    const half = liaoyanSpan * 0.31;
+    const n = Math.floor((2 * half) / RAF_SPACING);
+    for (let k = 0; k <= n; k++) {
+      rafIdx++;
+      comp({
+        id: `chuan-${s > 0 ? "E" : "W"}-${k}`, name_zh: "檐椽（山面）", name_en: "Eave rafter (gable side)", phase: "roof",
+        role: "Round rafter carrying the deep eave on the hip-gable side.",
+        geometry: { type: "cylinder", r: RAF_R, h: len, axis: "x" },
+        position: [s * (r1x + r2x) / 2, (y1 + y2) / 2, -half + k * RAF_SPACING],
+        rotation_deg: [0, 0, rotZ],
+        provenance: "conjecture",
+        source: "Eave projection = 1974–75 restoration estimate (QI1980, propagated); sizing YZFS 卷五 用椽之制",
+      });
+    }
+  }
+}
+L(`- 檐椽 placed: ${rafIdx} rafters (front/rear + gable rows).`);
 
 // --- Altar -------------------------------------------------------------------
 const A = C.altar_and_statues;

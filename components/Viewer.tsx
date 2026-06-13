@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
+import * as THREE from "three";
 import spec from "../artifacts/structural-spec.json";
 
 const FEN = 0.0165; // 1 fen = 16.5 mm → scene meters
@@ -14,51 +15,103 @@ type Component = (typeof spec.components)[number] & {
 };
 
 const PROV_COLORS: Record<string, string> = {
-  measured: "#d9a441",
-  reconstructed_design: "#b07c2e",
-  rule_derived: "#5566b8",
-  conjecture: "#c0392b",
+  measured: "#dca83f",
+  reconstructed_design: "#a87f2c",
+  rule_derived: "#5b6cb8",
+  conjecture: "#bb4434",
 };
 
 const MATERIAL_COLORS: Record<string, string> = {
-  zhu: "#8e3b2f",   // 朱
-  bai: "#e8e0d0",   // 白
-  huiwa: "#686c70", // 灰瓦
-  sumu: "#a9845e",  // 素木
-  stone: "#a8a294",
-  door: "#69281f",
+  zhu: "#84432f",   // 朱 (weathered earth-vermilion)
+  bai: "#ddd2b9",   // 白 (aged lime)
+  huiwa: "#565b60", // 灰瓦
+  sumu: "#97795a",  // 素木
+  stone: "#9b9489",
+  door: "#5d2a1e",
 };
 
 const PHASE_COLORS: Record<string, string> = {
-  platform: "#a8a294", // stone
-  columns: "#8e3b2f",  // 朱
-  puzuo: "#8e3b2f",    // 朱
-  frame: "#a9845e",    // 素木
-  roof: "#686c70",     // 灰瓦
-  enclosure: "#e8e0d0",
+  platform: "#9b9489",
+  columns: "#84432f",
+  puzuo: "#84432f",
+  frame: "#97795a",
+  roof: "#565b60",
+  enclosure: "#ddd2b9",
 };
 
-function Member({ c, provMode }: { c: Component; provMode: boolean }) {
+/** Stable per-component tone offset so timber doesn't look injection-molded. */
+function jitter(id: string) {
+  let h = 0;
+  for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) | 0;
+  return (((h % 100) + 100) % 100 / 100 - 0.5) * 0.07;
+}
+
+function makeTileTexture(vertical: boolean) {
+  const c = document.createElement("canvas");
+  c.width = c.height = 128;
+  const g = c.getContext("2d")!;
+  g.fillStyle = "#62666b";
+  g.fillRect(0, 0, 128, 128);
+  for (let p = 0; p < 128; p += 16) {
+    g.fillStyle = "rgba(10,12,14,0.30)";
+    vertical ? g.fillRect(p, 0, 3, 128) : g.fillRect(0, p, 128, 3);
+    g.fillStyle = "rgba(255,255,255,0.06)";
+    vertical ? g.fillRect(p + 8, 0, 6, 128) : g.fillRect(0, p + 8, 128, 6);
+  }
+  const t = new THREE.CanvasTexture(c);
+  t.wrapS = t.wrapT = THREE.RepeatWrapping;
+  t.repeat.set(vertical ? 14 : 2, vertical ? 2 : 14);
+  return t;
+}
+
+function Member({
+  c,
+  provMode,
+  tileU,
+  tileV,
+}: {
+  c: Component;
+  provMode: boolean;
+  tileU: THREE.Texture | null;
+  tileV: THREE.Texture | null;
+}) {
   const g = c.geometry;
   const rot = (c.rotation_deg ?? [0, 0, 0]).map((d) => (d * Math.PI) / 180) as [
     number, number, number,
   ];
-  const color = provMode
+  const baseColor = provMode
     ? PROV_COLORS[c.provenance]
     : (c.material && MATERIAL_COLORS[c.material]) || PHASE_COLORS[c.phase] || "#888";
+  const color = useMemo(() => {
+    const col = new THREE.Color(baseColor);
+    if (!provMode) col.offsetHSL(0, 0, jitter(c.id));
+    return col;
+  }, [baseColor, provMode, c.id]);
   const pos = c.position as [number, number, number];
 
+  // tiled roof planes get the ridge-line texture (今貌 only)
+  const isRoofPlane = c.id.startsWith("roof-");
+  const map = !provMode && isRoofPlane ? (rot[0] !== 0 ? tileU : tileV) : null;
+
+  const mat = (
+    <meshStandardMaterial
+      color={map ? "#c8cbce" : color}
+      map={map ?? undefined}
+      roughness={provMode ? 1 : 0.85}
+      emissive={provMode ? baseColor : "#000000"}
+      emissiveIntensity={provMode ? 0.22 : 0}
+    />
+  );
+
   if (g.type === "cylinder") {
-    const taper = c.phase === "columns" ? 0.88 : 1; // 卷杀-style gentle taper
+    const taper = c.phase === "columns" ? 0.88 : 1;
+    const axisRot: [number, number, number] =
+      g.axis === "x" ? [0, 0, Math.PI / 2] : g.axis === "z" ? [Math.PI / 2, 0, 0] : [0, 0, 0];
     return (
       <group position={pos} rotation={rot}>
-        <mesh
-          rotation={g.axis === "x" ? [0, 0, Math.PI / 2] : [0, 0, 0]}
-          castShadow
-          receiveShadow
-        >
-          <cylinderGeometry args={[g.r! * taper, g.r!, g.h!, 20]} />
-          <meshStandardMaterial color={color} roughness={0.85} />
+        <mesh rotation={axisRot} castShadow receiveShadow>
+          <cylinderGeometry args={[g.r! * taper, g.r!, g.h!, 14]} />
+          {mat}
         </mesh>
       </group>
     );
@@ -66,7 +119,7 @@ function Member({ c, provMode }: { c: Component; provMode: boolean }) {
   return (
     <mesh position={pos} rotation={rot} castShadow receiveShadow>
       <boxGeometry args={[g.w!, g.h!, g.d!]} />
-      <meshStandardMaterial color={color} roughness={0.85} />
+      {mat}
     </mesh>
   );
 }
@@ -81,14 +134,16 @@ const LEGEND: [string, string, string][] = [
 export default function Viewer() {
   const [provMode, setProvMode] = useState(false);
   const components = useMemo(() => spec.components as Component[], []);
+  const tileU = useMemo(() => makeTileTexture(true), []);
+  const tileV = useMemo(() => makeTileTexture(false), []);
 
   return (
     <div style={{ width: "100vw", height: "100vh", position: "relative" }}>
       <Canvas camera={{ position: [16, 9, 19], fov: 42 }} shadows>
         <color attach="background" args={["#141416"]} />
         <fog attach="fog" args={["#141416", 36, 95]} />
-        <hemisphereLight args={["#3a3f4d", "#26211c", 0.6]} />
-        <ambientLight intensity={0.28} />
+        <hemisphereLight args={["#3d4250", "#2a241d", 0.7]} />
+        <ambientLight intensity={0.32} />
         <directionalLight
           position={[16, 26, 12]}
           intensity={1.7}
@@ -104,13 +159,12 @@ export default function Viewer() {
         <directionalLight position={[-12, 9, -16]} intensity={0.35} color="#9db4d8" />
         <group scale={FEN}>
           {components.map((c) => (
-            <Member key={c.id} c={c} provMode={provMode} />
+            <Member key={c.id} c={c} provMode={provMode} tileU={tileU} tileV={tileV} />
           ))}
         </group>
-        {/* ground reference */}
         <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.67, 0]} receiveShadow>
           <circleGeometry args={[60, 64]} />
-          <meshStandardMaterial color="#1b1b1d" roughness={1} />
+          <meshStandardMaterial color="#191a1c" roughness={1} />
         </mesh>
         <OrbitControls
           target={[0, 3.2, 0]}
@@ -151,8 +205,7 @@ export default function Viewer() {
               <div key={key} style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 4 }}>
                 <span style={{ width: 12, height: 12, background: PROV_COLORS[key], display: "inline-block" }} />
                 <span>
-                  {zh} {en} ·{" "}
-                  {components.filter((c) => c.provenance === key).length}
+                  {zh} {en} · {components.filter((c) => c.provenance === key).length}
                 </span>
               </div>
             ))}

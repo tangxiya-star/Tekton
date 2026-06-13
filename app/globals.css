@@ -1,17 +1,17 @@
 /* Locked design tokens (PRD §8) — the model applies these by name only. */
 :root {
   /* 今貌 present-day palette */
-  --zhu: #8e3b2f;        /* 朱 vermilion (weathered timber red) */
-  --bai: #e8e0d0;        /* 白 lime white */
-  --huiwa: #686c70;      /* 灰瓦 grey tile */
-  --sumu: #a9845e;       /* 素木 plain timber */
-  --stone: #a8a294;      /* platform masonry (derived neutral) */
+  --zhu: #84432f;        /* 朱 vermilion (weathered earth-vermilion) */
+  --bai: #ddd2b9;        /* 白 aged lime */
+  --huiwa: #565b60;      /* 灰瓦 grey tile */
+  --sumu: #97795a;       /* 素木 plain timber */
+  --stone: #9b9489;      /* platform masonry (derived neutral) */
 
   /* Provenance layer */
-  --prov-measured: #d9a441;       /* measured — bronze */
-  --prov-reconstructed: #b07c2e;  /* reconstructed design — deep bronze */
-  --prov-rule: #5566b8;           /* rule-derived — indigo */
-  --prov-conjecture: #c0392b;     /* conjecture — red */
+  --prov-measured: #dca83f;       /* measured — bronze */
+  --prov-reconstructed: #a87f2c;  /* reconstructed design — deep bronze */
+  --prov-rule: #5b6cb8;           /* rule-derived — indigo */
+  --prov-conjecture: #bb4434;     /* conjecture — red */
 
   --bg: #141416;
   --ink: #e8e0d0;
