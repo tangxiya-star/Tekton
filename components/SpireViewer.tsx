@@ -33,6 +33,7 @@ type Comp = (typeof spec.components)[number] & {
     type: string;
     w?: number; h?: number; d?: number; r?: number; rTop?: number; rt?: number;
     axis?: string; pts?: number[][]; scale?: number[]; seg?: number;
+    arc?: number; arcStart?: number; // optional lathe sweep (radians) — a hemicycle apse, not a full revolve
   };
 };
 
@@ -51,7 +52,23 @@ const MAT_COLORS: Record<string, string> = {
   oak: "#6e5535",    // oak armature
   copper: "#3f8f74", // verdigris copper statues
   gilt: "#d8b24a",   // gilded coq + orb
+  stone: "#c9bda0",  // Lutetian limestone — the cathedral masonry massing
 };
+
+// Whole-cathedral massing categories that are MASONRY (rendered as limestone) vs.
+// lead-clad (roof/apse keep the spec's lead). This is a render-side material
+// treatment of the massing categories; the data stays as authored (lead). It lets
+// the masonry body read as a cathedral and separates it from the lead spire/roof.
+const MASONRY_CATEGORIES = new Set([
+  "massing-westfront", "massing-tower", "massing-nave", "massing-aisle",
+  "massing-crossing", "massing-transept", "massing-choir",
+]);
+// Built-mode material for a component: massing masonry → limestone; everything
+// else uses its authored material (lead spire/roof/apse, oak, copper, gilt).
+function builtMaterial(c: Comp): string {
+  if (c.fidelity === "massing" && c.category && MASONRY_CATEGORIES.has(c.category)) return "stone";
+  return c.material ?? "lead";
+}
 const PROV_LABEL: Record<string, [string, string]> = {
   measured: ["mesuré", "Measured"],
   reconstructed_design: ["dessin reconstitué", "Reconstructed design (VLD plate)"],
@@ -87,18 +104,25 @@ function Member({
   const rot = (c.rotation_deg ?? [0, 0, 0]).map((d) => (d * Math.PI) / 180) as [number, number, number];
   const pos = c.position as [number, number, number];
 
+  const builtMat = builtMaterial(c);
   const color = useMemo(() => {
     if (prov) return new THREE.Color(PROV_COLORS[c.provenance] ?? "#888");
-    const base = (c.material && MAT_COLORS[c.material]) || "#8a8f97";
+    const base = MAT_COLORS[builtMat] || "#8a8f97";
     const col = new THREE.Color(base);
-    col.offsetHSL(0, 0, jitter(c.id));
+    // gentler tonal variation on the broad massing shells, full jitter on detail
+    col.offsetHSL(0, 0, jitter(c.id) * (c.fidelity === "massing" ? 0.4 : 1));
     return col;
-  }, [prov, c.material, c.provenance, c.id]);
+  }, [prov, builtMat, c.provenance, c.id, c.fidelity]);
 
   const customGeo = useMemo(() => {
     if (g.type === "poly") return polyGeometry(g.pts!);
     if (g.type === "lathe")
-      return new THREE.LatheGeometry(g.pts!.map((p) => new THREE.Vector2(p[0], p[1])), g.seg ?? 24);
+      return new THREE.LatheGeometry(
+        g.pts!.map((p) => new THREE.Vector2(p[0], p[1])),
+        g.seg ?? 24,
+        g.arcStart ?? 0,
+        g.arc ?? Math.PI * 2, // a hemicycle apse passes arc=π so it reads as a chevet, not a full dome
+      );
     return null;
   }, [g]);
 
@@ -108,8 +132,8 @@ function Member({
   ) : (
     <meshStandardMaterial
       color={color}
-      metalness={c.material === "gilt" || c.material === "copper" ? 0.55 : c.material === "lead" ? 0.35 : 0.05}
-      roughness={c.material === "gilt" ? 0.3 : c.material === "lead" ? 0.55 : 0.85}
+      metalness={builtMat === "gilt" || builtMat === "copper" ? 0.55 : builtMat === "lead" ? 0.35 : 0.04}
+      roughness={builtMat === "gilt" ? 0.3 : builtMat === "lead" ? 0.55 : builtMat === "stone" ? 0.95 : 0.85}
       emissive={emissive}
       emissiveIntensity={selected ? 0.35 : 0}
       side={g.type === "poly" || g.type === "lathe" ? THREE.DoubleSide : THREE.FrontSide}
@@ -142,12 +166,34 @@ function Member({
   return <mesh position={pos} rotation={rot} castShadow receiveShadow {...handlers}><boxGeometry args={[g.w!, g.h!, g.d!]} />{mat}</mesh>;
 }
 
-const CAMS: Record<string, { pos: [number, number, number]; target: [number, number, number] }> = {
+// Whether the spec carries whole-cathedral massing (PASS 1) or is spire-only.
+// When massing is present we frame the WHOLE silhouette (128 m nave, west front +
+// twin towers, transept, the flèche on the crossing, apse); otherwise we keep the
+// original spire stations. Both render from the same flat components[].
+const HAS_MASSING = (spec.components as Comp[]).some((c) => c.fidelity === "massing");
+
+// Camera stations.
+//  - WHOLE cathedral: default = a 3/4 view down the south flank showing the full
+//    silhouette with the spire on the crossing; front = west façade head-on (twin
+//    towers, spire rising behind); aerial = high oblique reading the cruciform plan;
+//    detail = the spire close-up (the full-fidelity hero); provenance = default view.
+//  - Spire-only fallback keeps the original spire framing.
+const CATHEDRAL_CAMS: Record<string, { pos: [number, number, number]; target: [number, number, number] }> = {
+  default: { pos: [128, 96, 150], target: [-2, 36, 0] },
+  front: { pos: [-176, 58, 2], target: [-8, 40, 0] },
+  aerial: { pos: [60, 205, 150], target: [4, 18, 0] },
+  // the full-fidelity spire hero, framed rising above the crossing roof (its
+  // lower souche sits inside the crossing massing, top at 43 m; summit at 96 m)
+  detail: { pos: [46, 72, 70], target: [0, 70, 0] },
+  provenance: { pos: [128, 96, 150], target: [-2, 36, 0] },
+};
+const SPIRE_CAMS: Record<string, { pos: [number, number, number]; target: [number, number, number] }> = {
   default: { pos: [62, 58, 104], target: [0, 60, 0] },
   front: { pos: [0, 60, 138], target: [0, 60, 0] },
   detail: { pos: [11, 47, 17], target: [0, 44, 0] },
   provenance: { pos: [62, 58, 104], target: [0, 60, 0] },
 };
+const CAMS = HAS_MASSING ? CATHEDRAL_CAMS : SPIRE_CAMS;
 
 function CameraRig({ goal, flyingRef }: { goal: { pos: [number, number, number]; target: [number, number, number] }; flyingRef: React.MutableRefObject<boolean>; }) {
   const { camera, controls } = useThree();
@@ -226,15 +272,19 @@ export default function SpireViewer() {
 
   return (
     <div style={{ width: "100vw", height: "100vh", position: "relative", background: "#141416", color: "var(--ink, #e8e2d4)", fontFamily: "var(--font, system-ui)" }}>
-      <Canvas camera={{ position: cam.pos, fov: 40 }} shadows>
+      <Canvas camera={{ position: cam.pos, fov: 40, far: HAS_MASSING ? 1200 : 600 }} shadows>
         <color attach="background" args={["#141416"]} />
-        <fog attach="fog" args={["#141416", 80, 230]} />
+        {/* push fog back for the 128 m whole-cathedral framing; keep the tighter
+            spire fog when massing is absent */}
+        <fog attach="fog" args={["#141416", HAS_MASSING ? 180 : 80, HAS_MASSING ? 460 : 230]} />
         <hemisphereLight args={["#7c8aa8", "#2a2620", prov ? 0.4 : 0.55]} />
         <ambientLight intensity={prov ? 1.6 : 0.25} />
         <directionalLight
-          position={[60, 120, 50]} intensity={prov ? 0.4 : 1.5} color={prov ? "#ffffff" : "#fff2dc"}
+          position={HAS_MASSING ? [120, 170, 90] : [60, 120, 50]} intensity={prov ? 0.4 : 1.5} color={prov ? "#ffffff" : "#fff2dc"}
           castShadow shadow-mapSize={[2048, 2048]}
-          shadow-camera-left={-60} shadow-camera-right={60} shadow-camera-top={120} shadow-camera-bottom={-10} shadow-bias={-0.0004}
+          shadow-camera-left={HAS_MASSING ? -90 : -60} shadow-camera-right={HAS_MASSING ? 90 : 60}
+          shadow-camera-top={HAS_MASSING ? 160 : 120} shadow-camera-bottom={-10}
+          shadow-camera-near={1} shadow-camera-far={HAS_MASSING ? 420 : 300} shadow-bias={-0.0004}
         />
         <directionalLight position={[-50, 60, -60]} intensity={0.4} color="#9db4d8" />
         <Suspense fallback={null}>
@@ -250,15 +300,19 @@ export default function SpireViewer() {
           <circleGeometry args={[400, 48]} />
           <meshStandardMaterial color="#161719" roughness={1} />
         </mesh>
-        <OrbitControls makeDefault onStart={() => { flyingRef.current = false; }} target={[0, 60, 0]} maxDistance={260} minDistance={6} maxPolarAngle={Math.PI / 1.9} />
+        <OrbitControls makeDefault onStart={() => { flyingRef.current = false; }} target={HAS_MASSING ? [-2, 36, 0] : [0, 60, 0]} maxDistance={HAS_MASSING ? 520 : 260} minDistance={6} maxPolarAngle={Math.PI / 1.9} />
         <CameraRig goal={goal} flyingRef={flyingRef} />
       </Canvas>
 
       {/* header */}
       <div style={{ position: "absolute", top: 22, left: 26, pointerEvents: "none", textShadow: "0 1px 8px #000" }}>
-        <div style={{ fontSize: 28, letterSpacing: 3, fontWeight: 600 }}>Flèche de Notre-Dame de Paris</div>
-        <div style={{ fontSize: 12, color: "#b9b2a2", marginTop: 4, maxWidth: 520 }}>
-          Spire of Notre-Dame · Viollet-le-Duc 1859, rebuilt à l'identique 2024 · 96&nbsp;m · derived from the verified corpus + Gothic rules
+        <div style={{ fontSize: 28, letterSpacing: 3, fontWeight: 600 }}>
+          {HAS_MASSING ? "Notre-Dame de Paris" : "Flèche de Notre-Dame de Paris"}
+        </div>
+        <div style={{ fontSize: 12, color: "#b9b2a2", marginTop: 4, maxWidth: 540 }}>
+          {HAS_MASSING
+            ? "Whole-cathedral massing (PASS 1) · 128 m long · west front + twin towers (69 m) · transept (48 m) · the full-fidelity flèche on the crossing (96 m) · apse — derived from the verified corpus; the toggle shows the fidelity gradient"
+            : "Spire of Notre-Dame · Viollet-le-Duc 1859, rebuilt à l'identique 2024 · 96 m · derived from the verified corpus + Gothic rules"}
         </div>
       </div>
 
@@ -273,7 +327,13 @@ export default function SpireViewer() {
           ))}
         </div>
         <div style={{ marginTop: 10, fontSize: 11.5, color: "#b9b2a2", maxWidth: 360 }}>
-          {prov ? "Nothing renders without a source — colour = evidence class. Click any element to see its citation." : "The reconstruction à l'identique: lead over an oak armature, oxidised-copper statuary, gilt coq."}
+          {prov
+            ? (HAS_MASSING
+                ? "Nothing renders without a source — colour = evidence class. Massing is measured / rule-derived; the spire is full fidelity. Click any element for its citation."
+                : "Nothing renders without a source — colour = evidence class. Click any element to see its citation.")
+            : (HAS_MASSING
+                ? "Limestone masonry massing carries the lead-clad spire à l'identique — measured volumes, recognizable silhouette. Switch to Provenance for the fidelity gradient."
+                : "The reconstruction à l'identique: lead over an oak armature, oxidised-copper statuary, gilt coq.")}
         </div>
         <div style={{ marginTop: 10, fontSize: 11.5 }}>
           {Object.entries(PROV_LABEL).map(([k, [, en]]) => (

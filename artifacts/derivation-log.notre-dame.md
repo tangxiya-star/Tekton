@@ -1,51 +1,45 @@
-# Derivation Log — Flèche de Notre-Dame de Paris (Viollet-le-Duc, 1859)
+# Derivation Log — Cathédrale Notre-Dame de Paris (WHOLE CATHEDRAL — PASS 1 massing + spire)
 
-Rule Engine run. Inputs: `data/notre-dame-canonical.json` (verified corpus, 16 verdicts / 40 gaps) + the Gothic ruleset (ad quadratum, Roriczer pinnacle).
-Module = pied du roi = 324.8 mm. Positions emitted in METRES.
-Precedence: measured / reconstructed_design → rule → flagged conjecture. The 96 m total + 30 m base are MEASURED and are never recomputed from a geometric ideal (V08 critical).
+Rule Engine COMPOSER run. Inputs: `data/notre-dame-canonical.json` (verified corpus, 16 verdicts / 40 gaps) + the Gothic ruleset.
+Module = pied du roi = 324.8 mm. Positions emitted in METRES. World frame: crossing at the origin, +X→chevet, −X→west front, ±Z→transept arms, +Y up.
+Precedence: measured / reconstructed_design → rule → flagged conjecture. The MEASURED headline dims set the scale and are never recomputed from a geometric ideal (V08/V-VLT critical).
 
-## 0. Anchors (measured)
-- Total height = **96 m** to the rooster head [CULTURE-FLECHE; +3 corroborating]
-- Base anchored = **30 m** above ground, on the croisée du transept [CONSTRUCTIONBTP]
-- Visible extent = 96 − 30 = **66 m** (reconstructed_design)
+## 0. Measured headline anchors (cathedral_geometry — all CONFIRMED)
+- total length **128 m** · width at transept **48 m** (arm width 14 m) · west façade **43.5 × 45 m** · towers **69 m**
+- nave vessel **13 m** · side aisle **5.9 m** · **10** bays · vault crown **33 m** · under roof **43 m** · chevet Ø **47.88 m** · spire **96 m / 30 m**
 
-## 1. Six-part profile (la flèche) — heights scaled off the PD plate (rule_derived; the absolute scale is the measured 96 m)
-- Section run sums to 65 m + 1 m coq = 66 m = the measured visible extent ✓
-- tabouret  y 30→32 m · octagon R 4.8→4.6 m · [conjecture; RESTAURONS-ND]
-- souche    y 32→40 m · octagon R 4.6→4.3 m · [reconstructed_design; VLD-FLECHE]
-- fut       y 40→62 m · octagon R 4→2.6 m · [reconstructed_design; VLD-FLECHE]
-- gallery1  y 62→69 m · octagon R 2.85→2.55 m · [reconstructed_design; VLD-FLECHE]
-- gallery2  y 69→79 m · octagon R 2.7→1.5 m · [reconstructed_design; VLD-FLECHE]
-- aiguille  y 79→95 m · octagon R 1.6→0.08 m · [reconstructed_design; VLD-FLECHE]
-- Taper (octagon circumradius) is strictly decreasing souche→aiguille — the measured-reality monotonic guard (V11).
+## 0b. Rule-derived longitudinal split (the corpus does NOT publish these — flagged, never measured)
+- West end at X=-60 m, chevet outer at X=68 m → span 128 m = the measured 128 m ✓ (crossing position = origin is rule_derived).
+- Nave -56→-7 m (49 m, 10 bays × ~4.9 m interval — count measured, interval rule_derived).
+- Crossing -7→7 m (14 m measured footprint). Choir 7→44.06 m + apse hemicycle (R 23.94 m measured) centred X=44.06 → 68 m.
+- Transept arms reach ±24 m on Z (48 m arm-to-arm measured). Aisle height 23.76 m + roof ridge form = rule_derived (GAPs).
 
-## 2. Octagon ring beams — radius set by the ad quadratum octagon rule (rule_derived)
-- Octagon springs from a square by 45° rotation (side ratio 1/√2 ≈ 0.707); the exact springing dimension is a GAP, so a regular octagon is inscribed in the ~14 m crossing and the rings mark each section join.
+## 1. Composing fragments (construction order; massing shells first, spire last)
+- `west-front` [massing] → 3 components
+- `nave` [massing] → 3 components
+- `crossing` [massing] → 1 component
+- `transept` [massing] → 2 components
+- `choir` [massing] → 3 components
+- `apse` [massing] → 1 component
+- `roof` [massing] → 2 components
+## SPIRE (full fidelity) — six-part profile scaled off the PD plate; the absolute scale is the measured 96 m
+- Section run sums to 65 m + 1 m coq = 66 m = the measured visible extent ✓; base 30 → summit 96 m.
+- `spire` [full] → 93 components (composed in UNCHANGED at the crossing — ids/positions byte-identical, V08–V14 anchor)
 
-## 3. Quadrilobes — 8 on the fût faces [count measured: 8; form reconstructed_design from VLD plate]
+## 2. Provenance audit
+- Components: 108 total — measured: 44, rule_derived: 24, conjecture: 18, reconstructed_design: 22
+- Fidelity: massing: 15, full: 93
+- Fragments: west-front: 3, nave: 3, crossing: 1, transept: 2, choir: 3, apse: 1, roof: 2, spire: 93
+- Audit gate: every component (massing + spire) carries {provenance, source, url, rights}; source resolves to the rights-cleared registry (use/use-data); a restricted or unregistered source throws (0 unsourced by construction).
+- Spire group present at the crossing: 93 components, 16 statues, coq at 96 m (summit, measured 96 m).
 
-## 4. Gabled bays — 8 lucarnes on the second gallery [reconstructed_design; "8 gabled bays" per culture.gouv profile]
-
-## 5. Pinnacles — 16 via the Roriczer (1486) rule [rule_derived]; vertical multiples (~6×/7×) CITED-UNCERTAIN → spirelets conjecture
-- Roriczer: base square → 45°-rotated inscribed squares (1/√2). 8 around gallery1 + 8 around gallery2 = 16 [count measured: 16].
-
-## 6. Statuary — 16 copper statues [measured: 12 apostles + 4 evangelist symbols; PERSEE-2009]
-- 4 groups of 3 apostles (staggered, climbing) + 4 evangelist symbols, around the base of the spire (gallery1 level).
-- Apostle ≈ 3.4 m (measured); evangelist ≈ 2 m (measured). Weights cited-uncertain (apostle 140 vs 150 kg; evangelist 65 vs 75 kg) — adversarially flagged, drive no geometry.
-- St Thomas (patron of architects) turns to FACE the spire and bears Viollet-le-Duc's own features.
-
-## 7. Summit — the coq (rooster) at 96 m [conjecture: weight ~30 kg vs ~10 kg cited-uncertain; position from the measured 96 m]
-
-## 8. Provenance audit
-- Components: 93 total — conjecture: 18, reconstructed_design: 22, rule_derived: 21, measured: 32
-- Audit gate: every component carries {provenance, source, url, rights}; source resolves to the rights-cleared registry (use/use-data); a restricted or unregistered source throws.
-- Statue count = 16 (12 apostles + 4 evangelists). Pinnacles = 16.
-
-## 9. Measured-reality deviations (kept, never corrected — V08)
+## 3. Measured-reality deviations (kept, never corrected — V08 / V-VLT)
 - Spire total 96 m and base 30 m are MEASURED — never recomputed from an ad-triangulum height-from-width ideal (V08 critical).
 - Per-section heights are NOT published → scaled off the PD plate (rule_derived), never asserted as measured.
 - Octagon springing dimension is a GAP → a regular octagon is inscribed in the mean ~14 m footprint (rule_derived), never claimed as surveyed.
 - Rooster weight is cited-uncertain (~30 vs ~10 kg) → conjecture, never measured.
 - Roriczer 6×/7× pinnacle multiples are cited-uncertain → pinnacle heights are conjecture, never exact.
+- Vault crown is the MEASURED 33 m — never recomputed toward 35 m (refuted) or 43 m (under-roof) (V-VLT, generalised V08).
+- Every internal split the corpus does not publish (crossing position, nave/choir division, bay interval) is rule_derived and flagged — uncertainty propagated to placement, never invented.
 
-*Viollet-le-Duc's measured 96 m outranks any geometric ideal.*
+*The measured cathedral outranks the rulebook; partial fidelity (massing + the flawless spire) is honest, shown by the provenance toggle.*

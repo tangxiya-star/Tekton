@@ -36,6 +36,30 @@
     { "id": "public_repo", "category": "orchestration", "required": true, "critical": false, "requirement": "Public repo (hackathon rule — private = DQ)", "check": "github.com/tangxiya-star/yingzao visibility == public" },
     { "id": "readme", "category": "impact", "required": true, "critical": false, "requirement": "README with pitch, problem, method, source/rights table, why Fable 5, rerun instructions", "check": "README.md present with those sections + the rights table" },
     { "id": "autonomy_log", "category": "autonomy", "required": true, "critical": false, "requirement": "Session log shows long autonomous stretches; human interventions are new-information only (not course-corrections)", "check": "review the session log; interventions limited to credentials/new info" },
-    { "id": "rerunnable", "category": "orchestration", "required": false, "critical": false, "requirement": "Rerunnable: npm run goal works from a clean checkout and is building-parameterized; Nanchan stays green as the regression anchor", "check": "fresh clone + npm run goal reaches green; --building nanchan still passes" }
-  ]
+    { "id": "rerunnable", "category": "orchestration", "required": false, "critical": false, "requirement": "Rerunnable: npm run goal works from a clean checkout and is building-parameterized; Nanchan stays green as the regression anchor", "check": "fresh clone + npm run goal reaches green; --building nanchan still passes" },
+
+    { "id": "wc_total_length", "tier": "whole-cathedral", "category": "impact", "required": false, "critical": false, "requirement": "PASS 1 massing: cathedral total length 128 m (extreme X span of cathedral components) ±2%", "check": "verifier C01 passes" },
+    { "id": "wc_transept_width", "tier": "whole-cathedral", "category": "impact", "required": false, "critical": false, "requirement": "PASS 1 massing: max width across transept 48 m (Z span) ±2% + transept arm thickness 14 m", "check": "verifier C02 passes" },
+    { "id": "wc_west_facade", "tier": "whole-cathedral", "category": "impact", "required": false, "critical": false, "requirement": "PASS 1 massing: west façade width 43.5 m ±2% + façade body height ≈45 m", "check": "verifier C03 passes" },
+    { "id": "wc_towers", "tier": "whole-cathedral", "category": "impact", "required": false, "critical": false, "requirement": "PASS 1 massing: west towers reach 69 m ±2%", "check": "verifier C04 passes" },
+    { "id": "wc_vault_crown", "tier": "whole-cathedral", "category": "impact", "required": false, "critical": false, "requirement": "PASS 1 massing: nave high-vault crown 33 m (measured-reality guard: not 35 m, not 43 m)", "check": "verifier C05 passes" },
+    { "id": "wc_spire_composed", "tier": "whole-cathedral", "category": "demo", "required": false, "critical": false, "requirement": "Spire group composes UNCHANGED on the crossing (x≈0,z≈0): total 96 m, base 30 m, 8 faces, 16 statues; V08–V14 stay green", "check": "verifier C06 passes (and V08–V14 still pass)" },
+    { "id": "wc_provenance_audit", "tier": "whole-cathedral", "category": "impact", "required": false, "critical": false, "requirement": "Every massing block {provenance,source,url,rights}; 0 unsourced; all four evidence classes; massing renders measured/rule_derived, the spire full fidelity (honesty gradient)", "check": "verifier C-PROV passes + P01–P03" }
+  ],
+  "tiers": {
+    "whole-cathedral": {
+      "pass": "MASSING",
+      "required": false,
+      "note": "PASS 1 whole-cathedral massing, composed into the same structural-spec.notre-dame.json behind the building selector. required:false so the spire (V08–V14 / P01–P03) verdict is unaffected — partial fidelity is honest, the provenance toggle shows the gradient. Each C-check is recomputed FROM COMPONENT COORDINATES, never from spec.key_dimensions.",
+      "checks": {
+        "C01": "total length 128 m — extreme X span of cathedral components ±2%",
+        "C02": "max width across transept 48 m — Z span ±2% + arm thickness 14 m",
+        "C03": "west façade width 43.5 m ±2% + façade body ≈45 m",
+        "C04": "west towers reach 69 m ±2%",
+        "C05": "nave vault crown 33 m (guard: not 35 m / not 43 m)",
+        "C06": "spire composes unchanged on the crossing (x≈0,z≈0); V08–V14 intact; 8 faces, 16 statues",
+        "C-PROV": "massing provenance audit (every block sourced; all four classes; fidelity gradient massing/full)"
+      }
+    }
+  }
 }

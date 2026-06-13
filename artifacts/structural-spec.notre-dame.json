@@ -5,14 +5,15 @@
     "building_key": "notre-dame",
     "designer": "Eugène Viollet-le-Duc (flèche, 1859), with Jean-Baptiste Lassus",
     "date_built": "spire designed/erected 1859 (Viollet-le-Duc); lost in the fire 15 Apr 2019; rebuilt à l'identique, cathedral reopened 7–8 Dec 2024; new spire summit + rooster 2023",
-    "generated_by": "scripts/derive-notre-dame.mjs (Yingzao Rule Engine — spire)",
-    "canonical_source": "data/notre-dame-canonical.json"
+    "generated_by": "scripts/derive-notre-dame.mjs (Yingzao Rule Engine — whole-cathedral composer; PASS 1 massing + spire)",
+    "canonical_source": "data/notre-dame-canonical.json",
+    "composition": "ONE spec composed from per-fragment scopes; massing fragments offset/namespaced to world, the spire composed in UNCHANGED at the crossing [0,0,0]."
   },
   "units": {
     "scene_scale": 1,
     "unit": "metre",
     "pied_du_roi_mm": 324.8,
-    "note": "All positions/dimensions in metres."
+    "note": "All positions/dimensions in metres. World frame: crossing at origin, +X→chevet, −X→west front, ±Z→transept arms."
   },
   "provenance_colors": {
     "measured": "#d9a843",
@@ -21,6 +22,15 @@
     "conjecture": "#b34a38"
   },
   "phases": [
+    "massing-westfront",
+    "massing-tower",
+    "massing-nave",
+    "massing-aisle",
+    "massing-crossing",
+    "massing-transept",
+    "massing-choir",
+    "massing-apse",
+    "massing-roof",
     "base",
     "souche",
     "fut",
@@ -32,39 +42,564 @@
     "statuary",
     "summit"
   ],
+  "fragments": [
+    {
+      "key": "west-front",
+      "fidelity": "massing",
+      "components": 3
+    },
+    {
+      "key": "nave",
+      "fidelity": "massing",
+      "components": 3
+    },
+    {
+      "key": "crossing",
+      "fidelity": "massing",
+      "components": 1
+    },
+    {
+      "key": "transept",
+      "fidelity": "massing",
+      "components": 2
+    },
+    {
+      "key": "choir",
+      "fidelity": "massing",
+      "components": 3
+    },
+    {
+      "key": "apse",
+      "fidelity": "massing",
+      "components": 1
+    },
+    {
+      "key": "roof",
+      "fidelity": "massing",
+      "components": 2
+    },
+    {
+      "key": "spire",
+      "fidelity": "full",
+      "components": 93
+    }
+  ],
   "key_dimensions": {
-    "total_height_m": 96,
-    "base_level_m": 30,
-    "visible_extent_m": 66,
+    "total_length_m": 128,
+    "total_width_transept_m": 48,
+    "transept_arm_width_m": 14,
+    "west_facade_m": [
+      43.5,
+      45
+    ],
+    "west_tower_height_m": 69,
+    "nave_vessel_width_m": 13,
+    "side_aisle_width_m": 5.9,
+    "nave_bays": 10,
+    "vault_crown_height_m": 33,
+    "height_under_roof_m": 43,
+    "chevet_outer_diameter_m": 47.88,
+    "rule_derived_split": {
+      "west_outer_x_m": -60,
+      "chevet_outer_x_m": 68,
+      "nave_x_m": [
+        -56,
+        -7
+      ],
+      "nave_length_m": 49,
+      "bay_interval_m": 4.9,
+      "choir_x_m": [
+        7,
+        44.06
+      ],
+      "apse_center_x_m": 44.06,
+      "apse_radius_m": 23.94,
+      "crossing_half_x_m": 7,
+      "transept_arm_tip_z_m": 24,
+      "note": "Crossing position along the 128 m, nave-vs-choir split, bay interval, wall depths, tower footprints and aisle/roof heights are rule_derived (corpus does not publish them) — never measured."
+    },
+    "spire_total_height_m": 96,
+    "spire_base_level_m": 30,
     "octagon_faces": 8,
-    "statue_count": 16,
-    "apostles": 12,
-    "evangelists": 4,
-    "pinnacles": 16,
-    "taper_across_flats_m": [
-      {
-        "part": "souche",
-        "across_flats_top_m": 7.945
-      },
-      {
-        "part": "fut",
-        "across_flats_top_m": 4.804
-      },
-      {
-        "part": "gallery1",
-        "across_flats_top_m": 4.712
-      },
-      {
-        "part": "gallery2",
-        "across_flats_top_m": 2.772
-      },
-      {
-        "part": "aiguille",
-        "across_flats_top_m": 0.148
-      }
-    ]
+    "statue_count": 16
   },
   "components": [
+    {
+      "id": "west-front:facade",
+      "name_fr": "façade occidentale (écran)",
+      "name_en": "West façade screen",
+      "phase": "massing-westfront",
+      "category": "massing-westfront",
+      "role": "The west façade screen — 43.5 m wide and 45 m tall (both measured, excluding the towers). Its wall depth is rule_derived (not published). The Gallery of Kings / rose / 3 portals are a later fidelity tier.",
+      "geometry": {
+        "type": "box",
+        "w": 4,
+        "h": 45,
+        "d": 43.5
+      },
+      "position": [
+        -58,
+        22.5,
+        0
+      ],
+      "provenance": "measured",
+      "source": "FRIENDS-LAYOUT",
+      "material": "lead",
+      "note": "Façade width 43.5 m + height 45 m MEASURED (FRIENDS layout; techno-science.net). Wall depth is rule_derived (GAP). X position is rule_derived (façade at the -X end of the 128 m).",
+      "fragment": "west-front",
+      "fidelity": "massing",
+      "url": "https://www.friendsofnotredamedeparis.org/notre-dame-cathedral/architecture/layout/",
+      "rights": "facts_uncopyrightable",
+      "seq": 0
+    },
+    {
+      "id": "west-front:tower-N",
+      "name_fr": "tour nord",
+      "name_en": "North tower",
+      "phase": "massing-tower",
+      "category": "massing-tower",
+      "role": "West tower rising to 69 m (measured height). Its footprint and spacing along Z are rule_derived (not published). Tower pinnacles / belfry openings are a later fidelity tier.",
+      "geometry": {
+        "type": "box",
+        "w": 6,
+        "h": 69,
+        "d": 11.5
+      },
+      "position": [
+        -57,
+        34.5,
+        16
+      ],
+      "provenance": "measured",
+      "source": "WIKI-NDP",
+      "material": "lead",
+      "note": "Tower height 69 m MEASURED (de.Wikipedia + FRIENDS). Tower footprint ~11.5 m and ±Z spacing are rule_derived (GAP _GAP_wall_depths). '297 steps' was REFUTED → not used.",
+      "fragment": "west-front",
+      "fidelity": "massing",
+      "url": "https://de.wikipedia.org/wiki/Kathedrale_Notre-Dame_de_Paris",
+      "rights": "facts_uncopyrightable",
+      "seq": 1
+    },
+    {
+      "id": "west-front:tower-S",
+      "name_fr": "tour sud",
+      "name_en": "South tower",
+      "phase": "massing-tower",
+      "category": "massing-tower",
+      "role": "West tower rising to 69 m (measured height). Its footprint and spacing along Z are rule_derived (not published). Tower pinnacles / belfry openings are a later fidelity tier.",
+      "geometry": {
+        "type": "box",
+        "w": 6,
+        "h": 69,
+        "d": 11.5
+      },
+      "position": [
+        -57,
+        34.5,
+        -16
+      ],
+      "provenance": "measured",
+      "source": "WIKI-NDP",
+      "material": "lead",
+      "note": "Tower height 69 m MEASURED (de.Wikipedia + FRIENDS). Tower footprint ~11.5 m and ±Z spacing are rule_derived (GAP _GAP_wall_depths). '297 steps' was REFUTED → not used.",
+      "fragment": "west-front",
+      "fidelity": "massing",
+      "url": "https://de.wikipedia.org/wiki/Kathedrale_Notre-Dame_de_Paris",
+      "rights": "facts_uncopyrightable",
+      "seq": 2
+    },
+    {
+      "id": "nave:vessel",
+      "name_fr": "vaisseau central de la nef",
+      "name_en": "Nave central vessel",
+      "phase": "massing-nave",
+      "category": "massing-nave",
+      "role": "The central nave vessel — 13 m clear width, 33 m high-vault crown (both measured). Its 49 m length and crossing offset are rule_derived (10 bays × ~4.9 m; the nave-vs-choir split is not published).",
+      "geometry": {
+        "type": "box",
+        "w": 49,
+        "h": 33,
+        "d": 13
+      },
+      "position": [
+        -31.5,
+        16.5,
+        0
+      ],
+      "provenance": "measured",
+      "source": "FRIENDS-LAYOUT",
+      "material": "lead",
+      "note": "Vessel width 13 m + vault crown 33 m MEASURED (FRIENDS layout / techno-science / de.Wikipedia). Length 49 m over 10 measured bays (interval ~4.9 m) is rule_derived. MEASURED-REALITY GUARD: 33 m is the crown, never 35 m / 43 m.",
+      "fragment": "nave",
+      "fidelity": "massing",
+      "url": "https://www.friendsofnotredamedeparis.org/notre-dame-cathedral/architecture/layout/",
+      "rights": "facts_uncopyrightable",
+      "seq": 3
+    },
+    {
+      "id": "nave:aisle-N",
+      "name_fr": "bas-côté nord",
+      "name_en": "North side aisle",
+      "phase": "massing-aisle",
+      "category": "massing-aisle",
+      "role": "Inner side aisle — 5.9 m clear width (measured). Its vault crown height is not published (corpus gap) → rendered at a rule_derived height below the 33 m vessel crown.",
+      "geometry": {
+        "type": "box",
+        "w": 49,
+        "h": 23.76,
+        "d": 5.9
+      },
+      "position": [
+        -31.5,
+        11.88,
+        9.45
+      ],
+      "provenance": "measured",
+      "source": "FRIENDS-LAYOUT",
+      "material": "lead",
+      "note": "Aisle width 5.9 m MEASURED (FRIENDS layout). Aisle vault crown height is a GAP (_GAP_aisle_vault_heights) → height is rule_derived, never asserted as measured.",
+      "fragment": "nave",
+      "fidelity": "massing",
+      "url": "https://www.friendsofnotredamedeparis.org/notre-dame-cathedral/architecture/layout/",
+      "rights": "facts_uncopyrightable",
+      "seq": 4
+    },
+    {
+      "id": "nave:aisle-S",
+      "name_fr": "bas-côté sud",
+      "name_en": "South side aisle",
+      "phase": "massing-aisle",
+      "category": "massing-aisle",
+      "role": "Inner side aisle — 5.9 m clear width (measured). Its vault crown height is not published (corpus gap) → rendered at a rule_derived height below the 33 m vessel crown.",
+      "geometry": {
+        "type": "box",
+        "w": 49,
+        "h": 23.76,
+        "d": 5.9
+      },
+      "position": [
+        -31.5,
+        11.88,
+        -9.45
+      ],
+      "provenance": "measured",
+      "source": "FRIENDS-LAYOUT",
+      "material": "lead",
+      "note": "Aisle width 5.9 m MEASURED (FRIENDS layout). Aisle vault crown height is a GAP (_GAP_aisle_vault_heights) → height is rule_derived, never asserted as measured.",
+      "fragment": "nave",
+      "fidelity": "massing",
+      "url": "https://www.friendsofnotredamedeparis.org/notre-dame-cathedral/architecture/layout/",
+      "rights": "facts_uncopyrightable",
+      "seq": 5
+    },
+    {
+      "id": "crossing:mass",
+      "name_fr": "croisée du transept (volume)",
+      "name_en": "Crossing block (carries the spire)",
+      "phase": "massing-crossing",
+      "category": "massing-crossing",
+      "role": "The square-ish transept crossing on which the flèche is anchored — the world origin. Width 14 m is measured (transept arm width); its X centre = the origin is rule_derived (crossing position along the 128 m is not published).",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 43,
+        "d": 14
+      },
+      "position": [
+        0,
+        21.5,
+        0
+      ],
+      "provenance": "measured",
+      "source": "FRIENDS-LAYOUT",
+      "material": "lead",
+      "note": "Width 14 m MEASURED (transept arm width, FRIENDS+de.Wikipedia). The crossing CENTRE at the origin is rule_derived — the corpus does not publish the crossing position along the 128 m total length.",
+      "fragment": "crossing",
+      "fidelity": "massing",
+      "url": "https://www.friendsofnotredamedeparis.org/notre-dame-cathedral/architecture/layout/",
+      "rights": "facts_uncopyrightable",
+      "seq": 6
+    },
+    {
+      "id": "transept:arm-N",
+      "name_fr": "bras nord du transept",
+      "name_en": "North transept arm",
+      "phase": "massing-transept",
+      "category": "massing-transept",
+      "role": "Transept arm reaching ±24 m from the crossing (48 m arm-to-arm, measured); 14 m wide along X (measured). Length to ±24 m is measured-derived from the 48 m width.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 43,
+        "d": 24
+      },
+      "position": [
+        0,
+        21.5,
+        12
+      ],
+      "provenance": "measured",
+      "source": "FRIENDS-LAYOUT",
+      "material": "lead",
+      "note": "Arm-to-arm 48 m + arm width 14 m MEASURED (FRIENDS layout). The arm spans the crossing centre out to ±24 m (measured-derived from the 48 m width).",
+      "fragment": "transept",
+      "fidelity": "massing",
+      "url": "https://www.friendsofnotredamedeparis.org/notre-dame-cathedral/architecture/layout/",
+      "rights": "facts_uncopyrightable",
+      "seq": 7
+    },
+    {
+      "id": "transept:arm-S",
+      "name_fr": "bras sud du transept",
+      "name_en": "South transept arm",
+      "phase": "massing-transept",
+      "category": "massing-transept",
+      "role": "Transept arm reaching ±24 m from the crossing (48 m arm-to-arm, measured); 14 m wide along X (measured). Length to ±24 m is measured-derived from the 48 m width.",
+      "geometry": {
+        "type": "box",
+        "w": 14,
+        "h": 43,
+        "d": 24
+      },
+      "position": [
+        0,
+        21.5,
+        -12
+      ],
+      "provenance": "measured",
+      "source": "FRIENDS-LAYOUT",
+      "material": "lead",
+      "note": "Arm-to-arm 48 m + arm width 14 m MEASURED (FRIENDS layout). The arm spans the crossing centre out to ±24 m (measured-derived from the 48 m width).",
+      "fragment": "transept",
+      "fidelity": "massing",
+      "url": "https://www.friendsofnotredamedeparis.org/notre-dame-cathedral/architecture/layout/",
+      "rights": "facts_uncopyrightable",
+      "seq": 8
+    },
+    {
+      "id": "choir:vessel",
+      "name_fr": "vaisseau du chœur",
+      "name_en": "Choir vessel",
+      "phase": "massing-choir",
+      "category": "massing-choir",
+      "role": "The choir vessel east of the crossing — same 13 m vessel width and 33 m vault crown as the nave (measured). Its length and the nave-vs-choir split are rule_derived (not published).",
+      "geometry": {
+        "type": "box",
+        "w": 37.06,
+        "h": 33,
+        "d": 13
+      },
+      "position": [
+        25.53,
+        16.5,
+        0
+      ],
+      "provenance": "measured",
+      "source": "FRIENDS-LAYOUT",
+      "material": "lead",
+      "note": "Vessel width 13 m + vault crown 33 m MEASURED. Choir straight-bay length 37.06 m and the nave/choir split are rule_derived (the corpus publishes no clean modern split).",
+      "fragment": "choir",
+      "fidelity": "massing",
+      "url": "https://www.friendsofnotredamedeparis.org/notre-dame-cathedral/architecture/layout/",
+      "rights": "facts_uncopyrightable",
+      "seq": 9
+    },
+    {
+      "id": "choir:aisle-N",
+      "name_fr": "déambulatoire nord",
+      "name_en": "North choir aisle",
+      "phase": "massing-aisle",
+      "category": "massing-aisle",
+      "role": "Choir side aisle continuing the 5.9 m aisle east toward the double ambulatory (measured width; height a rule_derived gap).",
+      "geometry": {
+        "type": "box",
+        "w": 37.06,
+        "h": 23.76,
+        "d": 5.9
+      },
+      "position": [
+        25.53,
+        11.88,
+        9.45
+      ],
+      "provenance": "measured",
+      "source": "FRIENDS-LAYOUT",
+      "material": "lead",
+      "note": "Aisle width 5.9 m MEASURED. Height a rule_derived GAP. Radiating chapels / double ambulatory detail is a later fidelity tier.",
+      "fragment": "choir",
+      "fidelity": "massing",
+      "url": "https://www.friendsofnotredamedeparis.org/notre-dame-cathedral/architecture/layout/",
+      "rights": "facts_uncopyrightable",
+      "seq": 10
+    },
+    {
+      "id": "choir:aisle-S",
+      "name_fr": "déambulatoire sud",
+      "name_en": "South choir aisle",
+      "phase": "massing-aisle",
+      "category": "massing-aisle",
+      "role": "Choir side aisle continuing the 5.9 m aisle east toward the double ambulatory (measured width; height a rule_derived gap).",
+      "geometry": {
+        "type": "box",
+        "w": 37.06,
+        "h": 23.76,
+        "d": 5.9
+      },
+      "position": [
+        25.53,
+        11.88,
+        -9.45
+      ],
+      "provenance": "measured",
+      "source": "FRIENDS-LAYOUT",
+      "material": "lead",
+      "note": "Aisle width 5.9 m MEASURED. Height a rule_derived GAP. Radiating chapels / double ambulatory detail is a later fidelity tier.",
+      "fragment": "choir",
+      "fidelity": "massing",
+      "url": "https://www.friendsofnotredamedeparis.org/notre-dame-cathedral/architecture/layout/",
+      "rights": "facts_uncopyrightable",
+      "seq": 11
+    },
+    {
+      "id": "apse:hemicycle",
+      "name_fr": "chevet (hémicycle)",
+      "name_en": "Apse / chevet hemicycle",
+      "phase": "massing-apse",
+      "category": "massing-apse",
+      "role": "The semicircular chevet closing the east end — outer radius from the measured ~47.88 m chevet diameter. The hemicycle FORM is rule_derived massing (the published Bork/Tallon concentric radii trace to a rights-excluded blog → GAP, never rendered as measured).",
+      "geometry": {
+        "type": "lathe",
+        "seg": 24,
+        "arcStart": -1.5707963267948966,
+        "arc": 3.141592653589793,
+        "pts": [
+          [
+            23.94,
+            0
+          ],
+          [
+            23.94,
+            24.419999999999998
+          ],
+          [
+            15.8,
+            33
+          ],
+          [
+            4.309,
+            39
+          ]
+        ]
+      },
+      "position": [
+        44.06,
+        0,
+        0
+      ],
+      "provenance": "rule_derived",
+      "source": "AD-QUADRATUM",
+      "url": "https://www.friendsofnotredamedeparis.org/notre-dame-cathedral/architecture/layout/",
+      "material": "lead",
+      "note": "Outer radius from the chevet outer diameter ~47.88 m (MEASURED, = the 48 m width); the hemicycle FORM is rule_derived (ad-quadratum half-revolve). The Bork/Tallon concentric chevet radii (CHARTRES-BLOG, rights_excluded) are a GAP and are NOT rendered. The radiating chapels / double ambulatory are a later fidelity tier.",
+      "fragment": "apse",
+      "fidelity": "massing",
+      "rights": "rule",
+      "seq": 12
+    },
+    {
+      "id": "roof:ridge-N",
+      "name_fr": "versant nord de la toiture",
+      "name_en": "North roof slope",
+      "phase": "massing-roof",
+      "category": "massing-roof",
+      "role": "Steep roof slope over the nave + choir, ridge near the 43 m under-roof level (measured). The steep two-slope ridge form is rule_derived massing; the lost oak 'forêt' frame is a later conjecture tier.",
+      "geometry": {
+        "type": "poly",
+        "pts": [
+          [
+            -56,
+            38,
+            7
+          ],
+          [
+            44.06,
+            38,
+            7
+          ],
+          [
+            44.06,
+            47,
+            0
+          ],
+          [
+            -56,
+            47,
+            0
+          ]
+        ]
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "provenance": "rule_derived",
+      "source": "AD-QUADRATUM",
+      "url": "https://www.friendsofnotredamedeparis.org/notre-dame-cathedral/architecture/layout/",
+      "material": "lead",
+      "note": "Ridge crest near the 43 m under-roof level (MEASURED, FRIENDS layout); the steep two-slope ridge FORM is rule_derived (the lost 13th-c. oak 'forêt' frame is a later conjecture tier). Rendered as two roof slopes.",
+      "fragment": "roof",
+      "fidelity": "massing",
+      "rights": "rule",
+      "seq": 13
+    },
+    {
+      "id": "roof:ridge-S",
+      "name_fr": "versant sud de la toiture",
+      "name_en": "South roof slope",
+      "phase": "massing-roof",
+      "category": "massing-roof",
+      "role": "Steep roof slope over the nave + choir, ridge near the 43 m under-roof level (measured). The steep two-slope ridge form is rule_derived massing; the lost oak 'forêt' frame is a later conjecture tier.",
+      "geometry": {
+        "type": "poly",
+        "pts": [
+          [
+            -56,
+            38,
+            -7
+          ],
+          [
+            44.06,
+            38,
+            -7
+          ],
+          [
+            44.06,
+            47,
+            0
+          ],
+          [
+            -56,
+            47,
+            0
+          ]
+        ]
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "provenance": "rule_derived",
+      "source": "AD-QUADRATUM",
+      "url": "https://www.friendsofnotredamedeparis.org/notre-dame-cathedral/architecture/layout/",
+      "material": "lead",
+      "note": "Ridge crest near the 43 m under-roof level (MEASURED, FRIENDS layout); the steep two-slope ridge FORM is rule_derived (the lost 13th-c. oak 'forêt' frame is a later conjecture tier). Rendered as two roof slopes.",
+      "fragment": "roof",
+      "fidelity": "massing",
+      "rights": "rule",
+      "seq": 14
+    },
     {
       "id": "spire-tabouret",
       "name_fr": "tabouret",
@@ -105,9 +640,11 @@
       "material": "oak",
       "note": "single medium-confidence footprint source → conjecture (cross-check only)",
       "width_m": 8.5,
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.restauronsnotredame.org/post/notre-dame-de-paris-le-tabouret-ou-la-souche-de-la-fl%C3%A8che-de-viollet-le-duc",
       "rights": "facts_uncopyrightable",
-      "seq": 0
+      "seq": 15
     },
     {
       "id": "spire-souche",
@@ -149,9 +686,11 @@
       "material": "lead",
       "note": "octagonal form + proportion from the VLD PD 'Flèche' plate; absolute height scaled off the plate × the measured 66 m extent",
       "width_m": 7.945,
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://passerelles.essentiels.bnf.fr/fr/image/44140e30-c8c3-40c2-b613-55c6009b22da-elevation-et-plans-la-fleche-notre-dame-paris-par-viollet-le-duc",
       "rights": "public_domain",
-      "seq": 1
+      "seq": 16
     },
     {
       "id": "spire-fut",
@@ -193,9 +732,11 @@
       "material": "lead",
       "note": "octagonal form + proportion from the VLD PD 'Flèche' plate; absolute height scaled off the plate × the measured 66 m extent",
       "width_m": 4.804,
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://passerelles.essentiels.bnf.fr/fr/image/44140e30-c8c3-40c2-b613-55c6009b22da-elevation-et-plans-la-fleche-notre-dame-paris-par-viollet-le-duc",
       "rights": "public_domain",
-      "seq": 2
+      "seq": 17
     },
     {
       "id": "spire-gallery1",
@@ -237,9 +778,11 @@
       "material": "lead",
       "note": "octagonal form + proportion from the VLD PD 'Flèche' plate; absolute height scaled off the plate × the measured 66 m extent",
       "width_m": 4.712,
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://passerelles.essentiels.bnf.fr/fr/image/44140e30-c8c3-40c2-b613-55c6009b22da-elevation-et-plans-la-fleche-notre-dame-paris-par-viollet-le-duc",
       "rights": "public_domain",
-      "seq": 3
+      "seq": 18
     },
     {
       "id": "spire-gallery2",
@@ -281,9 +824,11 @@
       "material": "lead",
       "note": "octagonal form + proportion from the VLD PD 'Flèche' plate; absolute height scaled off the plate × the measured 66 m extent",
       "width_m": 2.772,
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://passerelles.essentiels.bnf.fr/fr/image/44140e30-c8c3-40c2-b613-55c6009b22da-elevation-et-plans-la-fleche-notre-dame-paris-par-viollet-le-duc",
       "rights": "public_domain",
-      "seq": 4
+      "seq": 19
     },
     {
       "id": "spire-aiguille",
@@ -325,9 +870,11 @@
       "material": "lead",
       "note": "octagonal form + proportion from the VLD PD 'Flèche' plate; absolute height scaled off the plate × the measured 66 m extent",
       "width_m": 0.148,
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://passerelles.essentiels.bnf.fr/fr/image/44140e30-c8c3-40c2-b613-55c6009b22da-elevation-et-plans-la-fleche-notre-dame-paris-par-viollet-le-duc",
       "rights": "public_domain",
-      "seq": 5
+      "seq": 20
     },
     {
       "id": "ring-souche",
@@ -363,9 +910,11 @@
       "source": "AD-QUADRATUM",
       "material": "oak",
       "note": "Octagon radius from the ad quadratum rule; exact springing dimension is a GAP (rule_derived, not surveyed).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.researchgate.net/publication/304352380",
       "rights": "rule",
-      "seq": 6
+      "seq": 21
     },
     {
       "id": "ring-fut",
@@ -401,9 +950,11 @@
       "source": "AD-QUADRATUM",
       "material": "oak",
       "note": "Octagon radius from the ad quadratum rule; exact springing dimension is a GAP (rule_derived, not surveyed).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.researchgate.net/publication/304352380",
       "rights": "rule",
-      "seq": 7
+      "seq": 22
     },
     {
       "id": "ring-gallery1",
@@ -439,9 +990,11 @@
       "source": "AD-QUADRATUM",
       "material": "oak",
       "note": "Octagon radius from the ad quadratum rule; exact springing dimension is a GAP (rule_derived, not surveyed).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.researchgate.net/publication/304352380",
       "rights": "rule",
-      "seq": 8
+      "seq": 23
     },
     {
       "id": "ring-gallery2",
@@ -477,9 +1030,11 @@
       "source": "AD-QUADRATUM",
       "material": "oak",
       "note": "Octagon radius from the ad quadratum rule; exact springing dimension is a GAP (rule_derived, not surveyed).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.researchgate.net/publication/304352380",
       "rights": "rule",
-      "seq": 9
+      "seq": 24
     },
     {
       "id": "ring-aiguille",
@@ -515,9 +1070,11 @@
       "source": "AD-QUADRATUM",
       "material": "oak",
       "note": "Octagon radius from the ad quadratum rule; exact springing dimension is a GAP (rule_derived, not surveyed).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.researchgate.net/publication/304352380",
       "rights": "rule",
-      "seq": 10
+      "seq": 25
     },
     {
       "id": "quadrilobe-0",
@@ -544,9 +1101,11 @@
       "provenance": "reconstructed_design",
       "source": "VLD-FLECHE",
       "material": "lead",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://passerelles.essentiels.bnf.fr/fr/image/44140e30-c8c3-40c2-b613-55c6009b22da-elevation-et-plans-la-fleche-notre-dame-paris-par-viollet-le-duc",
       "rights": "public_domain",
-      "seq": 11
+      "seq": 26
     },
     {
       "id": "quadrilobe-1",
@@ -573,9 +1132,11 @@
       "provenance": "reconstructed_design",
       "source": "VLD-FLECHE",
       "material": "lead",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://passerelles.essentiels.bnf.fr/fr/image/44140e30-c8c3-40c2-b613-55c6009b22da-elevation-et-plans-la-fleche-notre-dame-paris-par-viollet-le-duc",
       "rights": "public_domain",
-      "seq": 12
+      "seq": 27
     },
     {
       "id": "quadrilobe-2",
@@ -602,9 +1163,11 @@
       "provenance": "reconstructed_design",
       "source": "VLD-FLECHE",
       "material": "lead",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://passerelles.essentiels.bnf.fr/fr/image/44140e30-c8c3-40c2-b613-55c6009b22da-elevation-et-plans-la-fleche-notre-dame-paris-par-viollet-le-duc",
       "rights": "public_domain",
-      "seq": 13
+      "seq": 28
     },
     {
       "id": "quadrilobe-3",
@@ -631,9 +1194,11 @@
       "provenance": "reconstructed_design",
       "source": "VLD-FLECHE",
       "material": "lead",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://passerelles.essentiels.bnf.fr/fr/image/44140e30-c8c3-40c2-b613-55c6009b22da-elevation-et-plans-la-fleche-notre-dame-paris-par-viollet-le-duc",
       "rights": "public_domain",
-      "seq": 14
+      "seq": 29
     },
     {
       "id": "quadrilobe-4",
@@ -660,9 +1225,11 @@
       "provenance": "reconstructed_design",
       "source": "VLD-FLECHE",
       "material": "lead",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://passerelles.essentiels.bnf.fr/fr/image/44140e30-c8c3-40c2-b613-55c6009b22da-elevation-et-plans-la-fleche-notre-dame-paris-par-viollet-le-duc",
       "rights": "public_domain",
-      "seq": 15
+      "seq": 30
     },
     {
       "id": "quadrilobe-5",
@@ -689,9 +1256,11 @@
       "provenance": "reconstructed_design",
       "source": "VLD-FLECHE",
       "material": "lead",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://passerelles.essentiels.bnf.fr/fr/image/44140e30-c8c3-40c2-b613-55c6009b22da-elevation-et-plans-la-fleche-notre-dame-paris-par-viollet-le-duc",
       "rights": "public_domain",
-      "seq": 16
+      "seq": 31
     },
     {
       "id": "quadrilobe-6",
@@ -718,9 +1287,11 @@
       "provenance": "reconstructed_design",
       "source": "VLD-FLECHE",
       "material": "lead",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://passerelles.essentiels.bnf.fr/fr/image/44140e30-c8c3-40c2-b613-55c6009b22da-elevation-et-plans-la-fleche-notre-dame-paris-par-viollet-le-duc",
       "rights": "public_domain",
-      "seq": 17
+      "seq": 32
     },
     {
       "id": "quadrilobe-7",
@@ -747,9 +1318,11 @@
       "provenance": "reconstructed_design",
       "source": "VLD-FLECHE",
       "material": "lead",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://passerelles.essentiels.bnf.fr/fr/image/44140e30-c8c3-40c2-b613-55c6009b22da-elevation-et-plans-la-fleche-notre-dame-paris-par-viollet-le-duc",
       "rights": "public_domain",
-      "seq": 18
+      "seq": 33
     },
     {
       "id": "lucarne-0",
@@ -786,9 +1359,11 @@
       "provenance": "reconstructed_design",
       "source": "VLD-FLECHE",
       "material": "lead",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://passerelles.essentiels.bnf.fr/fr/image/44140e30-c8c3-40c2-b613-55c6009b22da-elevation-et-plans-la-fleche-notre-dame-paris-par-viollet-le-duc",
       "rights": "public_domain",
-      "seq": 19
+      "seq": 34
     },
     {
       "id": "lucarne-1",
@@ -825,9 +1400,11 @@
       "provenance": "reconstructed_design",
       "source": "VLD-FLECHE",
       "material": "lead",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://passerelles.essentiels.bnf.fr/fr/image/44140e30-c8c3-40c2-b613-55c6009b22da-elevation-et-plans-la-fleche-notre-dame-paris-par-viollet-le-duc",
       "rights": "public_domain",
-      "seq": 20
+      "seq": 35
     },
     {
       "id": "lucarne-2",
@@ -864,9 +1441,11 @@
       "provenance": "reconstructed_design",
       "source": "VLD-FLECHE",
       "material": "lead",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://passerelles.essentiels.bnf.fr/fr/image/44140e30-c8c3-40c2-b613-55c6009b22da-elevation-et-plans-la-fleche-notre-dame-paris-par-viollet-le-duc",
       "rights": "public_domain",
-      "seq": 21
+      "seq": 36
     },
     {
       "id": "lucarne-3",
@@ -903,9 +1482,11 @@
       "provenance": "reconstructed_design",
       "source": "VLD-FLECHE",
       "material": "lead",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://passerelles.essentiels.bnf.fr/fr/image/44140e30-c8c3-40c2-b613-55c6009b22da-elevation-et-plans-la-fleche-notre-dame-paris-par-viollet-le-duc",
       "rights": "public_domain",
-      "seq": 22
+      "seq": 37
     },
     {
       "id": "lucarne-4",
@@ -942,9 +1523,11 @@
       "provenance": "reconstructed_design",
       "source": "VLD-FLECHE",
       "material": "lead",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://passerelles.essentiels.bnf.fr/fr/image/44140e30-c8c3-40c2-b613-55c6009b22da-elevation-et-plans-la-fleche-notre-dame-paris-par-viollet-le-duc",
       "rights": "public_domain",
-      "seq": 23
+      "seq": 38
     },
     {
       "id": "lucarne-5",
@@ -981,9 +1564,11 @@
       "provenance": "reconstructed_design",
       "source": "VLD-FLECHE",
       "material": "lead",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://passerelles.essentiels.bnf.fr/fr/image/44140e30-c8c3-40c2-b613-55c6009b22da-elevation-et-plans-la-fleche-notre-dame-paris-par-viollet-le-duc",
       "rights": "public_domain",
-      "seq": 24
+      "seq": 39
     },
     {
       "id": "lucarne-6",
@@ -1020,9 +1605,11 @@
       "provenance": "reconstructed_design",
       "source": "VLD-FLECHE",
       "material": "lead",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://passerelles.essentiels.bnf.fr/fr/image/44140e30-c8c3-40c2-b613-55c6009b22da-elevation-et-plans-la-fleche-notre-dame-paris-par-viollet-le-duc",
       "rights": "public_domain",
-      "seq": 25
+      "seq": 40
     },
     {
       "id": "lucarne-7",
@@ -1059,9 +1646,11 @@
       "provenance": "reconstructed_design",
       "source": "VLD-FLECHE",
       "material": "lead",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://passerelles.essentiels.bnf.fr/fr/image/44140e30-c8c3-40c2-b613-55c6009b22da-elevation-et-plans-la-fleche-notre-dame-paris-par-viollet-le-duc",
       "rights": "public_domain",
-      "seq": 26
+      "seq": 41
     },
     {
       "id": "pinnacle-gallery1-0",
@@ -1090,9 +1679,11 @@
       "source": "RORICZER1486",
       "material": "lead",
       "note": "Shaft height = base × 6 (Roriczer vertical multiple) — CITED-UNCERTAIN, re-verify against the verbatim 1847 text.",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
       "rights": "public_domain",
-      "seq": 27
+      "seq": 42
     },
     {
       "id": "pinnacle-gallery1-0-spirelet",
@@ -1116,9 +1707,11 @@
       "source": "RORICZER1486",
       "material": "lead",
       "note": "Auszug height from the ~7× Roriczer multiple — cited-uncertain, so flagged conjecture (uncertainty propagates).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
       "rights": "public_domain",
-      "seq": 28
+      "seq": 43
     },
     {
       "id": "pinnacle-gallery1-1",
@@ -1147,9 +1740,11 @@
       "source": "RORICZER1486",
       "material": "lead",
       "note": "Shaft height = base × 6 (Roriczer vertical multiple) — CITED-UNCERTAIN, re-verify against the verbatim 1847 text.",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
       "rights": "public_domain",
-      "seq": 29
+      "seq": 44
     },
     {
       "id": "pinnacle-gallery1-1-spirelet",
@@ -1173,9 +1768,11 @@
       "source": "RORICZER1486",
       "material": "lead",
       "note": "Auszug height from the ~7× Roriczer multiple — cited-uncertain, so flagged conjecture (uncertainty propagates).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
       "rights": "public_domain",
-      "seq": 30
+      "seq": 45
     },
     {
       "id": "pinnacle-gallery1-2",
@@ -1204,9 +1801,11 @@
       "source": "RORICZER1486",
       "material": "lead",
       "note": "Shaft height = base × 6 (Roriczer vertical multiple) — CITED-UNCERTAIN, re-verify against the verbatim 1847 text.",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
       "rights": "public_domain",
-      "seq": 31
+      "seq": 46
     },
     {
       "id": "pinnacle-gallery1-2-spirelet",
@@ -1230,9 +1829,11 @@
       "source": "RORICZER1486",
       "material": "lead",
       "note": "Auszug height from the ~7× Roriczer multiple — cited-uncertain, so flagged conjecture (uncertainty propagates).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
       "rights": "public_domain",
-      "seq": 32
+      "seq": 47
     },
     {
       "id": "pinnacle-gallery1-3",
@@ -1261,9 +1862,11 @@
       "source": "RORICZER1486",
       "material": "lead",
       "note": "Shaft height = base × 6 (Roriczer vertical multiple) — CITED-UNCERTAIN, re-verify against the verbatim 1847 text.",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
       "rights": "public_domain",
-      "seq": 33
+      "seq": 48
     },
     {
       "id": "pinnacle-gallery1-3-spirelet",
@@ -1287,9 +1890,11 @@
       "source": "RORICZER1486",
       "material": "lead",
       "note": "Auszug height from the ~7× Roriczer multiple — cited-uncertain, so flagged conjecture (uncertainty propagates).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
       "rights": "public_domain",
-      "seq": 34
+      "seq": 49
     },
     {
       "id": "pinnacle-gallery1-4",
@@ -1318,9 +1923,11 @@
       "source": "RORICZER1486",
       "material": "lead",
       "note": "Shaft height = base × 6 (Roriczer vertical multiple) — CITED-UNCERTAIN, re-verify against the verbatim 1847 text.",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
       "rights": "public_domain",
-      "seq": 35
+      "seq": 50
     },
     {
       "id": "pinnacle-gallery1-4-spirelet",
@@ -1344,9 +1951,11 @@
       "source": "RORICZER1486",
       "material": "lead",
       "note": "Auszug height from the ~7× Roriczer multiple — cited-uncertain, so flagged conjecture (uncertainty propagates).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
       "rights": "public_domain",
-      "seq": 36
+      "seq": 51
     },
     {
       "id": "pinnacle-gallery1-5",
@@ -1375,9 +1984,11 @@
       "source": "RORICZER1486",
       "material": "lead",
       "note": "Shaft height = base × 6 (Roriczer vertical multiple) — CITED-UNCERTAIN, re-verify against the verbatim 1847 text.",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
       "rights": "public_domain",
-      "seq": 37
+      "seq": 52
     },
     {
       "id": "pinnacle-gallery1-5-spirelet",
@@ -1401,9 +2012,11 @@
       "source": "RORICZER1486",
       "material": "lead",
       "note": "Auszug height from the ~7× Roriczer multiple — cited-uncertain, so flagged conjecture (uncertainty propagates).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
       "rights": "public_domain",
-      "seq": 38
+      "seq": 53
     },
     {
       "id": "pinnacle-gallery1-6",
@@ -1432,9 +2045,11 @@
       "source": "RORICZER1486",
       "material": "lead",
       "note": "Shaft height = base × 6 (Roriczer vertical multiple) — CITED-UNCERTAIN, re-verify against the verbatim 1847 text.",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
       "rights": "public_domain",
-      "seq": 39
+      "seq": 54
     },
     {
       "id": "pinnacle-gallery1-6-spirelet",
@@ -1458,9 +2073,11 @@
       "source": "RORICZER1486",
       "material": "lead",
       "note": "Auszug height from the ~7× Roriczer multiple — cited-uncertain, so flagged conjecture (uncertainty propagates).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
       "rights": "public_domain",
-      "seq": 40
+      "seq": 55
     },
     {
       "id": "pinnacle-gallery1-7",
@@ -1489,9 +2106,11 @@
       "source": "RORICZER1486",
       "material": "lead",
       "note": "Shaft height = base × 6 (Roriczer vertical multiple) — CITED-UNCERTAIN, re-verify against the verbatim 1847 text.",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
       "rights": "public_domain",
-      "seq": 41
+      "seq": 56
     },
     {
       "id": "pinnacle-gallery1-7-spirelet",
@@ -1515,9 +2134,11 @@
       "source": "RORICZER1486",
       "material": "lead",
       "note": "Auszug height from the ~7× Roriczer multiple — cited-uncertain, so flagged conjecture (uncertainty propagates).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
       "rights": "public_domain",
-      "seq": 42
+      "seq": 57
     },
     {
       "id": "pinnacle-gallery2-0",
@@ -1546,9 +2167,11 @@
       "source": "RORICZER1486",
       "material": "lead",
       "note": "Shaft height = base × 6 (Roriczer vertical multiple) — CITED-UNCERTAIN, re-verify against the verbatim 1847 text.",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
       "rights": "public_domain",
-      "seq": 43
+      "seq": 58
     },
     {
       "id": "pinnacle-gallery2-0-spirelet",
@@ -1572,9 +2195,11 @@
       "source": "RORICZER1486",
       "material": "lead",
       "note": "Auszug height from the ~7× Roriczer multiple — cited-uncertain, so flagged conjecture (uncertainty propagates).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
       "rights": "public_domain",
-      "seq": 44
+      "seq": 59
     },
     {
       "id": "pinnacle-gallery2-1",
@@ -1603,9 +2228,11 @@
       "source": "RORICZER1486",
       "material": "lead",
       "note": "Shaft height = base × 6 (Roriczer vertical multiple) — CITED-UNCERTAIN, re-verify against the verbatim 1847 text.",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
       "rights": "public_domain",
-      "seq": 45
+      "seq": 60
     },
     {
       "id": "pinnacle-gallery2-1-spirelet",
@@ -1629,9 +2256,11 @@
       "source": "RORICZER1486",
       "material": "lead",
       "note": "Auszug height from the ~7× Roriczer multiple — cited-uncertain, so flagged conjecture (uncertainty propagates).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
       "rights": "public_domain",
-      "seq": 46
+      "seq": 61
     },
     {
       "id": "pinnacle-gallery2-2",
@@ -1660,9 +2289,11 @@
       "source": "RORICZER1486",
       "material": "lead",
       "note": "Shaft height = base × 6 (Roriczer vertical multiple) — CITED-UNCERTAIN, re-verify against the verbatim 1847 text.",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
       "rights": "public_domain",
-      "seq": 47
+      "seq": 62
     },
     {
       "id": "pinnacle-gallery2-2-spirelet",
@@ -1686,9 +2317,11 @@
       "source": "RORICZER1486",
       "material": "lead",
       "note": "Auszug height from the ~7× Roriczer multiple — cited-uncertain, so flagged conjecture (uncertainty propagates).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
       "rights": "public_domain",
-      "seq": 48
+      "seq": 63
     },
     {
       "id": "pinnacle-gallery2-3",
@@ -1717,9 +2350,11 @@
       "source": "RORICZER1486",
       "material": "lead",
       "note": "Shaft height = base × 6 (Roriczer vertical multiple) — CITED-UNCERTAIN, re-verify against the verbatim 1847 text.",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
       "rights": "public_domain",
-      "seq": 49
+      "seq": 64
     },
     {
       "id": "pinnacle-gallery2-3-spirelet",
@@ -1743,9 +2378,11 @@
       "source": "RORICZER1486",
       "material": "lead",
       "note": "Auszug height from the ~7× Roriczer multiple — cited-uncertain, so flagged conjecture (uncertainty propagates).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
       "rights": "public_domain",
-      "seq": 50
+      "seq": 65
     },
     {
       "id": "pinnacle-gallery2-4",
@@ -1774,9 +2411,11 @@
       "source": "RORICZER1486",
       "material": "lead",
       "note": "Shaft height = base × 6 (Roriczer vertical multiple) — CITED-UNCERTAIN, re-verify against the verbatim 1847 text.",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
       "rights": "public_domain",
-      "seq": 51
+      "seq": 66
     },
     {
       "id": "pinnacle-gallery2-4-spirelet",
@@ -1800,9 +2439,11 @@
       "source": "RORICZER1486",
       "material": "lead",
       "note": "Auszug height from the ~7× Roriczer multiple — cited-uncertain, so flagged conjecture (uncertainty propagates).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
       "rights": "public_domain",
-      "seq": 52
+      "seq": 67
     },
     {
       "id": "pinnacle-gallery2-5",
@@ -1831,9 +2472,11 @@
       "source": "RORICZER1486",
       "material": "lead",
       "note": "Shaft height = base × 6 (Roriczer vertical multiple) — CITED-UNCERTAIN, re-verify against the verbatim 1847 text.",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
       "rights": "public_domain",
-      "seq": 53
+      "seq": 68
     },
     {
       "id": "pinnacle-gallery2-5-spirelet",
@@ -1857,9 +2500,11 @@
       "source": "RORICZER1486",
       "material": "lead",
       "note": "Auszug height from the ~7× Roriczer multiple — cited-uncertain, so flagged conjecture (uncertainty propagates).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
       "rights": "public_domain",
-      "seq": 54
+      "seq": 69
     },
     {
       "id": "pinnacle-gallery2-6",
@@ -1888,9 +2533,11 @@
       "source": "RORICZER1486",
       "material": "lead",
       "note": "Shaft height = base × 6 (Roriczer vertical multiple) — CITED-UNCERTAIN, re-verify against the verbatim 1847 text.",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
       "rights": "public_domain",
-      "seq": 55
+      "seq": 70
     },
     {
       "id": "pinnacle-gallery2-6-spirelet",
@@ -1914,9 +2561,11 @@
       "source": "RORICZER1486",
       "material": "lead",
       "note": "Auszug height from the ~7× Roriczer multiple — cited-uncertain, so flagged conjecture (uncertainty propagates).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
       "rights": "public_domain",
-      "seq": 56
+      "seq": 71
     },
     {
       "id": "pinnacle-gallery2-7",
@@ -1945,9 +2594,11 @@
       "source": "RORICZER1486",
       "material": "lead",
       "note": "Shaft height = base × 6 (Roriczer vertical multiple) — CITED-UNCERTAIN, re-verify against the verbatim 1847 text.",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
       "rights": "public_domain",
-      "seq": 57
+      "seq": 72
     },
     {
       "id": "pinnacle-gallery2-7-spirelet",
@@ -1971,9 +2622,11 @@
       "source": "RORICZER1486",
       "material": "lead",
       "note": "Auszug height from the ~7× Roriczer multiple — cited-uncertain, so flagged conjecture (uncertainty propagates).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
       "rights": "public_domain",
-      "seq": 58
+      "seq": 73
     },
     {
       "phase": "statuary",
@@ -2004,9 +2657,11 @@
       ],
       "statue_height_m": 2,
       "note": "Count, heights and arrangement are measured (PERSEE-2009 + corroboration); the figurative massing is stylized, not a sculpture reconstruction. Weights cited-uncertain (see canonical).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
       "rights": "facts_uncopyrightable",
-      "seq": 59
+      "seq": 74
     },
     {
       "phase": "statuary",
@@ -2029,9 +2684,11 @@
         42.5,
         2.939
       ],
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
       "rights": "facts_uncopyrightable",
-      "seq": 60
+      "seq": 75
     },
     {
       "phase": "statuary",
@@ -2062,9 +2719,11 @@
       ],
       "statue_height_m": 3.4,
       "note": "Count, heights and arrangement are measured (PERSEE-2009 + corroboration); the figurative massing is stylized, not a sculpture reconstruction. Weights cited-uncertain (see canonical).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
       "rights": "facts_uncopyrightable",
-      "seq": 61
+      "seq": 76
     },
     {
       "phase": "statuary",
@@ -2087,9 +2746,11 @@
         44.06,
         2.748
       ],
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
       "rights": "facts_uncopyrightable",
-      "seq": 62
+      "seq": 77
     },
     {
       "phase": "statuary",
@@ -2120,9 +2781,11 @@
       ],
       "statue_height_m": 3.4,
       "note": "Count, heights and arrangement are measured (PERSEE-2009 + corroboration); the figurative massing is stylized, not a sculpture reconstruction. Weights cited-uncertain (see canonical).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
       "rights": "facts_uncopyrightable",
-      "seq": 63
+      "seq": 78
     },
     {
       "phase": "statuary",
@@ -2145,9 +2808,11 @@
         45.16,
         3.695
       ],
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
       "rights": "facts_uncopyrightable",
-      "seq": 64
+      "seq": 79
     },
     {
       "phase": "statuary",
@@ -2178,9 +2843,11 @@
       ],
       "statue_height_m": 3.4,
       "note": "Count, heights and arrangement are measured (PERSEE-2009 + corroboration); the figurative massing is stylized, not a sculpture reconstruction. Weights cited-uncertain (see canonical).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
       "rights": "facts_uncopyrightable",
-      "seq": 65
+      "seq": 80
     },
     {
       "phase": "statuary",
@@ -2203,9 +2870,11 @@
         46.26,
         4.533
       ],
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
       "rights": "facts_uncopyrightable",
-      "seq": 66
+      "seq": 81
     },
     {
       "phase": "statuary",
@@ -2236,9 +2905,11 @@
       ],
       "statue_height_m": 2,
       "note": "Count, heights and arrangement are measured (PERSEE-2009 + corroboration); the figurative massing is stylized, not a sculpture reconstruction. Weights cited-uncertain (see canonical).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
       "rights": "facts_uncopyrightable",
-      "seq": 67
+      "seq": 82
     },
     {
       "phase": "statuary",
@@ -2261,9 +2932,11 @@
         42.5,
         4.703
       ],
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
       "rights": "facts_uncopyrightable",
-      "seq": 68
+      "seq": 83
     },
     {
       "phase": "statuary",
@@ -2294,9 +2967,11 @@
       ],
       "statue_height_m": 3.4,
       "note": "Count, heights and arrangement are measured (PERSEE-2009 + corroboration); the figurative massing is stylized, not a sculpture reconstruction. Weights cited-uncertain (see canonical).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
       "rights": "facts_uncopyrightable",
-      "seq": 69
+      "seq": 84
     },
     {
       "phase": "statuary",
@@ -2319,9 +2994,11 @@
         44.06,
         4.232
       ],
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
       "rights": "facts_uncopyrightable",
-      "seq": 70
+      "seq": 85
     },
     {
       "phase": "statuary",
@@ -2352,9 +3029,11 @@
       ],
       "statue_height_m": 3.4,
       "note": "Count, heights and arrangement are measured (PERSEE-2009 + corroboration); the figurative massing is stylized, not a sculpture reconstruction. Weights cited-uncertain (see canonical).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
       "rights": "facts_uncopyrightable",
-      "seq": 71
+      "seq": 86
     },
     {
       "phase": "statuary",
@@ -2377,9 +3056,11 @@
         45.16,
         3.695
       ],
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
       "rights": "facts_uncopyrightable",
-      "seq": 72
+      "seq": 87
     },
     {
       "phase": "statuary",
@@ -2410,9 +3091,11 @@
       ],
       "statue_height_m": 3.4,
       "note": "Count, heights and arrangement are measured (PERSEE-2009 + corroboration); the figurative massing is stylized, not a sculpture reconstruction. Weights cited-uncertain (see canonical).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
       "rights": "facts_uncopyrightable",
-      "seq": 73
+      "seq": 88
     },
     {
       "phase": "statuary",
@@ -2435,9 +3118,11 @@
         46.26,
         2.944
       ],
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
       "rights": "facts_uncopyrightable",
-      "seq": 74
+      "seq": 89
     },
     {
       "phase": "statuary",
@@ -2468,9 +3153,11 @@
       ],
       "statue_height_m": 2,
       "note": "Count, heights and arrangement are measured (PERSEE-2009 + corroboration); the figurative massing is stylized, not a sculpture reconstruction. Weights cited-uncertain (see canonical).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
       "rights": "facts_uncopyrightable",
-      "seq": 75
+      "seq": 90
     },
     {
       "phase": "statuary",
@@ -2493,9 +3180,11 @@
         42.5,
         -2.939
       ],
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
       "rights": "facts_uncopyrightable",
-      "seq": 76
+      "seq": 91
     },
     {
       "phase": "statuary",
@@ -2526,9 +3215,11 @@
       ],
       "statue_height_m": 3.4,
       "note": "Count, heights and arrangement are measured (PERSEE-2009 + corroboration); the figurative massing is stylized, not a sculpture reconstruction. Weights cited-uncertain (see canonical).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
       "rights": "facts_uncopyrightable",
-      "seq": 77
+      "seq": 92
     },
     {
       "phase": "statuary",
@@ -2551,9 +3242,11 @@
         44.06,
         -2.748
       ],
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
       "rights": "facts_uncopyrightable",
-      "seq": 78
+      "seq": 93
     },
     {
       "phase": "statuary",
@@ -2584,9 +3277,11 @@
       ],
       "statue_height_m": 3.4,
       "note": "Count, heights and arrangement are measured (PERSEE-2009 + corroboration); the figurative massing is stylized, not a sculpture reconstruction. Weights cited-uncertain (see canonical).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
       "rights": "facts_uncopyrightable",
-      "seq": 79
+      "seq": 94
     },
     {
       "phase": "statuary",
@@ -2609,9 +3304,11 @@
         45.16,
         -3.695
       ],
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
       "rights": "facts_uncopyrightable",
-      "seq": 80
+      "seq": 95
     },
     {
       "phase": "statuary",
@@ -2642,9 +3339,11 @@
       ],
       "statue_height_m": 3.4,
       "note": "Count, heights and arrangement are measured (PERSEE-2009 + corroboration); the figurative massing is stylized, not a sculpture reconstruction. Weights cited-uncertain (see canonical).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
       "rights": "facts_uncopyrightable",
-      "seq": 81
+      "seq": 96
     },
     {
       "phase": "statuary",
@@ -2667,9 +3366,11 @@
         46.26,
         -4.533
       ],
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
       "rights": "facts_uncopyrightable",
-      "seq": 82
+      "seq": 97
     },
     {
       "phase": "statuary",
@@ -2700,9 +3401,11 @@
       ],
       "statue_height_m": 2,
       "note": "Count, heights and arrangement are measured (PERSEE-2009 + corroboration); the figurative massing is stylized, not a sculpture reconstruction. Weights cited-uncertain (see canonical).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
       "rights": "facts_uncopyrightable",
-      "seq": 83
+      "seq": 98
     },
     {
       "phase": "statuary",
@@ -2725,9 +3428,11 @@
         42.5,
         -4.703
       ],
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
       "rights": "facts_uncopyrightable",
-      "seq": 84
+      "seq": 99
     },
     {
       "phase": "statuary",
@@ -2758,9 +3463,11 @@
       ],
       "statue_height_m": 3.4,
       "note": "Count, heights and arrangement are measured (PERSEE-2009 + corroboration); the figurative massing is stylized, not a sculpture reconstruction. Weights cited-uncertain (see canonical).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
       "rights": "facts_uncopyrightable",
-      "seq": 85
+      "seq": 100
     },
     {
       "phase": "statuary",
@@ -2783,9 +3490,11 @@
         44.06,
         -4.232
       ],
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
       "rights": "facts_uncopyrightable",
-      "seq": 86
+      "seq": 101
     },
     {
       "phase": "statuary",
@@ -2816,9 +3525,11 @@
       ],
       "statue_height_m": 3.4,
       "note": "Count, heights and arrangement are measured (PERSEE-2009 + corroboration); the figurative massing is stylized, not a sculpture reconstruction. Weights cited-uncertain (see canonical).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
       "rights": "facts_uncopyrightable",
-      "seq": 87
+      "seq": 102
     },
     {
       "phase": "statuary",
@@ -2841,9 +3552,11 @@
         45.16,
         -3.695
       ],
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
       "rights": "facts_uncopyrightable",
-      "seq": 88
+      "seq": 103
     },
     {
       "phase": "statuary",
@@ -2874,9 +3587,11 @@
       ],
       "statue_height_m": 3.4,
       "note": "Count, heights and arrangement are measured (PERSEE-2009 + corroboration); the figurative massing is stylized, not a sculpture reconstruction. Weights cited-uncertain (see canonical).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
       "rights": "facts_uncopyrightable",
-      "seq": 89
+      "seq": 104
     },
     {
       "phase": "statuary",
@@ -2899,9 +3614,11 @@
         46.26,
         -2.944
       ],
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
       "rights": "facts_uncopyrightable",
-      "seq": 90
+      "seq": 105
     },
     {
       "id": "summit-orb",
@@ -2922,9 +3639,11 @@
       "provenance": "reconstructed_design",
       "source": "VLD-FLECHE",
       "material": "gilt",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://passerelles.essentiels.bnf.fr/fr/image/44140e30-c8c3-40c2-b613-55c6009b22da-elevation-et-plans-la-fleche-notre-dame-paris-par-viollet-le-duc",
       "rights": "public_domain",
-      "seq": 91
+      "seq": 106
     },
     {
       "id": "coq",
@@ -2958,9 +3677,11 @@
       "source": "WIKIPEDIA-SPIRE",
       "material": "gilt",
       "note": "Single topmost component, at the measured 96 m. Weight cited-uncertain (V13 → conjecture).",
+      "fragment": "spire",
+      "fidelity": "full",
       "url": "https://en.wikipedia.org/wiki/Spire_of_Notre-Dame_de_Paris",
       "rights": "facts_uncopyrightable",
-      "seq": 92
+      "seq": 107
     }
   ]
 }

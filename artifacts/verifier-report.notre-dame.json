@@ -1,14 +1,13 @@
 {
-  "generated_at": "2026-06-13T21:59:52.786Z",
+  "generated_at": "2026-06-13T23:11:31.161Z",
   "building": "notre-dame",
   "spec": "artifacts/structural-spec.notre-dame.json",
   "screenshot_refresh": {
-    "refreshed": false,
-    "note": "viewer not reachable at http://localhost:5057; grading existing PNGs"
+    "refreshed": true
   },
   "summary": {
-    "total": 13,
-    "pass": 13,
+    "total": 20,
+    "pass": 20,
     "fail": 0,
     "critical_failures": []
   },
@@ -125,15 +124,15 @@
       "method": "spec-geometry",
       "pass": true,
       "measured": {
-        "total": 93,
+        "total": 108,
         "unsourced": [],
         "missing_url": [],
         "missing_rights": [],
         "classes_present": [
-          "conjecture",
-          "reconstructed_design",
+          "measured",
           "rule_derived",
-          "measured"
+          "conjecture",
+          "reconstructed_design"
         ]
       },
       "expected": "0 unsourced, every component {provenance,source,url,rights}, all four classes present"
@@ -155,9 +154,144 @@
       "pass": true,
       "measured": {
         "offenders": [],
-        "registry_size": 14
+        "registry_size": 18
       },
       "expected": "0 components from excluded/unknown sources"
+    },
+    {
+      "id": "C01",
+      "assert": "Cathedral total length = 128 m (extreme X span of all components, west front → chevet) ±2%",
+      "method": "spec-geometry",
+      "pass": true,
+      "measured": {
+        "length_m": 128,
+        "west_x_m": -60,
+        "chevet_x_m": 68
+      },
+      "expected": {
+        "length_m": 128,
+        "tolerance": "±2%"
+      }
+    },
+    {
+      "id": "C02",
+      "assert": "Max width across transept = 48 m (extreme Z span) ±2%; transept arm thickness = 14 m",
+      "method": "spec-geometry",
+      "pass": true,
+      "measured": {
+        "width_m": 48,
+        "z_span_m": [
+          -24,
+          24
+        ],
+        "arm_thickness_m": [
+          14
+        ]
+      },
+      "expected": {
+        "width_m": 48,
+        "arm_thickness_m": 14,
+        "tolerance": "±2%"
+      }
+    },
+    {
+      "id": "C03",
+      "assert": "West façade width = 43.5 m (Z extent of the west-front block) ±2%; façade body height ≈ 45 m",
+      "method": "spec-geometry",
+      "pass": true,
+      "measured": {
+        "facade_width_m": 43.5,
+        "facade_height_m": 45
+      },
+      "expected": {
+        "facade_width_m": 43.5,
+        "facade_height_m": 45,
+        "tolerance": "width ±2%, height ±3%"
+      }
+    },
+    {
+      "id": "C04",
+      "assert": "West towers reach 69 m (top Y of each tower block) ±2%",
+      "method": "spec-geometry",
+      "pass": true,
+      "measured": {
+        "tower_tops_m": [
+          69
+        ],
+        "towers": 2
+      },
+      "expected": {
+        "tower_height_m": 69,
+        "count": 2,
+        "tolerance": "±2%"
+      }
+    },
+    {
+      "id": "C05",
+      "assert": "Nave high-vault crown = 33 m (top Y of the nave vessel) — measured-reality guard: NOT 35 m, NOT 43 m",
+      "method": "spec-geometry",
+      "pass": true,
+      "measured": {
+        "vault_crown_m": 33
+      },
+      "expected": {
+        "vault_crown_m": 33,
+        "guard": "must NOT equal 35 m (refuted) or 43 m (under-roof)",
+        "tolerance": "±3%"
+      },
+      "note": "measured 33 m crown preserved"
+    },
+    {
+      "id": "C06",
+      "assert": "Spire group composes UNCHANGED on the crossing: V08–V14 anchors intact AND sits at x≈0, z≈0",
+      "method": "spec-geometry",
+      "pass": true,
+      "measured": {
+        "spire_components": 93,
+        "souche_xz": [
+          0,
+          0
+        ],
+        "octagon_faces": 8,
+        "statues": 16,
+        "coq_present": true,
+        "spire_checks": {
+          "V08": true,
+          "V09": true,
+          "V10": true,
+          "V11": true,
+          "V12": true,
+          "V13": true,
+          "V14": true
+        }
+      },
+      "expected": {
+        "on_crossing": "x≈0,z≈0",
+        "octagon_faces": 8,
+        "statues": 16,
+        "V08–V14": "all pass"
+      }
+    },
+    {
+      "id": "C-PROV",
+      "assert": "Massing provenance audit: every massing block {provenance,source,url,rights}; 0 unsourced; massing is measured/rule_derived; the spire is full fidelity",
+      "method": "spec-geometry",
+      "pass": true,
+      "measured": {
+        "massing_total": 15,
+        "unsourced": [],
+        "missing_url": [],
+        "missing_rights": [],
+        "misclassed_massing": [],
+        "wrong_fidelity": [],
+        "classes_present": [
+          "measured",
+          "rule_derived",
+          "conjecture",
+          "reconstructed_design"
+        ]
+      },
+      "expected": "0 unsourced, massing ∈ {measured,rule_derived}, massing fidelity 'massing' / spire 'full', all four classes present"
     },
     {
       "id": "P01",
@@ -174,7 +308,7 @@
       "method": "pixels",
       "pass": true,
       "measured": {
-        "non_background": "6.3%"
+        "non_background": "6.8%"
       }
     },
     {
@@ -183,7 +317,7 @@
       "method": "pixels",
       "pass": true,
       "measured": {
-        "non_background": "5.5%"
+        "non_background": "6.1%"
       }
     },
     {
@@ -192,7 +326,7 @@
       "method": "pixels",
       "pass": true,
       "measured": {
-        "non_background": "48.7%"
+        "non_background": "47.4%"
       }
     },
     {
@@ -201,20 +335,20 @@
       "method": "pixels",
       "pass": true,
       "measured": {
-        "non_background": "5.9%"
+        "non_background": "6.4%"
       }
     },
     {
       "id": "P03",
-      "assert": "provenance view shows all four evidence-class colors",
+      "assert": "provenance view shows all four evidence-class colors (presence — whole-cathedral framing)",
       "method": "pixels",
       "pass": true,
       "measured": {
         "class_pixel_pct": {
-          "measured": 0.222,
-          "reconstructed_design": 2.494,
-          "rule_derived": 0.199,
-          "conjecture": 0.157
+          "measured": 0.228,
+          "reconstructed_design": 2.503,
+          "rule_derived": 0.214,
+          "conjecture": 0.165
         }
       }
     }

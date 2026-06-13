@@ -114,6 +114,34 @@
       "rights": "rule",
       "verdict": "use",
       "reason": "Pure geometry — sets elevation heights from plan width. Used only where no measured/scaled value exists; never overrides a sourced value (V08)."
+    },
+    "FRIENDS-LAYOUT": {
+      "citation": "Friends of Notre-Dame de Paris — 'The Majestic Layout of Notre-Dame' (architecture/layout page).",
+      "url": "https://www.friendsofnotredamedeparis.org/notre-dame-cathedral/architecture/layout/",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data",
+      "reason": "Official confirmed headline geometry for the WHOLE cathedral: length 128 m, width 48 m at the transept, west facade 43.5 m / 45 m, nave vessel 13 m, side aisle 5.9 m, 10 nave bays, vault 33 m, height under roof 43 m, transept 48 x 14 m. Dimensions are uncopyrightable facts → ingest numbers; prose/images are not ingested."
+    },
+    "TECHNO-SCIENCE": {
+      "citation": "techno-science.net — 'Cathédrale Notre-Dame de Paris', éléments architecturaux extérieurs / structure et dimensions (mirror of FR Wikipedia article text).",
+      "url": "https://www.techno-science.net/glossaire-definition/Cathedrale-Notre-Dame-de-Paris-page-3.html",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data",
+      "reason": "Independent corroboration of the west facade ('43,5 mètres / 135 pieds-du-roi' wide, '45 mètres' high) and the central vessel ('largeur du vaisseau central de la nef : 13 mètres'). Numbers are facts; prose is not ingested."
+    },
+    "WIKI-NDP": {
+      "citation": "de.Wikipedia — 'Kathedrale Notre-Dame de Paris'.",
+      "url": "https://de.wikipedia.org/wiki/Kathedrale_Notre-Dame_de_Paris",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data",
+      "reason": "Confirmed west tower height 69 m and nave vault 32.5 m; cross-check of the headline dimensional set. Numbers are facts; prose/images are not ingested."
+    },
+    "DEHIO-BEZOLD": {
+      "citation": "Dehio & von Bezold, 'Die kirchliche Baukunst des Abendlandes', atlas (UB Heidelberg, Public Domain Mark 1.0) — measured plans/sections of Notre-Dame de Paris.",
+      "url": "https://digi.ub.uni-heidelberg.de/diglit/dehio1887atlas1/0007",
+      "rights": "public_domain",
+      "verdict": "use",
+      "reason": "Explicit Public Domain Mark — the cleanest open repository for Notre-Dame plans/sections. Scaled dimensions off the plates are reconstructed_design; used here for the longitudinal massing layout (bay rhythm, nave-vs-choir division) as a published plan reference where the corpus does not publish an exact split."
     }
   },
   "rights_excluded": {
@@ -346,6 +374,137 @@
     "_GAP_above_ridge_height": {
       "provenance": "GAP",
       "note": "DO NOT FILL. No single authoritative 'height above roof' figure. 96 m above ground and ~30 m base are sourced; ~66 m above-base and ~45 m visible-above-ridge are derived/approximate. Sources disagree 93 m (rooster base) vs 96 m (rooster head)."
+    }
+  },
+  "cathedral_massing": {
+    "_note": "PASS 1 WHOLE-CATHEDRAL MASSING. Headline dimensions are the adversarially-verified cathedral_geometry from docs/NOTRE_DAME_VERIFIED_CORPUS.md (each is `measured`, multiply-sourced → carries corroborating_sources so comp()'s >=2-source gate passes). Where the corpus does NOT publish a split or placement (the crossing position along the 128 m, the nave-vs-choir division, the individual bay interval, the wall depths, the tower footprints, the aisle/roof heights) the value is `rule_derived` (or a GAP rendered as a plain massing volume), tagged with a note — never asserted as measured. The spire (data/notre-dame-canonical.json `spire`) stays FULL FIDELITY and is composed in at the crossing UNCHANGED; the massing is partial fidelity by design (the honest fidelity gradient). World frame: crossing at the origin, +X toward the chevet, -X toward the west front, +-Z the transept arms, +Y up; all values in metres.",
+    "total_length": {
+      "m": 128,
+      "pied_du_roi": 394.1,
+      "provenance": "measured",
+      "source": "FRIENDS-LAYOUT",
+      "url": "https://www.friendsofnotredamedeparis.org/notre-dame-cathedral/",
+      "corroborating_sources": ["WIKI-NDP"],
+      "note": "= 420 ft. Total exterior length, west front to chevet. CONFIRMED (FRIENDS + Wikipedia infobox). The verifier recomputes this from the extreme component span on X (V-LEN); the internal split along the 128 m is rule_derived (crossing position is not published)."
+    },
+    "total_width_transept": {
+      "m": 48,
+      "pied_du_roi": 147.8,
+      "provenance": "measured",
+      "source": "FRIENDS-LAYOUT",
+      "url": "https://www.friendsofnotredamedeparis.org/notre-dame-cathedral/architecture/layout/",
+      "corroborating_sources": ["WIKI-NDP"],
+      "note": "Maximum building width = transept arm-to-arm length = chevet outer diameter. CONFIRMED (FRIENDS layout; corroborated Le Marais Mood). North arm tip ~+24 m, south arm tip ~-24 m about the crossing origin."
+    },
+    "transept_arm_width": {
+      "m": 14,
+      "pied_du_roi": 46,
+      "provenance": "measured",
+      "source": "FRIENDS-LAYOUT",
+      "url": "https://www.friendsofnotredamedeparis.org/notre-dame-cathedral/architecture/layout/",
+      "corroborating_sources": ["WIKI-NDP"],
+      "note": "Width of the transept arm (the narrowly-defined 'transept width'), distinct from the 48 m arm-to-arm length. Sets the crossing footprint along X and the transept arm thickness."
+    },
+    "west_facade_width": {
+      "m": 43.5,
+      "pied_du_roi": 134,
+      "provenance": "measured",
+      "source": "FRIENDS-LAYOUT",
+      "url": "https://www.friendsofnotredamedeparis.org/notre-dame-cathedral/architecture/layout/",
+      "corroborating_sources": ["TECHNO-SCIENCE"],
+      "note": "West facade width. CONFIRMED (FRIENDS; independently techno-science.net '43,5 mètres / 135 pieds-du-roi'). Spans the two towers + the three portals across +-Z at the -X end."
+    },
+    "facade_height_no_towers": {
+      "m": 45,
+      "pied_du_roi": 138.5,
+      "provenance": "measured",
+      "source": "FRIENDS-LAYOUT",
+      "url": "https://www.friendsofnotredamedeparis.org/notre-dame-cathedral/architecture/layout/",
+      "corroborating_sources": ["TECHNO-SCIENCE"],
+      "note": "Height of the west facade screen excluding the towers (to the top of the Gallery of Kings gable zone). CONFIRMED (FRIENDS; techno-science.net '45 mètres / 141 pieds')."
+    },
+    "west_tower_height": {
+      "m": 69,
+      "pied_du_roi": 212.4,
+      "provenance": "measured",
+      "source": "WIKI-NDP",
+      "url": "https://de.wikipedia.org/wiki/Kathedrale_Notre-Dame_de_Paris",
+      "corroborating_sources": ["FRIENDS-LAYOUT"],
+      "note": "Height of each west tower. CONFIRMED (de.Wikipedia + FRIENDS). The dropped '297 steps' claim was REFUTED — not used. Tower footprint/spacing along Z is NOT published → rule_derived."
+    },
+    "nave_vessel_width": {
+      "m": 13,
+      "pied_du_roi": 40,
+      "provenance": "measured",
+      "source": "FRIENDS-LAYOUT",
+      "url": "https://www.friendsofnotredamedeparis.org/notre-dame-cathedral/architecture/layout/",
+      "corroborating_sources": ["TECHNO-SCIENCE", "WIKI-NDP"],
+      "note": "Clear width of the central vessel (vaisseau central). CONFIRMED (FRIENDS; techno-science.net 'vaisseau central 13 m'; de.Wikipedia 'über 12 Metern'). Same vessel width is carried through nave AND choir."
+    },
+    "side_aisle_width": {
+      "m": 5.9,
+      "pied_du_roi": 18.2,
+      "provenance": "measured",
+      "source": "FRIENDS-LAYOUT",
+      "url": "https://www.friendsofnotredamedeparis.org/notre-dame-cathedral/architecture/layout/",
+      "corroborating_sources": ["TECHNO-SCIENCE"],
+      "note": "Width of each inner side aisle. CONFIRMED (FRIENDS layout, corroborated by official notredamedeparis.fr / techno-science). Chevet/ambulatory aisle laser-measured 5.76 m (Bork/Tallon) is a CITE-only cross-check, not used to render."
+    },
+    "nave_bays": {
+      "value": 10,
+      "provenance": "measured",
+      "source": "FRIENDS-LAYOUT",
+      "url": "https://www.friendsofnotredamedeparis.org/notre-dame-cathedral/architecture/layout/",
+      "corroborating_sources": ["WIKI-NDP"],
+      "note": "10 nave bays, paired into 5 sexpartite double-bays. COUNT is measured; the individual bay INTERVAL (~6 m) is rule_derived (a directly-published single-bay dimension was not located — corpus gap)."
+    },
+    "vault_crown_height": {
+      "m": 33,
+      "pied_du_roi": 101.6,
+      "provenance": "measured",
+      "source": "FRIENDS-LAYOUT",
+      "url": "https://www.friendsofnotredamedeparis.org/notre-dame-cathedral/architecture/layout/",
+      "corroborating_sources": ["WIKI-NDP"],
+      "note": "High-vault crown (keystone) height above floor, nave AND choir. CONFIRMED (FRIENDS 33 m = 108 ft; de.Wikipedia 32.5 m; PARISCityVISION 33 m). MEASURED-REALITY GUARD: must NEVER be recomputed toward an ad-quadratum/ad-triangulum ideal, and is NOT 35 m (refuted 'general interior height') nor 43 m (height under roof)."
+    },
+    "height_under_roof": {
+      "m": 43,
+      "pied_du_roi": 132.4,
+      "provenance": "measured",
+      "source": "FRIENDS-LAYOUT",
+      "url": "https://www.friendsofnotredamedeparis.org/notre-dame-cathedral/architecture/layout/",
+      "corroborating_sources": ["WIKI-NDP"],
+      "note": "Height under the nave roof (hauteur sous toit, 141 ft). CONFIRMED; CORRECTED from the refuted ~35 m claim. The massing nave/choir vessel rises to the 33 m crown; the steep roof ridge sits near this 43 m level."
+    },
+    "chevet_outer_diameter": {
+      "m": 47.88,
+      "pied_du_roi": 147.4,
+      "provenance": "measured",
+      "source": "FRIENDS-LAYOUT",
+      "url": "https://www.friendsofnotredamedeparis.org/notre-dame-cathedral/architecture/layout/",
+      "corroborating_sources": ["WIKI-NDP"],
+      "note": "Chevet (apse) outer diameter ~47.88 m, equal to the 48 m maximum width. The apse hemicycle massing radius derives from this. The Bork/Tallon CONCENTRIC chevet radii (6.65/12.42/18.18/23.94 m) trace only to a self-published blog (CHARTRES-BLOG, rights_excluded) → GAP, never rendered as measured; the apse is a plain massing hemicycle (rule_derived form)."
+    },
+    "_placement_crossing_position": {
+      "provenance": "rule_derived",
+      "source": "AD-QUADRATUM",
+      "url": "https://www.researchgate.net/publication/304352380",
+      "note": "RULE-DERIVED, not published. The corpus gives total length 128 m but does NOT publish where the transept crossing falls along it, nor a clean modern nave-vs-choir interior split (Bell's 1902 PD nave 225 ft ~68.6 m is a different/interior reference, cross-check only). The composer places the crossing at the world origin and derives the west-front / nave / choir X-extents from {128 m total, 14 m crossing footprint, 48 m chevet diameter, ~6 m bay interval}; the split is rule_derived and flagged, never asserted as measured. Uncertainty propagated to PLACEMENT."
+    },
+    "_placement_bay_interval": {
+      "m": 4.9,
+      "provenance": "rule_derived",
+      "source": "DEHIO-BEZOLD",
+      "url": "https://digi.ub.uni-heidelberg.de/diglit/dehio1887atlas1/0007",
+      "note": "RULE-DERIVED bay interval. The nave runs 10 measured bays over the rule_derived nave length; the per-bay interval (~4.9-6 m) is not a directly-published single-bay survey value (corpus gap) — taken off the Dehio-Bezold PD plan rhythm. The COUNT (10) is measured; the INTERVAL is rule_derived."
+    },
+    "_GAP_aisle_vault_heights": {
+      "provenance": "GAP",
+      "note": "DO NOT FILL. Inner/outer aisle + tribune vault crown heights are not published numerically (corpus gap). The massing aisle volumes rise to a rule_derived height below the 33 m vessel crown; this is rendered as a plain rule_derived block, never as a measured aisle vault height."
+    },
+    "_GAP_wall_depths": {
+      "provenance": "GAP",
+      "note": "DO NOT FILL. The west-front wall depth, tower footprint dimensions and tower spacing along Z are not published (corpus gap). The massing uses rule_derived block depths/footprints sized to read correctly; never asserted as measured."
     }
   },
   "verifier_targets": {
