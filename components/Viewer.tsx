@@ -357,8 +357,6 @@ function Member({
     }
   }
 
-  const isReconWhiteWall = mode === "recon" && c.material === "bai" && !provMode;
-
   const color = useMemo(() => {
     if (provMode) return new THREE.Color(PROV_COLORS[c.provenance]);
     if (tintKey) {
@@ -374,15 +372,7 @@ function Member({
     return col;
   }, [provMode, mode, c.provenance, c.material, c.phase, c.id, tintKey]);
 
-  const mat = isReconWhiteWall ? (
-    <meshStandardMaterial
-      color={color}
-      metalness={0}
-      roughness={0.7}
-      envMapIntensity={0.35}
-      side={g.type === "poly" ? THREE.DoubleSide : THREE.FrontSide}
-    />
-  ) : (
+  const mat = (
     <meshStandardMaterial
       color={color}
       map={set?.map}
