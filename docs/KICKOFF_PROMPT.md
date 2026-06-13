@@ -14,9 +14,29 @@ The exact prompt + instructions to hand an autonomous agent to build the entire 
    ```
 3. **Fresh session on Fable 5.** Open a new Claude Code session in this repo on branch `feat/notre-dame-methodology`, set the model to **Fable 5** (`/model`). Fresh context = clean autonomy log (judges score it).
 
-## Kick off
+## Kick off — Option A: the `/goal` command (≤ 4000 chars)
 
-Paste the prompt below. As a `/goal`, prefix with `/goal `. As a plain kickoff message, paste as-is.
+`/goal` is capped at 4000 characters. Use this compact version — it points to the in-repo docs (which hold all the detail) and embeds only the non-negotiables. Prefix with `/goal `. **(2,883 chars.)**
+
+```text
+Goal: build the Notre-Dame de Paris spire (Viollet-le-Duc's 1859 fleche) reconstruction end-to-end and autonomously, in this repo on branch feat/notre-dame-methodology.
+
+READ FIRST (all detail lives in the repo): docs/KICKOFF_PROMPT.md, docs/GOAL_NOTRE_DAME_SPIRE.md (brief + Definition of Done + Research-guardrails + the 8-phase flow + backlog ND-1..ND-37 with acceptance + deps), and docs/NOTRE_DAME_VERIFIED_CORPUS.md (the ONLY source of dimensions; 16 verdicts, 40 gaps). Template = the Nanchan code: scripts/derive.mjs, scripts/verify.mjs, scripts/demo.mjs, data/nanchan-canonical.json, components/Viewer.tsx. NEVER take numbers or sources from NOTRE_DAME_TECH_TEMPLATE/METHODOLOGY/QUICKSTART (structure only).
+
+Non-negotiables: nothing renders without a real cited source; precedence measured > rule_derived > conjecture (a sourced value is never overridden by a rule); V09 - never normalize measured reality toward the ideal (CRITICAL fail); research is cite-or-gap (no source -> GAP, never invent), every measured value adversarially verified in a fresh context with >=2 independent sources; restricted data (Tallon/CNRS/blogs) is cite-only, never ingested.
+
+Work the backlog ND-1..ND-37 in dependency order, building the 8-phase pipeline behind one command npm run goal (scripts/orchestrate.mjs), each phase gating the next: research (scripts/research.mjs, verified-replay default; emits data/notre-dame-canonical.json + artifacts/research-findings.json) -> ingest (validate provenance+source+url+rights) -> derive (Gothic rules -> artifacts/structural-spec.json; no imported meshes) -> build (procedural React Three Fiber) -> verify (scripts/verify.mjs deterministic checks recomputed from component coords + a vision sub-agent in a fresh context) -> loop (fix -> re-run to green; keep every failed report; include one scripted demo:corrupt -> verify REFUSES -> demo:restore) -> record (Playwright -> artifacts/run-*.webm) -> ship (deploy; URL 200). Also build the watchable demo surface: provenance toggle, drawing->3D reveal, construction-sequence animation, click-to-inspect, the real-time Build Theater, and deterministic playback. Scope: SPIRE ONLY (towers/nave/whole building are the documented post-v1 roadmap).
+
+Discipline: the verifier gates completion - do NOT stop until npm run goal is green end-to-end; let it loop fail->revise->pass and keep every failed report; distill fixes into persistent memory; ask the human ONLY for new info you cannot obtain (a deploy credential).
+
+DONE = npm run goal green end-to-end: zero unsourced components (G09 source-registry), >=1 logged fail->revise->pass, the vision sub-agent passes, the V09 guard holds (demo:corrupt refused), the demo surface works, a recorded artifacts/run-*.webm exists, and a deployed URL responds 200.
+
+Begin by reading the three docs, then post a short plan of the first 3-4 tickets and proceed.
+```
+
+## Kick off — Option B: full kickoff message (no length limit)
+
+If you paste as a plain message (not `/goal`), use the complete version below — same intent, fully spelled out.
 
 ```text
 You are building an evidence-based 3D reconstruction, autonomously and end-to-end, for the "Yingzao" project. Repo: this checkout on branch feat/notre-dame-methodology. Your north star: the spire of Notre-Dame de Paris (Viollet-le-Duc's 1859 flèche), reconstructed so that EVERY component proves where it came from, an independent verifier gates the build, and a live URL responds. Provenance is the product: nothing renders without a real, cited source.
