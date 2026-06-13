@@ -185,8 +185,13 @@ export default function SpireViewer() {
   const comps = spec.components as Comp[];
   const total = comps.length;
   const [mode, setMode] = useState<Mode>("built");
-  const [visible, setVisible] = useState(total);
-  const [playing, setPlaying] = useState(false);
+  // Build-theater starts from t=0 for a human landing (no ?cam=): the flèche
+  // assembles itself from the first construction step. Automated capture (?cam=)
+  // must render the COMPLETE model so the verifier grades the finished geometry.
+  const isCam = () =>
+    typeof window !== "undefined" && new URLSearchParams(window.location.search).has("cam");
+  const [visible, setVisible] = useState(() => (isCam() ? total : 0));
+  const [playing, setPlaying] = useState(() => !isCam());
   const [selected, setSelected] = useState<Comp | null>(null);
   // Drawing→3D reveal (ND-11): a human landing (no ?cam=) opens on Viollet-le-Duc's
   // PD elevation; automated capture (?cam=) skips it so the verifier grades the 3D scene.
@@ -255,7 +260,7 @@ export default function SpireViewer() {
       </Canvas>
 
       {/* header */}
-      <div style={{ position: "absolute", top: 22, left: 26, pointerEvents: "none", textShadow: "0 1px 8px #000" }}>
+      <div style={{ position: "absolute", top: 58, left: 26, pointerEvents: "none", textShadow: "0 1px 8px #000" }}>
         <div style={{ fontSize: 28, letterSpacing: 3, fontWeight: 600 }}>Flèche de Notre-Dame de Paris</div>
         <div style={{ fontSize: 12, color: "#b9b2a2", marginTop: 4, maxWidth: 520 }}>
           Spire of Notre-Dame · Viollet-le-Duc 1859, rebuilt à l'identique 2024 · 96&nbsp;m · derived from the verified corpus + Gothic rules
@@ -333,7 +338,7 @@ function VerifierHUD() {
   const checks = (report as any).checks?.filter((c: any) => c.method === "spec-geometry") ?? [];
   const summary = (report as any).summary ?? { pass: 0, total: 0 };
   return (
-    <div style={{ position: "absolute", top: 64, right: 26, width: 252, background: "#1c1d20cc", border: "1px solid #3a3833", padding: 12, fontSize: 11, backdropFilter: "blur(4px)" }}>
+    <div style={{ position: "absolute", top: 22, right: 26, width: 252, background: "#1c1d20cc", border: "1px solid #3a3833", padding: 12, fontSize: 11, backdropFilter: "blur(4px)" }}>
       <div style={{ display: "flex", justifyContent: "space-between", color: "#cfc8b8", letterSpacing: 1, marginBottom: 6 }}>
         <span>VERIFIER</span>
         <span style={{ color: summary.fail ? "#b34a38" : "#7bbf7b" }}>{summary.pass}/{summary.total} ✓</span>

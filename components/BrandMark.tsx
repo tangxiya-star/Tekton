@@ -13,7 +13,7 @@ export default function BrandMark() {
       style={{
         position: "fixed",
         top: 16,
-        right: 24,
+        left: 24,
         zIndex: 60,
         display: "flex",
         alignItems: "center",

@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "building": "南禅寺大殿",
+    "building_en": "Main Hall of Nanchan Temple",
+    "date_built": "唐建中三年 (782 CE)",
+    "generated_by": "scripts/derive.mjs (Yingzao Rule Engine)",
+    "canonical_source": "data/nanchan-canonical.json"
+  },
+  "units": {
+    "fen_mm": 16.5,
+    "note": "All dimensions/positions in fen. Scene scale: 1 fen = 16.5 mm."
+  },
+  "phases": [
+    "platform",
+    "columns",
+    "puzuo",
+    "frame",
+    "roof",
+    "enclosure",
+    "statues"
+  ],
+  "key_dimensions": {
+    "total_width_fen": 700,
+    "total_depth_fen": 600,
+    "bay_rhythm": [
+      200,
+      300,
+      200
+    ],
+    "pingzhu_height_fen": 236.4,
+    "puzuo_stack_fen": 95,
+    "liaoyan_top_y": 331.4,
+    "ridge_top_y": 461.4,
+    "rise_fen": 130,
+    "rise_ratio": "1:2.67",
+    "purlin_interval_fen": 150,
+    "liaoyan_span_fen": 694,
+    "outward_jumps_fen": [
+      27,
+      20
+    ]
+  },
+  "components": [],
+  "playback": {
+    "index": 0,
+    "phase": "init",
+    "description": "初始化",
+    "totalStates": 339
+  }
+}

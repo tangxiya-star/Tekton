@@ -1,0 +1,2048 @@
+{
+  "totalStates": 339,
+  "phases": [
+    "platform",
+    "columns",
+    "puzuo",
+    "frame",
+    "roof",
+    "enclosure",
+    "statues"
+  ],
+  "states": [
+    {
+      "index": 0,
+      "phase": "init",
+      "description": "初始化",
+      "componentCount": 0
+    },
+    {
+      "index": 1,
+      "phase": "platform",
+      "description": "platform: +台基",
+      "componentCount": 1
+    },
+    {
+      "index": 2,
+      "phase": "platform",
+      "description": "platform: +佛坛",
+      "componentCount": 2
+    },
+    {
+      "index": 3,
+      "phase": "platform",
+      "description": "platform: +柱础（覆盆）",
+      "componentCount": 3
+    },
+    {
+      "index": 4,
+      "phase": "platform",
+      "description": "platform: +柱础（覆盆）",
+      "componentCount": 4
+    },
+    {
+      "index": 5,
+      "phase": "platform",
+      "description": "platform: +柱础（覆盆）",
+      "componentCount": 5
+    },
+    {
+      "index": 6,
+      "phase": "platform",
+      "description": "platform: +柱础（覆盆）",
+      "componentCount": 6
+    },
+    {
+      "index": 7,
+      "phase": "platform",
+      "description": "platform: +柱础（覆盆）",
+      "componentCount": 7
+    },
+    {
+      "index": 8,
+      "phase": "platform",
+      "description": "platform: +柱础（覆盆）",
+      "componentCount": 8
+    },
+    {
+      "index": 9,
+      "phase": "platform",
+      "description": "platform: +柱础（覆盆）",
+      "componentCount": 9
+    },
+    {
+      "index": 10,
+      "phase": "platform",
+      "description": "platform: +柱础（覆盆）",
+      "componentCount": 10
+    },
+    {
+      "index": 11,
+      "phase": "platform",
+      "description": "platform: +柱础（覆盆）",
+      "componentCount": 11
+    },
+    {
+      "index": 12,
+      "phase": "platform",
+      "description": "platform: +柱础（覆盆）",
+      "componentCount": 12
+    },
+    {
+      "index": 13,
+      "phase": "platform",
+      "description": "platform: +柱础（覆盆）",
+      "componentCount": 13
+    },
+    {
+      "index": 14,
+      "phase": "platform",
+      "description": "platform: +柱础（覆盆）",
+      "componentCount": 14
+    },
+    {
+      "index": 15,
+      "phase": "columns",
+      "description": "columns: +角柱",
+      "componentCount": 15
+    },
+    {
+      "index": 16,
+      "phase": "columns",
+      "description": "columns: +方柱（西山面，后代更换）",
+      "componentCount": 16
+    },
+    {
+      "index": 17,
+      "phase": "columns",
+      "description": "columns: +方柱（西山面，后代更换）",
+      "componentCount": 17
+    },
+    {
+      "index": 18,
+      "phase": "columns",
+      "description": "columns: +角柱",
+      "componentCount": 18
+    },
+    {
+      "index": 19,
+      "phase": "columns",
+      "description": "columns: +檐柱",
+      "componentCount": 19
+    },
+    {
+      "index": 20,
+      "phase": "columns",
+      "description": "columns: +檐柱",
+      "componentCount": 20
+    },
+    {
+      "index": 21,
+      "phase": "columns",
+      "description": "columns: +檐柱",
+      "componentCount": 21
+    },
+    {
+      "index": 22,
+      "phase": "columns",
+      "description": "columns: +檐柱",
+      "componentCount": 22
+    },
+    {
+      "index": 23,
+      "phase": "columns",
+      "description": "columns: +角柱",
+      "componentCount": 23
+    },
+    {
+      "index": 24,
+      "phase": "columns",
+      "description": "columns: +檐柱",
+      "componentCount": 24
+    },
+    {
+      "index": 25,
+      "phase": "columns",
+      "description": "columns: +檐柱",
+      "componentCount": 25
+    },
+    {
+      "index": 26,
+      "phase": "columns",
+      "description": "columns: +角柱",
+      "componentCount": 26
+    },
+    {
+      "index": 27,
+      "phase": "columns",
+      "description": "columns: +阑额",
+      "componentCount": 27
+    },
+    {
+      "index": 28,
+      "phase": "columns",
+      "description": "columns: +阑额",
+      "componentCount": 28
+    },
+    {
+      "index": 29,
+      "phase": "columns",
+      "description": "columns: +阑额",
+      "componentCount": 29
+    },
+    {
+      "index": 30,
+      "phase": "columns",
+      "description": "columns: +阑额",
+      "componentCount": 30
+    },
+    {
+      "index": 31,
+      "phase": "columns",
+      "description": "columns: +阑额",
+      "componentCount": 31
+    },
+    {
+      "index": 32,
+      "phase": "columns",
+      "description": "columns: +阑额",
+      "componentCount": 32
+    },
+    {
+      "index": 33,
+      "phase": "columns",
+      "description": "columns: +阑额",
+      "componentCount": 33
+    },
+    {
+      "index": 34,
+      "phase": "columns",
+      "description": "columns: +阑额",
+      "componentCount": 34
+    },
+    {
+      "index": 35,
+      "phase": "columns",
+      "description": "columns: +阑额",
+      "componentCount": 35
+    },
+    {
+      "index": 36,
+      "phase": "columns",
+      "description": "columns: +阑额",
+      "componentCount": 36
+    },
+    {
+      "index": 37,
+      "phase": "columns",
+      "description": "columns: +阑额",
+      "componentCount": 37
+    },
+    {
+      "index": 38,
+      "phase": "columns",
+      "description": "columns: +阑额",
+      "componentCount": 38
+    },
+    {
+      "index": 39,
+      "phase": "puzuo",
+      "description": "puzuo: +栌斗（转角铺作）",
+      "componentCount": 39
+    },
+    {
+      "index": 40,
+      "phase": "puzuo",
+      "description": "puzuo: +角华栱（第一跳，足材加宽）",
+      "componentCount": 40
+    },
+    {
+      "index": 41,
+      "phase": "puzuo",
+      "description": "puzuo: +角华栱（第二跳）",
+      "componentCount": 41
+    },
+    {
+      "index": 42,
+      "phase": "puzuo",
+      "description": "puzuo: +泥道栱",
+      "componentCount": 42
+    },
+    {
+      "index": 43,
+      "phase": "puzuo",
+      "description": "puzuo: +栌斗（柱头铺作）",
+      "componentCount": 43
+    },
+    {
+      "index": 44,
+      "phase": "puzuo",
+      "description": "puzuo: +华栱（第一跳，足材加宽）",
+      "componentCount": 44
+    },
+    {
+      "index": 45,
+      "phase": "puzuo",
+      "description": "puzuo: +华栱（第二跳）",
+      "componentCount": 45
+    },
+    {
+      "index": 46,
+      "phase": "puzuo",
+      "description": "puzuo: +泥道栱",
+      "componentCount": 46
+    },
+    {
+      "index": 47,
+      "phase": "puzuo",
+      "description": "puzuo: +令栱",
+      "componentCount": 47
+    },
+    {
+      "index": 48,
+      "phase": "puzuo",
+      "description": "puzuo: +栌斗（柱头铺作）",
+      "componentCount": 48
+    },
+    {
+      "index": 49,
+      "phase": "puzuo",
+      "description": "puzuo: +华栱（第一跳，足材加宽）",
+      "componentCount": 49
+    },
+    {
+      "index": 50,
+      "phase": "puzuo",
+      "description": "puzuo: +华栱（第二跳）",
+      "componentCount": 50
+    },
+    {
+      "index": 51,
+      "phase": "puzuo",
+      "description": "puzuo: +泥道栱",
+      "componentCount": 51
+    },
+    {
+      "index": 52,
+      "phase": "puzuo",
+      "description": "puzuo: +令栱",
+      "componentCount": 52
+    },
+    {
+      "index": 53,
+      "phase": "puzuo",
+      "description": "puzuo: +栌斗（转角铺作）",
+      "componentCount": 53
+    },
+    {
+      "index": 54,
+      "phase": "puzuo",
+      "description": "puzuo: +角华栱（第一跳，足材加宽）",
+      "componentCount": 54
+    },
+    {
+      "index": 55,
+      "phase": "puzuo",
+      "description": "puzuo: +角华栱（第二跳）",
+      "componentCount": 55
+    },
+    {
+      "index": 56,
+      "phase": "puzuo",
+      "description": "puzuo: +泥道栱",
+      "componentCount": 56
+    },
+    {
+      "index": 57,
+      "phase": "puzuo",
+      "description": "puzuo: +栌斗（柱头铺作）",
+      "componentCount": 57
+    },
+    {
+      "index": 58,
+      "phase": "puzuo",
+      "description": "puzuo: +华栱（第一跳，足材加宽）",
+      "componentCount": 58
+    },
+    {
+      "index": 59,
+      "phase": "puzuo",
+      "description": "puzuo: +华栱（第二跳，足材加宽）",
+      "componentCount": 59
+    },
+    {
+      "index": 60,
+      "phase": "puzuo",
+      "description": "puzuo: +泥道栱",
+      "componentCount": 60
+    },
+    {
+      "index": 61,
+      "phase": "puzuo",
+      "description": "puzuo: +令栱",
+      "componentCount": 61
+    },
+    {
+      "index": 62,
+      "phase": "puzuo",
+      "description": "puzuo: +栌斗（柱头铺作）",
+      "componentCount": 62
+    },
+    {
+      "index": 63,
+      "phase": "puzuo",
+      "description": "puzuo: +华栱（第一跳，足材加宽）",
+      "componentCount": 63
+    },
+    {
+      "index": 64,
+      "phase": "puzuo",
+      "description": "puzuo: +华栱（第二跳，足材加宽）",
+      "componentCount": 64
+    },
+    {
+      "index": 65,
+      "phase": "puzuo",
+      "description": "puzuo: +泥道栱",
+      "componentCount": 65
+    },
+    {
+      "index": 66,
+      "phase": "puzuo",
+      "description": "puzuo: +令栱",
+      "componentCount": 66
+    },
+    {
+      "index": 67,
+      "phase": "puzuo",
+      "description": "puzuo: +栌斗（柱头铺作）",
+      "componentCount": 67
+    },
+    {
+      "index": 68,
+      "phase": "puzuo",
+      "description": "puzuo: +华栱（第一跳，足材加宽）",
+      "componentCount": 68
+    },
+    {
+      "index": 69,
+      "phase": "puzuo",
+      "description": "puzuo: +华栱（第二跳，足材加宽）",
+      "componentCount": 69
+    },
+    {
+      "index": 70,
+      "phase": "puzuo",
+      "description": "puzuo: +泥道栱",
+      "componentCount": 70
+    },
+    {
+      "index": 71,
+      "phase": "puzuo",
+      "description": "puzuo: +令栱",
+      "componentCount": 71
+    },
+    {
+      "index": 72,
+      "phase": "puzuo",
+      "description": "puzuo: +栌斗（柱头铺作）",
+      "componentCount": 72
+    },
+    {
+      "index": 73,
+      "phase": "puzuo",
+      "description": "puzuo: +华栱（第一跳，足材加宽）",
+      "componentCount": 73
+    },
+    {
+      "index": 74,
+      "phase": "puzuo",
+      "description": "puzuo: +华栱（第二跳，足材加宽）",
+      "componentCount": 74
+    },
+    {
+      "index": 75,
+      "phase": "puzuo",
+      "description": "puzuo: +泥道栱",
+      "componentCount": 75
+    },
+    {
+      "index": 76,
+      "phase": "puzuo",
+      "description": "puzuo: +令栱",
+      "componentCount": 76
+    },
+    {
+      "index": 77,
+      "phase": "puzuo",
+      "description": "puzuo: +栌斗（转角铺作）",
+      "componentCount": 77
+    },
+    {
+      "index": 78,
+      "phase": "puzuo",
+      "description": "puzuo: +角华栱（第一跳，足材加宽）",
+      "componentCount": 78
+    },
+    {
+      "index": 79,
+      "phase": "puzuo",
+      "description": "puzuo: +角华栱（第二跳）",
+      "componentCount": 79
+    },
+    {
+      "index": 80,
+      "phase": "puzuo",
+      "description": "puzuo: +泥道栱",
+      "componentCount": 80
+    },
+    {
+      "index": 81,
+      "phase": "puzuo",
+      "description": "puzuo: +栌斗（柱头铺作）",
+      "componentCount": 81
+    },
+    {
+      "index": 82,
+      "phase": "puzuo",
+      "description": "puzuo: +华栱（第一跳，足材加宽）",
+      "componentCount": 82
+    },
+    {
+      "index": 83,
+      "phase": "puzuo",
+      "description": "puzuo: +华栱（第二跳）",
+      "componentCount": 83
+    },
+    {
+      "index": 84,
+      "phase": "puzuo",
+      "description": "puzuo: +泥道栱",
+      "componentCount": 84
+    },
+    {
+      "index": 85,
+      "phase": "puzuo",
+      "description": "puzuo: +令栱",
+      "componentCount": 85
+    },
+    {
+      "index": 86,
+      "phase": "puzuo",
+      "description": "puzuo: +栌斗（柱头铺作）",
+      "componentCount": 86
+    },
+    {
+      "index": 87,
+      "phase": "puzuo",
+      "description": "puzuo: +华栱（第一跳，足材加宽）",
+      "componentCount": 87
+    },
+    {
+      "index": 88,
+      "phase": "puzuo",
+      "description": "puzuo: +华栱（第二跳）",
+      "componentCount": 88
+    },
+    {
+      "index": 89,
+      "phase": "puzuo",
+      "description": "puzuo: +泥道栱",
+      "componentCount": 89
+    },
+    {
+      "index": 90,
+      "phase": "puzuo",
+      "description": "puzuo: +令栱",
+      "componentCount": 90
+    },
+    {
+      "index": 91,
+      "phase": "puzuo",
+      "description": "puzuo: +栌斗（转角铺作）",
+      "componentCount": 91
+    },
+    {
+      "index": 92,
+      "phase": "puzuo",
+      "description": "puzuo: +角华栱（第一跳，足材加宽）",
+      "componentCount": 92
+    },
+    {
+      "index": 93,
+      "phase": "puzuo",
+      "description": "puzuo: +角华栱（第二跳）",
+      "componentCount": 93
+    },
+    {
+      "index": 94,
+      "phase": "puzuo",
+      "description": "puzuo: +泥道栱",
+      "componentCount": 94
+    },
+    {
+      "index": 95,
+      "phase": "puzuo",
+      "description": "puzuo: +散斗",
+      "componentCount": 95
+    },
+    {
+      "index": 96,
+      "phase": "puzuo",
+      "description": "puzuo: +散斗（令栱头）",
+      "componentCount": 96
+    },
+    {
+      "index": 97,
+      "phase": "puzuo",
+      "description": "puzuo: +散斗",
+      "componentCount": 97
+    },
+    {
+      "index": 98,
+      "phase": "puzuo",
+      "description": "puzuo: +散斗（令栱头）",
+      "componentCount": 98
+    },
+    {
+      "index": 99,
+      "phase": "puzuo",
+      "description": "puzuo: +散斗",
+      "componentCount": 99
+    },
+    {
+      "index": 100,
+      "phase": "puzuo",
+      "description": "puzuo: +散斗（令栱头）",
+      "componentCount": 100
+    },
+    {
+      "index": 101,
+      "phase": "puzuo",
+      "description": "puzuo: +散斗",
+      "componentCount": 101
+    },
+    {
+      "index": 102,
+      "phase": "puzuo",
+      "description": "puzuo: +散斗（令栱头）",
+      "componentCount": 102
+    },
+    {
+      "index": 103,
+      "phase": "puzuo",
+      "description": "puzuo: +散斗",
+      "componentCount": 103
+    },
+    {
+      "index": 104,
+      "phase": "puzuo",
+      "description": "puzuo: +散斗（令栱头）",
+      "componentCount": 104
+    },
+    {
+      "index": 105,
+      "phase": "puzuo",
+      "description": "puzuo: +散斗",
+      "componentCount": 105
+    },
+    {
+      "index": 106,
+      "phase": "puzuo",
+      "description": "puzuo: +散斗（令栱头）",
+      "componentCount": 106
+    },
+    {
+      "index": 107,
+      "phase": "puzuo",
+      "description": "puzuo: +散斗",
+      "componentCount": 107
+    },
+    {
+      "index": 108,
+      "phase": "puzuo",
+      "description": "puzuo: +散斗（令栱头）",
+      "componentCount": 108
+    },
+    {
+      "index": 109,
+      "phase": "puzuo",
+      "description": "puzuo: +散斗",
+      "componentCount": 109
+    },
+    {
+      "index": 110,
+      "phase": "puzuo",
+      "description": "puzuo: +散斗（令栱头）",
+      "componentCount": 110
+    },
+    {
+      "index": 111,
+      "phase": "puzuo",
+      "description": "puzuo: +散斗",
+      "componentCount": 111
+    },
+    {
+      "index": 112,
+      "phase": "puzuo",
+      "description": "puzuo: +散斗（令栱头）",
+      "componentCount": 112
+    },
+    {
+      "index": 113,
+      "phase": "puzuo",
+      "description": "puzuo: +散斗",
+      "componentCount": 113
+    },
+    {
+      "index": 114,
+      "phase": "puzuo",
+      "description": "puzuo: +散斗（令栱头）",
+      "componentCount": 114
+    },
+    {
+      "index": 115,
+      "phase": "puzuo",
+      "description": "puzuo: +散斗",
+      "componentCount": 115
+    },
+    {
+      "index": 116,
+      "phase": "puzuo",
+      "description": "puzuo: +散斗（令栱头）",
+      "componentCount": 116
+    },
+    {
+      "index": 117,
+      "phase": "puzuo",
+      "description": "puzuo: +散斗",
+      "componentCount": 117
+    },
+    {
+      "index": 118,
+      "phase": "puzuo",
+      "description": "puzuo: +散斗（令栱头）",
+      "componentCount": 118
+    },
+    {
+      "index": 119,
+      "phase": "puzuo",
+      "description": "puzuo: +散斗",
+      "componentCount": 119
+    },
+    {
+      "index": 120,
+      "phase": "puzuo",
+      "description": "puzuo: +散斗（令栱头）",
+      "componentCount": 120
+    },
+    {
+      "index": 121,
+      "phase": "puzuo",
+      "description": "puzuo: +散斗",
+      "componentCount": 121
+    },
+    {
+      "index": 122,
+      "phase": "puzuo",
+      "description": "puzuo: +散斗（令栱头）",
+      "componentCount": 122
+    },
+    {
+      "index": 123,
+      "phase": "puzuo",
+      "description": "puzuo: +散斗",
+      "componentCount": 123
+    },
+    {
+      "index": 124,
+      "phase": "puzuo",
+      "description": "puzuo: +散斗（令栱头）",
+      "componentCount": 124
+    },
+    {
+      "index": 125,
+      "phase": "puzuo",
+      "description": "puzuo: +散斗",
+      "componentCount": 125
+    },
+    {
+      "index": 126,
+      "phase": "puzuo",
+      "description": "puzuo: +散斗（令栱头）",
+      "componentCount": 126
+    },
+    {
+      "index": 127,
+      "phase": "puzuo",
+      "description": "puzuo: +柱头枋",
+      "componentCount": 127
+    },
+    {
+      "index": 128,
+      "phase": "puzuo",
+      "description": "puzuo: +柱头枋",
+      "componentCount": 128
+    },
+    {
+      "index": 129,
+      "phase": "puzuo",
+      "description": "puzuo: +柱头枋",
+      "componentCount": 129
+    },
+    {
+      "index": 130,
+      "phase": "puzuo",
+      "description": "puzuo: +柱头枋",
+      "componentCount": 130
+    },
+    {
+      "index": 131,
+      "phase": "frame",
+      "description": "frame: +四椽栿",
+      "componentCount": 131
+    },
+    {
+      "index": 132,
+      "phase": "frame",
+      "description": "frame: +驼峰（1975 年修缮拆除，推想复原）",
+      "componentCount": 132
+    },
+    {
+      "index": 133,
+      "phase": "frame",
+      "description": "frame: +驼峰（1975 年修缮拆除，推想复原）",
+      "componentCount": 133
+    },
+    {
+      "index": 134,
+      "phase": "frame",
+      "description": "frame: +平梁",
+      "componentCount": 134
+    },
+    {
+      "index": 135,
+      "phase": "frame",
+      "description": "frame: +大叉手",
+      "componentCount": 135
+    },
+    {
+      "index": 136,
+      "phase": "frame",
+      "description": "frame: +大叉手",
+      "componentCount": 136
+    },
+    {
+      "index": 137,
+      "phase": "frame",
+      "description": "frame: +四椽栿",
+      "componentCount": 137
+    },
+    {
+      "index": 138,
+      "phase": "frame",
+      "description": "frame: +驼峰（1975 年修缮拆除，推想复原）",
+      "componentCount": 138
+    },
+    {
+      "index": 139,
+      "phase": "frame",
+      "description": "frame: +驼峰（1975 年修缮拆除，推想复原）",
+      "componentCount": 139
+    },
+    {
+      "index": 140,
+      "phase": "frame",
+      "description": "frame: +平梁",
+      "componentCount": 140
+    },
+    {
+      "index": 141,
+      "phase": "frame",
+      "description": "frame: +大叉手",
+      "componentCount": 141
+    },
+    {
+      "index": 142,
+      "phase": "frame",
+      "description": "frame: +大叉手",
+      "componentCount": 142
+    },
+    {
+      "index": 143,
+      "phase": "frame",
+      "description": "frame: +丁栿",
+      "componentCount": 143
+    },
+    {
+      "index": 144,
+      "phase": "frame",
+      "description": "frame: +丁栿",
+      "componentCount": 144
+    },
+    {
+      "index": 145,
+      "phase": "roof",
+      "description": "roof: +脊槫",
+      "componentCount": 145
+    },
+    {
+      "index": 146,
+      "phase": "roof",
+      "description": "roof: +平槫",
+      "componentCount": 146
+    },
+    {
+      "index": 147,
+      "phase": "roof",
+      "description": "roof: +平槫",
+      "componentCount": 147
+    },
+    {
+      "index": 148,
+      "phase": "roof",
+      "description": "roof: +牛脊枋",
+      "componentCount": 148
+    },
+    {
+      "index": 149,
+      "phase": "roof",
+      "description": "roof: +牛脊枋",
+      "componentCount": 149
+    },
+    {
+      "index": 150,
+      "phase": "roof",
+      "description": "roof: +撩檐枋",
+      "componentCount": 150
+    },
+    {
+      "index": 151,
+      "phase": "roof",
+      "description": "roof: +撩檐枋",
+      "componentCount": 151
+    },
+    {
+      "index": 152,
+      "phase": "roof",
+      "description": "roof: +撩檐枋",
+      "componentCount": 152
+    },
+    {
+      "index": 153,
+      "phase": "roof",
+      "description": "roof: +撩檐枋",
+      "componentCount": 153
+    },
+    {
+      "index": 154,
+      "phase": "roof",
+      "description": "roof: +檐口（1975 年复原出檐）",
+      "componentCount": 154
+    },
+    {
+      "index": 155,
+      "phase": "roof",
+      "description": "roof: +山面檐口（1975 年复原出檐）",
+      "componentCount": 155
+    },
+    {
+      "index": 156,
+      "phase": "roof",
+      "description": "roof: +下架屋面（檐步）",
+      "componentCount": 156
+    },
+    {
+      "index": 157,
+      "phase": "roof",
+      "description": "roof: +山面屋面",
+      "componentCount": 157
+    },
+    {
+      "index": 158,
+      "phase": "roof",
+      "description": "roof: +上架屋面（脊步）",
+      "componentCount": 158
+    },
+    {
+      "index": 159,
+      "phase": "roof",
+      "description": "roof: +山花",
+      "componentCount": 159
+    },
+    {
+      "index": 160,
+      "phase": "roof",
+      "description": "roof: +檐口（1975 年复原出檐）",
+      "componentCount": 160
+    },
+    {
+      "index": 161,
+      "phase": "roof",
+      "description": "roof: +山面檐口（1975 年复原出檐）",
+      "componentCount": 161
+    },
+    {
+      "index": 162,
+      "phase": "roof",
+      "description": "roof: +下架屋面（檐步）",
+      "componentCount": 162
+    },
+    {
+      "index": 163,
+      "phase": "roof",
+      "description": "roof: +山面屋面",
+      "componentCount": 163
+    },
+    {
+      "index": 164,
+      "phase": "roof",
+      "description": "roof: +上架屋面（脊步）",
+      "componentCount": 164
+    },
+    {
+      "index": 165,
+      "phase": "roof",
+      "description": "roof: +山花",
+      "componentCount": 165
+    },
+    {
+      "index": 166,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 166
+    },
+    {
+      "index": 167,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 167
+    },
+    {
+      "index": 168,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 168
+    },
+    {
+      "index": 169,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 169
+    },
+    {
+      "index": 170,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 170
+    },
+    {
+      "index": 171,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 171
+    },
+    {
+      "index": 172,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 172
+    },
+    {
+      "index": 173,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 173
+    },
+    {
+      "index": 174,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 174
+    },
+    {
+      "index": 175,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 175
+    },
+    {
+      "index": 176,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 176
+    },
+    {
+      "index": 177,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 177
+    },
+    {
+      "index": 178,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 178
+    },
+    {
+      "index": 179,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 179
+    },
+    {
+      "index": 180,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 180
+    },
+    {
+      "index": 181,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 181
+    },
+    {
+      "index": 182,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 182
+    },
+    {
+      "index": 183,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 183
+    },
+    {
+      "index": 184,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 184
+    },
+    {
+      "index": 185,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 185
+    },
+    {
+      "index": 186,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 186
+    },
+    {
+      "index": 187,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 187
+    },
+    {
+      "index": 188,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 188
+    },
+    {
+      "index": 189,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 189
+    },
+    {
+      "index": 190,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 190
+    },
+    {
+      "index": 191,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 191
+    },
+    {
+      "index": 192,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 192
+    },
+    {
+      "index": 193,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 193
+    },
+    {
+      "index": 194,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 194
+    },
+    {
+      "index": 195,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 195
+    },
+    {
+      "index": 196,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 196
+    },
+    {
+      "index": 197,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 197
+    },
+    {
+      "index": 198,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 198
+    },
+    {
+      "index": 199,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 199
+    },
+    {
+      "index": 200,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 200
+    },
+    {
+      "index": 201,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 201
+    },
+    {
+      "index": 202,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 202
+    },
+    {
+      "index": 203,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 203
+    },
+    {
+      "index": 204,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 204
+    },
+    {
+      "index": 205,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 205
+    },
+    {
+      "index": 206,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 206
+    },
+    {
+      "index": 207,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 207
+    },
+    {
+      "index": 208,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 208
+    },
+    {
+      "index": 209,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 209
+    },
+    {
+      "index": 210,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 210
+    },
+    {
+      "index": 211,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 211
+    },
+    {
+      "index": 212,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 212
+    },
+    {
+      "index": 213,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 213
+    },
+    {
+      "index": 214,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 214
+    },
+    {
+      "index": 215,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 215
+    },
+    {
+      "index": 216,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 216
+    },
+    {
+      "index": 217,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 217
+    },
+    {
+      "index": 218,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 218
+    },
+    {
+      "index": 219,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 219
+    },
+    {
+      "index": 220,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 220
+    },
+    {
+      "index": 221,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 221
+    },
+    {
+      "index": 222,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 222
+    },
+    {
+      "index": 223,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 223
+    },
+    {
+      "index": 224,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 224
+    },
+    {
+      "index": 225,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 225
+    },
+    {
+      "index": 226,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 226
+    },
+    {
+      "index": 227,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 227
+    },
+    {
+      "index": 228,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 228
+    },
+    {
+      "index": 229,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 229
+    },
+    {
+      "index": 230,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 230
+    },
+    {
+      "index": 231,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 231
+    },
+    {
+      "index": 232,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 232
+    },
+    {
+      "index": 233,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 233
+    },
+    {
+      "index": 234,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 234
+    },
+    {
+      "index": 235,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 235
+    },
+    {
+      "index": 236,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 236
+    },
+    {
+      "index": 237,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 237
+    },
+    {
+      "index": 238,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 238
+    },
+    {
+      "index": 239,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 239
+    },
+    {
+      "index": 240,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 240
+    },
+    {
+      "index": 241,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 241
+    },
+    {
+      "index": 242,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 242
+    },
+    {
+      "index": 243,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 243
+    },
+    {
+      "index": 244,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 244
+    },
+    {
+      "index": 245,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 245
+    },
+    {
+      "index": 246,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 246
+    },
+    {
+      "index": 247,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 247
+    },
+    {
+      "index": 248,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 248
+    },
+    {
+      "index": 249,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 249
+    },
+    {
+      "index": 250,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 250
+    },
+    {
+      "index": 251,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 251
+    },
+    {
+      "index": 252,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 252
+    },
+    {
+      "index": 253,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 253
+    },
+    {
+      "index": 254,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 254
+    },
+    {
+      "index": 255,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 255
+    },
+    {
+      "index": 256,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 256
+    },
+    {
+      "index": 257,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 257
+    },
+    {
+      "index": 258,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 258
+    },
+    {
+      "index": 259,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 259
+    },
+    {
+      "index": 260,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 260
+    },
+    {
+      "index": 261,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 261
+    },
+    {
+      "index": 262,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 262
+    },
+    {
+      "index": 263,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 263
+    },
+    {
+      "index": 264,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 264
+    },
+    {
+      "index": 265,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 265
+    },
+    {
+      "index": 266,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 266
+    },
+    {
+      "index": 267,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 267
+    },
+    {
+      "index": 268,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 268
+    },
+    {
+      "index": 269,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 269
+    },
+    {
+      "index": 270,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 270
+    },
+    {
+      "index": 271,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 271
+    },
+    {
+      "index": 272,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 272
+    },
+    {
+      "index": 273,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 273
+    },
+    {
+      "index": 274,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 274
+    },
+    {
+      "index": 275,
+      "phase": "roof",
+      "description": "roof: +檐椽",
+      "componentCount": 275
+    },
+    {
+      "index": 276,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 276
+    },
+    {
+      "index": 277,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 277
+    },
+    {
+      "index": 278,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 278
+    },
+    {
+      "index": 279,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 279
+    },
+    {
+      "index": 280,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 280
+    },
+    {
+      "index": 281,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 281
+    },
+    {
+      "index": 282,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 282
+    },
+    {
+      "index": 283,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 283
+    },
+    {
+      "index": 284,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 284
+    },
+    {
+      "index": 285,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 285
+    },
+    {
+      "index": 286,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 286
+    },
+    {
+      "index": 287,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 287
+    },
+    {
+      "index": 288,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 288
+    },
+    {
+      "index": 289,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 289
+    },
+    {
+      "index": 290,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 290
+    },
+    {
+      "index": 291,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 291
+    },
+    {
+      "index": 292,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 292
+    },
+    {
+      "index": 293,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 293
+    },
+    {
+      "index": 294,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 294
+    },
+    {
+      "index": 295,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 295
+    },
+    {
+      "index": 296,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 296
+    },
+    {
+      "index": 297,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 297
+    },
+    {
+      "index": 298,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 298
+    },
+    {
+      "index": 299,
+      "phase": "roof",
+      "description": "roof: +檐椽（山面）",
+      "componentCount": 299
+    },
+    {
+      "index": 300,
+      "phase": "roof",
+      "description": "roof: +正脊",
+      "componentCount": 300
+    },
+    {
+      "index": 301,
+      "phase": "roof",
+      "description": "roof: +鸱尾",
+      "componentCount": 301
+    },
+    {
+      "index": 302,
+      "phase": "roof",
+      "description": "roof: +鸱尾",
+      "componentCount": 302
+    },
+    {
+      "index": 303,
+      "phase": "enclosure",
+      "description": "enclosure: +后檐墙",
+      "componentCount": 303
+    },
+    {
+      "index": 304,
+      "phase": "enclosure",
+      "description": "enclosure: +山墙",
+      "componentCount": 304
+    },
+    {
+      "index": 305,
+      "phase": "enclosure",
+      "description": "enclosure: +槛墙",
+      "componentCount": 305
+    },
+    {
+      "index": 306,
+      "phase": "enclosure",
+      "description": "enclosure: +窗额/腰串",
+      "componentCount": 306
+    },
+    {
+      "index": 307,
+      "phase": "enclosure",
+      "description": "enclosure: +窗额/腰串",
+      "componentCount": 307
+    },
+    {
+      "index": 308,
+      "phase": "enclosure",
+      "description": "enclosure: +直棂窗棂条",
+      "componentCount": 308
+    },
+    {
+      "index": 309,
+      "phase": "enclosure",
+      "description": "enclosure: +直棂窗棂条",
+      "componentCount": 309
+    },
+    {
+      "index": 310,
+      "phase": "enclosure",
+      "description": "enclosure: +直棂窗棂条",
+      "componentCount": 310
+    },
+    {
+      "index": 311,
+      "phase": "enclosure",
+      "description": "enclosure: +直棂窗棂条",
+      "componentCount": 311
+    },
+    {
+      "index": 312,
+      "phase": "enclosure",
+      "description": "enclosure: +直棂窗棂条",
+      "componentCount": 312
+    },
+    {
+      "index": 313,
+      "phase": "enclosure",
+      "description": "enclosure: +直棂窗棂条",
+      "componentCount": 313
+    },
+    {
+      "index": 314,
+      "phase": "enclosure",
+      "description": "enclosure: +直棂窗棂条",
+      "componentCount": 314
+    },
+    {
+      "index": 315,
+      "phase": "enclosure",
+      "description": "enclosure: +直棂窗棂条",
+      "componentCount": 315
+    },
+    {
+      "index": 316,
+      "phase": "enclosure",
+      "description": "enclosure: +直棂窗棂条",
+      "componentCount": 316
+    },
+    {
+      "index": 317,
+      "phase": "enclosure",
+      "description": "enclosure: +直棂窗棂条",
+      "componentCount": 317
+    },
+    {
+      "index": 318,
+      "phase": "enclosure",
+      "description": "enclosure: +直棂窗棂条",
+      "componentCount": 318
+    },
+    {
+      "index": 319,
+      "phase": "enclosure",
+      "description": "enclosure: +板门",
+      "componentCount": 319
+    },
+    {
+      "index": 320,
+      "phase": "enclosure",
+      "description": "enclosure: +山墙",
+      "componentCount": 320
+    },
+    {
+      "index": 321,
+      "phase": "enclosure",
+      "description": "enclosure: +槛墙",
+      "componentCount": 321
+    },
+    {
+      "index": 322,
+      "phase": "enclosure",
+      "description": "enclosure: +窗额/腰串",
+      "componentCount": 322
+    },
+    {
+      "index": 323,
+      "phase": "enclosure",
+      "description": "enclosure: +窗额/腰串",
+      "componentCount": 323
+    },
+    {
+      "index": 324,
+      "phase": "enclosure",
+      "description": "enclosure: +直棂窗棂条",
+      "componentCount": 324
+    },
+    {
+      "index": 325,
+      "phase": "enclosure",
+      "description": "enclosure: +直棂窗棂条",
+      "componentCount": 325
+    },
+    {
+      "index": 326,
+      "phase": "enclosure",
+      "description": "enclosure: +直棂窗棂条",
+      "componentCount": 326
+    },
+    {
+      "index": 327,
+      "phase": "enclosure",
+      "description": "enclosure: +直棂窗棂条",
+      "componentCount": 327
+    },
+    {
+      "index": 328,
+      "phase": "enclosure",
+      "description": "enclosure: +直棂窗棂条",
+      "componentCount": 328
+    },
+    {
+      "index": 329,
+      "phase": "enclosure",
+      "description": "enclosure: +直棂窗棂条",
+      "componentCount": 329
+    },
+    {
+      "index": 330,
+      "phase": "enclosure",
+      "description": "enclosure: +直棂窗棂条",
+      "componentCount": 330
+    },
+    {
+      "index": 331,
+      "phase": "enclosure",
+      "description": "enclosure: +直棂窗棂条",
+      "componentCount": 331
+    },
+    {
+      "index": 332,
+      "phase": "enclosure",
+      "description": "enclosure: +直棂窗棂条",
+      "componentCount": 332
+    },
+    {
+      "index": 333,
+      "phase": "enclosure",
+      "description": "enclosure: +直棂窗棂条",
+      "componentCount": 333
+    },
+    {
+      "index": 334,
+      "phase": "enclosure",
+      "description": "enclosure: +直棂窗棂条",
+      "componentCount": 334
+    },
+    {
+      "index": 335,
+      "phase": "enclosure",
+      "description": "enclosure: +板门",
+      "componentCount": 335
+    },
+    {
+      "index": 336,
+      "phase": "statues",
+      "description": "statues: +主佛（照片建模）",
+      "componentCount": 336
+    },
+    {
+      "index": 337,
+      "phase": "statues",
+      "description": "statues: +文殊骑狮（照片建模）",
+      "componentCount": 337
+    },
+    {
+      "index": 338,
+      "phase": "statues",
+      "description": "statues: +文殊骑狮（照片建模，东侧）",
+      "componentCount": 338
+    }
+  ]
+}

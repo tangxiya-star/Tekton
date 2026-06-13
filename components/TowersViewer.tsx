@@ -218,8 +218,13 @@ export default function TowersViewer() {
   const total = comps.length;
   const [mode, setMode] = useState<Mode>("built");
   const [hypothesis, setHypothesis] = useState<Hypothesis>("today");
-  const [visible, setVisible] = useState(total);
-  const [playing, setPlaying] = useState(false);
+  // Build-theater starts from t=0 for a human landing (no ?cam=): the towers
+  // assemble themselves from the first construction step. Automated capture (?cam=)
+  // must render the COMPLETE model so the verifier grades the finished geometry.
+  const isCam = () =>
+    typeof window !== "undefined" && new URLSearchParams(window.location.search).has("cam");
+  const [visible, setVisible] = useState(() => (isCam() ? total : 0));
+  const [playing, setPlaying] = useState(() => !isCam());
   const [selected, setSelected] = useState<Comp | null>(null);
   const flyingRef = useRef(true);
   const cam = useMemo(() => {
@@ -280,7 +285,7 @@ export default function TowersViewer() {
       </Canvas>
 
       {/* header */}
-      <div style={{ position: "absolute", top: 22, left: 26, pointerEvents: "none", textShadow: "0 1px 8px #000" }}>
+      <div style={{ position: "absolute", top: 58, left: 26, pointerEvents: "none", textShadow: "0 1px 8px #000" }}>
         <div style={{ fontSize: 26, letterSpacing: 2.5, fontWeight: 600 }}>Façade occidentale et tours · Notre-Dame de Paris</div>
         <div style={{ fontSize: 12, color: "#b9b2a2", marginTop: 4, maxWidth: 560 }}>
           West facade &amp; towers · the harmonic facade (c.1200–1250), restored by Viollet-le-Duc &amp; Lassus · 43.5&nbsp;m wide · towers 69&nbsp;m · rose 9.6&nbsp;m · derived from the verified corpus + Gothic rules
@@ -312,7 +317,7 @@ export default function TowersViewer() {
 
       {/* material-hypothesis toggle (CONJECTURE — exact colour is a GAP) */}
       {!prov && (
-        <div style={{ position: "absolute", top: 96, left: 26, width: 260, background: "#1c1d20cc", border: "1px solid #3a3833", padding: 12, backdropFilter: "blur(4px)" }}>
+        <div style={{ position: "absolute", top: 140, left: 26, width: 260, background: "#1c1d20cc", border: "1px solid #3a3833", padding: 12, backdropFilter: "blur(4px)" }}>
           <div style={{ fontSize: 11, letterSpacing: 1, color: "#cfc8b8", marginBottom: 7 }}>STONE COLOUR · HYPOTHESIS</div>
           <div style={{ display: "inline-flex", border: "1px solid #4a4640", marginBottom: 8 }}>
             {HYPOTHESES.map((h, i) => (
