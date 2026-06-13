@@ -62,7 +62,6 @@ export function AnnotationPanel({
 
         {/* 说明文本 */}
         <div className="annotation-content">
-          <p className="annotation-desc-zh">{desc_zh}</p>
           <p className="annotation-desc-en">{desc_en}</p>
         </div>
 
