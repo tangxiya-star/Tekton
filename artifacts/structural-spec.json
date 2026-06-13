@@ -4,7 +4,19 @@
     "building_en": "Main Hall of Nanchan Temple",
     "date_built": "唐建中三年 (782 CE)",
     "generated_by": "scripts/derive.mjs (Yingzao Rule Engine)",
-    "canonical_source": "data/nanchan-canonical.json"
+    "canonical_source": "data/nanchan-canonical.json",
+    "enhancements": [
+      {
+        "date": "2026-06-13T19:38:00.020Z",
+        "description": "Enhanced bracket (puzuo) detail based on reference drawing analysis",
+        "changes": [
+          "Added 8 central support posts (center-zhuzhu) to column-top bracket sets",
+          "Adjusted hg1/hg2 width gradients for visual hierarchy",
+          "Central posts thread through bracket layers concentrating load to columns"
+        ],
+        "reference": "references/dougong-analysis.md"
+      }
+    ]
   },
   "units": {
     "fen_mm": 16.5,
@@ -445,7 +457,7 @@
       "role": "Load-bearing projecting arm widened to 11 fen — the builders bent the modular system for mechanics, centuries before Ming/Qing practice.",
       "geometry": {
         "type": "box",
-        "w": 74,
+        "w": 80,
         "h": 21,
         "d": 11
       },
@@ -467,7 +479,7 @@
       "role": "Projecting arm stepping the eave load outward; 偷心造 — no transverse arm rides this jump.",
       "geometry": {
         "type": "box",
-        "w": 81,
+        "w": 70,
         "h": 21,
         "d": 10
       },
@@ -555,7 +567,7 @@
       "role": "Load-bearing projecting arm widened to 11 fen — the builders bent the modular system for mechanics, centuries before Ming/Qing practice.",
       "geometry": {
         "type": "box",
-        "w": 74,
+        "w": 80,
         "h": 21,
         "d": 11
       },
@@ -577,7 +589,7 @@
       "role": "Projecting arm stepping the eave load outward; 偷心造 — no transverse arm rides this jump.",
       "geometry": {
         "type": "box",
-        "w": 81,
+        "w": 70,
         "h": 21,
         "d": 10
       },
@@ -766,7 +778,7 @@
       "role": "Load-bearing projecting arm widened to 11 fen — the builders bent the modular system for mechanics, centuries before Ming/Qing practice.",
       "geometry": {
         "type": "box",
-        "w": 11,
+        "w": 80,
         "h": 21,
         "d": 71
       },
@@ -877,7 +889,7 @@
       "role": "Load-bearing projecting arm widened to 11 fen — the builders bent the modular system for mechanics, centuries before Ming/Qing practice.",
       "geometry": {
         "type": "box",
-        "w": 11,
+        "w": 80,
         "h": 21,
         "d": 71
       },
@@ -988,7 +1000,7 @@
       "role": "Load-bearing projecting arm widened to 11 fen — the builders bent the modular system for mechanics, centuries before Ming/Qing practice.",
       "geometry": {
         "type": "box",
-        "w": 11,
+        "w": 80,
         "h": 21,
         "d": 71
       },
@@ -1099,7 +1111,7 @@
       "role": "Load-bearing projecting arm widened to 11 fen — the builders bent the modular system for mechanics, centuries before Ming/Qing practice.",
       "geometry": {
         "type": "box",
-        "w": 11,
+        "w": 80,
         "h": 21,
         "d": 71
       },
@@ -7215,6 +7227,166 @@
       "material": "zhu"
     },
     {
+      "id": "pz-2-center-zhuzhu",
+      "name_zh": "pz-2中央支撑柱",
+      "name_en": "Central support post for pz-2",
+      "phase": "puzuo",
+      "role": "Vertical post threading through bracket layers, concentrating load to column",
+      "geometry": {
+        "type": "cylinder",
+        "r": 12,
+        "h": 100
+      },
+      "position": [
+        -350,
+        280,
+        -100
+      ],
+      "provenance": "reference_enhanced",
+      "source": "dougong-detail reference drawing analysis",
+      "note": "Central vertical post concentrating multi-layer bracket load; added from reference detail analysis"
+    },
+    {
+      "id": "pz-3-center-zhuzhu",
+      "name_zh": "pz-3中央支撑柱",
+      "name_en": "Central support post for pz-3",
+      "phase": "puzuo",
+      "role": "Vertical post threading through bracket layers, concentrating load to column",
+      "geometry": {
+        "type": "cylinder",
+        "r": 12,
+        "h": 100
+      },
+      "position": [
+        -350,
+        280,
+        100
+      ],
+      "provenance": "reference_enhanced",
+      "source": "dougong-detail reference drawing analysis",
+      "note": "Central vertical post concentrating multi-layer bracket load; added from reference detail analysis"
+    },
+    {
+      "id": "pz-5-center-zhuzhu",
+      "name_zh": "pz-5中央支撑柱",
+      "name_en": "Central support post for pz-5",
+      "phase": "puzuo",
+      "role": "Vertical post threading through bracket layers, concentrating load to column",
+      "geometry": {
+        "type": "cylinder",
+        "r": 12,
+        "h": 100
+      },
+      "position": [
+        -150,
+        280,
+        -300
+      ],
+      "provenance": "reference_enhanced",
+      "source": "dougong-detail reference drawing analysis",
+      "note": "Central vertical post concentrating multi-layer bracket load; added from reference detail analysis"
+    },
+    {
+      "id": "pz-6-center-zhuzhu",
+      "name_zh": "pz-6中央支撑柱",
+      "name_en": "Central support post for pz-6",
+      "phase": "puzuo",
+      "role": "Vertical post threading through bracket layers, concentrating load to column",
+      "geometry": {
+        "type": "cylinder",
+        "r": 12,
+        "h": 100
+      },
+      "position": [
+        -150,
+        280,
+        300
+      ],
+      "provenance": "reference_enhanced",
+      "source": "dougong-detail reference drawing analysis",
+      "note": "Central vertical post concentrating multi-layer bracket load; added from reference detail analysis"
+    },
+    {
+      "id": "pz-7-center-zhuzhu",
+      "name_zh": "pz-7中央支撑柱",
+      "name_en": "Central support post for pz-7",
+      "phase": "puzuo",
+      "role": "Vertical post threading through bracket layers, concentrating load to column",
+      "geometry": {
+        "type": "cylinder",
+        "r": 12,
+        "h": 100
+      },
+      "position": [
+        150,
+        280,
+        -300
+      ],
+      "provenance": "reference_enhanced",
+      "source": "dougong-detail reference drawing analysis",
+      "note": "Central vertical post concentrating multi-layer bracket load; added from reference detail analysis"
+    },
+    {
+      "id": "pz-8-center-zhuzhu",
+      "name_zh": "pz-8中央支撑柱",
+      "name_en": "Central support post for pz-8",
+      "phase": "puzuo",
+      "role": "Vertical post threading through bracket layers, concentrating load to column",
+      "geometry": {
+        "type": "cylinder",
+        "r": 12,
+        "h": 100
+      },
+      "position": [
+        150,
+        280,
+        300
+      ],
+      "provenance": "reference_enhanced",
+      "source": "dougong-detail reference drawing analysis",
+      "note": "Central vertical post concentrating multi-layer bracket load; added from reference detail analysis"
+    },
+    {
+      "id": "pz-10-center-zhuzhu",
+      "name_zh": "pz-10中央支撑柱",
+      "name_en": "Central support post for pz-10",
+      "phase": "puzuo",
+      "role": "Vertical post threading through bracket layers, concentrating load to column",
+      "geometry": {
+        "type": "cylinder",
+        "r": 12,
+        "h": 100
+      },
+      "position": [
+        350,
+        280,
+        -100
+      ],
+      "provenance": "reference_enhanced",
+      "source": "dougong-detail reference drawing analysis",
+      "note": "Central vertical post concentrating multi-layer bracket load; added from reference detail analysis"
+    },
+    {
+      "id": "pz-11-center-zhuzhu",
+      "name_zh": "pz-11中央支撑柱",
+      "name_en": "Central support post for pz-11",
+      "phase": "puzuo",
+      "role": "Vertical post threading through bracket layers, concentrating load to column",
+      "geometry": {
+        "type": "cylinder",
+        "r": 12,
+        "h": 100
+      },
+      "position": [
+        350,
+        280,
+        100
+      ],
+      "provenance": "reference_enhanced",
+      "source": "dougong-detail reference drawing analysis",
+      "note": "Central vertical post concentrating multi-layer bracket load; added from reference detail analysis"
+    },
+    {
       "id": "zhengji",
       "name_zh": "正脊",
       "name_en": "Main ridge",
@@ -7989,6 +8161,66 @@
       ],
       "provenance": "conjecture",
       "source": "Mirrored copy of wenshu-model for symmetry"
+    },
+    {
+      "id": "steps-1",
+      "name_zh": "台阶第一级",
+      "name_en": "Steps level 1",
+      "phase": "platform",
+      "role": "Front steps leading to the hall entrance.",
+      "geometry": {
+        "type": "box",
+        "w": 700,
+        "h": 30,
+        "d": 120
+      },
+      "position": [
+        0,
+        -8,
+        -50
+      ],
+      "provenance": "measured",
+      "source": "Visible in photographs of Nanchan Temple"
+    },
+    {
+      "id": "steps-2",
+      "name_zh": "台阶第二级",
+      "name_en": "Steps level 2",
+      "phase": "platform",
+      "role": "Front steps leading to the hall entrance.",
+      "geometry": {
+        "type": "box",
+        "w": 700,
+        "h": 30,
+        "d": 120
+      },
+      "position": [
+        0,
+        -24,
+        -130
+      ],
+      "provenance": "measured",
+      "source": "Visible in photographs of Nanchan Temple"
+    },
+    {
+      "id": "steps-3",
+      "name_zh": "台阶第三级",
+      "name_en": "Steps level 3",
+      "phase": "platform",
+      "role": "Front steps leading to the hall entrance.",
+      "geometry": {
+        "type": "box",
+        "w": 700,
+        "h": 30,
+        "d": 120
+      },
+      "position": [
+        0,
+        -40,
+        -210
+      ],
+      "provenance": "measured",
+      "source": "Visible in photographs of Nanchan Temple"
     }
   ]
 }

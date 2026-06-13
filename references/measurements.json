@@ -1,0 +1,147 @@
+{
+  "project": "Ancient Architecture Reference Measurements",
+  "unit": "mm",
+  "notes": "Extracted from architectural drawings",
+  "overall_dimensions": {
+    "width": 13101.0,
+    "depth": 9900.0,
+    "height": 4158.3,
+    "description": "Total building footprint and height"
+  },
+  "horizontal_divisions": {
+    "left_section": 3300.0,
+    "center_section": 4950.0,
+    "right_section": 3300.0,
+    "subdivisions": {
+      "columns": [
+        {
+          "id": 1,
+          "width": 1564.5
+        },
+        {
+          "id": 2,
+          "width": 775.5
+        },
+        {
+          "id": 3,
+          "width": 2475.0
+        },
+        {
+          "id": 4,
+          "width": 825.0
+        },
+        {
+          "id": 5,
+          "width": 4950.0
+        },
+        {
+          "id": 6,
+          "width": 825.0
+        },
+        {
+          "id": 7,
+          "width": 2475.0
+        },
+        {
+          "id": 8,
+          "width": 775.5
+        },
+        {
+          "id": 9,
+          "width": 1564.5
+        }
+      ]
+    }
+  },
+  "vertical_structure": {
+    "base": {
+      "height": 1150,
+      "description": "Foundation/platform level"
+    },
+    "lower_chamber": {
+      "height": 3900.0,
+      "description": "Main interior space with windows/doors"
+    },
+    "roof_structure": {
+      "height": 1567.5,
+      "description": "Eaves, tiles, and decorative roof elements"
+    },
+    "total_column_height": 3800.0,
+    "description": "From base to roof structure connection"
+  },
+  "dougong_bracket_system": {
+    "description": "Stepped bracket complex - 4 levels",
+    "overall_width": 1881.0,
+    "base_width": 1155.0,
+    "base_depth": 1155.0,
+    "levels": [
+      {
+        "level": 1,
+        "type": "base_tier",
+        "description": "Bottom ornamental layer"
+      },
+      {
+        "level": 2,
+        "type": "middle_tier_lower",
+        "description": "Lower middle bracket set"
+      },
+      {
+        "level": 3,
+        "type": "middle_tier_upper",
+        "description": "Upper middle bracket set"
+      },
+      {
+        "level": 4,
+        "type": "top_tier",
+        "description": "Top bracket supporting roof beam"
+      }
+    ]
+  },
+  "fenestration": {
+    "windows": {
+      "type": "vertical_louver_pattern",
+      "side_openings": {
+        "width": 3300.0,
+        "height": 2800.0,
+        "description": "Left and right side windows with louver panels"
+      }
+    },
+    "doors": {
+      "center_double_door": {
+        "width": 4950.0,
+        "height": 3000.0,
+        "description": "Central main entrance"
+      }
+    }
+  },
+  "roof": {
+    "eave_depth": {
+      "front": 1567.5,
+      "sides": 1567.5
+    },
+    "ridge_height": 4158.3,
+    "roof_tile_pattern": "Traditional Chinese curved tile",
+    "corner_finials": {
+      "material": "glazed ceramic",
+      "style": "upturned wing corners"
+    }
+  },
+  "scale_references": {
+    "human_figure": {
+      "approximate_height": 1600,
+      "notes": "Used in longitudinal-section for scale reference"
+    }
+  },
+  "construction_notes": {
+    "timber_frame": "Post-and-beam structure with mortise-tenon joints",
+    "interior_ceiling": "Coffered grid pattern visible in longitudinal section",
+    "structural_system": "Traditional Chinese timber architecture with load-bearing columns and bracket arms"
+  },
+  "source_files": [
+    "elevations/front-elevation.jpg",
+    "elevations/temple-front-elevation-sketch.jpg",
+    "sections/transverse-section.jpg",
+    "sections/longitudinal-section.jpg",
+    "details/dougong-bracket-detail.jpg"
+  ]
+}
