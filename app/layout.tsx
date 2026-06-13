@@ -1,4 +1,5 @@
 import "./globals.css";
+import "../styles/annotation.css";
 
 export const metadata = {
   title: "营造 Yingzao — 南禅寺大殿",
