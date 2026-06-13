@@ -55,8 +55,9 @@ export function AnnotationPanel({
 
         {/* 标题 */}
         <div className="annotation-header">
-          <h3 className="annotation-title-zh">{title_zh}</h3>
-          <p className="annotation-title-en">{title_en}</p>
+          <h3 className="annotation-title">
+            {title_zh} <span className="annotation-title-en">{title_en}</span>
+          </h3>
         </div>
 
         {/* 说明文本 */}

@@ -1,0 +1,36 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <style>
+      .placeholder-bg { fill: #f5f5f5; }
+      .placeholder-border { stroke: #d0d0d0; stroke-width: 2; fill: none; }
+      .placeholder-text { fill: #999; font-family: Arial, sans-serif; font-size: 16px; text-anchor: middle; }
+      .placeholder-icon { fill: #d0d0d0; }
+    </style>
+  </defs>
+
+  <!-- 背景 -->
+  <rect class="placeholder-bg" width="400" height="300"/>
+
+  <!-- 边框 -->
+  <rect class="placeholder-border" x="10" y="10" width="380" height="280"/>
+
+  <!-- 斗拱示意图 -->
+  <g transform="translate(200, 150)">
+    <!-- 中央柱子 -->
+    <rect x="-10" y="-40" width="20" height="80" fill="#a8402c" opacity="0.3"/>
+
+    <!-- 栌斗 -->
+    <rect x="-30" y="-45" width="60" height="15" fill="#a8402c" opacity="0.4"/>
+
+    <!-- 华栱第一跳 -->
+    <rect x="-50" y="-35" width="50" height="12" fill="#a8402c" opacity="0.5"/>
+    <rect x="0" y="-35" width="50" height="12" fill="#a8402c" opacity="0.5"/>
+
+    <!-- 华栱第二跳 -->
+    <rect x="-65" y="-20" width="40" height="10" fill="#a8402c" opacity="0.6"/>
+    <rect x="25" y="-20" width="40" height="10" fill="#a8402c" opacity="0.6"/>
+  </g>
+
+  <!-- 文字 -->
+  <text class="placeholder-text" x="200" y="280">斗拱结构示意图 (Bracket Assembly Diagram)</text>
+</svg>
