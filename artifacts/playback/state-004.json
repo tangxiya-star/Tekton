@@ -1,0 +1,21 @@
+{
+  "step": 4,
+  "total": 12,
+  "phase": "gallery2",
+  "visible_component_ids": [
+    "spire-tabouret",
+    "spire-souche",
+    "spire-fut",
+    "spire-gallery1",
+    "spire-gallery2"
+  ],
+  "added_ids": [
+    "spire-gallery2"
+  ],
+  "counts": {
+    "measured": 0,
+    "reconstructed_design": 4,
+    "rule_derived": 0,
+    "conjecture": 1
+  }
+}

@@ -2,8 +2,8 @@
 
 import dynamic from "next/dynamic";
 
-const Viewer = dynamic(() => import("../components/Viewer"), { ssr: false });
+const BuildingRouter = dynamic(() => import("../components/BuildingRouter"), { ssr: false });
 
 export default function Home() {
-  return <Viewer />;
+  return <BuildingRouter />;
 }

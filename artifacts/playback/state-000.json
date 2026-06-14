@@ -1,0 +1,17 @@
+{
+  "step": 0,
+  "total": 12,
+  "phase": "base",
+  "visible_component_ids": [
+    "spire-tabouret"
+  ],
+  "added_ids": [
+    "spire-tabouret"
+  ],
+  "counts": {
+    "measured": 0,
+    "reconstructed_design": 0,
+    "rule_derived": 0,
+    "conjecture": 1
+  }
+}

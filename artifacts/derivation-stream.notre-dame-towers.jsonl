@@ -1,0 +1,122 @@
+{"seq":0,"id":"facade-body","phase":"facade","category":"facade","provenance":"measured","source":"FRIENDS-WEST-FACADE","name_en":"West facade body","name_fr":"corps de la façade occidentale"}
+{"seq":1,"id":"facade-cornice","phase":"facade","category":"facade","provenance":"reconstructed_design","source":"DEHIO-BEZOLD","name_en":"Chimera-gallery cornice (facade top)","name_fr":"corniche de la galerie des chimères"}
+{"seq":2,"id":"tower-north","phase":"tower","category":"tower","provenance":"reconstructed_design","source":"EN-WIKI-NDP","name_en":"North tower (square belfry)","name_fr":"tour nord"}
+{"seq":3,"id":"tower-north-parapet","phase":"tower","category":"tower","provenance":"measured","source":"BNF-FACADE-9POINTS","name_en":"North tower flat parapet (no spire)","name_fr":"couronnement plat (tour nord)"}
+{"seq":4,"id":"tower-south","phase":"tower","category":"tower","provenance":"reconstructed_design","source":"EN-WIKI-NDP","name_en":"South tower (square belfry)","name_fr":"tour sud"}
+{"seq":5,"id":"tower-south-parapet","phase":"tower","category":"tower","provenance":"measured","source":"BNF-FACADE-9POINTS","name_en":"South tower flat parapet (no spire)","name_fr":"couronnement plat (tour sud)"}
+{"seq":6,"id":"buttress-0","phase":"buttress","category":"buttress","provenance":"measured","source":"FRIENDS-WEST-FACADE","name_en":"Buttress 1","name_fr":"contrefort 1"}
+{"seq":7,"id":"buttress-1","phase":"buttress","category":"buttress","provenance":"measured","source":"FRIENDS-WEST-FACADE","name_en":"Buttress 2","name_fr":"contrefort 2"}
+{"seq":8,"id":"buttress-2","phase":"buttress","category":"buttress","provenance":"measured","source":"FRIENDS-WEST-FACADE","name_en":"Buttress 3","name_fr":"contrefort 3"}
+{"seq":9,"id":"buttress-3","phase":"buttress","category":"buttress","provenance":"measured","source":"FRIENDS-WEST-FACADE","name_en":"Buttress 4","name_fr":"contrefort 4"}
+{"seq":10,"id":"portal-left","phase":"portal","category":"portal","provenance":"rule_derived","source":"TWO-CENTRED-ARCH","name_en":"Portal of the Virgin (north/left)","name_fr":"portail de la Vierge"}
+{"seq":11,"id":"portal-left-arch","phase":"portal","category":"portal","provenance":"rule_derived","source":"TWO-CENTRED-ARCH","name_en":"Pointed (two-centred) arch — Portal of the Virgin (north/left)","name_fr":"arc brisé (portail de la Vierge)"}
+{"seq":12,"id":"portal-centre","phase":"portal","category":"portal","provenance":"rule_derived","source":"TWO-CENTRED-ARCH","name_en":"Portal of the Last Judgment (centre, widest)","name_fr":"portail du Jugement dernier"}
+{"seq":13,"id":"portal-centre-arch","phase":"portal","category":"portal","provenance":"rule_derived","source":"TWO-CENTRED-ARCH","name_en":"Pointed (two-centred) arch — Portal of the Last Judgment (centre, widest)","name_fr":"arc brisé (portail du Jugement dernier)"}
+{"seq":14,"id":"portal-right","phase":"portal","category":"portal","provenance":"rule_derived","source":"TWO-CENTRED-ARCH","name_en":"Portal of St-Anne (south/right)","name_fr":"portail Sainte-Anne"}
+{"seq":15,"id":"portal-right-arch","phase":"portal","category":"portal","provenance":"rule_derived","source":"TWO-CENTRED-ARCH","name_en":"Pointed (two-centred) arch — Portal of St-Anne (south/right)","name_fr":"arc brisé (portail Sainte-Anne)"}
+{"seq":16,"id":"king-0","phase":"king","category":"king","provenance":"reconstructed_design","source":"PANORAMA-GALERIE-ROIS","name_en":"King of Judah 1","name_fr":"roi de Juda 1"}
+{"seq":17,"id":"king-0-head","phase":"king","category":"king","provenance":"reconstructed_design","source":"CLUNY-HEADS","name_en":"King of Judah 1 — head","name_fr":"roi de Juda 1 · tête"}
+{"seq":18,"id":"king-1","phase":"king","category":"king","provenance":"reconstructed_design","source":"PANORAMA-GALERIE-ROIS","name_en":"King of Judah 2","name_fr":"roi de Juda 2"}
+{"seq":19,"id":"king-1-head","phase":"king","category":"king","provenance":"reconstructed_design","source":"CLUNY-HEADS","name_en":"King of Judah 2 — head","name_fr":"roi de Juda 2 · tête"}
+{"seq":20,"id":"king-2","phase":"king","category":"king","provenance":"reconstructed_design","source":"PANORAMA-GALERIE-ROIS","name_en":"King of Judah 3","name_fr":"roi de Juda 3"}
+{"seq":21,"id":"king-2-head","phase":"king","category":"king","provenance":"reconstructed_design","source":"CLUNY-HEADS","name_en":"King of Judah 3 — head","name_fr":"roi de Juda 3 · tête"}
+{"seq":22,"id":"king-3","phase":"king","category":"king","provenance":"reconstructed_design","source":"PANORAMA-GALERIE-ROIS","name_en":"King of Judah 4","name_fr":"roi de Juda 4"}
+{"seq":23,"id":"king-3-head","phase":"king","category":"king","provenance":"reconstructed_design","source":"CLUNY-HEADS","name_en":"King of Judah 4 — head","name_fr":"roi de Juda 4 · tête"}
+{"seq":24,"id":"king-4","phase":"king","category":"king","provenance":"reconstructed_design","source":"PANORAMA-GALERIE-ROIS","name_en":"King of Judah 5","name_fr":"roi de Juda 5"}
+{"seq":25,"id":"king-4-head","phase":"king","category":"king","provenance":"reconstructed_design","source":"CLUNY-HEADS","name_en":"King of Judah 5 — head","name_fr":"roi de Juda 5 · tête"}
+{"seq":26,"id":"king-5","phase":"king","category":"king","provenance":"reconstructed_design","source":"PANORAMA-GALERIE-ROIS","name_en":"King of Judah 6","name_fr":"roi de Juda 6"}
+{"seq":27,"id":"king-5-head","phase":"king","category":"king","provenance":"reconstructed_design","source":"CLUNY-HEADS","name_en":"King of Judah 6 — head","name_fr":"roi de Juda 6 · tête"}
+{"seq":28,"id":"king-6","phase":"king","category":"king","provenance":"reconstructed_design","source":"PANORAMA-GALERIE-ROIS","name_en":"King of Judah 7","name_fr":"roi de Juda 7"}
+{"seq":29,"id":"king-6-head","phase":"king","category":"king","provenance":"reconstructed_design","source":"CLUNY-HEADS","name_en":"King of Judah 7 — head","name_fr":"roi de Juda 7 · tête"}
+{"seq":30,"id":"king-7","phase":"king","category":"king","provenance":"reconstructed_design","source":"PANORAMA-GALERIE-ROIS","name_en":"King of Judah 8","name_fr":"roi de Juda 8"}
+{"seq":31,"id":"king-7-head","phase":"king","category":"king","provenance":"reconstructed_design","source":"CLUNY-HEADS","name_en":"King of Judah 8 — head","name_fr":"roi de Juda 8 · tête"}
+{"seq":32,"id":"king-8","phase":"king","category":"king","provenance":"reconstructed_design","source":"PANORAMA-GALERIE-ROIS","name_en":"King of Judah 9","name_fr":"roi de Juda 9"}
+{"seq":33,"id":"king-8-head","phase":"king","category":"king","provenance":"reconstructed_design","source":"CLUNY-HEADS","name_en":"King of Judah 9 — head","name_fr":"roi de Juda 9 · tête"}
+{"seq":34,"id":"king-9","phase":"king","category":"king","provenance":"reconstructed_design","source":"PANORAMA-GALERIE-ROIS","name_en":"King of Judah 10","name_fr":"roi de Juda 10"}
+{"seq":35,"id":"king-9-head","phase":"king","category":"king","provenance":"reconstructed_design","source":"CLUNY-HEADS","name_en":"King of Judah 10 — head","name_fr":"roi de Juda 10 · tête"}
+{"seq":36,"id":"king-10","phase":"king","category":"king","provenance":"reconstructed_design","source":"PANORAMA-GALERIE-ROIS","name_en":"King of Judah 11","name_fr":"roi de Juda 11"}
+{"seq":37,"id":"king-10-head","phase":"king","category":"king","provenance":"reconstructed_design","source":"CLUNY-HEADS","name_en":"King of Judah 11 — head","name_fr":"roi de Juda 11 · tête"}
+{"seq":38,"id":"king-11","phase":"king","category":"king","provenance":"reconstructed_design","source":"PANORAMA-GALERIE-ROIS","name_en":"King of Judah 12","name_fr":"roi de Juda 12"}
+{"seq":39,"id":"king-11-head","phase":"king","category":"king","provenance":"reconstructed_design","source":"CLUNY-HEADS","name_en":"King of Judah 12 — head","name_fr":"roi de Juda 12 · tête"}
+{"seq":40,"id":"king-12","phase":"king","category":"king","provenance":"reconstructed_design","source":"PANORAMA-GALERIE-ROIS","name_en":"King of Judah 13","name_fr":"roi de Juda 13"}
+{"seq":41,"id":"king-12-head","phase":"king","category":"king","provenance":"reconstructed_design","source":"CLUNY-HEADS","name_en":"King of Judah 13 — head","name_fr":"roi de Juda 13 · tête"}
+{"seq":42,"id":"king-13","phase":"king","category":"king","provenance":"reconstructed_design","source":"PANORAMA-GALERIE-ROIS","name_en":"King of Judah 14","name_fr":"roi de Juda 14"}
+{"seq":43,"id":"king-13-head","phase":"king","category":"king","provenance":"reconstructed_design","source":"CLUNY-HEADS","name_en":"King of Judah 14 — head","name_fr":"roi de Juda 14 · tête"}
+{"seq":44,"id":"king-14","phase":"king","category":"king","provenance":"reconstructed_design","source":"PANORAMA-GALERIE-ROIS","name_en":"King of Judah 15","name_fr":"roi de Juda 15"}
+{"seq":45,"id":"king-14-head","phase":"king","category":"king","provenance":"reconstructed_design","source":"CLUNY-HEADS","name_en":"King of Judah 15 — head","name_fr":"roi de Juda 15 · tête"}
+{"seq":46,"id":"king-15","phase":"king","category":"king","provenance":"reconstructed_design","source":"PANORAMA-GALERIE-ROIS","name_en":"King of Judah 16","name_fr":"roi de Juda 16"}
+{"seq":47,"id":"king-15-head","phase":"king","category":"king","provenance":"reconstructed_design","source":"CLUNY-HEADS","name_en":"King of Judah 16 — head","name_fr":"roi de Juda 16 · tête"}
+{"seq":48,"id":"king-16","phase":"king","category":"king","provenance":"reconstructed_design","source":"PANORAMA-GALERIE-ROIS","name_en":"King of Judah 17","name_fr":"roi de Juda 17"}
+{"seq":49,"id":"king-16-head","phase":"king","category":"king","provenance":"reconstructed_design","source":"CLUNY-HEADS","name_en":"King of Judah 17 — head","name_fr":"roi de Juda 17 · tête"}
+{"seq":50,"id":"king-17","phase":"king","category":"king","provenance":"reconstructed_design","source":"PANORAMA-GALERIE-ROIS","name_en":"King of Judah 18","name_fr":"roi de Juda 18"}
+{"seq":51,"id":"king-17-head","phase":"king","category":"king","provenance":"reconstructed_design","source":"CLUNY-HEADS","name_en":"King of Judah 18 — head","name_fr":"roi de Juda 18 · tête"}
+{"seq":52,"id":"king-18","phase":"king","category":"king","provenance":"reconstructed_design","source":"PANORAMA-GALERIE-ROIS","name_en":"King of Judah 19","name_fr":"roi de Juda 19"}
+{"seq":53,"id":"king-18-head","phase":"king","category":"king","provenance":"reconstructed_design","source":"CLUNY-HEADS","name_en":"King of Judah 19 — head","name_fr":"roi de Juda 19 · tête"}
+{"seq":54,"id":"king-19","phase":"king","category":"king","provenance":"reconstructed_design","source":"PANORAMA-GALERIE-ROIS","name_en":"King of Judah 20","name_fr":"roi de Juda 20"}
+{"seq":55,"id":"king-19-head","phase":"king","category":"king","provenance":"reconstructed_design","source":"CLUNY-HEADS","name_en":"King of Judah 20 — head","name_fr":"roi de Juda 20 · tête"}
+{"seq":56,"id":"king-20","phase":"king","category":"king","provenance":"reconstructed_design","source":"PANORAMA-GALERIE-ROIS","name_en":"King of Judah 21","name_fr":"roi de Juda 21"}
+{"seq":57,"id":"king-20-head","phase":"king","category":"king","provenance":"reconstructed_design","source":"CLUNY-HEADS","name_en":"King of Judah 21 — head","name_fr":"roi de Juda 21 · tête"}
+{"seq":58,"id":"king-21","phase":"king","category":"king","provenance":"reconstructed_design","source":"PANORAMA-GALERIE-ROIS","name_en":"King of Judah 22","name_fr":"roi de Juda 22"}
+{"seq":59,"id":"king-21-head","phase":"king","category":"king","provenance":"reconstructed_design","source":"CLUNY-HEADS","name_en":"King of Judah 22 — head","name_fr":"roi de Juda 22 · tête"}
+{"seq":60,"id":"king-22","phase":"king","category":"king","provenance":"reconstructed_design","source":"PANORAMA-GALERIE-ROIS","name_en":"King of Judah 23","name_fr":"roi de Juda 23"}
+{"seq":61,"id":"king-22-head","phase":"king","category":"king","provenance":"reconstructed_design","source":"CLUNY-HEADS","name_en":"King of Judah 23 — head","name_fr":"roi de Juda 23 · tête"}
+{"seq":62,"id":"king-23","phase":"king","category":"king","provenance":"reconstructed_design","source":"PANORAMA-GALERIE-ROIS","name_en":"King of Judah 24","name_fr":"roi de Juda 24"}
+{"seq":63,"id":"king-23-head","phase":"king","category":"king","provenance":"reconstructed_design","source":"CLUNY-HEADS","name_en":"King of Judah 24 — head","name_fr":"roi de Juda 24 · tête"}
+{"seq":64,"id":"king-24","phase":"king","category":"king","provenance":"reconstructed_design","source":"PANORAMA-GALERIE-ROIS","name_en":"King of Judah 25","name_fr":"roi de Juda 25"}
+{"seq":65,"id":"king-24-head","phase":"king","category":"king","provenance":"reconstructed_design","source":"CLUNY-HEADS","name_en":"King of Judah 25 — head","name_fr":"roi de Juda 25 · tête"}
+{"seq":66,"id":"king-25","phase":"king","category":"king","provenance":"reconstructed_design","source":"PANORAMA-GALERIE-ROIS","name_en":"King of Judah 26","name_fr":"roi de Juda 26"}
+{"seq":67,"id":"king-25-head","phase":"king","category":"king","provenance":"reconstructed_design","source":"CLUNY-HEADS","name_en":"King of Judah 26 — head","name_fr":"roi de Juda 26 · tête"}
+{"seq":68,"id":"king-26","phase":"king","category":"king","provenance":"reconstructed_design","source":"PANORAMA-GALERIE-ROIS","name_en":"King of Judah 27","name_fr":"roi de Juda 27"}
+{"seq":69,"id":"king-26-head","phase":"king","category":"king","provenance":"reconstructed_design","source":"CLUNY-HEADS","name_en":"King of Judah 27 — head","name_fr":"roi de Juda 27 · tête"}
+{"seq":70,"id":"king-27","phase":"king","category":"king","provenance":"reconstructed_design","source":"PANORAMA-GALERIE-ROIS","name_en":"King of Judah 28","name_fr":"roi de Juda 28"}
+{"seq":71,"id":"king-27-head","phase":"king","category":"king","provenance":"reconstructed_design","source":"CLUNY-HEADS","name_en":"King of Judah 28 — head","name_fr":"roi de Juda 28 · tête"}
+{"seq":72,"id":"rose-outer-ring","phase":"rose","category":"rose","provenance":"measured","source":"FRIENDS-ROSE-WINDOWS","name_en":"West rose — outer ring","name_fr":"rose occidentale — cercle extérieur"}
+{"seq":73,"id":"rose-hub","phase":"rose","category":"rose","provenance":"rule_derived","source":"ROSE-RADIAL","name_en":"West rose — hub","name_fr":"rose occidentale — moyeu"}
+{"seq":74,"id":"rose-ray-0","phase":"rose","category":"rose","provenance":"rule_derived","source":"ROSE-RADIAL","name_en":"West rose — spoke 1","name_fr":"rose occidentale — rayon 1"}
+{"seq":75,"id":"rose-ray-1","phase":"rose","category":"rose","provenance":"rule_derived","source":"ROSE-RADIAL","name_en":"West rose — spoke 2","name_fr":"rose occidentale — rayon 2"}
+{"seq":76,"id":"rose-ray-2","phase":"rose","category":"rose","provenance":"rule_derived","source":"ROSE-RADIAL","name_en":"West rose — spoke 3","name_fr":"rose occidentale — rayon 3"}
+{"seq":77,"id":"rose-ray-3","phase":"rose","category":"rose","provenance":"rule_derived","source":"ROSE-RADIAL","name_en":"West rose — spoke 4","name_fr":"rose occidentale — rayon 4"}
+{"seq":78,"id":"rose-ray-4","phase":"rose","category":"rose","provenance":"rule_derived","source":"ROSE-RADIAL","name_en":"West rose — spoke 5","name_fr":"rose occidentale — rayon 5"}
+{"seq":79,"id":"rose-ray-5","phase":"rose","category":"rose","provenance":"rule_derived","source":"ROSE-RADIAL","name_en":"West rose — spoke 6","name_fr":"rose occidentale — rayon 6"}
+{"seq":80,"id":"rose-ray-6","phase":"rose","category":"rose","provenance":"rule_derived","source":"ROSE-RADIAL","name_en":"West rose — spoke 7","name_fr":"rose occidentale — rayon 7"}
+{"seq":81,"id":"rose-ray-7","phase":"rose","category":"rose","provenance":"rule_derived","source":"ROSE-RADIAL","name_en":"West rose — spoke 8","name_fr":"rose occidentale — rayon 8"}
+{"seq":82,"id":"rose-ray-8","phase":"rose","category":"rose","provenance":"rule_derived","source":"ROSE-RADIAL","name_en":"West rose — spoke 9","name_fr":"rose occidentale — rayon 9"}
+{"seq":83,"id":"rose-ray-9","phase":"rose","category":"rose","provenance":"rule_derived","source":"ROSE-RADIAL","name_en":"West rose — spoke 10","name_fr":"rose occidentale — rayon 10"}
+{"seq":84,"id":"rose-ray-10","phase":"rose","category":"rose","provenance":"rule_derived","source":"ROSE-RADIAL","name_en":"West rose — spoke 11","name_fr":"rose occidentale — rayon 11"}
+{"seq":85,"id":"rose-ray-11","phase":"rose","category":"rose","provenance":"rule_derived","source":"ROSE-RADIAL","name_en":"West rose — spoke 12","name_fr":"rose occidentale — rayon 12"}
+{"seq":86,"id":"rose-ray-12","phase":"rose","category":"rose","provenance":"rule_derived","source":"ROSE-RADIAL","name_en":"West rose — spoke 13","name_fr":"rose occidentale — rayon 13"}
+{"seq":87,"id":"rose-ray-13","phase":"rose","category":"rose","provenance":"rule_derived","source":"ROSE-RADIAL","name_en":"West rose — spoke 14","name_fr":"rose occidentale — rayon 14"}
+{"seq":88,"id":"rose-ray-14","phase":"rose","category":"rose","provenance":"rule_derived","source":"ROSE-RADIAL","name_en":"West rose — spoke 15","name_fr":"rose occidentale — rayon 15"}
+{"seq":89,"id":"rose-ray-15","phase":"rose","category":"rose","provenance":"rule_derived","source":"ROSE-RADIAL","name_en":"West rose — spoke 16","name_fr":"rose occidentale — rayon 16"}
+{"seq":90,"id":"rose-ray-16","phase":"rose","category":"rose","provenance":"rule_derived","source":"ROSE-RADIAL","name_en":"West rose — spoke 17","name_fr":"rose occidentale — rayon 17"}
+{"seq":91,"id":"rose-ray-17","phase":"rose","category":"rose","provenance":"rule_derived","source":"ROSE-RADIAL","name_en":"West rose — spoke 18","name_fr":"rose occidentale — rayon 18"}
+{"seq":92,"id":"rose-ray-18","phase":"rose","category":"rose","provenance":"rule_derived","source":"ROSE-RADIAL","name_en":"West rose — spoke 19","name_fr":"rose occidentale — rayon 19"}
+{"seq":93,"id":"rose-ray-19","phase":"rose","category":"rose","provenance":"rule_derived","source":"ROSE-RADIAL","name_en":"West rose — spoke 20","name_fr":"rose occidentale — rayon 20"}
+{"seq":94,"id":"rose-ray-20","phase":"rose","category":"rose","provenance":"rule_derived","source":"ROSE-RADIAL","name_en":"West rose — spoke 21","name_fr":"rose occidentale — rayon 21"}
+{"seq":95,"id":"rose-ray-21","phase":"rose","category":"rose","provenance":"rule_derived","source":"ROSE-RADIAL","name_en":"West rose — spoke 22","name_fr":"rose occidentale — rayon 22"}
+{"seq":96,"id":"rose-ray-22","phase":"rose","category":"rose","provenance":"rule_derived","source":"ROSE-RADIAL","name_en":"West rose — spoke 23","name_fr":"rose occidentale — rayon 23"}
+{"seq":97,"id":"rose-ray-23","phase":"rose","category":"rose","provenance":"rule_derived","source":"ROSE-RADIAL","name_en":"West rose — spoke 24","name_fr":"rose occidentale — rayon 24"}
+{"seq":98,"id":"chimera-0","phase":"gargoyle","category":"gargoyle","provenance":"conjecture","source":"VLD-FACADE","name_en":"Chimera 1 (Gallery of Chimeras, 19th-c)","name_fr":"chimère 1 (galerie des chimères, 19e s.)"}
+{"seq":99,"id":"chimera-1","phase":"gargoyle","category":"gargoyle","provenance":"conjecture","source":"VLD-FACADE","name_en":"Chimera 2 (Gallery of Chimeras, 19th-c)","name_fr":"chimère 2 (galerie des chimères, 19e s.)"}
+{"seq":100,"id":"chimera-2","phase":"gargoyle","category":"gargoyle","provenance":"conjecture","source":"VLD-FACADE","name_en":"Chimera 3 (Gallery of Chimeras, 19th-c)","name_fr":"chimère 3 (galerie des chimères, 19e s.)"}
+{"seq":101,"id":"chimera-3","phase":"gargoyle","category":"gargoyle","provenance":"conjecture","source":"VLD-FACADE","name_en":"Chimera 4 (Gallery of Chimeras, 19th-c)","name_fr":"chimère 4 (galerie des chimères, 19e s.)"}
+{"seq":102,"id":"chimera-4","phase":"gargoyle","category":"gargoyle","provenance":"conjecture","source":"VLD-FACADE","name_en":"Chimera 5 (Gallery of Chimeras, 19th-c)","name_fr":"chimère 5 (galerie des chimères, 19e s.)"}
+{"seq":103,"id":"chimera-5","phase":"gargoyle","category":"gargoyle","provenance":"conjecture","source":"VLD-FACADE","name_en":"Chimera 6 (Gallery of Chimeras, 19th-c)","name_fr":"chimère 6 (galerie des chimères, 19e s.)"}
+{"seq":104,"id":"gargoyle-north","phase":"gargoyle","category":"gargoyle","provenance":"conjecture","source":"VLD-FACADE","name_en":"Gargoyle waterspout (north tower, 19th-c)","name_fr":"gargouille (tour nord, 19e s.)"}
+{"seq":105,"id":"gargoyle-south","phase":"gargoyle","category":"gargoyle","provenance":"conjecture","source":"VLD-FACADE","name_en":"Gargoyle waterspout (south tower, 19th-c)","name_fr":"gargouille (tour sud, 19e s.)"}
+{"seq":106,"id":"pinnacle-north-0","phase":"pinnacle","category":"pinnacle","provenance":"rule_derived","source":"AD-QUADRATUM","name_en":"Tower pinnacle (Roriczer rule) — north","name_fr":"pinacle (tour nord)"}
+{"seq":107,"id":"pinnacle-north-0-cap","phase":"pinnacle","category":"pinnacle","provenance":"rule_derived","source":"AD-QUADRATUM","name_en":"Pinnacle cap — north","name_fr":"amortissement du pinacle (tour nord)"}
+{"seq":108,"id":"pinnacle-north-1","phase":"pinnacle","category":"pinnacle","provenance":"rule_derived","source":"AD-QUADRATUM","name_en":"Tower pinnacle (Roriczer rule) — north","name_fr":"pinacle (tour nord)"}
+{"seq":109,"id":"pinnacle-north-1-cap","phase":"pinnacle","category":"pinnacle","provenance":"rule_derived","source":"AD-QUADRATUM","name_en":"Pinnacle cap — north","name_fr":"amortissement du pinacle (tour nord)"}
+{"seq":110,"id":"pinnacle-north-2","phase":"pinnacle","category":"pinnacle","provenance":"rule_derived","source":"AD-QUADRATUM","name_en":"Tower pinnacle (Roriczer rule) — north","name_fr":"pinacle (tour nord)"}
+{"seq":111,"id":"pinnacle-north-2-cap","phase":"pinnacle","category":"pinnacle","provenance":"rule_derived","source":"AD-QUADRATUM","name_en":"Pinnacle cap — north","name_fr":"amortissement du pinacle (tour nord)"}
+{"seq":112,"id":"pinnacle-north-3","phase":"pinnacle","category":"pinnacle","provenance":"rule_derived","source":"AD-QUADRATUM","name_en":"Tower pinnacle (Roriczer rule) — north","name_fr":"pinacle (tour nord)"}
+{"seq":113,"id":"pinnacle-north-3-cap","phase":"pinnacle","category":"pinnacle","provenance":"rule_derived","source":"AD-QUADRATUM","name_en":"Pinnacle cap — north","name_fr":"amortissement du pinacle (tour nord)"}
+{"seq":114,"id":"pinnacle-south-0","phase":"pinnacle","category":"pinnacle","provenance":"rule_derived","source":"AD-QUADRATUM","name_en":"Tower pinnacle (Roriczer rule) — south","name_fr":"pinacle (tour sud)"}
+{"seq":115,"id":"pinnacle-south-0-cap","phase":"pinnacle","category":"pinnacle","provenance":"rule_derived","source":"AD-QUADRATUM","name_en":"Pinnacle cap — south","name_fr":"amortissement du pinacle (tour sud)"}
+{"seq":116,"id":"pinnacle-south-1","phase":"pinnacle","category":"pinnacle","provenance":"rule_derived","source":"AD-QUADRATUM","name_en":"Tower pinnacle (Roriczer rule) — south","name_fr":"pinacle (tour sud)"}
+{"seq":117,"id":"pinnacle-south-1-cap","phase":"pinnacle","category":"pinnacle","provenance":"rule_derived","source":"AD-QUADRATUM","name_en":"Pinnacle cap — south","name_fr":"amortissement du pinacle (tour sud)"}
+{"seq":118,"id":"pinnacle-south-2","phase":"pinnacle","category":"pinnacle","provenance":"rule_derived","source":"AD-QUADRATUM","name_en":"Tower pinnacle (Roriczer rule) — south","name_fr":"pinacle (tour sud)"}
+{"seq":119,"id":"pinnacle-south-2-cap","phase":"pinnacle","category":"pinnacle","provenance":"rule_derived","source":"AD-QUADRATUM","name_en":"Pinnacle cap — south","name_fr":"amortissement du pinacle (tour sud)"}
+{"seq":120,"id":"pinnacle-south-3","phase":"pinnacle","category":"pinnacle","provenance":"rule_derived","source":"AD-QUADRATUM","name_en":"Tower pinnacle (Roriczer rule) — south","name_fr":"pinacle (tour sud)"}
+{"seq":121,"id":"pinnacle-south-3-cap","phase":"pinnacle","category":"pinnacle","provenance":"rule_derived","source":"AD-QUADRATUM","name_en":"Pinnacle cap — south","name_fr":"amortissement du pinacle (tour sud)"}

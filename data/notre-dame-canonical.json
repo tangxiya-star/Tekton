@@ -1,0 +1,417 @@
+{
+  "$schema_notes": {
+    "purpose": "Canonical building specification for the spire (la flèche) of Notre-Dame de Paris — Viollet-le-Duc's 1859 flèche, reconstructed à l'identique (96 m) after the 15 Apr 2019 fire. Building #2 proving the Yingzao pipeline rerun. Every dimensional node carries a provenance class + a real source URL + a rights verdict. The Rule Engine derives geometry ONLY from values in this file plus the Gothic ruleset; nothing renders without a source. SPIRE ONLY for v1 — cathedral / nave / la forêt are the documented post-v1 roadmap.",
+    "data_source": "Every number traces to docs/NOTRE_DAME_VERIFIED_CORPUS.md (ND-1 output: 16 adversarially-verified verdicts, 40 explicit gaps). NEVER sourced from the fabricated Reims/Nohesive docs.",
+    "provenance_classes": {
+      "measured": "Published survey/instrument value or a multiply-confirmed published dimension (factual, uncopyrightable). Requires >=2 independent sources to be 'measured'.",
+      "reconstructed_design": "19th-c. design intent reconstructed from Viollet-le-Duc / Lassus public-domain drawings (the flèche is NOT medieval fabric — it is an 1859 design).",
+      "rule_derived": "Derived by OUR engine from the Gothic ruleset (ad quadratum / ad triangulum, Roriczer pinnacle rule, two-centred arch). Must cite the rule.",
+      "conjecture": "Flagged uncertain: contested estimate, photo-deduced, scaled off a drawing where no number is published, or lost fabric. Renders in conjecture color; MUST NOT be presented as measured.",
+      "GAP": "Could not source. NEVER filled with a number. The corpus ships 40 of these as the model — emulate, never guess."
+    },
+    "units": {
+      "module": "pied du roi (royal foot) = 324.8 mm — the French-Gothic metrological anchor, the cai-fen analog. The derivation log shows the module math in pieds; emitted component positions/dimensions are in METRES so the verifier reads 96 m / 30 m / the octagon footprint directly.",
+      "pied_du_roi_mm": 324.8,
+      "scene_unit": "metre",
+      "scene_scale_m_per_unit": 1
+    },
+    "provenance_colors": {
+      "measured": "#d9a843",
+      "reconstructed_design": "#a3812f",
+      "rule_derived": "#5e6ca8",
+      "conjecture": "#b34a38"
+    }
+  },
+  "source_registry": {
+    "_note": "The rights-cleared registry. The G09 source-registry check (verify.mjs) HARD-FAILS any component whose `source` key is not present here with a `use` or `use-data` verdict. CITE-only and NEITHER sources may be referenced in prose but may NEVER back a rendered component value. This is the DQ-avoidance gate: unauthorized assets = disqualification.",
+    "VLD-FLECHE": {
+      "citation": "Viollet-le-Duc, Dictionnaire raisonné de l'architecture française, art. 'Flèche', t.5 — 'Élévation et plans de la flèche', engraving.",
+      "url": "https://passerelles.essentiels.bnf.fr/fr/image/44140e30-c8c3-40c2-b613-55c6009b22da-elevation-et-plans-la-fleche-notre-dame-paris-par-viollet-le-duc",
+      "rights": "public_domain",
+      "verdict": "use",
+      "reason": "Author d.1879 → PD worldwide. THE measured-drawing asset (elevation + plans). Cite BnF for provenance. Scaled dimensions off the plate are rule_derived/reconstructed_design."
+    },
+    "VLD-DICT": {
+      "citation": "Viollet-le-Duc, Dictionnaire raisonné t.5 'Flèche' text + figures (Wikisource).",
+      "url": "https://fr.wikisource.org/wiki/Page:Viollet-le-Duc_-_Dictionnaire_raisonn%C3%A9_de_l%E2%80%99architecture_fran%C3%A7aise_du_XIe_au_XVIe_si%C3%A8cle,_1854-1868,_tome_5.djvu/447",
+      "rights": "public_domain",
+      "verdict": "use",
+      "reason": "PD (d.1879). Structural/charpente system figures and the six-part profile description."
+    },
+    "CULTURE-FLECHE": {
+      "citation": "Ministère de la Culture — site officiel Notre-Dame de Paris, 'Petite histoire de la flèche'.",
+      "url": "https://notre-dame-de-paris.culture.gouv.fr/fr/petite-histoire-de-la-fleche",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data",
+      "reason": "Dimensions are uncopyrightable facts → ingest numbers (96 m, 30/33 m, profile, ornament). Do not ingest page prose/images."
+    },
+    "FRIENDS": {
+      "citation": "Friends of Notre-Dame de Paris — official cathedral facts / spire page.",
+      "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/spire/",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data",
+      "reason": "Confirmed dimensional / weight set (500 t oak, 250 t lead). Numbers are facts; prose/images are not ingested."
+    },
+    "NDP-SPIRE": {
+      "citation": "Cathédrale Notre-Dame de Paris (official) — 'The spire' / architecture pages.",
+      "url": "https://www.notredamedeparis.fr/en/understand/architecture/the-spire/",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data",
+      "reason": "Official confirmation of 96 m and the ~30 m crossing anchor. Numbers only."
+    },
+    "CONSTRUCTIONBTP": {
+      "citation": "constructionbtp.com — 'Flèche Notre-Dame de Paris, chef-d'œuvre de charpente en chêne' (2023).",
+      "url": "https://www.constructionbtp.com/batiment/article/2023/06/12/144676/fleche-notredame-paris-chef-uvre-charpente-chene",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data",
+      "reason": "Base anchored 30 m above the crossing; ornament counts (crockets, pinnacles, gargoyles, quadrilobes); reconstruction à l'identique figures. Facts only."
+    },
+    "RESTAURONS-ND": {
+      "citation": "Restaurons Notre-Dame — 'le tabouret ou la souche de la flèche de Viollet-le-Duc'.",
+      "url": "https://www.restauronsnotredame.org/post/notre-dame-de-paris-le-tabouret-ou-la-souche-de-la-fl%C3%A8che-de-viollet-le-duc",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data",
+      "reason": "Tabouret 15×13 m trapezoid footprint, 80 t / 110 pieces (medium confidence — flagged in notes). Facts only."
+    },
+    "WIKIPEDIA-SPIRE": {
+      "citation": "Wikipedia — 'Spire of Notre-Dame de Paris' / 'Flèche de Notre-Dame de Paris'.",
+      "url": "https://en.wikipedia.org/wiki/Spire_of_Notre-Dame_de_Paris",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data",
+      "reason": "Multi-source confirmation of 96 m, statuary programme, rooster, fire timeline. Cross-check only; numbers are facts."
+    },
+    "PERSEE-2009": {
+      "citation": "Bulletin Monumental 2009, t.167-2 (Persée) — Viollet-le-Duc spire statuary.",
+      "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data",
+      "reason": "16 copper statues — 12 apostles (4 groups of 3) + 4 evangelist symbols; heights/weights; St Thomas with VLD's features. Facts only."
+    },
+    "MEDIACHIMIE": {
+      "citation": "mediachimie.org — the copper statuary of the spire.",
+      "url": "https://www.mediachimie.org/",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data",
+      "reason": "Corroborates apostle 3.40 m / 140 kg, evangelist 2.0 m / 65 kg copper figures. Facts only."
+    },
+    "RORICZER1486": {
+      "citation": "Mathias Roriczer, 'Büchlein von der Fialen Gerechtigkeit' (1486); 1847 PD translation, Archaeological Journal v.4.",
+      "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
+      "rights": "public_domain",
+      "verdict": "use",
+      "reason": "The pinnacle rule: base square → 45°-rotated inscribed squares (side ratio 1/√2). 6×/7× vertical multiples are CITED-UNCERTAIN → any value using them is conjecture, never measured."
+    },
+    "AD-QUADRATUM": {
+      "citation": "Ad quadratum: successive square side ratio 1/√2 ≈ 0.7071 (Salama et al. 2016; pure Euclid).",
+      "url": "https://www.researchgate.net/publication/304352380",
+      "rights": "rule",
+      "verdict": "use",
+      "reason": "Pure geometry — uncopyrightable construction rule. Drives the octagon-from-square and pinnacle insets."
+    },
+    "AD-TRIANGULUM": {
+      "citation": "Ad triangulum: triangle height = base × √3/2 ≈ 0.8660 (Hiscock, 'The Symbol at Your Door', ch.10; pure geometry).",
+      "url": "https://www.taylorfrancis.com/chapters/mono/10.4324/9781315236872-10/ad-triangulum-nigel-hiscock",
+      "rights": "rule",
+      "verdict": "use",
+      "reason": "Pure geometry — sets elevation heights from plan width. Used only where no measured/scaled value exists; never overrides a sourced value (V08)."
+    }
+  },
+  "rights_excluded": {
+    "_note": "Restricted sources — CITE-ONLY or NEITHER. These may NEVER back a rendered component (G09 rejects them). Listed so the registry is auditable and so a value mis-attributed to them hard-fails (V13).",
+    "TALLON-SCAN": {
+      "verdict": "neither",
+      "reason": "Andrew Tallon ~1B-pt laser cloud — no open license, custody unclear. Facts citable; data not ingestible.",
+      "url": "https://en.wikipedia.org/wiki/Andrew_Tallon"
+    },
+    "AGP-SCAN": {
+      "verdict": "neither",
+      "reason": "AGP ~50B-pt surveys — proprietary commissioned deliverable, no reuse license.",
+      "url": "https://artgp.fr/references/notre-dame/"
+    },
+    "CNRS-TWIN": {
+      "verdict": "neither",
+      "reason": "CNRS/De Luca digital twin / Aioli — restricted, authenticated access, no public CC license.",
+      "url": "https://news.cnrs.fr/articles/a-digital-twin-for-notre-dame"
+    },
+    "CHARTRES-BLOG": {
+      "verdict": "neither",
+      "reason": "chartrescathedralconceptualplan.wordpress.com — self-published; amateur ad-quadratum derivations MIS-attributed to Bork/Tallon. Hard DQ — never ingest, never cite as measured.",
+      "url": "https://chartrescathedralconceptualplan.wordpress.com/"
+    }
+  },
+  "meta": {
+    "name_fr": "Flèche de la cathédrale Notre-Dame de Paris",
+    "name_en": "Spire of Notre-Dame de Paris",
+    "designer": "Eugène Viollet-le-Duc (flèche, 1859), with Jean-Baptiste Lassus",
+    "date": {
+      "value": "spire designed/erected 1859 (Viollet-le-Duc); lost in the fire 15 Apr 2019; rebuilt à l'identique, cathedral reopened 7–8 Dec 2024; new spire summit + rooster 2023",
+      "provenance": "measured",
+      "source": "CULTURE-FLECHE",
+      "url": "https://notre-dame-de-paris.culture.gouv.fr/fr/petite-histoire-de-la-fleche"
+    },
+    "build_state": "Reconstructed à l'identique — the same Viollet-le-Duc design, 96 m, rebuilt 2021–2024 in oak + lead with the original statuary (removed 11 Apr 2019, four days before the fire, so the apostles/evangelists survive).",
+    "fire_event": {
+      "value": "ignition in la forêt ~18:18; flèche collapse ~19:50 on 15 Apr 2019; ~750 t of stone and lead fell",
+      "provenance": "measured",
+      "source": "WIKIPEDIA-SPIRE",
+      "url": "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris"
+    }
+  },
+  "modular_system": {
+    "pied_du_roi_mm": {
+      "value": 324.8,
+      "provenance": "measured",
+      "source": "VLD-DICT",
+      "url": "https://fr.wikisource.org/wiki/Page:Viollet-le-Duc_-_Dictionnaire_raisonn%C3%A9_de_l%E2%80%99architecture_fran%C3%A7aise_du_XIe_au_XVIe_si%C3%A8cle,_1854-1868,_tome_5.djvu/447",
+      "note": "Royal foot = 0.3248 m. The unit, like Nanchan's chi, is the metrological anchor for the derivation log. Standard French historical metrology."
+    },
+    "design_ruleset": {
+      "ad_quadratum": {
+        "value": "successive square side ratio = 1/√2 ≈ 0.70711; the octagon springs from a square by 45° rotation; area halves between insets",
+        "provenance": "rule_derived",
+        "source": "AD-QUADRATUM",
+        "url": "https://www.researchgate.net/publication/304352380"
+      },
+      "ad_triangulum": {
+        "value": "triangle height = base × √3/2 ≈ 0.86603 — sets elevation height from plan width where no measured/scaled value exists",
+        "provenance": "rule_derived",
+        "source": "AD-TRIANGULUM",
+        "url": "https://www.taylorfrancis.com/chapters/mono/10.4324/9781315236872-10/ad-triangulum-nigel-hiscock"
+      },
+      "roriczer_pinnacle": {
+        "value": "base square → 45°-rotated inscribed squares (side ratio 1/√2): outer = plinth, next = shaft, inner = panel. Auszug (spirelet) to vertical. Vertical multiples (shaft ~6×, spire ~7× base width) are CITED-UNCERTAIN.",
+        "provenance": "rule_derived",
+        "source": "RORICZER1486",
+        "url": "https://en.wikisource.org/wiki/Archaeological_Journal/Volume_4/Rules_for_Constructing_a_Pinnacle,_as_given_by_Mathias_Roriczer_in_1486",
+        "note": "Used for the spire's pinnacles. 6×/7× multiples flagged conjecture — never presented as exact."
+      }
+    }
+  },
+  "spire": {
+    "total_height": {
+      "m": 96,
+      "pied_du_roi": 295.6,
+      "provenance": "measured",
+      "source": "CULTURE-FLECHE",
+      "url": "https://notre-dame-de-paris.culture.gouv.fr/fr/petite-histoire-de-la-fleche",
+      "corroborating_sources": [
+        "NDP-SPIRE",
+        "FRIENDS",
+        "WIKIPEDIA-SPIRE"
+      ],
+      "note": "To summit / rooster head, above street level. 'Culminant à 96 mètres.' Multiply confirmed (>=2 independent sources) → measured. VERIFIER ANCHOR V08."
+    },
+    "base_level": {
+      "m": 30,
+      "pied_du_roi": 92.4,
+      "provenance": "measured",
+      "source": "CONSTRUCTIONBTP",
+      "url": "https://www.constructionbtp.com/batiment/article/2023/06/12/144676/fleche-notredame-paris-chef-uvre-charpente-chene",
+      "corroborating_sources": [
+        "NDP-SPIRE"
+      ],
+      "note": "Anchored ~30 m above the ground, above the croisée du transept (crossing). One Culture source gives 33 m for the tabouret platform — accept 30–33 m. Enrayure zéro ~1 m above the crossing vaults. VERIFIER ANCHOR V08."
+    },
+    "height_above_base": {
+      "m": 66,
+      "pied_du_roi": 203.2,
+      "provenance": "reconstructed_design",
+      "source": "CULTURE-FLECHE",
+      "url": "https://fr.wikipedia.org/wiki/Fl%C3%A8che_de_Notre-Dame_de_Paris",
+      "note": "CITED-UNCERTAIN: DERIVED 96 − 30. 93 m (rooster base) vs 96 m (rooster head) ambiguity; ~45 m commonly rendered above the ridge. Not a single clean published figure — see _GAP_per_section_heights."
+    },
+    "base_footprint": {
+      "trapezoid_m": [
+        15,
+        13
+      ],
+      "pied_du_roi": [
+        46.2,
+        40
+      ],
+      "provenance": "conjecture",
+      "source": "RESTAURONS-ND",
+      "url": "https://www.restauronsnotredame.org/post/notre-dame-de-paris-le-tabouret-ou-la-souche-de-la-fl%C3%A8che-de-viollet-le-duc",
+      "note": "CITED-UNCERTAIN (single medium-confidence source → not measured per the >=2-source guardrail). Irregular crossing footprint (tabouret). Used only as a CROSS-CHECK that the octagon inscribes within the ~14 m crossing; the octagon's actual proportions come from the VLD-FLECHE plate (reconstructed_design), not from this number. The exact octagon springing dimension is a GAP."
+    },
+    "profile_six_parts": {
+      "value": "1 tabouret → 2 souche → 3 octagonal fût (with quadrilobes) → 4 first openwork gallery → 5 second level (8 gabled bays) → 6 aiguille + coq; octagon angles set on the roof ridges + 4 valleys",
+      "parts": [
+        "tabouret",
+        "souche",
+        "fut",
+        "gallery1",
+        "gallery2",
+        "aiguille"
+      ],
+      "provenance": "reconstructed_design",
+      "source": "CULTURE-FLECHE",
+      "url": "https://notre-dame-de-paris.culture.gouv.fr/fr/petite-histoire-de-la-fleche",
+      "corroborating_sources": [
+        "VLD-DICT"
+      ],
+      "note": "THE taper schema — drives the rule engine's spire profile. Six parts confirmed; their individual heights are NOT published (see _GAP_per_section_heights) → scaled off the VLD plate proportions, tagged rule_derived."
+    },
+    "octagon_faces": {
+      "value": 8,
+      "provenance": "reconstructed_design",
+      "source": "VLD-FLECHE",
+      "url": "https://passerelles.essentiels.bnf.fr/fr/image/44140e30-c8c3-40c2-b613-55c6009b22da-elevation-et-plans-la-fleche-notre-dame-paris-par-viollet-le-duc",
+      "note": "Octagonal plan, 8 faces, with the 4 cardinal faces on the roof ridges and the 4 diagonal faces over the valleys. Confirmed by the 'plans' half of the VLD elevation+plans plate."
+    },
+    "tabouret": {
+      "weight_t": 80,
+      "pieces": 110,
+      "provenance": "conjecture",
+      "source": "RESTAURONS-ND",
+      "url": "https://www.restauronsnotredame.org/post/notre-dame-de-paris-le-tabouret-ou-la-souche-de-la-fl%C3%A8che-de-viollet-le-duc",
+      "note": "CITED-UNCERTAIN (single medium-confidence source → not measured per the >=2-source guardrail). The stool (souche) transferring spire load to the 4 crossing piers. 80 t is PART OF the 500 t timber total, not additional."
+    },
+    "oak_framework": {
+      "weight_t": 500,
+      "pieces": 1000,
+      "provenance": "measured",
+      "source": "FRIENDS",
+      "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/spire/",
+      "corroborating_sources": [
+        "WIKIPEDIA-SPIRE"
+      ],
+      "note": "Oak armature (charpente de chêne). ~1000 pieces. Confirmed multi-source."
+    },
+    "lead_cladding": {
+      "weight_t": 250,
+      "provenance": "measured",
+      "source": "FRIENDS",
+      "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/spire/",
+      "corroborating_sources": [
+        "WIKIPEDIA-SPIRE"
+      ],
+      "note": "Lead sheathing over the oak armature. Confirmed multi-source."
+    },
+    "ornament": {
+      "value": "hundreds of crockets (crochets) + floral motifs across the 8 faces; pinnacles; bay arcatures; 8 quadrilobes; gargoyles",
+      "pinnacles": 16,
+      "quadrilobes": 8,
+      "gargoyles_contested": [
+        16,
+        32
+      ],
+      "provenance": "conjecture",
+      "source": "CONSTRUCTIONBTP",
+      "url": "https://www.constructionbtp.com/batiment/article/2023/06/12/144676/fleche-notredame-paris-chef-uvre-charpente-chene",
+      "note": "REVISED after adversarial verification (artifacts/adversarial-verification.json, research guardrail #2). The '~200 crockets per face / 32 gargoyles' framing was REFUTED — it traces to a single non-independent press cluster, while the official Ministry source (culture.gouv 'Spécial ND 4/6') gives DIFFERENT figures: ~112 crochets gothiques on the aiguille arêtes, 16 gargouilles (not 32), 8 grands-ducs + 8 griffons on the pinnacles. So the ornament COUNTS are conjecture (cited-uncertain). The rendered ornament (8 quadrilobes, 16 pinnacles, gabled bays) takes its FORM from the VLD public-domain plate (reconstructed_design), not from these contested counts."
+    },
+    "statues": {
+      "count": 16,
+      "apostles": 12,
+      "evangelist_symbols": 4,
+      "arrangement": "4 groups of 3 (one apostle group + ... actually 4 corners × [3 apostles staggered]) with the 4 evangelist symbols (angel/Matthew, lion/Mark, ox/Luke, eagle/John) leading each group; staggered up the base of the spire, climbing toward heaven; St Thomas (patron of architects) turns to face the spire and bears Viollet-le-Duc's own features",
+      "apostle_h_m": 3.4,
+      "evangelist_h_m": 2,
+      "apostle_kg_contested": [
+        140,
+        150
+      ],
+      "evangelist_kg_contested": [
+        65,
+        75
+      ],
+      "provenance": "measured",
+      "source": "PERSEE-2009",
+      "url": "https://www.persee.fr/doc/bulmo_0007-473x_2009_num_167_2_7284",
+      "corroborating_sources": [
+        "WIKIPEDIA-SPIRE",
+        "MEDIACHIMIE"
+      ],
+      "note": "16 copper statues by Geoffroi-Dechaume. Removed 11 Apr 2019, four days before the fire → originals survive. VERIFIER ANCHOR V10: 16 = 12 + 4; apostle ≈ 3.40 m, evangelist ≈ 2.0 m; St Thomas faces inward. The COUNT, HEIGHTS and ARRANGEMENT are measured + adversarially corroborated; the WEIGHTS are cited-uncertain (apostle 140 vs ~150 kg per culture.gouv/diocèse; evangelist 65 vs ~75 kg) per artifacts/adversarial-verification.json — so weights are recorded as contested ranges, not asserted, and drive no geometry (the statues render at their measured HEIGHTS)."
+    },
+    "rooster": {
+      "approx_kg": 30,
+      "provenance": "conjecture",
+      "source": "WIKIPEDIA-SPIRE",
+      "url": "https://en.wikipedia.org/wiki/Spire_of_Notre-Dame_de_Paris",
+      "corroborating_sources": [
+        "CULTURE-FLECHE"
+      ],
+      "note": "CITED-UNCERTAIN weight: ~30 kg (most sources) vs ~10 kg (one ND culture page) — the two sources CONFLICT, so the weight is conjecture (V13 requires rooster weight <= conjecture). The coq's existence and ~96 m summit POSITION are measured (from total_height); only this published mass is uncertain. Gilded copper coq holds 3 relics; new rooster (Olivier Brisville) installed 16 Dec 2023."
+    },
+    "_GAP_per_section_heights": {
+      "provenance": "GAP",
+      "note": "DO NOT FILL with invented numbers. Exact heights of the souche / octagonal fût / each openwork gallery / aiguille are NOT published. The engine scales them off the VLD 'Flèche' plate (BnF ark mm320202712p) proportions and tags every per-section height rule_derived ('scaled from PD plate, ratio × 66 m visible extent'), or leaves them conjecture. The 96 m total and 30 m base are the only hard measured anchors."
+    },
+    "_GAP_octagon_springing": {
+      "provenance": "GAP",
+      "note": "DO NOT FILL. The precise octagon springing dimension at the spire base is not published as a number. The engine inscribes a regular octagon in the mean of the 15×13 m tabouret trapezoid (rule_derived); the exact dimension stays a gap."
+    },
+    "_GAP_above_ridge_height": {
+      "provenance": "GAP",
+      "note": "DO NOT FILL. No single authoritative 'height above roof' figure. 96 m above ground and ~30 m base are sourced; ~66 m above-base and ~45 m visible-above-ridge are derived/approximate. Sources disagree 93 m (rooster base) vs 96 m (rooster head)."
+    }
+  },
+  "verifier_targets": {
+    "_note": "Machine-checkable assertions, recomputed by verify.mjs FROM component coordinates (never from key_dimensions). Scene length unit = metre; tolerances explicit. Spire-only subset of the corpus V01–V14 (cathedral/nave/la forêt checks are post-v1).",
+    "checks": [
+      {
+        "id": "V08",
+        "assert": "Spire total height = 96 m, base anchored at ~30 m (accept 30–33), visible extent ≈ 66 m. MEASURED-REALITY GUARD: the engine must NOT normalize the spire toward any ad-triangulum/Roriczer ideal that contradicts the sourced 96 m / 30 m — a spire 'corrected' away from 96 m total or 30 m base is a CRITICAL failure.",
+        "tolerance": "96 m ±1%; base 30–33 m; no idealization",
+        "priority": "critical"
+      },
+      {
+        "id": "V09",
+        "assert": "Spire is octagonal (8 faces) on the ~14 m mean crossing footprint, with the six-part profile present (tabouret, souche, fût, 2 openwork galleries, aiguille+coq).",
+        "tolerance": "footprint ±5%; 8 faces exact; 6 parts present"
+      },
+      {
+        "id": "V10",
+        "assert": "Spire statuary: 16 copper statues = 12 apostles (4 groups of 3, staggered heights) + 4 evangelist symbols; apostle ≈ 3.40 m, evangelist ≈ 2.0 m; St Thomas faces inward.",
+        "tolerance": "count exact; heights ±5%"
+      },
+      {
+        "id": "V11",
+        "assert": "Taper monotonic: cross-section width strictly decreases from souche to aiguille (no bulge); rooster (coq) is the single topmost component at ~96 m.",
+        "tolerance": "monotonic; summit is the rooster"
+      },
+      {
+        "id": "V12",
+        "assert": "Provenance audit: every component carries a valid class + a non-empty source that resolves to the rights-cleared source_registry with a use/use-data verdict; 0 unsourced; the per-section heights / octagon springing render rule_derived or conjecture, never measured.",
+        "tolerance": "0 unsourced; 0 misclassed"
+      },
+      {
+        "id": "V13",
+        "assert": "No-invention guard: no component may carry a `measured` class while citing a restricted source (Tallon/AGP/CNRS/chartres-blog) or a GAP value; the rooster weight (cited-uncertain) and per-section heights stay <= rule_derived/conjecture.",
+        "tolerance": "hard-fail on violation"
+      },
+      {
+        "id": "V14",
+        "assert": "Rights gate (G09): every component `source` is in source_registry with verdict use/use-data; a source resolving to rights_excluded or absent from the registry FAILS the build.",
+        "tolerance": "0 components from excluded/unknown sources"
+      },
+      {
+        "id": "P01",
+        "assert": "All canonical views render (non-missing).",
+        "tolerance": "per Nanchan"
+      },
+      {
+        "id": "P02",
+        "assert": "Each view is non-blank (>3% non-background pixels).",
+        "tolerance": ">3%"
+      },
+      {
+        "id": "P03",
+        "assert": "Provenance view shows all four evidence-class colors.",
+        "tolerance": "all four present"
+      }
+    ]
+  },
+  "ideal_deviations_index": {
+    "_note": "The provenance layer's exhibit list — where the real flèche disagrees with a generic Gothic ideal. Pipeline rule: measured reality overrides the rulebook; deviations are annotated, never 'fixed' (V08).",
+    "items": [
+      "Spire total 96 m and base 30 m are MEASURED — never recomputed from an ad-triangulum height-from-width ideal (V08 critical).",
+      "Per-section heights are NOT published → scaled off the PD plate (rule_derived), never asserted as measured.",
+      "Octagon springing dimension is a GAP → a regular octagon is inscribed in the mean ~14 m footprint (rule_derived), never claimed as surveyed.",
+      "Rooster weight is cited-uncertain (~30 vs ~10 kg) → conjecture, never measured.",
+      "Roriczer 6×/7× pinnacle multiples are cited-uncertain → pinnacle heights are conjecture, never exact."
+    ]
+  }
+}

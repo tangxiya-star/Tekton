@@ -1,0 +1,1762 @@
+{
+  "generated_at": "2026-06-13T22:00:49Z",
+  "tier": "v2-west-towers-facade",
+  "method": "adversarial cite-or-gap, >=2 sources for measured",
+  "summary": {
+    "measured": 43,
+    "reconstructed_design": 11,
+    "rule_derived": 0,
+    "conjecture": 4,
+    "GAP": 10
+  },
+  "source_registry": {
+    "FRIENDS-WEST-FACADE": {
+      "citation": "Friends of Notre-Dame de Paris (official charity) — West Facade page",
+      "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/west-facade/",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "TECHNO-SCIENCE": {
+      "citation": "Techno-Science.net — Cathedrale Notre-Dame de Paris (mirror of FR-Wikipedia 'Elements architecturaux exterieurs')",
+      "url": "https://www.techno-science.net/glossaire-definition/Cathedrale-Notre-Dame-de-Paris-page-3.html",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "BNF-FACADE-9POINTS": {
+      "citation": "BnF Passerelles — 'La facade de Notre-Dame de Paris en 9 points'",
+      "url": "https://passerelles.essentiels.bnf.fr/fr/article/e854492c-8458-4685-9bd0-d211156adb0f-facade-notre-dame-paris-en-9-points",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "BNF-FACADE-9POINTS-CHRONO": {
+      "citation": "BnF Passerelles — 'La facade de Notre-Dame de Paris en 9 points' (construction chronology path)",
+      "url": "https://passerelles.essentiels.bnf.fr/fr/chronologie/construction/5528aa47-6ab5-48d1-92fb-46ca5144731b-cathedrale-notre-dame-paris/article/e854492c-8458-4685-9bd0-d211156adb0f-facade-notre-dame-paris-en-9-points",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "NDP-OFFICIAL-FACADE-FR": {
+      "citation": "Notre-Dame de Paris official site — 'La facade occidentale' (FR)",
+      "url": "https://www.notredamedeparis.fr/comprendre/architecture/la-facade-occidentale/",
+      "rights": "cite_only",
+      "verdict": "cite-only"
+    },
+    "NDP-OFFICIAL-FACADE-EN": {
+      "citation": "Notre-Dame de Paris official site — 'The western facade' (EN)",
+      "url": "https://www.notredamedeparis.fr/en/understand/architecture/the-western-facade/",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "TOURS-NDP-OFFICIAL": {
+      "citation": "Towers of Notre-Dame de Paris official site (Centre des monuments nationaux) — distinctive features of the towers",
+      "url": "https://www.tours-notre-dame-de-paris.fr/en/discover/the-distinctive-features-of-the-towers-of-notre-dame-de-paris",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "BORK-JSAH": {
+      "citation": "Robert Bork, 'The Design Geometry of Notre-Dame in Paris', JSAH 81(1), 2022, pp.21-41, DOI 10.1525/jsah.2022.81.1.21 (paywalled)",
+      "url": "https://online.ucpress.edu/jsah/article/81/1/21/120426/The-Design-Geometry-of-Notre-Dame-in-Paris",
+      "rights": "cite_only",
+      "verdict": "cite-only"
+    },
+    "BORK-RESEARCHGATE": {
+      "citation": "ResearchGate listing — Bork, 'The Design Geometry of Notre-Dame in Paris'",
+      "url": "https://www.researchgate.net/publication/359755115_The_Design_Geometry_of_Notre-Dame_in_Paris",
+      "rights": "cite_only",
+      "verdict": "cite-only"
+    },
+    "DEHIO-BEZOLD": {
+      "citation": "Dehio & Bezold, 'Die kirchliche Baukunst des Abendlandes' (atlas, 1887-1901), UB Heidelberg, Public Domain Mark",
+      "url": "https://digi.ub.uni-heidelberg.de/diglit/dehio1887ga",
+      "rights": "public_domain",
+      "verdict": "use"
+    },
+    "NEWSWEEK-BELL": {
+      "citation": "Newsweek — 'Notre Dame Welcomes New Bell, Restoration Milestone' (2024)",
+      "url": "https://www.newsweek.com/notre-dame-welcomes-new-bell-restoration-milestone-1982112",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "PARIS2VERSAILLES-TOWERS": {
+      "citation": "Paris to Versailles — 'The Bell Towers of Notre-Dame Cathedral'",
+      "url": "https://www.paristoversailles.com/the-bell-towers-of-notre-dame-cathedral/",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "FINESTRE-TOWERS-REOPEN": {
+      "citation": "Finestre sull'Arte — 'Paris, Notre-Dame reopens its towers to the public with a new tour itinerary'",
+      "url": "https://www.finestresullarte.info/en/news/paris-notre-dame-reopens-its-towers-to-the-public-with-a-new-tour-itinerary",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "CULTURE-GOUV-EMMANUEL": {
+      "citation": "Ministere de la Culture — official Notre-Dame site, 'Le bourdon Emmanuel'",
+      "url": "https://notre-dame-de-paris.culture.gouv.fr/fr/le-bourdon-emmanuel",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "FR-WIKI-EMMANUEL": {
+      "citation": "fr.Wikipedia — 'Emmanuel (bourdon)'",
+      "url": "https://fr.wikipedia.org/wiki/Emmanuel_(bourdon)",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "FRIENDS-BELLS": {
+      "citation": "Friends of Notre-Dame de Paris (official charity) — Bells page",
+      "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/bells/",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "EN-WIKI-BELLS": {
+      "citation": "en.Wikipedia — 'Bells of Notre-Dame de Paris'",
+      "url": "https://en.wikipedia.org/wiki/Bells_of_Notre-Dame_de_Paris",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "EN-WIKI-LIST-BELLS": {
+      "citation": "en.Wikipedia — 'List of bells in Notre-Dame de Paris'",
+      "url": "https://en.wikipedia.org/wiki/List_of_bells_in_Notre-Dame_de_Paris",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "PANORAMA-GALERIE-ROIS": {
+      "citation": "Panorama de l'art (RMN scholarly) — 'Galerie des rois de la cathedrale Notre-Dame de Paris'",
+      "url": "https://panoramadelart.com/analyse/galerie-des-rois-de-la-cathedrale-notre-dame-de-paris",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "EN-WIKI-NDP": {
+      "citation": "en.Wikipedia — 'Notre-Dame de Paris'",
+      "url": "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "CLUNY-HEADS": {
+      "citation": "Musee de Cluny - Musee national du Moyen Age — 'Heads of the kings of Judah' collection page",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "AVIEWONCITIES-NDP": {
+      "citation": "A View On Cities — Paris, Notre-Dame Cathedral",
+      "url": "https://aviewoncities.com/paris/notre-dame-cathedral",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "UNJOUR-CLUNY-HEADS": {
+      "citation": "Un Jour de Plus a Paris — 'Extraordinaire periple des tetes des rois de Juda au Musee de Cluny'",
+      "url": "https://www.unjourdeplusaparis.com/en/paris-culture/extraordinaire-periple-tetes-rois-de-juda-musee-cluny",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "MEDIEVAL-EU-CLUNY": {
+      "citation": "Medieval.eu — 'Medieval Sculpture from Notre-Dame de Paris at Cluny'",
+      "url": "https://www.medieval.eu/medieval-sculpture-from-notre-dame-de-paris-at-cluny/",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "FR-WIKI-NDP": {
+      "citation": "fr.Wikipedia — 'Cathedrale Notre-Dame de Paris'",
+      "url": "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Notre-Dame_de_Paris",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "EN-WIKI-ROSE-WINDOW": {
+      "citation": "en.Wikipedia — 'Rose window'",
+      "url": "https://en.wikipedia.org/wiki/Rose_window",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "FRIENDS-ROSE-WINDOWS": {
+      "citation": "Friends of Notre-Dame de Paris (official charity) — Rose Windows page",
+      "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/rose-windows/",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "FRIENDS-PORTALS": {
+      "citation": "Friends of Notre-Dame de Paris (official charity) — Portals page",
+      "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/portals/",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "FR-WIKI-PORTAIL-JUGEMENT": {
+      "citation": "fr.Wikipedia — 'Portail du Jugement dernier'",
+      "url": "https://fr.wikipedia.org/wiki/Portail_du_Jugement_dernier",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "JALLADEAU-PORTAILS": {
+      "citation": "Jalladeau (scholarly) — Portails de Notre-Dame de Paris",
+      "url": "https://jalladeauj.fr/portailsndparis/",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "SACRED-DESTINATIONS-NDP": {
+      "citation": "Sacred Destinations — Paris, Notre-Dame Cathedral",
+      "url": "https://www.sacred-destinations.com/france/paris-notre-dame-cathedral",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "CITE-ARCHI-VOUSSURES": {
+      "citation": "Cite de l'architecture et du patrimoine — voussures du portail du Jugement dernier (casts catalogue)",
+      "url": "https://www.citedelarchitecture.fr/fr/oeuvre/voussures-du-portail-du-jugement-dernier-portail-central-de-la-facade-occidentale-de-la-0",
+      "rights": "cite_only",
+      "verdict": "cite-only"
+    },
+    "FRIENDS-GROTESQUES": {
+      "citation": "Friends of Notre-Dame de Paris (official charity) — Grotesques page",
+      "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/grotesques/",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "BROADEN-HORIZONS-GARGOYLES": {
+      "citation": "Broaden Horizons — 'Notre-Dame Gargoyles Complete Guide'",
+      "url": "https://broaden-horizons.fr/blog-en/notre-dame-gargoyles-complete-guide/",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "FR-WIKI-CHIMERES": {
+      "citation": "fr.Wikipedia — 'Chimeres de Notre-Dame de Paris'",
+      "url": "https://fr.wikipedia.org/wiki/Chim%C3%A8res_de_Notre-Dame_de_Paris",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "WIKIART-LE-STRYGE": {
+      "citation": "WikiArt — Charles Meryon, 'Le Stryge' (1853), public domain etching",
+      "url": "https://www.wikiart.org/en/charles-meryon/le-stryge",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "FRIENDS-GARGOYLES": {
+      "citation": "Friends of Notre-Dame de Paris (official charity) — Gargoyles page",
+      "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/gargoyles/",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "19THC-ARTWORLDWIDE-GARGOYLES": {
+      "citation": "Nineteenth-Century Art Worldwide (scholarly, Camille review) — 'The Gargoyles of Notre-Dame'",
+      "url": "https://www.19thc-artworldwide.org/autumn10/the-gargoyles-of-notre-dame",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "APOLLO-VLD": {
+      "citation": "Apollo Magazine — Viollet-le-Duc, Notre-Dame, Gothic Revival restoration",
+      "url": "https://apollo-magazine.com/viollet-le-duc-notre-dame-gothic-revival-restoration/",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "FRENCHMOMENTS-WEST-FACADE": {
+      "citation": "French Moments — 'West Facade of Notre-Dame Cathedral Paris'",
+      "url": "https://frenchmoments.eu/west-facade-of-notre-dame-cathedral-paris/",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "ARCHITECTURELAB-NDP": {
+      "citation": "Architecture Lab — Notre-Dame Cathedral Paris",
+      "url": "https://www.architecturelab.net/architecture/landmark/notre-dame-cathedral-paris/",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "EN-WIKI-LUTETIAN": {
+      "citation": "en.Wikipedia — 'Lutetian limestone'",
+      "url": "https://en.wikipedia.org/wiki/Lutetian_limestone",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "BRGM-RECONSTRUCTION": {
+      "citation": "BRGM (French national geological survey) — 'Reconstruction of Notre-Dame de Paris: chronology and explanations'",
+      "url": "https://www.brgm.fr/en/news/field-notes/reconstruction-dame-paris-chronology-explanations",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "CNRS-MATERIALS": {
+      "citation": "CNRS News — 'Unveiling the secrets of Notre-Dame's materials'",
+      "url": "https://news.cnrs.fr/articles/unveiling-the-secrets-of-notre-dames-materials",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "FRIENDS-PROGRESSION": {
+      "citation": "Friends of Notre-Dame de Paris (official charity) — 'Progression through time' history page",
+      "url": "https://www.friendsofnotredamedeparis.org/notre-dame-cathedral/history/progression-through-time/",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "SCIENCEDIRECT-WEATHERING": {
+      "citation": "ScienceDirect — peer-reviewed study, weathering of Notre-Dame materials from air pollution/climate 1325-2090 (abstract only)",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1296207421000996",
+      "rights": "cite_only",
+      "verdict": "cite-only"
+    },
+    "EN-WIKI-SPIRE": {
+      "citation": "en.Wikipedia — 'Spire of Notre-Dame de Paris'",
+      "url": "https://en.wikipedia.org/wiki/Spire_of_Notre-Dame_de_Paris",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "SCIENCEDIRECT-LEAD": {
+      "citation": "ScienceDirect — peer-reviewed study, lead use and plumbers' practices in the Notre-Dame building yard 12th-19th c. (abstract only)",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1296207423000249",
+      "rights": "cite_only",
+      "verdict": "cite-only"
+    },
+    "ARTNEWSPAPER-OAK-ROOF": {
+      "citation": "The Art Newspaper — 'Green wood, axes and oaks: how ancient skills helped to raise Notre-Dame's new roof' (2024)",
+      "url": "https://www.theartnewspaper.com/2024/12/02/green-wood-axes-and-oaks-how-ancient-skills-helped-to-raise-notre-dames-new-roof",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "ARCHDAILY-NDP": {
+      "citation": "ArchDaily — Notre-Dame article (881238)",
+      "url": "https://www.archdaily.com/881238",
+      "rights": "cite_only",
+      "verdict": "cite-only"
+    },
+    "LIVESCIENCE-LEAD": {
+      "citation": "Live Science — 'Notre-Dame sky-high lead levels'",
+      "url": "https://www.livescience.com/65451-notre-dame-sky-high-lead-levels.html",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    },
+    "STONEFORENSICS-CLEANING": {
+      "citation": "Stone Forensics — 'How they cleaned the stone in the restoration of Notre-Dame'",
+      "url": "https://stoneforensics.com/how-they-cleaned-the-stone-in-the-restoration-of-notre-dame-lessons-for-the-stone-professional/",
+      "rights": "facts_uncopyrightable",
+      "verdict": "use-data"
+    }
+  },
+  "findings": [
+    {
+      "key": "west_facade_total_width_m",
+      "value": 43.5,
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/west-facade/",
+          "supports": true,
+          "note": "Friends of Notre-Dame de Paris (official charity): '43.5 meters wide'."
+        },
+        {
+          "url": "https://www.techno-science.net/glossaire-definition/Cathedrale-Notre-Dame-de-Paris-page-3.html",
+          "supports": true,
+          "note": "Independent stream (mirror of FR-Wikipedia 'Eléments architecturaux extérieurs'): '43,5 mètres (135 pieds-du-roi)' wide."
+        },
+        {
+          "url": "https://passerelles.essentiels.bnf.fr/fr/article/e854492c-8458-4685-9bd0-d211156adb0f-facade-notre-dame-paris-en-9-points",
+          "supports": true,
+          "note": "BnF Passerelles 'La façade en 9 points': 'Elle mesure 43,5 mètres de large'."
+        }
+      ],
+      "notes": "Multiply confirmed across 3 independent streams (official charity, techno-science/FR-Wiki mirror, BnF). Published pied-du-roi conversion = 135 pieds-du-roi (exact metric conversion at 0.3248 m/pied is ~134 PdR; sources state 135). Re-confirms the project corpus anchor (43.5 m). Number is an uncopyrightable fact; ingest the number, not the page prose/images.",
+      "topic": "Notre-Dame de Paris — West Facade overall geometry (facade-geometry sub-topic)"
+    },
+    {
+      "key": "facade_height_to_base_of_towers_m",
+      "value": 45,
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/west-facade/",
+          "supports": true,
+          "note": "Friends of Notre-Dame: '45 meters high' (facade body, exclusive of towers), '69 meters with the towers'."
+        },
+        {
+          "url": "https://www.techno-science.net/glossaire-definition/Cathedrale-Notre-Dame-de-Paris-page-3.html",
+          "supports": true,
+          "note": "Independent: '45 mètres (141 pieds)' high, hors hauteur des tours."
+        },
+        {
+          "url": "https://passerelles.essentiels.bnf.fr/fr/article/e854492c-8458-4685-9bd0-d211156adb0f-facade-notre-dame-paris-en-9-points",
+          "supports": true,
+          "note": "BnF Passerelles: 'Elle mesure ... 45 mètres de haut.'"
+        }
+      ],
+      "notes": "45 m is the height of the facade BODY below the towers, multiply confirmed (3 independent streams). ~141 pieds-du-roi published. ADVERSARIAL NOTE / conflict: sources disagree on the exact upper reference this 45 m measures TO — most state 'height of the facade apart from the towers' (i.e. to the base of the towers, top of the colonnade/Gallery-of-Chimeras zone), but at least one synthesis ties it loosely to the top of the Gallery of the Virgin terrace. The 45 m NUMBER is solid; the precise terminating register is recorded with this caveat. Re-confirms corpus anchor facade_height_no_towers=45 m.",
+      "topic": "Notre-Dame de Paris — West Facade overall geometry (facade-geometry sub-topic)"
+    },
+    {
+      "key": "facade_height_to_top_of_gallery_of_kings_m",
+      "value": null,
+      "provenance": "GAP",
+      "rights": "none",
+      "sources": [
+        {
+          "url": "https://www.notredamedeparis.fr/comprendre/architecture/la-facade-occidentale/",
+          "supports": false,
+          "note": "Official 'La façade occidentale' page describes the register sequence (portals -> Gallery of Kings -> Gallery of the Virgin terrace -> rose) but publishes NO discrete metric height to the top of the Gallery of Kings."
+        }
+      ],
+      "notes": "DO NOT FILL. No independently published clean metric height specifically to the TOP of the Gallery of Kings (as distinct from the 43.5 m width and 45 m facade-body height) could be sourced. One WebSearch synthesis reported the gallery 'runs at ~20 m above ground' but this is single-source, unattributed, and could not be corroborated, so it is NOT recorded as a value. A measured section (Dehio-Bezold PD plate) would be required to scale this; that would be reconstructed_design, not measured.",
+      "topic": "Notre-Dame de Paris — West Facade overall geometry (facade-geometry sub-topic)"
+    },
+    {
+      "key": "west_tower_height_m",
+      "value": 69,
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/west-facade/",
+          "supports": true,
+          "note": "Friends of Notre-Dame: '69 meters with the towers'."
+        },
+        {
+          "url": "https://passerelles.essentiels.bnf.fr/fr/article/e854492c-8458-4685-9bd0-d211156adb0f-facade-notre-dame-paris-en-9-points",
+          "supports": true,
+          "note": "BnF Passerelles: 'Les deux tours de Notre-Dame culminent à 69 mètres.'"
+        }
+      ],
+      "notes": "Top-of-tower height 69 m confirmed by 2 independent institutional streams (official charity + BnF), consistent with the project corpus anchor (de.Wikipedia + Friends). This is the full facade height including the towers; the facade body alone is 45 m.",
+      "topic": "Notre-Dame de Paris — West Facade overall geometry (facade-geometry sub-topic)"
+    },
+    {
+      "key": "west_rose_window_diameter_m",
+      "value": 9.6,
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/west-facade/",
+          "supports": true,
+          "note": "Friends of Notre-Dame: '9.6 meters in diameter'."
+        },
+        {
+          "url": "https://www.techno-science.net/glossaire-definition/Cathedrale-Notre-Dame-de-Paris-page-3.html",
+          "supports": true,
+          "note": "Independent: 'neuf mètres soixante de diamètre' (9.60 m)."
+        },
+        {
+          "url": "https://passerelles.essentiels.bnf.fr/fr/article/e854492c-8458-4685-9bd0-d211156adb0f-facade-notre-dame-paris-en-9-points",
+          "supports": true,
+          "note": "BnF Passerelles: 'grande rosace en vitraux de 9,60 m de diamètre', executed c.1225."
+        }
+      ],
+      "notes": "West rose diameter 9.6 m (9.60 m) multiply confirmed (3 independent streams). Matches the corpus anchor (~9.6-9.7 m); the 9.7 m figure in the corpus is the high end of a minor source spread. Use 9.6 m as the central confirmed value.",
+      "topic": "Notre-Dame de Paris — West Facade overall geometry (facade-geometry sub-topic)"
+    },
+    {
+      "key": "horizontal_register_scheme",
+      "value": "Bottom-to-top: (1) portals zone = three portals (left: Virgin; centre: Last Judgement; right: St Anne); (2) Gallery of Kings (28 statues of the kings of Judah); (3) central zone = west rose window flanked by twin/geminated bays surmounted by small roses, above a terrace/Gallery of the Virgin; (4) upper colonnade (Grande Galerie / Gallery of Chimeras) linking the two towers; (5) the two square belfry towers.",
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.techno-science.net/glossaire-definition/Cathedrale-Notre-Dame-de-Paris-page-3.html",
+          "supports": true,
+          "note": "Lists 'l'étage des trois portails, la galerie des rois, puis un étage occupé au centre par la rosace ouest' with 'fenêtres géminées surmontées de petites rosaces', then 'un dernier étage de colonnades reliant les deux tours'."
+        },
+        {
+          "url": "https://passerelles.essentiels.bnf.fr/fr/article/e854492c-8458-4685-9bd0-d211156adb0f-facade-notre-dame-paris-en-9-points",
+          "supports": true,
+          "note": "BnF Passerelles confirms registers bottom-to-top: three portals, Gallery of Kings (28 statues), Gallery of the Virgin terrace, rose window, Gallery of Chimeras, twin towers."
+        },
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/west-facade/",
+          "supports": true,
+          "note": "Friends of Notre-Dame: portals lower section, then gallery of kings, then rose-window gallery, then two square towers."
+        }
+      ],
+      "notes": "The 'harmonic facade' (symmetrical, tripartite) register scheme is qualitatively documented and consistent across the three independent streams. The exact register sequence requested (portals -> Gallery of Kings -> rose+colonnade zone -> tower belfry) is corroborated, with the finer intermediate elements (Gallery of the Virgin terrace between Kings and rose; Gallery of Chimeras colonnade between rose and towers) added. This is a factual description (counts/arrangement), not a copyrightable image.",
+      "topic": "Notre-Dame de Paris — West Facade overall geometry (facade-geometry sub-topic)"
+    },
+    {
+      "key": "gallery_of_kings_figure_count",
+      "value": 28,
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/west-facade/",
+          "supports": true,
+          "note": "Friends of Notre-Dame: '28 characters illustrating the 28 generations of the kings of Judea'."
+        },
+        {
+          "url": "https://passerelles.essentiels.bnf.fr/fr/article/e854492c-8458-4685-9bd0-d211156adb0f-facade-notre-dame-paris-en-9-points",
+          "supports": true,
+          "note": "BnF Passerelles: 'Ces 28 statues' representing the kings of Judah / ancestors of Christ."
+        }
+      ],
+      "notes": "28 figures confirmed by 2 independent institutional streams. They are kings of Judah (ancestors of Christ via the Virgin), NOT kings of France (common misconception). The present figures are Viollet-le-Duc's 19th-c. reconstructions; original fragments are at the Musée de Cluny. The COUNT is a measured fact; the statues themselves as reconstructed fabric would be reconstructed_design if modelled.",
+      "topic": "Notre-Dame de Paris — West Facade overall geometry (facade-geometry sub-topic)"
+    },
+    {
+      "key": "proportional_analysis_ad_triangulum_bork",
+      "value": "Robert Bork (JSAH 81/1, 2022, 'The Design Geometry of Notre-Dame in Paris') argues from laser-scan analysis that the cathedral's master plan was based largely on the geometry of EQUILATERAL TRIANGLES (ad triangulum). This is a scholarly hypothesis for the whole building, not a facade-elevation-specific published scheme, and is contested.",
+      "provenance": "conjecture",
+      "rights": "cite_only",
+      "sources": [
+        {
+          "url": "https://online.ucpress.edu/jsah/article/81/1/21/120426/The-Design-Geometry-of-Notre-Dame-in-Paris",
+          "supports": true,
+          "note": "Bork, JSAH 81(1), 2022, pp.21-41, DOI 10.1525/jsah.2022.81.1.21. Argues master plan 'based largely on the geometry of equilateral triangles'. PAYWALLED (HTTP 403); abstract only accessible."
+        },
+        {
+          "url": "https://www.researchgate.net/publication/359755115_The_Design_Geometry_of_Notre-Dame_in_Paris",
+          "supports": true,
+          "note": "Independent listing of the same paper confirming the equilateral-triangle (ad triangulum) thesis."
+        }
+      ],
+      "notes": "CONJECTURE, not measured: (a) the paper is paywalled so the facade-specific geometry could not be independently verified beyond the abstract; (b) it is a modern interpretive reconstruction of design intent, not a survey fact; (c) it is contested — Paul Frankl held that 'excogitated networks of hundreds of lines' to fix all points are 'probably undemonstrable and unlikely'. Bork (modern copyrighted text) is CITE-ONLY: reference the thesis, never ingest text/figures. Do NOT let this rule override the measured 43.5/45/69 m values (measured-reality-wins guard).",
+      "topic": "Notre-Dame de Paris — West Facade overall geometry (facade-geometry sub-topic)"
+    },
+    {
+      "key": "proportional_analysis_ad_quadratum_facade_dehio_bezold",
+      "value": null,
+      "provenance": "GAP",
+      "rights": "none",
+      "sources": [
+        {
+          "url": "https://digi.ub.uni-heidelberg.de/diglit/dehio1887ga",
+          "supports": false,
+          "note": "Dehio & Bezold, 'Die kirchliche Baukunst des Abendlandes' (atlas, 1887-1901), UB Heidelberg, Public Domain Mark. A documented ad-quadratum/ad-triangulum PROPORTIONAL ANALYSIS specific to the Notre-Dame WEST FACADE elevation could not be located in the accessible plates/text; the Dehio-Bezold geometric tradition at ND concerns chiefly the CHEVET plan, not the facade."
+        }
+      ],
+      "notes": "DO NOT FILL. No specific, sourceable ad-quadratum or ad-triangulum proportional scheme for the WEST FACADE (e.g. inscribed-square or equilateral-triangle ratios governing the facade elevation) could be independently confirmed. Caveats: (1) the Dehio-Bezold geometric analysis at ND is documented for the chevet PLAN, not the facade elevation; (2) BnF Passerelles reports a 20th-c. Le Corbusier AESTHETIC reading of the facade as 'pureté géométrique' combining 'le cercle et le carré' (circle=divine perfection, square=human construction) - but this is a qualitative appreciation, NOT a documented metric proportional system, so it grounds no rule. A facade proportional rule may only be applied as rule_derived (ad quadratum 1/sqrt2, ad triangulum sqrt3/2) explicitly tagged as engine-derived geometry, never asserted as the historical design's measured proportion.",
+      "topic": "Notre-Dame de Paris — West Facade overall geometry (facade-geometry sub-topic)"
+    },
+    {
+      "key": "west_tower_height_m",
+      "value": 69,
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.tours-notre-dame-de-paris.fr/en/discover/the-distinctive-features-of-the-towers-of-notre-dame-de-paris",
+          "supports": true,
+          "note": "Official Towers of Notre-Dame site (Centre des monuments nationaux): 'Both towers rise to 69 metres.'"
+        },
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/west-facade/",
+          "supports": true,
+          "note": "Friends of Notre-Dame: towers 69 m high (independent of CMN/official-site lineage)."
+        }
+      ],
+      "notes": "Height of each tower above ground = 69 m. Multiply-confirmed and matches the project's pre-cleared corpus anchor (west tower height 69 m). The terrace reached by the new visitor route is stated at 69 m height.",
+      "topic": "Notre-Dame de Paris — the two west towers: heights, belfry stage, step counts, oak bell-frame, and bells (Emmanuel bourdon + 2012/2013 sets)"
+    },
+    {
+      "key": "north_south_towers_differ",
+      "value": "yes — different widths and build dates; both 69 m tall",
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.tours-notre-dame-de-paris.fr/en/discover/the-distinctive-features-of-the-towers-of-notre-dame-de-paris",
+          "supports": true,
+          "note": "North tower (Great Tower) 14.91 m wide; South tower (Small Tower) 13.69 m wide; difference 1.22 m. Both 69 m."
+        },
+        {
+          "url": "https://www.notredamedeparis.fr/en/understand/architecture/the-western-facade/",
+          "supports": true,
+          "note": "Official cathedral site: south tower built c.1220-1240, north tower c.1235-1250 (the two towers were built in different campaigns)."
+        }
+      ],
+      "notes": "Towers are the same height (69 m) but NOT identical: the north tower is ~1.22 m wider (14.91 m vs 13.69 m), and they were built in successive campaigns (south first, ~1220-1240; north ~1235-1250). The width figures trace primarily to the official Towers/CMN site; treat the 14.91/13.69 m pair as official-published values.",
+      "topic": "Notre-Dame de Paris — the two west towers: heights, belfry stage, step counts, oak bell-frame, and bells (Emmanuel bourdon + 2012/2013 sets)"
+    },
+    {
+      "key": "north_tower_width_m",
+      "value": 14.91,
+      "provenance": "reconstructed_design",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.tours-notre-dame-de-paris.fr/en/discover/the-distinctive-features-of-the-towers-of-notre-dame-de-paris",
+          "supports": true,
+          "note": "'North Tower (Great Tower): 14.91 metres.'"
+        }
+      ],
+      "notes": "North tower (the 'Great Tower') width. Single authoritative source (official Towers site); the 14.91/13.69 m pair recurs across tourist sites that copy it, so it is NOT independently confirmed at 2-source level. Downgraded from 'measured' to reflect single-source provenance per cite-or-gap rule.",
+      "topic": "Notre-Dame de Paris — the two west towers: heights, belfry stage, step counts, oak bell-frame, and bells (Emmanuel bourdon + 2012/2013 sets)"
+    },
+    {
+      "key": "south_tower_width_m",
+      "value": 13.69,
+      "provenance": "reconstructed_design",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.tours-notre-dame-de-paris.fr/en/discover/the-distinctive-features-of-the-towers-of-notre-dame-de-paris",
+          "supports": true,
+          "note": "'South Tower (Small Tower): 13.69 metres.'"
+        }
+      ],
+      "notes": "South tower (the 'Small Tower') width; difference from north tower = 1.22 m. Single authoritative source; downgraded to reconstructed_design (not independently cross-confirmed).",
+      "topic": "Notre-Dame de Paris — the two west towers: heights, belfry stage, step counts, oak bell-frame, and bells (Emmanuel bourdon + 2012/2013 sets)"
+    },
+    {
+      "key": "belfry_stage",
+      "value": "Each west tower houses a belfry (beffroi) — an oak framework on which the bells are suspended; the bells hang in the upper open-arcaded stage of each tower",
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.tours-notre-dame-de-paris.fr/en/discover/the-distinctive-features-of-the-towers-of-notre-dame-de-paris",
+          "supports": true,
+          "note": "'Each of the towers has a belfry... the wooden framework on which the bells are suspended.'"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/List_of_bells_in_Notre-Dame_de_Paris",
+          "supports": true,
+          "note": "South-tower belfry holds the two bourdons (Emmanuel, Marie); north-tower belfry holds the eight 2012 bells — confirms the two-belfry arrangement."
+        }
+      ],
+      "notes": "The belfry (beffroi) is the timber bell-frame stage inside the upper part of each tower. South belfry = the two bourdons (Emmanuel + Marie); north belfry = the eight smaller bells. Both sit at roughly 60 m height per CMN restoration notes.",
+      "topic": "Notre-Dame de Paris — the two west towers: heights, belfry stage, step counts, oak bell-frame, and bells (Emmanuel bourdon + 2012/2013 sets)"
+    },
+    {
+      "key": "oak_belfry_framing",
+      "value": "Solid-oak bell yokes (jougs) and frame in the south tower belfry: Emmanuel's yoke ~1.30 m high × 3.30 m long; Marie's yoke ~1 m high × 3.20 m long; refurbished in Alsace for the 2024 reopening",
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.tours-notre-dame-de-paris.fr/en/discover/the-distinctive-features-of-the-towers-of-notre-dame-de-paris",
+          "supports": true,
+          "note": "Belfry described as 'the wooden framework on which the bells are suspended.'"
+        },
+        {
+          "url": "https://www.newsweek.com/notre-dame-welcomes-new-bell-restoration-milestone-1982112",
+          "supports": true,
+          "note": "2024 restoration: solid-oak yokes refurbished; Emmanuel yoke 1.30 m H x 3.30 m L, Marie yoke ~1 m H x 3.20 m L; bells ring from ~60 m height in the south tower."
+        }
+      ],
+      "notes": "Oak belfry framing = the timber bell-frame and yokes (jougs) supporting the bourdons in the south tower. Yoke dimensions are from 2024 reconstruction reporting. The single-source yoke dimensions are reconstruction-press figures; the existence of an oak bell-frame is multiply-attested. (Distinct from the new 178-step solid-oak double-helix visitor staircase in the south tower belfry — 1,200 hand-assembled oak pieces — see step-count datum.)",
+      "topic": "Notre-Dame de Paris — the two west towers: heights, belfry stage, step counts, oak bell-frame, and bells (Emmanuel bourdon + 2012/2013 sets)"
+    },
+    {
+      "key": "tower_steps_count",
+      "value": "297 REFUTED; historic pre-fire route ~387 steps to the terraces; current (post-2025 reopening) route 422-424 steps to the south-tower terrace",
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.tours-notre-dame-de-paris.fr/en/discover/the-distinctive-features-of-the-towers-of-notre-dame-de-paris",
+          "supports": true,
+          "note": "Official Towers site: '389 steps to reach the terraces' (pre-reopening figure ~387-389)."
+        },
+        {
+          "url": "https://www.paristoversailles.com/the-bell-towers-of-notre-dame-cathedral/",
+          "supports": true,
+          "note": "Current reopened route: '424 steps' via a double-spiral oak staircase to the south-tower terrace (69 m)."
+        },
+        {
+          "url": "https://www.finestresullarte.info/en/news/paris-notre-dame-reopens-its-towers-to-the-public-with-a-new-tour-itinerary",
+          "supports": true,
+          "note": "New 2025 route 'involves climbing 422 steps' (entrance now from the south tower)."
+        }
+      ],
+      "notes": "The corpus-refuted '297 steps' is NOT corroborated by any source. The pre-fire published climb was ~387-389 steps to the terraces (official Towers site says 389). The towers reopened 20 Sep 2025 with a new route reported as 422 (one source) to 424 (multiple sources) steps to the south-tower terrace. The 422/424 spread reflects route-direction/counting differences. Keep 297 as a hard-negative.",
+      "topic": "Notre-Dame de Paris — the two west towers: heights, belfry stage, step counts, oak bell-frame, and bells (Emmanuel bourdon + 2012/2013 sets)"
+    },
+    {
+      "key": "emmanuel_bourdon_mass_t",
+      "value": 13.32,
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://notre-dame-de-paris.culture.gouv.fr/fr/le-bourdon-emmanuel",
+          "supports": true,
+          "note": "Ministere de la Culture official Notre-Dame site: Emmanuel = 13 320 kg; diameter 261 cm; cast March 1686; hoisted into the South tower 14 July 1682 (recast in place); clapper 447 kg (installed Oct 2017)."
+        },
+        {
+          "url": "https://fr.wikipedia.org/wiki/Emmanuel_(bourdon)",
+          "supports": true,
+          "note": "fr.Wikipedia: 'Le bourdon pese au total 13 320 kg'; base diameter 2.61 m; note Fa#2; steel clapper 447 kg; South tower."
+        }
+      ],
+      "notes": "Emmanuel = 13,320 kg = ~13.32 t (precise official figure), in the SOUTH tower, cast 1686, sounds F-sharp 2 (fa diese 2), base diameter ~2.61 m. Popular/tourist sources round this to '13 tonnes' with a '500 kg / 2.62 m' clapper-and-diameter pair (e.g. Friends of ND, eutouring), but the precise official value is 13,320 kg with a 447 kg clapper (current, since Oct 2017). The two precise figures (culture.gouv + fr.wiki) agree exactly. Second-largest bell in France after the Savoyarde of Sacre-Coeur.",
+      "topic": "Notre-Dame de Paris — the two west towers: heights, belfry stage, step counts, oak bell-frame, and bells (Emmanuel bourdon + 2012/2013 sets)"
+    },
+    {
+      "key": "emmanuel_bourdon_tower",
+      "value": "South tower",
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/bells/",
+          "supports": true,
+          "note": "Emmanuel located in the south tower; cast 1683/1686; rings F-sharp; sole bell to survive the Revolution melt-down."
+        },
+        {
+          "url": "https://notre-dame-de-paris.culture.gouv.fr/fr/le-bourdon-emmanuel",
+          "supports": true,
+          "note": "Official: 'hisse... dans la tour Sud.'"
+        }
+      ],
+      "notes": "Emmanuel (and the petit bourdon Marie) are in the SOUTH tower. Emmanuel was the only Notre-Dame bell to survive the 1791-92 Revolutionary melt-down; reinstalled 1802 under Napoleon I. Undamaged by the 2019 fire.",
+      "topic": "Notre-Dame de Paris — the two west towers: heights, belfry stage, step counts, oak bell-frame, and bells (Emmanuel bourdon + 2012/2013 sets)"
+    },
+    {
+      "key": "marie_bourdon",
+      "value": "Marie — petit bourdon, South tower, 6,023 kg, G#2, cast 2012 by Royal Eijsbouts (Netherlands)",
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Bells_of_Notre-Dame_de_Paris",
+          "supports": true,
+          "note": "Marie: 6,023 kg, South tower, 2012, note G#2, Royal Eijsbouts foundry."
+        },
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/bells/",
+          "supports": true,
+          "note": "Marie produced at Royal Eijsbouts foundry (Netherlands), south tower 'petit bourdon'; ~6 tonnes; designed to sound like Emmanuel."
+        }
+      ],
+      "notes": "Marie is the second south-tower bourdon, added in the 2012-2013 restoration; ~6 t (precise 6,023 kg per Wikipedia bell table). Cast by Royal Eijsbouts (NL), distinct from the eight north-tower bells (Cornille-Havard, Normandy).",
+      "topic": "Notre-Dame de Paris — the two west towers: heights, belfry stage, step counts, oak bell-frame, and bells (Emmanuel bourdon + 2012/2013 sets)"
+    },
+    {
+      "key": "north_tower_2013_bell_set",
+      "value": "8 bells in the NORTH tower, cast 2012 by Cornille-Havard (Villedieu-les-Poeles), blessed/installed for the 2013 850th anniversary: Gabriel 4,162 kg; Anne-Genevieve 3,477 kg; Denis 2,502 kg; Marcel 1,925 kg; Etienne 1,494 kg; Benoit-Joseph 1,309 kg; Maurice 1,011 kg; Jean-Marie 782 kg",
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Bells_of_Notre-Dame_de_Paris",
+          "supports": true,
+          "note": "Full table: Gabriel 4162, Anne-Genevieve 3477, Denis 2502, Marcel 1925, Etienne 1494, Benoit-Joseph 1309, Maurice 1011, Jean-Marie 782 kg; all North tower, 2012, Cornille-Havard; notes A#2 down to A#3."
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/List_of_bells_in_Notre-Dame_de_Paris",
+          "supports": true,
+          "note": "Same eight names, same individual kg weights, North tower, Cornille-Havard foundry — independent confirmation of the per-bell weights."
+        }
+      ],
+      "notes": "The 2013 north-tower set replaced the four 19th-c. bells (melted and recast) for the cathedral's 850th anniversary. Eight bells named for figures of the diocese/Church, cast 2012 by Cornille-Havard in Villedieu-les-Poeles, Normandy, using historic profiles to recreate the 17th-c. sound. Note: castings are dated 2012; the public installation/blessing and 850th-anniversary ringing were 2013 (hence the project is widely called the '2013 bells'). The eight bells were cleaned/restored, not damaged, in the 2019 fire (north tower).",
+      "topic": "Notre-Dame de Paris — the two west towers: heights, belfry stage, step counts, oak bell-frame, and bells (Emmanuel bourdon + 2012/2013 sets)"
+    },
+    {
+      "key": "tower_spires_never_built",
+      "value": "The two west towers were never finished with spires — they were planned in the 13th c. but never built, leaving the flat-topped square towers seen today",
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.notredamedeparis.fr/en/understand/architecture/the-western-facade/",
+          "supports": true,
+          "note": "Official cathedral site: spires for the west towers were considered in the 13th c. but never built."
+        }
+      ],
+      "notes": "Context for tower geometry: the square west towers terminate in flat terraces, not spires. Single official source; relevant to any reconstruction so the towers are not modelled with spires. (The 96 m fleche is over the crossing, not on the towers.)",
+      "topic": "Notre-Dame de Paris — the two west towers: heights, belfry stage, step counts, oak bell-frame, and bells (Emmanuel bourdon + 2012/2013 sets)"
+    },
+    {
+      "key": "figure_count",
+      "value": 28,
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/west-facade/",
+          "supports": true,
+          "note": "Official Friends of Notre-Dame de Paris: 'a series of 28 characters illustrating the 28 generations of the kings of Judea, preceding Christ.'"
+        },
+        {
+          "url": "https://panoramadelart.com/analyse/galerie-des-rois-de-la-cathedrale-notre-dame-de-paris",
+          "supports": true,
+          "note": "Panorama de l'art (RMN scholarly): 'vingt-huit sculptures monumentales' (28 monumental sculptures)."
+        },
+        {
+          "url": "https://passerelles.essentiels.bnf.fr/fr/article/e854492c-8458-4685-9bd0-d211156adb0f-facade-notre-dame-paris-en-9-points",
+          "supports": true,
+          "note": "BnF Passerelles educational resource: 'Ces 28 statues.'"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris",
+          "supports": true,
+          "note": "Wikipedia: 'The twenty-eight statues of biblical kings located at the west facade.'"
+        }
+      ],
+      "notes": "Count of 28 confirmed across four independent authorities (official cathedral foundation, RMN scholarly, BnF, encyclopedia). The number corresponds to 28 generations of the kings of Judah preceding Christ. Multiply-confirmed => measured.",
+      "topic": "Notre-Dame de Paris — Galerie des Rois (Gallery of Kings), west facade"
+    },
+    {
+      "key": "figure_identity",
+      "value": "Kings of Judah (and Israel) — Old Testament royal ancestors of Christ through the Virgin Mary; NOT kings of France",
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://panoramadelart.com/analyse/galerie-des-rois-de-la-cathedrale-notre-dame-de-paris",
+          "supports": true,
+          "note": "RMN scholarly: 'les rois de Juda et d'Israel', symbolizing 'la genealogie de la Vierge' / ancestors of Christ."
+        },
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/west-facade/",
+          "supports": true,
+          "note": "Official: biblical kings of Judea; during the Revolution 'wrongly associated with the sovereigns of the kingdom of France.'"
+        },
+        {
+          "url": "https://passerelles.essentiels.bnf.fr/fr/article/e854492c-8458-4685-9bd0-d211156adb0f-facade-notre-dame-paris-en-9-points",
+          "supports": true,
+          "note": "BnF: 'elles figurent en realite les ancetres de la Vierge Marie' — explicitly debunking the kings-of-France belief."
+        },
+        {
+          "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+          "supports": true,
+          "note": "Musee de Cluny names the collection 'Heads of the kings of Judah.'"
+        }
+      ],
+      "notes": "Identity = biblical kings of Judah/Israel (genealogy of the Virgin / ancestors of Christ). The 'kings of France' attribution is an explicitly documented MYTH/misidentification that led revolutionaries to behead them. Multiply-confirmed including the official cathedral foundation and the holding museum => measured.",
+      "topic": "Notre-Dame de Paris — Galerie des Rois (Gallery of Kings), west facade"
+    },
+    {
+      "key": "figure_height_m",
+      "value": 3.5,
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://panoramadelart.com/analyse/galerie-des-rois-de-la-cathedrale-notre-dame-de-paris",
+          "supports": true,
+          "note": "RMN scholarly: statues '3,5 m de haut', monumental so as to be identifiable from the parvis."
+        },
+        {
+          "url": "https://aviewoncities.com/paris/notre-dame-cathedral",
+          "supports": true,
+          "note": "'a row of 28 statues of Judean Kings preceding Christ ... each 3.5 meters tall (11 ft.).'"
+        }
+      ],
+      "notes": "Height 3.5 m (~11 ft) for the current Viollet-le-Duc figures, confirmed by two independent sources (one RMN scholarly). The notredamedeparis.fr official site also cites 3,5 m per search snippet but that page returned 403 on direct fetch so not counted. Two independent confirmations => measured.",
+      "topic": "Notre-Dame de Paris — Galerie des Rois (Gallery of Kings), west facade"
+    },
+    {
+      "key": "decapitation_year",
+      "value": 1793,
+      "provenance": "reconstructed_design",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris",
+          "supports": true,
+          "note": "Wikipedia: statues 'mistaken for statues of French kings, were beheaded' in 1793."
+        },
+        {
+          "url": "https://panoramadelart.com/analyse/galerie-des-rois-de-la-cathedrale-notre-dame-de-paris",
+          "supports": true,
+          "note": "RMN scholarly: 'En 1793, la galerie des Rois est methodiquement detruite' as images of tyranny/superstition."
+        },
+        {
+          "url": "https://www.unjourdeplusaparis.com/en/paris-culture/extraordinaire-periple-tetes-rois-de-juda-musee-cluny",
+          "supports": false,
+          "note": "CONFLICT: states 'In 1792, after the abolition of the monarchy, many statues were destroyed.'"
+        },
+        {
+          "url": "https://www.medieval.eu/medieval-sculpture-from-notre-dame-de-paris-at-cluny/",
+          "supports": false,
+          "note": "CONFLICT: 'In 1792 ... they were beheaded, and thrown into the forecourt.'"
+        }
+      ],
+      "notes": "The destruction event is certain; the exact YEAR is contested. Dominant scholarly date is 1793 (RMN Panorama de l'art, Wikipedia); two travel/history sources give 1792 (tied to the Sept 1792 abolition of the monarchy). Decree of 23 Oct 1793 ordered destruction of royal effigies; demolition of the Gallery of Kings is generally dated to 1793, with work possibly spilling into 1794. Year marked reconstructed_design (well-documented but conflicting) rather than measured pending a definitive primary archival source.",
+      "topic": "Notre-Dame de Paris — Galerie des Rois (Gallery of Kings), west facade"
+    },
+    {
+      "key": "heads_rediscovered_count",
+      "value": 21,
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://panoramadelart.com/analyse/galerie-des-rois-de-la-cathedrale-notre-dame-de-paris",
+          "supports": true,
+          "note": "RMN scholarly: '364 fragments, dont vingt et une tetes couronnees' (364 fragments, including 21 crowned heads), now at Musee de Cluny."
+        },
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/west-facade/",
+          "supports": true,
+          "note": "Official: 'Twenty-one original heads were found in 1977, during restoration work on rue de la Chaussee d'Antin.'"
+        },
+        {
+          "url": "https://www.unjourdeplusaparis.com/en/paris-culture/extraordinaire-periple-tetes-rois-de-juda-musee-cluny",
+          "supports": false,
+          "note": "CONFLICT/nuance: says 'twenty-two of them could be restored' among ~400 fragments — likely counting an extra restorable fragment vs the 21 crowned royal heads."
+        }
+      ],
+      "notes": "21 heads is the dominant figure, confirmed by the RMN scholarly source ('vingt et une tetes couronnees') and the official cathedral foundation. One source says 22 restored; the 21 figure refers specifically to the crowned kings' heads. Multiply-confirmed by independent authorities => measured.",
+      "topic": "Notre-Dame de Paris — Galerie des Rois (Gallery of Kings), west facade"
+    },
+    {
+      "key": "heads_rediscovery_year",
+      "value": 1977,
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/west-facade/",
+          "supports": true,
+          "note": "Official: 'Twenty-one original heads were found in 1977.'"
+        },
+        {
+          "url": "https://panoramadelart.com/analyse/galerie-des-rois-de-la-cathedrale-notre-dame-de-paris",
+          "supports": true,
+          "note": "RMN: fragments 'decouverts par hasard en 1977.'"
+        },
+        {
+          "url": "https://www.unjourdeplusaparis.com/en/paris-culture/extraordinaire-periple-tetes-rois-de-juda-musee-cluny",
+          "supports": true,
+          "note": "Confirms 1977 discovery."
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris",
+          "supports": true,
+          "note": "Wikipedia: 'found during a 1977 excavation nearby.'"
+        }
+      ],
+      "notes": "1977 discovery year unanimously confirmed across all independent sources => measured.",
+      "topic": "Notre-Dame de Paris — Galerie des Rois (Gallery of Kings), west facade"
+    },
+    {
+      "key": "heads_discovery_location",
+      "value": "Hotel Moreau, 20 rue de la Chaussee d'Antin, Paris 9th arrondissement (during excavation works)",
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.unjourdeplusaparis.com/en/paris-culture/extraordinaire-periple-tetes-rois-de-juda-musee-cluny",
+          "supports": true,
+          "note": "'the Hotel Moreau, located 20, rue de la Chaussee d'Antin in the 9th arrondissement' where ~400 stone fragments were found."
+        },
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/west-facade/",
+          "supports": true,
+          "note": "Official: 'found in 1977, during restoration work on rue de la Chaussee d'Antin.'"
+        }
+      ],
+      "notes": "Found buried in the courtyard/foundations of the Hotel Moreau, 20 rue de la Chaussee d'Antin (9th arr.). Confirmed by two independent sources (street confirmed by both; specific hotel name by one). Measured.",
+      "topic": "Notre-Dame de Paris — Galerie des Rois (Gallery of Kings), west facade"
+    },
+    {
+      "key": "originals_current_location",
+      "value": "Musee de Cluny - Musee national du Moyen Age, Paris",
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+          "supports": true,
+          "note": "Holding museum's own collection page: 'Heads of the kings of Judah', Musee de Cluny."
+        },
+        {
+          "url": "https://panoramadelart.com/analyse/galerie-des-rois-de-la-cathedrale-notre-dame-de-paris",
+          "supports": true,
+          "note": "RMN: fragments now displayed at the Musee de Cluny."
+        },
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/west-facade/",
+          "supports": true,
+          "note": "Official: heads 'now displayed at the Cluny Museum.'"
+        }
+      ],
+      "notes": "Surviving original 13th-c heads/fragments held at Musee de Cluny (Musee national du Moyen Age). Confirmed by the museum itself plus two independent sources => measured. The on-facade figures today are NOT these originals.",
+      "topic": "Notre-Dame de Paris — Galerie des Rois (Gallery of Kings), west facade"
+    },
+    {
+      "key": "current_figures_origin",
+      "value": "19th-century restoration: recreated under Eugene Viollet-le-Duc; statues carved in the workshops of Adolphe-Victor Geoffroy-Dechaume (NOT original medieval fabric)",
+      "provenance": "reconstructed_design",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/west-facade/",
+          "supports": true,
+          "note": "Official: 'the workshops of Adolphe-Victor and Geoffroy-Dechaume produced the statues which are visible today.'"
+        },
+        {
+          "url": "https://panoramadelart.com/analyse/galerie-des-rois-de-la-cathedrale-notre-dame-de-paris",
+          "supports": true,
+          "note": "RMN: gallery 'entierement recreee' by Viollet-le-Duc; restoration 1845-1846, new sculptures from 1858 onward."
+        }
+      ],
+      "notes": "CRITICAL for reconstruction: every figure currently on the facade is a 19th-century Viollet-le-Duc-era recreation (Geoffroy-Dechaume workshop), not medieval fabric. Therefore any 3D model of the current figures is reconstructed_design, not measured medieval. Restoration campaign began 1845-1846; sculptures executed from 1858. (Note: BnF Passerelles cites '1843' for the restoration project start — minor date variance in the campaign timeline.)",
+      "topic": "Notre-Dame de Paris — Galerie des Rois (Gallery of Kings), west facade"
+    },
+    {
+      "key": "vertical_placement_height_m",
+      "value": 20,
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://panoramadelart.com/analyse/galerie-des-rois-de-la-cathedrale-notre-dame-de-paris",
+          "supports": true,
+          "note": "RMN: gallery runs horizontally 'a environ 20 metres au-dessus du sol' (~20 m above ground), on colonnettes."
+        },
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/west-facade/",
+          "supports": true,
+          "note": "Official (via search): 'at twenty meters from the ground, it forms a series of twenty-eight figures.'"
+        }
+      ],
+      "notes": "The gallery band sits roughly 20 m above the parvis. Confirmed by two independent sources => measured. This is the approximate sill height of the gallery band, not the figure mid-height.",
+      "topic": "Notre-Dame de Paris — Galerie des Rois (Gallery of Kings), west facade"
+    },
+    {
+      "key": "vertical_placement_band",
+      "value": "Horizontal band spanning the full facade width, above the three portals and the spandrel zone, BELOW the balustrade and the rose-window register; figures stand in arcaded niches on colonnettes",
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/west-facade/",
+          "supports": true,
+          "note": "Official: gallery 'under the balustrade' as 'a horizontal band ... between the three portals below and the rose window above.'"
+        },
+        {
+          "url": "https://panoramadelart.com/analyse/galerie-des-rois-de-la-cathedrale-notre-dame-de-paris",
+          "supports": true,
+          "note": "RMN: horizontal gallery on colonnettes, between the three portals (below) and rose level (above)."
+        }
+      ],
+      "notes": "Placement: full-width horizontal arcaded band between the portal register (below) and the rose-window/'galerie haute' register (above), beneath the balustrade. Confirmed by two independent sources => measured. Useful for positioning the band in the facade model relative to the already-anchored facade width 43.5 m.",
+      "topic": "Notre-Dame de Paris — Galerie des Rois (Gallery of Kings), west facade"
+    },
+    {
+      "key": "west_rose_diameter_m",
+      "value": 9.6,
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/west-facade/",
+          "supports": true,
+          "note": "Friends of Notre-Dame de Paris west-facade page: rose window '9.6 meters in diameter', 'made around 1225'."
+        },
+        {
+          "url": "https://passerelles.essentiels.bnf.fr/fr/chronologie/construction/5528aa47-6ab5-48d1-92fb-46ca5144731b-cathedrale-notre-dame-paris/article/e854492c-8458-4685-9bd0-d211156adb0f-facade-notre-dame-paris-en-9-points",
+          "supports": true,
+          "note": "BnF Passerelles 'La facade de Notre-Dame de Paris en 9 points': west rose '9,60 m de diametre'."
+        },
+        {
+          "url": "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Notre-Dame_de_Paris",
+          "supports": true,
+          "note": "FR Wikipedia (cathedral article) quoted via search: rosace ouest 'diametre de 9,60 m' at the gallery of the Virgin level. Confirms 9.60 m."
+        }
+      ],
+      "notes": "Three independent sources agree on 9.60 m (~31.5 ft). It is the OLDEST and SMALLEST of the three roses (transept N/S roses are ~13 m). MINOR CONFLICT: EN Wikipedia 'Rose window' article gives 'nearly 33 feet' (~10.06 m) — likely a rounded/influenced figure; 9.60 m is the dominant, French-sourced value. Ingest the number (dimension = uncopyrightable fact); page prose/images are cite-only.",
+      "topic": "Notre-Dame de Paris — west rose window and three west portals"
+    },
+    {
+      "key": "west_rose_date",
+      "value": "c. 1220–1225",
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/rose-windows/",
+          "supports": true,
+          "note": "Friends of ND: west rose 'originally completed around 1225'."
+        },
+        {
+          "url": "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Notre-Dame_de_Paris",
+          "supports": true,
+          "note": "FR Wikipedia verbatim: 'L'etage de la rose date de 1220-1225.'"
+        },
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/west-facade/",
+          "supports": true,
+          "note": "Friends of ND west-facade page: rose 'made around 1225'."
+        }
+      ],
+      "notes": "Consensus c.1220–1225 across the cathedral's own documentation, Friends of ND, BnF, and FR Wikipedia. CONFLICT NOTED: EN Wikipedia 'Rose window' article states 'completed about 1255' — this likely refers to its influence (it 'set the pattern' for the transept/St-Denis roses) rather than its own completion; the 1220–1225 figure is far better corroborated. No original glass survives (recreated 19th c.).",
+      "topic": "Notre-Dame de Paris — west rose window and three west portals"
+    },
+    {
+      "key": "west_rose_tracery",
+      "value": "Radial wheel tracery: 24 rays/spokes arranged on three concentric circles, around a central roundel (Madonna and Child); iconographic program of vices, virtues, zodiac signs and labors of the months",
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/rose-windows/",
+          "supports": true,
+          "note": "Friends of ND: '24 rays on three concentric circles'; center Madonna and Child; innermost circle = twelve tribes of Israel; upper = vices/virtues; lower = 12 zodiac signs / labors of the months."
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Rose_window",
+          "supports": true,
+          "note": "EN Wikipedia 'Rose window': ND west rose has 'twenty-four spokes on three concentric circles'; describes mullions in two bands radiating from a central roundel terminating in pointed arches."
+        }
+      ],
+      "notes": "Two independent sources confirm 24 radiating spokes on three concentric circles — a radial/wheel pattern with pointed-arch terminations. The count and ring topology are structural facts usable for the render; iconographic program is descriptive (cite text, ingest the geometric structure only).",
+      "topic": "Notre-Dame de Paris — west rose window and three west portals"
+    },
+    {
+      "key": "west_rose_surrounding_colonnade",
+      "value": null,
+      "provenance": "GAP",
+      "rights": "cite_only",
+      "sources": [
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/west-facade/",
+          "supports": false,
+          "note": "No numeric dimension or count for a colonnade/arcade surrounding or framing the west rose found here."
+        },
+        {
+          "url": "https://passerelles.essentiels.bnf.fr/fr/chronologie/construction/5528aa47-6ab5-48d1-92fb-46ca5144731b-cathedrale-notre-dame-paris/article/e854492c-8458-4685-9bd0-d211156adb0f-facade-notre-dame-paris-en-9-points",
+          "supports": false,
+          "note": "Describes the rose flanked by the Gallery of Kings below and the Grande Galerie / colonnade above, but gives no dimensions for the colonnade itself."
+        }
+      ],
+      "notes": "GAP. The west rose sits within the 'Galerie de la Vierge' level; the facade carries the Gallery of Kings (28 figures) below and the colonnade/Grande Galerie above, but NO published metric for any 'surrounding colonnade' of the rose itself was located. Do NOT fill. Geometry for any rose-framing arcade must be scaled from a PD drawing (Dehio-Bezold / Viollet-le-Duc facade plate) and tagged reconstructed_design, or left conjecture.",
+      "topic": "Notre-Dame de Paris — west rose window and three west portals"
+    },
+    {
+      "key": "portal_left_virgin",
+      "value": "Portal of the Virgin (north / left); tympanum: Death, Assumption and Coronation of the Virgin (Mary as Queen of Heaven); trumeau Virgin and Child; date c.1210–1220",
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/portals/",
+          "supports": true,
+          "note": "Friends of ND: Portal of the Virgin 'on the left side of the west facade', 'around 1210-1220', tympanum = Mary's death, assumption to paradise, coronation as queen of heaven; trumeau Virgin and Child trampling the serpent."
+        },
+        {
+          "url": "https://passerelles.essentiels.bnf.fr/fr/chronologie/construction/5528aa47-6ab5-48d1-92fb-46ca5144731b-cathedrale-notre-dame-paris/article/e854492c-8458-4685-9bd0-d211156adb0f-facade-notre-dame-paris-en-9-points",
+          "supports": true,
+          "note": "BnF Passerelles: Portal of the Virgin (north), Gothic tracery; tympanum Marie at death, flanked by Saint Denis and Sainte Genevieve."
+        }
+      ],
+      "notes": "Left/north portal. Identity, side, tympanum subject (Dormition/Assumption/Coronation of the Virgin) and approximate date all multiply confirmed (Friends + BnF). Iconography is descriptive (cite); the layout fact (left = Virgin) is uncopyrightable.",
+      "topic": "Notre-Dame de Paris — west rose window and three west portals"
+    },
+    {
+      "key": "portal_centre_last_judgment",
+      "value": "Portal of the Last Judgment (centre); tympanum: Christ in Majesty showing wounds, St Michael weighing souls, resurrection of the dead, elect to paradise / damned to hell; trumeau teaching Christ; date c.1220–1230 (last completed); restored by Viollet-le-Duc after Soufflot's 1771 alteration",
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/portals/",
+          "supports": true,
+          "note": "Friends of ND: central Last Judgment portal 'installed between 1220 and 1230'; tympanum Christ in glory, soul-weighing (Archangel Michael), paradise/hell; lower lintel resurrection of the dead."
+        },
+        {
+          "url": "https://passerelles.essentiels.bnf.fr/fr/chronologie/construction/5528aa47-6ab5-48d1-92fb-46ca5144731b-cathedrale-notre-dame-paris/article/e854492c-8458-4685-9bd0-d211156adb0f-facade-notre-dame-paris-en-9-points",
+          "supports": true,
+          "note": "BnF Passerelles: central portal du Jugement dernier 'le plus eleve et le plus large', with linteaux, trumeau, tympan, voussures."
+        },
+        {
+          "url": "https://fr.wikipedia.org/wiki/Portail_du_Jugement_dernier",
+          "supports": true,
+          "note": "FR Wikipedia: central portal, ogival arch, two archways separated by a trumeau; Soufflot removed trumeau/central lintel in 1771, Viollet-le-Duc restored it 19th c."
+        }
+      ],
+      "notes": "Central portal. Subject (Last Judgment / Christ in Majesty + psychostasis), central position, and 'tallest and widest' status all multiply confirmed. Trumeau and central lintel are 19th-c. Viollet-le-Duc restoration (Soufflot cut them away in 1771) — sculpture is reconstructed fabric, but the portal geometry/position is a published fact.",
+      "topic": "Notre-Dame de Paris — west rose window and three west portals"
+    },
+    {
+      "key": "portal_right_st_anne",
+      "value": "Portal of St-Anne (south / right); tympanum: Romanesque-style, Virgin and Child enthroned with royal attributes flanked by a king and a bishop, plus childhood-of-Christ scenes; tympanum reused/carved c.1150 (older than the facade); portal assembled c.1200 (oldest of the three)",
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/portals/",
+          "supports": true,
+          "note": "Friends of ND: St-Anne portal 'on the right side', 'installed around 1200', 'the oldest of the three portals'; tympanum childhood of Christ (Annunciation, Visitation, Nativity, Epiphany), Virgin and Child enthroned."
+        },
+        {
+          "url": "https://passerelles.essentiels.bnf.fr/fr/chronologie/construction/5528aa47-6ab5-48d1-92fb-46ca5144731b-cathedrale-notre-dame-paris/article/e854492c-8458-4685-9bd0-d211156adb0f-facade-notre-dame-paris-en-9-points",
+          "supports": true,
+          "note": "BnF Passerelles: St-Anne portal (south), from the earlier Saint-Etienne church; 'tympan d'inspiration romane' depicting Sainte Anne, mother of Mary."
+        }
+      ],
+      "notes": "Right/south portal. Subject, side, and its status as the oldest (with a reused mid-12th-c. Romanesque tympanum predating the Gothic facade) are multiply confirmed (Friends + BnF). The earlier Romanesque tympanum is the key distinguishing fact.",
+      "topic": "Notre-Dame de Paris — west rose window and three west portals"
+    },
+    {
+      "key": "central_portal_widest",
+      "value": "Yes — the central Last Judgment portal is the tallest and widest; the two side portals (Virgin, St-Anne) are narrower and lower",
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://passerelles.essentiels.bnf.fr/fr/chronologie/construction/5528aa47-6ab5-48d1-92fb-46ca5144731b-cathedrale-notre-dame-paris/article/e854492c-8458-4685-9bd0-d211156adb0f-facade-notre-dame-paris-en-9-points",
+          "supports": true,
+          "note": "BnF Passerelles: central portal du Jugement dernier 'le plus eleve et le plus large' (tallest and widest)."
+        },
+        {
+          "url": "https://jalladeauj.fr/portailsndparis/",
+          "supports": true,
+          "note": "Jalladeau scholarly portals site: 'le portail central appele portail du Jugement Dernier, plus eleve et plus large que les deux autres.'"
+        },
+        {
+          "url": "https://www.sacred-destinations.com/france/paris-notre-dame-cathedral",
+          "supports": true,
+          "note": "Sacred Destinations: central Portal of the Last Judgment 'larger than' the Portal of St Anne (right) and Portal of the Virgin (left)."
+        }
+      ],
+      "notes": "The relative-width ordering (centre wider/taller than the two flanking portals) is multiply and independently confirmed. This is a qualitative ratio fact — usable to make the central bay wider in the render. EXACT metric portal widths were NOT found (see GAP).",
+      "topic": "Notre-Dame de Paris — west rose window and three west portals"
+    },
+    {
+      "key": "portal_widths_m",
+      "value": null,
+      "provenance": "GAP",
+      "rights": "cite_only",
+      "sources": [
+        {
+          "url": "https://fr.wikipedia.org/wiki/Portail_du_Jugement_dernier",
+          "supports": false,
+          "note": "Describes structure (ogival arch, two archways, trumeau) but gives NO portal width in meters. Mentions an archivolt apex at ~16 m from the ground (a HEIGHT reference, not a width)."
+        },
+        {
+          "url": "https://jalladeauj.fr/portailsndparis/",
+          "supports": false,
+          "note": "States the central portal is wider/taller than the others but provides NO metric dimensions for any portal."
+        },
+        {
+          "url": "https://www.citedelarchitecture.fr/fr/oeuvre/voussures-du-portail-du-jugement-dernier-portail-central-de-la-facade-occidentale-de-la-0",
+          "supports": false,
+          "note": "Cite de l'architecture catalogues casts/voussures of the central portal but no portal opening width was located."
+        }
+      ],
+      "notes": "GAP — DO NOT FILL. No published metric width for the central or side portals (in meters) could be sourced. Only the qualitative ordering (centre widest) and one height reference (central archivolt apex ~16 m from ground, from FR Wikipedia, NOT independently confirmed) exist. Portal widths for the render must be scaled from a PD facade drawing (Dehio-Bezold atlas / Viollet-le-Duc facade plate) and tagged reconstructed_design, or left conjecture — never asserted as a measured metric.",
+      "topic": "Notre-Dame de Paris — west rose window and three west portals"
+    },
+    {
+      "key": "transept_rose_diameter_m_crosscheck",
+      "value": 13,
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/rose-windows/",
+          "supports": true,
+          "note": "Friends of ND: south rose window 'almost 13 meters in diameter (about 42 feet)'."
+        },
+        {
+          "url": "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Notre-Dame_de_Paris",
+          "supports": true,
+          "note": "FR Wikipedia (via search): transept north/south roses 'un diametre de 13 metres', confirming the west rose (9.60 m) is the smallest."
+        }
+      ],
+      "notes": "Cross-check only (transept roses, not the west rose). Confirms the corpus value transept_NS_diameter ~13.1 m and that the west rose (9.60 m) is the smallest of the three. Consistent with existing corpus entry; reinforces the west diameter figure by contrast.",
+      "topic": "Notre-Dame de Paris — west rose window and three west portals"
+    },
+    {
+      "key": "chimera_count_galerie_des_chimeres",
+      "value": 54,
+      "provenance": "conjecture",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/grotesques/",
+          "supports": true,
+          "note": "Official Friends of Notre-Dame: '54 grotesques' designed by Viollet-le-Duc, sculpted by Geoffroy-Dechaume workshops; 4 need full replacement."
+        },
+        {
+          "url": "https://broaden-horizons.fr/blog-en/notre-dame-gargoyles-complete-guide/",
+          "supports": true,
+          "note": "Independent guide: 'approximately 54 chimeras'; 5 replaced after 2019 fire."
+        },
+        {
+          "url": "https://fr.wikipedia.org/wiki/Chim%C3%A8res_de_Notre-Dame_de_Paris",
+          "supports": true,
+          "note": "Confirms 19th-c Viollet-le-Duc additions, team of 15 sculptors under Geoffroy-Dechaume; does not state an exact total count."
+        }
+      ],
+      "notes": "TWO independent sources (Friends of ND + broaden-horizons) give 54; an outlier search hit mentioned 56. Counted as 'conjecture' not 'measured' because the figure is reported as 'approximately', sources sometimes conflate chimeras/grotesques, and 4-5 figures were destroyed/replaced after 2019 — so the live count is unstable. These are 19th-c Viollet-le-Duc INVENTIONS on the gallery between the towers, NOT medieval fabric: modeled form => reconstructed_design, the exact count => conjecture.",
+      "topic": "Notre-Dame de Paris — gargoyles, chimeras (Galerie des Chimères), west-facade/tower buttresses and pinnacles"
+    },
+    {
+      "key": "chimeras_are_19th_century_violletleduc_creation",
+      "value": "Yes — the Galerie des Chimères figures are 19th-century inventions designed by Viollet-le-Duc (restoration 1844-1864), sculpted by Geoffroy-Dechaume's workshop; they did NOT exist in the medieval cathedral.",
+      "provenance": "reconstructed_design",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://fr.wikipedia.org/wiki/Chim%C3%A8res_de_Notre-Dame_de_Paris",
+          "supports": true,
+          "note": "'Ces éléments n'existaient pas au Moyen Âge' — néogothique additions by Viollet-le-Duc in the 19th c."
+        },
+        {
+          "url": "https://www.19thc-artworldwide.org/autumn10/the-gargoyles-of-notre-dame",
+          "supports": true,
+          "note": "Scholarly (Camille review): chimeras/gargoyles today are 19th-c 'fresh creations... an imagined vision of a vanished past', not archaeological reconstructions."
+        },
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/grotesques/",
+          "supports": true,
+          "note": "Designed by Viollet-le-Duc in the 19th c., recreating a fantastic medieval universe."
+        }
+      ],
+      "notes": "Three independent sources concur. Per the brief: chimeres = reconstructed_design (PD-era design intent), and any FINE modeling of individual creatures = conjecture. Do not present as medieval fabric.",
+      "topic": "Notre-Dame de Paris — gargoyles, chimeras (Galerie des Chimères), west-facade/tower buttresses and pinnacles"
+    },
+    {
+      "key": "le_stryge_most_famous_chimera",
+      "value": "Le Stryge (the 'Vampire'/'Spitting gargoyle', a horned brooding figure with chin on hands overlooking Paris) — the most famous chimera, located at the corner of the gallery between the towers.",
+      "provenance": "reconstructed_design",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/grotesques/",
+          "supports": true,
+          "note": "'One of the most famous grotesques... is Le Stryge, also known as The Vampire.'"
+        },
+        {
+          "url": "https://fr.wikipedia.org/wiki/Chim%C3%A8res_de_Notre-Dame_de_Paris",
+          "supports": true,
+          "note": "'La Stryge... sans doute la plus célèbre des chimères de la cathédrale.'"
+        }
+      ],
+      "notes": "A Viollet-le-Duc invention => reconstructed_design as design intent; any geometric modeling of the creature is conjecture. Popularized by Charles Méryon's 1853 etching (see le_stryge_meryon_etching_year).",
+      "topic": "Notre-Dame de Paris — gargoyles, chimeras (Galerie des Chimères), west-facade/tower buttresses and pinnacles"
+    },
+    {
+      "key": "le_stryge_meryon_etching_year",
+      "value": 1853,
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.wikiart.org/en/charles-meryon/le-stryge",
+          "supports": true,
+          "note": "Charles Méryon, 'Le Stryge', 1853."
+        },
+        {
+          "url": "https://broaden-horizons.fr/blog-en/notre-dame-gargoyles-complete-guide/",
+          "supports": true,
+          "note": "'1853: Charles Meryon's etching The Vampire depicting the Stryga.'"
+        }
+      ],
+      "notes": "Date of the etching that made Le Stryge iconic — a multiply-confirmed art-historical fact (used for provenance/context, not a building dimension). Méryon's plate itself (author d.1868) is public domain. The etching post-dates the sculpture, confirming the chimera is a 1850s creation, not medieval.",
+      "topic": "Notre-Dame de Paris — gargoyles, chimeras (Galerie des Chimères), west-facade/tower buttresses and pinnacles"
+    },
+    {
+      "key": "chimera_vs_gargoyle_distinction",
+      "value": "Gargoyles (gargouilles) are FUNCTIONAL waterspouts that channel rainwater clear of the masonry; chimeras/grotesques are PURELY DECORATIVE figures with no drainage function. The two are routinely conflated in popular usage.",
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/gargoyles/",
+          "supports": true,
+          "note": "Gargoyles drain rainwater off the walls; grotesques/chimeras 'do not serve a functional role in water drainage'."
+        },
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/grotesques/",
+          "supports": true,
+          "note": "Grotesques are 'purely decorative'; gargoyles channel rainwater away."
+        },
+        {
+          "url": "https://broaden-horizons.fr/blog-en/notre-dame-gargoyles-complete-guide/",
+          "supports": true,
+          "note": "Gargoyles = 'waterspouts'; chimeras = 'no water channel, no drainage function'."
+        }
+      ],
+      "notes": "Three independent sources state the same functional definition — a well-established, uncopyrightable fact. Core modeling rule: gargoyles project from eaves/cornices as cantilevered spouts; chimeras sit on the inter-tower balustrade gallery.",
+      "topic": "Notre-Dame de Paris — gargoyles, chimeras (Galerie des Chimères), west-facade/tower buttresses and pinnacles"
+    },
+    {
+      "key": "gargoyles_today_largely_19th_century_replacements",
+      "value": "The gargoyles seen today are largely 19th-century Viollet-le-Duc-era replacements/recreations (campaign 1843-1864), carved by Victor (Joseph) Pyanet; medieval originals had eroded and many were replaced rather than literally restored.",
+      "provenance": "reconstructed_design",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/gargoyles/",
+          "supports": true,
+          "note": "'During the 19th-century restoration led by Viollet-le-Duc, many of the original gargoyles were replaced with new sculptures.'"
+        },
+        {
+          "url": "https://www.19thc-artworldwide.org/autumn10/the-gargoyles-of-notre-dame",
+          "supports": true,
+          "note": "Scholarly: gargoyles today are 19th-c collaboration of Viollet-le-Duc + sculptor Pyanet ('Joseph Pyanet the actual carver')."
+        },
+        {
+          "url": "https://apollo-magazine.com/viollet-le-duc-notre-dame-gothic-revival-restoration/",
+          "supports": true,
+          "note": "Viollet-le-Duc created 'an entire new bestiary of waterspouts and statues'."
+        }
+      ],
+      "notes": "Unlike the chimeras (pure invention), gargoyles DID exist medievally as a building type, but the visible fabric is 19th-c design => reconstructed_design. Sculptor name varies in sources (Victor Pyanet vs Joseph Pyanet; one outlier said Frémiet) — treat individual attributions as conjecture.",
+      "topic": "Notre-Dame de Paris — gargoyles, chimeras (Galerie des Chimères), west-facade/tower buttresses and pinnacles"
+    },
+    {
+      "key": "gargoyle_count_total",
+      "value": null,
+      "provenance": "GAP",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/gargoyles/",
+          "supports": false,
+          "note": "Official page gives NO count: 'No specific count of gargoyles is provided.'"
+        },
+        {
+          "url": "https://www.19thc-artworldwide.org/autumn10/the-gargoyles-of-notre-dame",
+          "supports": false,
+          "note": "Speaks only of 'hundreds of monstrous figures' across three levels — no exact gargoyle count."
+        }
+      ],
+      "notes": "No reliable published total count of functional gargoyles. 'Hundreds of monstrous figures' lumps gargoyles + chimeras + grotesques together. Cite-or-gap => value null. Do not invent a number.",
+      "topic": "Notre-Dame de Paris — gargoyles, chimeras (Galerie des Chimères), west-facade/tower buttresses and pinnacles"
+    },
+    {
+      "key": "gargoyle_typical_projection_m",
+      "value": null,
+      "provenance": "GAP",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://broaden-horizons.fr/blog-en/notre-dame-gargoyles-complete-guide/",
+          "supports": true,
+          "note": "Single tertiary source states '~2 metres typical projection distance of gargoyles from walls'."
+        }
+      ],
+      "notes": "Only ONE non-authoritative tour-guide source gives ~2 m projection; no independent confirmation and no primary survey. Per cite-or-gap + >=2-independent-sources rule, a single tertiary source is insufficient for a numeric value => GAP (value null). If a dimension is ever needed, scale it off a VLD/Dehio-Bezold PD elevation and flag conjecture — do not adopt the 2 m figure as fact.",
+      "topic": "Notre-Dame de Paris — gargoyles, chimeras (Galerie des Chimères), west-facade/tower buttresses and pinnacles"
+    },
+    {
+      "key": "west_facade_buttress_count",
+      "value": 4,
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://frenchmoments.eu/west-facade-of-notre-dame-cathedral-paris/",
+          "supports": true,
+          "note": "'four powerful buttresses' that rise to the towers, dividing the facade vertically."
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris",
+          "supports": true,
+          "note": "West facade composed of vertical lines of four buttresses + two towers (harmonic tripartite facade)."
+        }
+      ],
+      "notes": "Four vertical buttresses (contreforts) divide the west facade into three bays; together with the two towers they form the facade's vertical articulation. Two independent sources concur => measured. These are the FLAT pier-buttresses of the facade, distinct from the chevet/nave flying buttresses.",
+      "topic": "Notre-Dame de Paris — gargoyles, chimeras (Galerie des Chimères), west-facade/tower buttresses and pinnacles"
+    },
+    {
+      "key": "west_tower_height_m",
+      "value": 69,
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://frenchmoments.eu/west-facade-of-notre-dame-cathedral-paris/",
+          "supports": true,
+          "note": "Both towers reach 69 metres."
+        },
+        {
+          "url": "https://www.architecturelab.net/architecture/landmark/notre-dame-cathedral-paris/",
+          "supports": true,
+          "note": "Two square towers 69 m high, 422 steps."
+        }
+      ],
+      "notes": "Re-confirms the project anchor (west tower 69 m) from two independent sources. Step counts to the top vary by source (422 / 387 / 424) — those are GAP-grade, not the height.",
+      "topic": "Notre-Dame de Paris — gargoyles, chimeras (Galerie des Chimères), west-facade/tower buttresses and pinnacles"
+    },
+    {
+      "key": "west_facade_width_m",
+      "value": 43.5,
+      "provenance": "reconstructed_design",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.architecturelab.net/architecture/landmark/notre-dame-cathedral-paris/",
+          "supports": true,
+          "note": "'This facade measures 43.5 metres in width and 45 metres in height, 69 metres with the towers.'"
+        },
+        {
+          "url": "https://frenchmoments.eu/west-facade-of-notre-dame-cathedral-paris/",
+          "supports": false,
+          "note": "CONFLICT: gives 41 m wide and 43 m ground-to-tower-base — narrower than 43.5 m."
+        }
+      ],
+      "notes": "CONFLICT FLAGGED: project anchor + architecturelab = 43.5 m width; frenchmoments + the (403-blocked) official notredamedeparis.fr = 41 m. The 41 m vs 43.5 m gap likely reflects measuring full width vs width between outer buttress faces. Because sources disagree, NOT 'measured' here — keeping the corpus anchor (43.5 m) but downgraded to reconstructed_design pending an independent survey resolving the discrepancy. Do not silently overwrite the anchor.",
+      "topic": "Notre-Dame de Paris — gargoyles, chimeras (Galerie des Chimères), west-facade/tower buttresses and pinnacles"
+    },
+    {
+      "key": "galerie_des_chimeres_height_above_ground_m",
+      "value": null,
+      "provenance": "GAP",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://broaden-horizons.fr/blog-en/notre-dame-gargoyles-complete-guide/",
+          "supports": true,
+          "note": "Single tertiary source: '46 metres height of the Gallery of Chimeras above street level'."
+        }
+      ],
+      "notes": "Only one tour-guide source gives 46 m; no independent or primary confirmation. The gallery sits above the Gallery of Kings / rose-window level and below the tower belfries (towers = 69 m), so ~45-50 m is plausible, but cite-or-gap + 2-source rule => GAP. Do not adopt 46 m as a fact.",
+      "topic": "Notre-Dame de Paris — gargoyles, chimeras (Galerie des Chimères), west-facade/tower buttresses and pinnacles"
+    },
+    {
+      "key": "tower_pinnacles_dimensions",
+      "value": null,
+      "provenance": "GAP",
+      "rights": "cite_only",
+      "sources": [
+        {
+          "url": "https://www.19thc-artworldwide.org/autumn10/the-gargoyles-of-notre-dame",
+          "supports": false,
+          "note": "Mentions figures projecting from facade/tower levels but gives no pinnacle dimensions."
+        }
+      ],
+      "notes": "No published dimensional data found for the west-tower corner pinnacles/colonnettes or their crockets. Notre-Dame's west towers are notably FLAT-TOPPED (the medieval spires were never built), so 'pinnacles' here means the small corner turrets/colonnettes and the balustrade gallery details, not large crocketed pinnacles. If form is ever modeled it must be scaled off a PD elevation (Dehio-Bezold atlas / Viollet-le-Duc facade plate) and flagged conjecture — modern photos are cite_only and must NOT be ingested. Value null.",
+      "topic": "Notre-Dame de Paris — gargoyles, chimeras (Galerie des Chimères), west-facade/tower buttresses and pinnacles"
+    },
+    {
+      "key": "chimera_modeling_form_source",
+      "value": "Form must be taken from public-domain 19th-c facade elevations (Dehio-Bezold atlas, Viollet-le-Duc Dictionnaire facade drawings, Bell Handbook) — NOT from modern reference photos.",
+      "provenance": "reconstructed_design",
+      "rights": "public_domain",
+      "sources": [
+        {
+          "url": "https://www.19thc-artworldwide.org/autumn10/the-gargoyles-of-notre-dame",
+          "supports": true,
+          "note": "Confirms the chimeras/gargoyles are Viollet-le-Duc-era designs (PD author d.1879) — so PD drawings are the legitimate modeling source."
+        },
+        {
+          "url": "https://fr.wikipedia.org/wiki/Chim%C3%A8res_de_Notre-Dame_de_Paris",
+          "supports": true,
+          "note": "Attributes the design to Viollet-le-Duc, whose drawings are public domain."
+        }
+      ],
+      "notes": "Rights guidance datum, not a dimension. Viollet-le-Duc d.1879 and Dehio-Bezold (1887) are public_domain; their facade/chimera drawings are cleared for use. Individual creature geometry (Le Stryge etc.) at fine resolution = conjecture. Reference PHOTOS of the present chimeras are copyrighted => cite_only, never ingest.",
+      "topic": "Notre-Dame de Paris — gargoyles, chimeras (Galerie des Chimères), west-facade/tower buttresses and pinnacles"
+    },
+    {
+      "key": "building_stone_type",
+      "value": "Lutetian limestone (calcaire lutétien / calcaire grossier), a fine marine limestone of the Paris Basin",
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Lutetian_limestone",
+          "supports": true,
+          "note": "Defines Lutetian limestone as a sedimentary limestone of the Paris Basin underlying Paris; geology reference."
+        },
+        {
+          "url": "https://www.brgm.fr/en/news/field-notes/reconstruction-dame-paris-chronology-explanations",
+          "supports": true,
+          "note": "BRGM (French national geological survey): Notre-Dame's original stone is Lutetian limestone; replacement quarries surveyed."
+        },
+        {
+          "url": "https://news.cnrs.fr/articles/unveiling-the-secrets-of-notre-dames-materials",
+          "supports": true,
+          "note": "CNRS News: cathedral built of Lutetian limestone from quarries beneath Paris (5th/12th arrondissements)."
+        }
+      ],
+      "notes": "Multiply confirmed by three independent authorities (geology reference, BRGM national survey, CNRS). Same stone family used at Reims, Versailles, the Louvre. Applies to facade/towers exterior fabric. The wall ashlar mixes a harder load-bearing 'liais'/'roche dure' for exterior facing and a softer 'lambourde' for backing — variant grades within the same Lutetian formation.",
+      "topic": "Notre-Dame de Paris — west facade + towers MATERIALS / FINISHES (building stone, colour states, lead roofing, oak belfry, weathering)"
+    },
+    {
+      "key": "building_stone_geological_age",
+      "value": "Eocene, Lutetian stage (~41–48 million years ago; ~40–45 Ma commonly cited)",
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Lutetian_limestone",
+          "supports": true,
+          "note": "Lutetian age dated 48.07–41.03 Ma, Eocene epoch."
+        },
+        {
+          "url": "https://www.brgm.fr/en/news/field-notes/reconstruction-dame-paris-chronology-explanations",
+          "supports": true,
+          "note": "BRGM confirms 'Lutetian' limestone (the Lutetian is by definition Eocene)."
+        }
+      ],
+      "notes": "REFUTATION NOTE: the BRGM stone-selection guide page rendered 'Lutetian (Miocene)' — this is an error/translation slip; the Lutetian stage is by definition Eocene, confirmed by the geology reference. Treated the Miocene mention as a conflict resolved in favour of Eocene.",
+      "topic": "Notre-Dame de Paris — west facade + towers MATERIALS / FINISHES (building stone, colour states, lead roofing, oak belfry, weathering)"
+    },
+    {
+      "key": "stone_quarry_origin",
+      "value": "Underground quarries beneath Paris (5th and 12th arrondissements) for original fabric; restoration replacement stone from Lutetian quarries in Oise/Aisne (e.g. Croix-Huyart / Bonneuil-en-Valois area)",
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://news.cnrs.fr/articles/unveiling-the-secrets-of-notre-dames-materials",
+          "supports": true,
+          "note": "Original Lutetian stone from quarries beneath Paris's 5th and 12th arrondissements."
+        },
+        {
+          "url": "https://www.brgm.fr/en/news/field-notes/reconstruction-dame-paris-chronology-explanations",
+          "supports": true,
+          "note": "Croix-Huyart quarry a major supplier for restoration; Lutetian quarries surveyed in Aisne/Oise."
+        }
+      ],
+      "notes": "Two independent sources. Quarry detail is contextual provenance, not a facade dimension.",
+      "topic": "Notre-Dame de Paris — west facade + towers MATERIALS / FINISHES (building stone, colour states, lead roofing, oak belfry, weathering)"
+    },
+    {
+      "key": "stone_color_as_built_descriptor",
+      "value": "Pale cream to cream-grey / ivory ('warm cream-grey stone of the French capital'; ranges bright white to butter-yellow to dull yellow-grey)",
+      "provenance": "conjecture",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Lutetian_limestone",
+          "supports": true,
+          "note": "Describes the stone as 'warm, elusive, cream-grey stone of the French capital', ranging bright white to butter-yellow to dull nicotine-yellow/grey."
+        },
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/notre-dame-cathedral/history/progression-through-time/",
+          "supports": true,
+          "note": "1990s campaign 'restored the cathedral's ivory color'."
+        }
+      ],
+      "notes": "Colour DESCRIPTORS are cited; the precise as-built shade is CONJECTURE (no exact RGB/hex — that would be invention). The 'as-built = pale cream' is a reasonable hypothesis: cleaned modern state approximates the original quarry-fresh colour. Use descriptor 'pale cream / ivory limestone', NOT a fabricated hex.",
+      "topic": "Notre-Dame de Paris — west facade + towers MATERIALS / FINISHES (building stone, colour states, lead roofing, oak belfry, weathering)"
+    },
+    {
+      "key": "stone_color_pre1990s_sooted_descriptor",
+      "value": "Soot-blackened / grey-black from centuries of atmospheric pollution and diesel soot prior to the 1990s cleaning",
+      "provenance": "conjecture",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/notre-dame-cathedral/history/progression-through-time/",
+          "supports": true,
+          "note": "Facade darkened/discoloured before the 1990s ivory-restoring cleaning."
+        },
+        {
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S1296207421000996",
+          "supports": true,
+          "note": "Peer-reviewed study of weathering of Notre-Dame materials from air pollution/climate 1325–2090 (soiling, soot blackening); abstract only / cite-only."
+        }
+      ],
+      "notes": "Descriptor cited; exact tone is CONJECTURE. The 'as-built vs today' hypothesis: today (post-1990s cleaning) ≈ pale cream original; the intermediate 20th-c. state was soot-blackened. Black soiling concentrates on sheltered/recessed surfaces, washed paler on rain-exposed faces (differential soiling) — model as non-uniform if depicting the sooted state.",
+      "topic": "Notre-Dame de Paris — west facade + towers MATERIALS / FINISHES (building stone, colour states, lead roofing, oak belfry, weathering)"
+    },
+    {
+      "key": "stone_color_cleaned_today_descriptor",
+      "value": "Bright/creamy cream-colored (ivory) — exterior cleaned in the 1990s and again in the post-2019-fire restoration",
+      "provenance": "reconstructed_design",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/notre-dame-cathedral/history/progression-through-time/",
+          "supports": true,
+          "note": "1990s stone treatment campaign restored the ivory color."
+        },
+        {
+          "url": "https://stoneforensics.com/how-they-cleaned-the-stone-in-the-restoration-of-notre-dame-lessons-for-the-stone-professional/",
+          "supports": true,
+          "note": "Post-fire cleaning revealed bright cream-colored exterior; soot/pollution scrubbed away."
+        }
+      ],
+      "notes": "Two sources for the cream/ivory cleaned state; the descriptor is well-supported but the exact RGB remains conjecture. Provenance 'reconstructed_design' since the current appearance is the result of modern cleaning campaigns, not necessarily the medieval surface.",
+      "topic": "Notre-Dame de Paris — west facade + towers MATERIALS / FINISHES (building stone, colour states, lead roofing, oak belfry, weathering)"
+    },
+    {
+      "key": "lead_roofing_spire_spirelets",
+      "value": "Lead sheet roofing over oak framing on the spire (flèche) and roofs; towers/spirelets and main roof clad in lead. Reported lead mass ~210–450 t (spire+roof); spire lead alone ~250 t cited",
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Spire_of_Notre-Dame_de_Paris",
+          "supports": true,
+          "note": "Viollet-le-Duc spire (1859) built of lead-lined oak."
+        },
+        {
+          "url": "https://news.cnrs.fr/articles/unveiling-the-secrets-of-notre-dames-materials",
+          "supports": true,
+          "note": "Lead used in 19th-c. roofing and the spire, plus stained-glass cames; most melted in the fire."
+        },
+        {
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S1296207423000249",
+          "supports": true,
+          "note": "Peer-reviewed study of lead use and plumbers' practices in the Notre-Dame building yard 12th–19th c.; cite-only abstract."
+        }
+      ],
+      "notes": "Lead cladding (over oak) is multiply confirmed. CONFLICT on total lead mass: ~210 t, ~250 t (spire), and up to ~450 t are variously reported — treat mass as conjecture/contested, not measured. The lead 'finish' is a dull mid-grey metallic patina, weathering to pale grey/white lead-carbonate over time.",
+      "topic": "Notre-Dame de Paris — west facade + towers MATERIALS / FINISHES (building stone, colour states, lead roofing, oak belfry, weathering)"
+    },
+    {
+      "key": "tower_belfry_oak_framing",
+      "value": "Oak (chêne) timber belfry frames (beffrois) inside both west towers carrying the bells; reinforced with robust oak structure in the 19th century",
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://www.tours-notre-dame-de-paris.fr/en/discover/the-distinctive-features-of-the-towers-of-notre-dame-de-paris",
+          "supports": true,
+          "note": "Official towers site: each tower has a belfry — the wooden framework on which bells are hung; reinforced in the 19th c. with a robust oak structure to absorb vibration."
+        },
+        {
+          "url": "https://news.cnrs.fr/articles/unveiling-the-secrets-of-notre-dames-materials",
+          "supports": true,
+          "note": "Oak ('forest') framing dominant timber of the structure; oak is the cathedral's structural timber."
+        }
+      ],
+      "notes": "Oak belfry framing confirmed by official tours source + CNRS for oak as the structural timber. South tower holds the bourdon Emmanuel (~13 t). Belfry is internal framing, not a visible facade finish, but confirms OAK as the tower timber material.",
+      "topic": "Notre-Dame de Paris — west facade + towers MATERIALS / FINISHES (building stone, colour states, lead roofing, oak belfry, weathering)"
+    },
+    {
+      "key": "roof_spire_oak_framing",
+      "value": "Oak (the medieval roof 'forest' / la forêt) — ~1,300 medieval oaks for the roof; Viollet-le-Duc spire of oak from Champagne",
+      "provenance": "measured",
+      "rights": "facts_uncopyrightable",
+      "sources": [
+        {
+          "url": "https://news.cnrs.fr/articles/unveiling-the-secrets-of-notre-dames-materials",
+          "supports": true,
+          "note": "Roof 'forest' ~2,000 oak beams assembled ~800 years ago; dendrochronology of oak."
+        },
+        {
+          "url": "https://www.theartnewspaper.com/2024/12/02/green-wood-axes-and-oaks-how-ancient-skills-helped-to-raise-notre-dames-new-roof",
+          "supports": true,
+          "note": "Oak framing raised with green-oak hand-hewn timbers, medieval technique."
+        }
+      ],
+      "notes": "Oak confirmed multiply. Beam-count figures vary (the roof 'forest' is sometimes counted as ~1,300 oaks for the medieval charpente, ~2,000 beams cited by CNRS) — count is contextual, not a facade datum. Spire oak 'from Champagne' is a single-source detail (treat as conjecture if used).",
+      "topic": "Notre-Dame de Paris — west facade + towers MATERIALS / FINISHES (building stone, colour states, lead roofing, oak belfry, weathering)"
+    },
+    {
+      "key": "limestone_weathering_behavior",
+      "value": "Porous Lutetian limestone is erosion- and pollution-susceptible: acid-pollutant attack, rain-driven recession (karst effect), differential soiling (black gypsum crusts in sheltered zones, washed pale on exposed faces)",
+      "provenance": "reconstructed_design",
+      "rights": "cite_only",
+      "sources": [
+        {
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S1296207421000996",
+          "supports": true,
+          "note": "Peer-reviewed: weathering of Notre-Dame materials from air pollution and climate 1325–2090; abstract cite-only."
+        },
+        {
+          "url": "https://www.archdaily.com/881238",
+          "supports": true,
+          "note": "Reports flying buttresses/pinnacles darkened by pollution and eroded by rainwater pre-restoration."
+        }
+      ],
+      "notes": "Weathering mechanism is well-established for this stone; the specific Notre-Dame study is paywalled (cite-only — ingest the fact, not the text). Differential soiling supports a non-uniform soot map for any 'pre-cleaning' depiction rather than a flat grey.",
+      "topic": "Notre-Dame de Paris — west facade + towers MATERIALS / FINISHES (building stone, colour states, lead roofing, oak belfry, weathering)"
+    },
+    {
+      "key": "stone_exact_rgb_hex",
+      "value": null,
+      "provenance": "GAP",
+      "rights": "none",
+      "sources": [],
+      "notes": "No source provides a measured/published RGB or hex value for the stone in any of its three states (as-built, sooted, cleaned). Inventing one would violate cite-or-gap. Use cited DESCRIPTORS ('pale cream/ivory', 'soot grey-black', 'lead mid-grey') and let the renderer derive a colour; do not record a numeric RGB as fact.",
+      "topic": "Notre-Dame de Paris — west facade + towers MATERIALS / FINISHES (building stone, colour states, lead roofing, oak belfry, weathering)"
+    },
+    {
+      "key": "lead_total_mass_tonnes",
+      "value": null,
+      "provenance": "GAP",
+      "rights": "none",
+      "sources": [
+        {
+          "url": "https://www.livescience.com/65451-notre-dame-sky-high-lead-levels.html",
+          "supports": false,
+          "note": "Reports vary 210–450 t; figures not reconciled across sources."
+        }
+      ],
+      "notes": "CONFLICTING figures (~210 t / ~250 t spire / up to ~450 t) reported in popular press for spire+roof lead; none independently survey-confirmed and they do not agree. Recorded as GAP/null for a precise value — the qualitative fact 'lead-clad' is captured in lead_roofing_spire_spirelets.",
+      "topic": "Notre-Dame de Paris — west facade + towers MATERIALS / FINISHES (building stone, colour states, lead roofing, oak belfry, weathering)"
+    }
+  ]
+}

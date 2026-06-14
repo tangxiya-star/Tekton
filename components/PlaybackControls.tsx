@@ -1,161 +1,147 @@
-import { useState, useEffect } from "react";
+// ND-32 — deterministic playback backbone (presentational control bar).
+//
+// Self-contained, default-exported control bar matching SpireViewer's dark
+// panel aesthetic. State lives entirely in the parent; this component only
+// renders and emits callbacks. No three, no spec, no external deps.
 
-interface PlaybackState {
-  index: number;
-  phase: string;
-  description: string;
-  totalStates: number;
-}
+import React from "react";
 
-export interface PlaybackControlsProps {
-  currentState: PlaybackState | null;
-  onStateChange: (index: number) => void;
-  isPlaying: boolean;
-  onPlayPauseChange: (playing: boolean) => void;
-  speed: number;
-  onSpeedChange: (speed: number) => void;
-}
+const SPEEDS = [0.25, 0.5, 1, 2, 4];
 
 export default function PlaybackControls({
-  currentState,
-  onStateChange,
-  isPlaying,
-  onPlayPauseChange,
+  total,
+  step,
+  playing,
   speed,
-  onSpeedChange,
-}: PlaybackControlsProps) {
-  const total = currentState?.totalStates || 339;
-  const current = currentState?.index || 0;
+  phase,
+  onStep,
+  onPlayToggle,
+  onSpeed,
+  onReset,
+}: {
+  total: number;
+  step: number;
+  playing: boolean;
+  speed: number;
+  phase: string;
+  onStep: (s: number) => void;
+  onPlayToggle: () => void;
+  onSpeed: (x: number) => void;
+  onReset: () => void;
+}) {
+  const atEnd = step >= total;
 
-  // Auto-advance when playing
-  useEffect(() => {
-    if (!isPlaying || !currentState) return;
+  const cycleSpeed = () => {
+    const idx = SPEEDS.indexOf(speed);
+    const next = SPEEDS[(idx === -1 ? 0 : idx + 1) % SPEEDS.length];
+    onSpeed(next);
+  };
 
-    const interval = setInterval(() => {
-      if (current < total - 1) {
-        onStateChange(current + 1);
-      } else {
-        onPlayPauseChange(false);
-      }
-    }, Math.max(50, 200 / speed)); // 200ms at speed=1, faster at higher speeds
-
-    return () => clearInterval(interval);
-  }, [isPlaying, current, total, speed, onStateChange, onPlayPauseChange, currentState]);
+  const fmtSpeed = (x: number) => (Number.isInteger(x) ? `${x}×` : `${x}×`);
 
   return (
     <div
       style={{
-        position: "absolute",
-        bottom: 28,
-        right: 28,
-        background: "rgba(20, 20, 22, 0.9)",
-        border: "1px solid var(--ink-dim)",
-        borderRadius: 8,
-        padding: 16,
-        width: 400,
-        zIndex: 100,
+        display: "flex",
+        alignItems: "center",
+        gap: 12,
+        background: "#1c1d20cc",
+        border: "1px solid #3a3833",
+        padding: "10px 16px",
+        backdropFilter: "blur(4px)",
+        color: "#e8e2d4",
+        fontFamily: "var(--font, system-ui)",
+        fontSize: 12,
+        letterSpacing: 0.4,
+        userSelect: "none",
       }}
     >
-      {/* 进度条 */}
-      <div style={{ marginBottom: 12 }}>
-        <input
-          type="range"
-          min="0"
-          max={total - 1}
-          value={current}
-          onChange={(e) => {
-            onPlayPauseChange(false);
-            onStateChange(Number(e.target.value));
-          }}
-          style={{
-            width: "100%",
-            cursor: "pointer",
-            accentColor: "var(--ink)",
-          }}
-        />
-        <div
-          style={{
-            fontSize: 11,
-            color: "var(--ink-dim)",
-            marginTop: 4,
-            display: "flex",
-            justifyContent: "space-between",
-          }}
-        >
-          <span>
-            {current} / {total - 1}
-          </span>
-          <span>{currentState?.phase}</span>
-        </div>
-      </div>
-
-      {/* 描述 */}
-      <div
+      {/* play / pause */}
+      <button
+        onClick={onPlayToggle}
+        title={playing ? "Pause" : atEnd ? "Replay" : "Play"}
         style={{
+          background: "#e8e2d4",
+          color: "#141416",
+          border: "none",
+          padding: "5px 14px",
           fontSize: 12,
-          color: "var(--ink)",
-          marginBottom: 12,
-          minHeight: 32,
-          display: "flex",
-          alignItems: "center",
+          cursor: "pointer",
+          minWidth: 78,
         }}
       >
-        {currentState?.description || "加载中..."}
-      </div>
+        {playing ? "❚❚ Pause" : atEnd ? "↻ Replay" : "▶ Play"}
+      </button>
 
-      {/* 播放控制 */}
-      <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
-        <button
-          onClick={() => onPlayPauseChange(!isPlaying)}
+      {/* reset */}
+      <button
+        onClick={onReset}
+        title="Reset to start"
+        style={{
+          background: "transparent",
+          color: "#e8e2d4",
+          border: "1px solid #4a4640",
+          padding: "5px 12px",
+          fontSize: 12,
+          cursor: "pointer",
+        }}
+      >
+        ↺ Reset
+      </button>
+
+      {/* speed selector (cycles through the fixed ladder) */}
+      <button
+        onClick={cycleSpeed}
+        title="Playback speed (click to cycle)"
+        style={{
+          background: "transparent",
+          color: "#d9a843",
+          border: "1px solid #4a4640",
+          padding: "5px 10px",
+          fontSize: 12,
+          cursor: "pointer",
+          minWidth: 48,
+          fontVariantNumeric: "tabular-nums",
+        }}
+      >
+        {fmtSpeed(speed)}
+      </button>
+
+      {/* scrubber */}
+      <input
+        type="range"
+        min={0}
+        max={total}
+        step={1}
+        value={Math.min(step, total)}
+        onChange={(e) => onStep(Number(e.target.value))}
+        aria-label="Build step"
+        style={{ flex: 1, minWidth: 120, accentColor: "#d9a843" }}
+      />
+
+      {/* phase + step/total readout */}
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-end",
+          minWidth: 96,
+          lineHeight: 1.35,
+        }}
+      >
+        <span
           style={{
-            flex: 1,
-            padding: "8px 12px",
-            background: isPlaying ? "var(--ink)" : "transparent",
-            color: isPlaying ? "#141416" : "var(--ink)",
-            border: "1px solid var(--ink-dim)",
-            borderRadius: 4,
-            fontSize: 12,
-            fontFamily: "inherit",
-            cursor: "pointer",
+            color: "#cfc8b8",
+            textTransform: "uppercase",
+            letterSpacing: 1,
+            fontSize: 11,
           }}
         >
-          {isPlaying ? "⏸ 暂停" : "▶ 播放"}
-        </button>
-        <button
-          onClick={() => onStateChange(0)}
-          style={{
-            padding: "8px 12px",
-            background: "transparent",
-            color: "var(--ink)",
-            border: "1px solid var(--ink-dim)",
-            borderRadius: 4,
-            fontSize: 12,
-            fontFamily: "inherit",
-            cursor: "pointer",
-          }}
-        >
-          ⏮ 重置
-        </button>
-      </div>
-
-      {/* 速度控制 */}
-      <div>
-        <div style={{ fontSize: 11, color: "var(--ink-dim)", marginBottom: 4 }}>
-          速度: {speed.toFixed(1)}x
-        </div>
-        <input
-          type="range"
-          min="0.25"
-          max="4"
-          step="0.25"
-          value={speed}
-          onChange={(e) => onSpeedChange(Number(e.target.value))}
-          style={{
-            width: "100%",
-            cursor: "pointer",
-            accentColor: "var(--ink)",
-          }}
-        />
+          {phase || "—"}
+        </span>
+        <span style={{ color: "#8c867a", fontVariantNumeric: "tabular-nums" }}>
+          {Math.min(step, total)}/{total}
+        </span>
       </div>
     </div>
   );

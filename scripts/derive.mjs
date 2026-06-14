@@ -15,6 +15,29 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
+
+// --- multi-building dispatch (ND-14) ---------------------------------------
+// `--building notre-dame` runs the spire engine and exits; the default (nanchan)
+// falls through to the engine below, so `npm run derive` stays byte-for-byte the
+// Nanchan regression anchor.
+function argBuilding() {
+  const av = process.argv.slice(2);
+  const eq = av.find((a) => a.startsWith("--building="));
+  if (eq) return eq.split("=")[1];
+  const i = av.indexOf("--building");
+  if (i >= 0 && av[i + 1]) return av[i + 1];
+  return "nanchan";
+}
+const BUILDING = argBuilding();
+if (BUILDING === "notre-dame-towers" || BUILDING === "towers") {
+  await import("./derive-notre-dame-towers.mjs");
+  process.exit(0);
+}
+if (BUILDING === "notre-dame" || BUILDING === "notredame") {
+  await import("./derive-notre-dame.mjs");
+  process.exit(0);
+}
+
 const C = JSON.parse(readFileSync(join(ROOT, "data/nanchan-canonical.json"), "utf8"));
 
 const FEN_MM = C.modular_system.fen_mm.value; // 16.5

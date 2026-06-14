@@ -1,0 +1,254 @@
+{
+  "generated_at": "2026-06-13T20:36:40Z",
+  "method": "fresh-context adversarial refutation (research guardrail #2)",
+  "summary": {
+    "total": 8,
+    "stands": 6,
+    "refuted": 1,
+    "uncertain": 1
+  },
+  "verdicts": [
+    {
+      "claim_id": "notre-dame-spire-height-96m",
+      "verdict": "stands",
+      "confidence": "high",
+      "corrected_value": null,
+      "reasoning": "I attempted to refute the 96 m claim but multiple INDEPENDENT sources (not the corpus's cited culture.gouv / notredamedeparis.fr / Friends of Notre-Dame) corroborate it, several explicitly framing it as total height above ground to the rooster/summit.\n\nCorroborating independent sources:\n1. Smithsonian Magazine (independent press, own reporting): \"96 meters (315 feet)\" and \"more than 96 meters from the ground\" describing the rooster's placement — directly supports \"total height above ground to the rooster.\"\n2. The Art Newspaper (independent art-news outlet): \"The 96-metre-tall spire... is crowned with a golden rooster and a cross.\"\n3. Designboom (independent architecture outlet): the rebuilt spire is \"rising again to 96 meters in height, the rightful altitude of its original counterpart,\" and notes it is \"anchored 30 metres from the ground above the transept crossing,\" consistent with 96 m being the full elevation to the top.\n4. English Wikipedia lists 96 m (315 ft) for the second (Viollet-le-Duc, 1859) and third (reconstructed) spires. France 24 (per search snippet) likewise places the rooster more than 96 m above ground.\n\nThese are genuinely independent (separate newsrooms doing their own reporting plus an encyclopedia), not SEO mirrors of each other.\n\nAdversarial caveats I checked: (a) A minority \"93 m\" figure appears in a few places, and French Wikipedia is internally inconsistent — it states \"la hauteur de la flèche est alors de 96 mètres\" in one passage but \"la flèche culmine à 93 mètres\" in another. (b) English Wikipedia frames 96 m as \"18 m more than the original\" 78 m spire, where 78 m was measured \"from the floor of the Church to the point of the spire,\" so the precise datum (ground vs. interior church floor vs. transept crossing) is not perfectly nailed down across sources. (c) The Viollet-le-Duc design year is given as 1859 (construction Feb–Aug 1859, inaugurated 15 Aug 1859); the claim's \"1859\" is correct, though some sources say 1860 for completion/lead work — a minor variance not affecting the height claim.\n\nNet: the dominant, official, and most-frequently-cited value across independent sources is 96 m as the total height above ground to the spire's summit/rooster, and the reconstruction was built à l'identique to that height. The claim stands. Confidence is high on the 96 m total-height-to-rooster value; the only residual uncertainty is the exact reference datum (ground vs. church floor, which for a cathedral differ negligibly) and a minority 93 m figure, neither of which overturns the claim.",
+      "independent_sources": [
+        {
+          "url": "https://www.smithsonianmag.com/smart-news/notre-dame-cathedral-gets-new-spire-and-golden-rooster-180983465/",
+          "supports": true,
+          "note": "Independent press. States 96 meters (315 feet) and 'more than 96 meters from the ground' describing the rooster's placement — directly supports total height above ground to the rooster/summit."
+        },
+        {
+          "url": "https://www.theartnewspaper.com/2024/03/08/new-notre-dame-spire-now-topped-with-golden-rooster",
+          "supports": true,
+          "note": "Independent art-news outlet: 'The 96-metre-tall spire, made of oak, is crowned with a golden rooster and a cross.'"
+        },
+        {
+          "url": "https://www.designboom.com/architecture/notre-dame-de-paris-spire-installation-cathedral-opening-12-12-2023/",
+          "supports": true,
+          "note": "Independent architecture outlet: rebuilt spire 'rising again to 96 meters in height, the rightful altitude of its original counterpart'; notes it is anchored 30 m above ground at the transept crossing, consistent with 96 m being the full elevation."
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Spire_of_Notre-Dame_de_Paris",
+          "supports": true,
+          "note": "Lists 96 m (315 ft) for the Viollet-le-Duc (1859) and reconstructed spires; frames it as 18 m more than the original 78 m (floor-to-tip), leaving the exact datum slightly ambiguous but supporting the 96 m figure."
+        },
+        {
+          "url": "https://fr.wikipedia.org/wiki/Fl%C3%A8che_de_Notre-Dame_de_Paris",
+          "supports": true,
+          "note": "States 'la hauteur de la fleche est alors de 96 metres' for Viollet-le-Duc's 1859 spire, but is internally inconsistent, elsewhere saying 'la fleche culmine a 93 metres' — flagged as the only meaningful discrepancy found."
+        }
+      ]
+    },
+    {
+      "claim_id": "spire-base-anchor-height",
+      "verdict": "stands",
+      "independent_sources": [
+        {
+          "url": "https://www.culture.gouv.fr/actualites/special-notre-dame-de-paris-4-6-le-jour-ou-la-cathedrale-a-retrouve-sa-fleche",
+          "supports": true,
+          "note": "French Ministry of Culture (government, fully independent of corpus). Explicit: 'Le tabouret prend appui a 33 metres du sol sur les quatre piliers de la croisee du transept.' Directly corroborates the 33 m tabouret figure AND the location (four pillars of the transept crossing)."
+        },
+        {
+          "url": "https://wukali.com/2023/03/17/restauration-de-notre-dame-de-paris-les-charpentiers-a-loeuvre/25546/",
+          "supports": true,
+          "note": "Independent cultural magazine, own wording (not the AFP boilerplate): the tabouret 'viendra prendre appui a 30 metres de hauteur, sur les quatre angles de la croisee.' Corroborates the ~30 m anchoring height and the transept-crossing location."
+        },
+        {
+          "url": "https://www.batiactu.com/edito/fleche-notre-dame-paris-retrouve-sa-place-dans-ciel-67547.php",
+          "supports": true,
+          "note": "Corroborates 30 m / croisee du transept BUT carries the verbatim AFP-syndicated sentence ('Ancre a 30 metres du sol, au-dessus de la croisee du transept...') identical to patrimoine-religieux.fr. NOT independent of that wire text; counted only as weak/non-independent support."
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Spire_of_Notre-Dame_de_Paris",
+          "supports": true,
+          "note": "Confirms spire sits above the transept crossing and total height 96 m, but gives NO specific base-anchor figure (no 30/33 m). Neutral/contextual only."
+        }
+      ],
+      "reasoning": "The claim is hedged and both figures are corroborated by independent sources; see structured reasoning field.",
+      "confidence": "high",
+      "corrected_value": null
+    },
+    {
+      "claim_id": "notre-dame-spire-oak-500t-1000pieces",
+      "verdict": "stands",
+      "confidence": "medium",
+      "corrected_value": null,
+      "independent_sources": [
+        {
+          "url": "https://www.designboom.com/architecture/notre-dame-de-paris-spire-installation-cathedral-opening-12-12-2023/",
+          "supports": true,
+          "note": "Architecture news outlet (independent of Friends of Notre-Dame / FR Wikipedia). States the new spire 'is made of around 1,000 pieces of wood.' Directly corroborates the ~1000 pieces figure. (Note: the 600-ton figure it gives is the temporary installation scaffolding, NOT the oak framework — checked to avoid a confusion trap.)"
+        },
+        {
+          "url": "https://www.swedishwood.com/publications/wood-magazine/articles-tra-magazine/2025/9/how-notre-dame-rose-again/",
+          "supports": true,
+          "note": "Swedish Wood trade magazine (independent). States the 96m spire 'was ingeniously designed from 500 tonnes of oak timber, covered with 250 tonnes of lead sheets.' Directly corroborates the ~500 t oak figure for the spire specifically."
+        },
+        {
+          "url": "https://europeanconservative.com/articles/commentary/notre-dame-spire-rises-from-the-ashes/",
+          "supports": true,
+          "note": "Independent commentary outlet. States the Viollet-le-Duc spire 'was composed of 500 tons of wood and 250 tons of lead' at 96 metres. Third independent corroboration of the 500 t wood figure."
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Spire_of_Notre-Dame_de_Paris",
+          "supports": true,
+          "note": "EN Wikipedia (distinct from the FR Wikipedia article the corpus cites). Confirms the lead covering '~250 tons' and 96m height, consistent with the 500t-wood / 250t-lead pairing, though it does not itself state the 500 t wood or piece count. Partial/contextual support."
+        }
+      ],
+      "reasoning": "The claim has two parts and both are independently corroborated. (1) ~500 t oak: Swedish Wood ('500 tonnes of oak timber') and the European Conservative ('500 tons of wood and 250 tons of lead') both attach 500 t specifically to the 96m Viollet-le-Duc spire — two sources independent of Friends of Notre-Dame and FR Wikipedia, and consistent with the widely-attested 250 t lead pairing (also in EN Wikipedia/Britannica). (2) ~1000 pieces: designboom states the new spire 'is made of around 1,000 pieces of wood' — an independent architecture outlet. Adversarial caveats that keep this at MEDIUM rather than HIGH confidence: (a) I had to disambiguate several near-miss figures that could mislead — designboom's '600-ton scaffolding' is the temporary installation rig, not the oak; '~1,000/1,260 oak trees' and '~2,000 pieces of charpente' refer to the broader flèche+transept harvest, not the spire armature alone; and '500 tonnes' is also occasionally used for the medieval roof 'forest.' Once filtered, the surviving sources do consistently tie BOTH 500 t and ~1000 pieces to the spire. (b) The 500 t describes the original/as-designed spire (reused as the reconstruction target) while the ~1000 pieces is clearest for the reconstructed spire — slightly different framings, but both legitimately the spire armature, matching the claim's wording. The corpus's underlying numbers are therefore corroborated by >=2 genuinely independent sources, so the verdict is 'stands.'"
+    },
+    {
+      "claim_id": "spire-lead-cladding-250t",
+      "verdict": "stands",
+      "confidence": "high",
+      "corrected_value": null,
+      "independent_sources": [
+        {
+          "url": "https://www.paris.fr/pages/l-histoire-en-images-de-la-fleche-de-notre-dame-6716",
+          "supports": true,
+          "note": "Ville de Paris (French municipal government), independent of the corpus citations. Exact text: 'La fleche de Notre-Dame est constituee de 500 tonnes de chenes et de 250 tonnes de plomb.' Note: states height as 93 m (minor discrepancy vs the 96 m cited elsewhere), but lead tonnage matches the claim exactly."
+        },
+        {
+          "url": "https://www.ina.fr/ina-eclaire-actu/comment-viollet-le-duc-a-restaure-notre-dame-de-paris",
+          "supports": true,
+          "note": "INA (Institut national de l'audiovisuel, French public broadcaster archive), independent institutional source. Exact text: 'Son sommet emblematique etait fait de bois de chene (500 tonnes) et recouvert d'un manteau de plomb (250 tonnes).'"
+        },
+        {
+          "url": "https://globalconstructionreview.com/news/inquest-notre-dame-focuses-restoration-works-spire",
+          "supports": true,
+          "note": "Global Construction Review, construction trade press reporting on the French criminal inquest into the fire. Exact text: the spire 'is covered with 250 tonnes of lead and includes intricately carved pinnacles, gargoyles and columns.' Different sector/domain from the corpus sources."
+        },
+        {
+          "url": "https://www.nationalgeographic.com/magazine/article/notre-dame-rises-again-feature",
+          "supports": true,
+          "note": "National Geographic. Does not give a spire-only figure but states '507 tons of lead in the roof and spire' combined. Consistent with (not contradicting) a ~250 t spire, since the spire is a subset of the roof+spire total. Treated as a corroborating plausibility cross-check, not direct confirmation."
+        }
+      ],
+      "reasoning": "The claim states the spire's lead cladding weighs ~250 t. I sought sources independent of the corpus citations (Friends of Notre-Dame, Wikipedia). Three clearly independent sources directly confirm the spire-specific figure of 250 tonnes of lead: Ville de Paris (municipal government), INA (French public broadcaster archive), and Global Construction Review (construction trade press covering the criminal inquest). These span different sectors (government, public-media archive, industry press) and use independently-worded phrasing ('manteau de plomb', 'couverture', 'covered with'), so they are not mirrors of one another or of the corpus sources. I checked for refutation: (a) an early WebSearch snippet mentioned an older estimate of '50 tonnes de plomb / 180-200 tonnes de bois,' but the search summary itself flagged this as an older estimate superseded by the modern 500 t wood / 250 t lead consensus, and the page hosting it was unreachable for direct verification, so it does not constitute a credible contradiction; (b) National Geographic (507 t) and The Art Newspaper (460 t) give larger figures, but those are explicitly totals for roof/nave PLUS spire combined, with the spire being a subset — fully consistent with a ~250 t spire and serving as a sanity check rather than a contradiction. A minor non-material discrepancy exists in spire height (paris.fr says 93 m vs the commonly cited 96 m), but the lead tonnage is unaffected. With >=2 strong independent corroborations and no credible contradicting evidence on the lead weight, the verdict is 'stands' at high confidence."
+    },
+    {
+      "claim_id": "notre-dame-spire-16-statues",
+      "verdict": "stands",
+      "independent_sources": [
+        {
+          "url": "https://www.theartnewspaper.com/2024/12/02/lucky-statues-on-notre-dames-spire-to-take-up-their-position-once-more",
+          "supports": true,
+          "note": "Independent journalism (The Art Newspaper), not in the audited corpus. Confirms 16 copper statues = 12 Apostles + 4 Evangelists, 'arranged in four diagonal lines around the narrow structure, each emblem of an evangelist topped by three apostles' (= 4 groups of 3). Names Saint Mark among evangelists. States St Thomas (patron saint of architects) 'was shown staring up at the spire' and was 'designed after Viollet-le-Duc's own image.' Corroborates every sub-claim including the 4-groups-of-3 arrangement and the St Thomas / Viollet-le-Duc self-portrait."
+        },
+        {
+          "url": "https://www.culture.gouv.fr/regions/drac-ile-de-france/actualites/actualite-a-la-une/Les-16-statues-de-la-fleche-de-Notre-Dame-de-Paris-enfin-reunies",
+          "supports": true,
+          "note": "Official French Ministry of Culture (DRAC Ile-de-France), independent of Bulletin Monumental/Wikipedia. Confirms 16 statues = apostles + evangelists, names evangelist symbols 'l'ange pour saint Mathieu, l'aigle pour saint Jean, le lion de saint Marc' (angel/Matthew, eagle/John, lion/Mark; ox-for-Luke being the standard fourth), and states 'la tete de saint Thomas, representation de Viollet-le-Duc' (head of St Thomas = portrait of Viollet-le-Duc)."
+        },
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/spire/",
+          "supports": true,
+          "note": "Friends of Notre-Dame de Paris foundation, independent of the audited corpus. Confirms 12 apostles + 4 evangelist symbols, and quotes: 'Saint Thomas, the patron saint of architects and builders is represented with the features of Viollet-le-Duc himself. With his face turned to the sky, he seems to be contemplating his work.' This matches 'St Thomas turns to face the spire and bears Viollet-le-Duc's own features.'"
+        }
+      ],
+      "reasoning": "I approached the claim adversarially and broke it into testable parts: (1) 16 copper statues; (2) 12 apostles in 4 groups of 3; (3) 4 evangelist symbols (angel, lion, ox, eagle); (4) St Thomas faces the spire and bears Viollet-le-Duc's features. I deliberately sought sources independent of the audited corpus (Bulletin Monumental 2009 / EN-FR Wikipedia), and avoided the official notredamedeparis.fr and Wikipedia pages.\n\nThree genuinely independent sources corroborate the claim:\n- The Art Newspaper (independent press) is the strongest: it explicitly states the 16 statues are arranged in 'four diagonal lines... each emblem of an evangelist topped by three apostles' — directly confirming the contested '4 groups of 3' detail — and confirms St Thomas was 'staring up at the spire' and 'designed after Viollet-le-Duc's own image.'\n- The French Ministry of Culture (culture.gouv.fr / DRAC) confirms 16 statues, names the evangelist symbols (angel-Matthew, eagle-John, lion-Mark, with ox-Luke being standard iconography), and confirms St Thomas is a portrait of Viollet-le-Duc.\n- Friends of Notre-Dame de Paris confirms 12 apostles + 4 evangelists and quotes that St Thomas bears Viollet-le-Duc's features with face turned to the sky 'contemplating his work.'\n\nThese three are not mirrors of each other nor of Wikipedia. The phrase 'turns to face the spire' is well-supported: sources describe his gaze turned upward toward his work (the spire/rooster), and The Art Newspaper states explicitly he is 'staring up at the spire.' The evangelist-symbol assignments (angel/Matthew, lion/Mark, ox/Luke, eagle/John) are the standard, universally attested iconography of the Four Evangelists and are partially named across the two sources. Every sub-claim is corroborated by at least two independent sources; the most specific/contestable detail (4 groups of 3) is confirmed verbatim by The Art Newspaper. Verdict: stands, high confidence.",
+      "confidence": "high",
+      "corrected_value": null
+    },
+    {
+      "claim_id": "spire-statue-dimensions",
+      "verdict": "uncertain",
+      "corrected_value": "Heights are well-supported (apostles ~3.40 m; evangelist symbols ~2.0 m). The WEIGHTS conflict across authoritative independent sources: the official rebuilding establishment (rebatirnotredamedeparis.fr) gives exactly \"douze plus grandes statues ... environ 140 kg, les quatre autres environ 2 mètres pour 65 kg\" (matches the claim), but the Ministère de la Culture / DRAC and the Diocèse de Paris give ~150 kg for the apostles (culture.gouv.fr: \"à peu près 150 kg ... environ 3,40 m\"; dioceseparis.fr: \"3,40 m et pesant 150 kg chacun\"), and the Ministry's own Notre-Dame site (notre-dame-de-paris.culture.gouv.fr) gives ~75 kg for the evangelist symbols (angel of St Matthew 2,10 m / ~75 kg; eagle of St John 2 m / ~75 kg), not 65 kg. So the most-cited alternative values are: apostles 3.40 m / ~150 kg; evangelist symbols ~2.0 m / ~75 kg.",
+      "independent_sources": [
+        {
+          "url": "https://rebatirnotredamedeparis.fr/restauration/restauration-statues-fleche",
+          "supports": true,
+          "note": "Official public establishment 'Rebatir Notre-Dame de Paris'. States verbatim that the twelve largest statues are ~3.4 m and ~140 kg, the four others ~2 m for 65 kg — an exact match to all four numbers in the claim. Independent of the corpus citations (mediachimie.org / Persee). Page body would not render in WebFetch but its text is indexed and quoted by web search."
+        },
+        {
+          "url": "https://www.culture.gouv.fr/regions/drac-ile-de-france/actualites/actualite-a-la-une/Les-16-statues-de-la-fleche-de-Notre-Dame-de-Paris-enfin-reunies",
+          "supports": false,
+          "note": "Ministere de la Culture / DRAC Ile-de-France: 'Chaque grande statue pese a peu pres 150 kg et mesure environ 3,40 m.' Confirms apostle height 3.40 m but gives 150 kg (not 140 kg) and does not differentiate evangelists — contradicts the claimed 140 kg apostle weight."
+        },
+        {
+          "url": "https://notre-dame-de-paris.culture.gouv.fr/fr/petite-histoire-de-la-fleche",
+          "supports": false,
+          "note": "Official Ministry Notre-Dame site: evangelist symbols angel of St Matthew 'Hauteur maximum : 2,10 m ... poids : environ 75 kg' and eagle of St John 'Hauteur maximum : 2 m ... poids : environ 75 kg'. Supports the ~2.0 m evangelist height but gives ~75 kg, contradicting the claimed 65 kg."
+        },
+        {
+          "url": "https://dioceseparis.fr/les-statues-de-notre-dame-sont.html",
+          "supports": false,
+          "note": "Diocese de Paris: 'Les douze Apotres - mesurant 3,40 m et pesant 150 kg chacun.' Confirms apostle height 3.40 m but gives 150 kg, contradicting the claimed 140 kg."
+        },
+        {
+          "url": "https://www.fondationnotredame.fr/a-la-une/le-grand-retour-des-statues-de-la-fleche-de-notre-dame",
+          "supports": true,
+          "note": "Fondation Notre Dame: all sixteen figures 'hautes de 3,4 metres'. Corroborates the 3.4 m height (for apostles) but gives no weights and does not state evangelists are a different/smaller size."
+        },
+        {
+          "url": "https://fr.wikipedia.org/wiki/Fl%C3%A8che_de_Notre-Dame_de_Paris",
+          "supports": true,
+          "note": "French Wikipedia / search snippet: 'Les seize statues, hautes de 3,4 metres.' Corroborates 3.4 m height but lumps all 16 together (does not confirm evangelists are smaller) and gives no weights. Not independent enough to settle the weight question."
+        }
+      ],
+      "reasoning": "The claim bundles four figures: apostles ~3.40 m / ~140 kg and evangelist symbols ~2.0 m / ~65 kg. The HEIGHTS are robustly corroborated by multiple independent sources (3.40 m for the large apostle statues; ~2.0–2.10 m for the evangelist symbols per the official Ministry Notre-Dame site). The WEIGHTS are genuinely contested among sources at least as authoritative as the one that matches the claim. The official rebuilding establishment rebatirnotredamedeparis.fr matches the claim exactly (140 kg / 65 kg), but (a) the Ministere de la Culture/DRAC and the Diocese de Paris both give ~150 kg for the apostles, and (b) the Ministry's own Notre-Dame heritage site gives ~75 kg for the evangelist symbols, not 65 kg. Because authoritative primary/official sources directly contradict each other on BOTH weight figures, the weights cannot be confirmed as stated. Per instructions to default to uncertain when sources conflict, the verdict is uncertain: the heights stand, but the specific weights (140 kg and 65 kg) are disputed and competing official values of ~150 kg and ~75 kg exist. Note also that the corpus's cited sources (mediachimie.org / Persee 2009) were deliberately not relied upon; the above are all independent of them.",
+      "confidence": "medium"
+    },
+    {
+      "claim_id": "notre-dame-spire-decorative-counts",
+      "verdict": "refuted",
+      "corrected_value": "The \"200 crochets per face across 8 faces (~1600 total)\" framing is wrong and the gargoyle count is contradicted. The widely-repeated press boilerplate reads: \"Chacune des huit faces de la flèche est ornée de près de 200 crochets et motifs floraux, 16 pinacles, 32 gargouilles, 16 arcatures de baies et 8 quadrilobes\" — but grammatically this is a single loosely-written sentence in which 16 pinnacles / 32 gargoyles / 16 bay-arcatures / 8 quadrilobes are WHOLE-SPIRE totals (32 gargoyles per face would imply 256, which is absurd), not per-face. Only \"près de 200 crochets et motifs floraux\" plausibly attaches per-face-ish, and even that is vague. The official Ministry of Culture source (culture.gouv.fr, \"Spécial Notre-Dame 4/6\") gives different installation-phase figures that contradict the claim: \"112 crochets gothiques à fixer sur les arêtes de l'aiguille,\" \"corniche ornée de seize gargouilles\" (16 gargoyles, not 32), plus \"huit grands-ducs et huit griffons\" on the pinnacles. So: do NOT state \"~200 crockets per face across 8 faces\" and do NOT state \"~32 gargoyles\" as a robustly independent fact. At most one can say the spire bears \"hundreds of crockets and floral motifs\" (ffbatiment.fr: \"centaines de crochets et motifs floraux\") and 16 copper statues (12 apostles + 4 evangelist tetramorph). Sources: https://www.culture.gouv.fr/actualites/special-notre-dame-de-paris-4-6-le-jour-ou-la-cathedrale-a-retrouve-sa-fleche ; https://www.ffbatiment.fr/actualites-batiment/actualite-bam/reconstruction-fleche-notre-dame-paris-defis-techniques-releves",
+      "confidence": "medium",
+      "independent_sources": [
+        {
+          "url": "https://www.ffbatiment.fr/actualites-batiment/actualite-bam/reconstruction-fleche-notre-dame-paris-defis-techniques-releves",
+          "supports": false,
+          "note": "French Federation of Building (FFB). Uses materially DIFFERENT wording: 'ses huit faces sont ornées de centaines de crochets et motifs floraux, pinacles, gargouilles, arcatures de baies et quadrilobes' — i.e. 'hundreds' (centaines), with elements framed as decorating the eight faces COLLECTIVELY, and gives NO specific counts of 200/16/32/8. Does not support 'per face' or the gargoyle count."
+        },
+        {
+          "url": "https://www.culture.gouv.fr/actualites/special-notre-dame-de-paris-4-6-le-jour-ou-la-cathedrale-a-retrouve-sa-fleche",
+          "supports": false,
+          "note": "Official Ministry of Culture. Gives conflicting specific figures tied to installation: '112 crochets gothiques a fixer sur les aretes de l'aiguille', 'corniche ornee de seize gargouilles' (16 gargoyles, not 32), 'huit grands-ducs et huit griffons'. Contradicts the ~200-crockets-per-face and 32-gargoyle figures. (Note: this domain is also one of the cited corpus sources, but the corpus's per-face/32-gargoyle gloss is not what this page actually says.)"
+        },
+        {
+          "url": "https://www.pariszigzag.fr/paris-au-quotidien/notre-dame-de-paris-fleche",
+          "supports": true,
+          "note": "Repeats the boilerplate 'chacune de ses 8 faces comportait pres de 200 crochets... 32 gargouilles, 16 pinacles, 16 arcatures de baies et 8 quadrilobes.' NOT independent — verbatim copy of the same press text found on Atrium Patrimoine, Construction Cayola (=constructionbtp.com, a cited corpus source), paris.fr and designboom. Counts as one non-independent cluster, and its grammar ('chacune des huit faces') makes the literal per-face reading incoherent."
+        },
+        {
+          "url": "https://www.designboom.com/architecture/notre-dame-de-paris-spire-installation-cathedral-opening-12-12-2023/",
+          "supports": true,
+          "note": "English-language version of the same boilerplate ('each decorated with nearly 200 hooks, 16 pinnacles, 32 gargoyles, 16 bay arches, 8 quatrefoils'). A translation of the same single press source — not independent, and its own analysis flags 16/32/8 as totals across all eight faces, not per-face."
+        }
+      ],
+      "reasoning": "Approached adversarially. (1) Independence failure: the exact figures '200 crochets / 16 pinacles / 32 gargouilles / 16 arcatures / 8 quadrilobes' appear as ONE verbatim sentence copied across Paris ZigZag, Atrium Patrimoine, Construction Cayola (which 301-redirects to constructionbtp.com — one of the two CITED corpus sources, hence excluded), paris.fr, and designboom (English). These are a single press-release cluster, not independent corroboration. (2) The most independent-sounding trade source, ffbatiment.fr, uses different wording ('centaines'/hundreds, elements across the eight faces collectively) and gives NO specific counts — it does not corroborate. (3) The official culture.gouv.fr page gives conflicting specifics: 112 gothic crockets on the needle edges, a cornice of 16 gargoyles (not 32), and 8 eagle-owls + 8 griffins on the pinnacles. (4) The corpus's framing '~200 crockets PER FACE across 8 faces' is the weakest part: read literally the source sentence ('Chacune des huit faces... 32 gargouilles') would imply 256 gargoyles, which is absurd, so 16/32/8 are clearly whole-spire totals awkwardly attached to 'each face' — the corpus inconsistently treats crockets as per-face (~1600) while treating 16/32/8 as totals. No source supports that mixed accounting. Net: the specific counts are non-independent boilerplate, the per-face crocket framing is unsupported/incoherent, and the gargoyle count is contradicted by the official source. Refuted, medium confidence (the boilerplate is widespread but traceable to one origin; the official figures use a different accounting basis rather than a clean head-to-head total)."
+    },
+    {
+      "claim_id": "notre-dame-spire-16-statues-removed-2019",
+      "verdict": "stands",
+      "confidence": "high",
+      "corrected_value": null,
+      "independent_sources": [
+        {
+          "url": "https://www.theartnewspaper.com/2024/12/02/lucky-statues-on-notre-dames-spire-to-take-up-their-position-once-more",
+          "supports": true,
+          "note": "The Art Newspaper (independent art publication, Dec 2024): confirms 16 copper sculptures (Twelve Apostles + four Evangelists) removed for conservation by firm Socra just four days before the fire; states 'Had the blaze occurred just a few days earlier, these works would have likely met their own grim demise.' Originals survived. Does not give exact calendar date but confirms the four-day gap and restoration purpose."
+        },
+        {
+          "url": "https://www.friendsofnotredamedeparis.org/notre-dame-cathedral-statues/",
+          "supports": true,
+          "note": "Friends of Notre-Dame de Paris (the official foundation supporting the cathedral, not a Wikipedia mirror): explicitly states the 16 copper statues were removed on April 11, 2019 for restoration, before the April 15, 2019 fire, preserving them. Independent authoritative organization."
+        },
+        {
+          "url": "https://www.malaymail.com/news/life/2019/04/12/tourists-stunned-as-notre-dame-cathedral-statues-fly-above-paris/1742649",
+          "supports": true,
+          "note": "Malay Mail (AFP-derived), published April 12, 2019 — i.e., BEFORE the fire — independently fixes the removal date as April 11, 2019 with no hindsight bias: crane lowered the 16 statues (12 Apostles + 4 Evangelists) off the 90m spire for restoration. A contemporaneous pre-fire report is the strongest possible confirmation of the removal date itself."
+        },
+        {
+          "url": "https://www.fox9.com/news/statues-on-notre-dame-spire-removed-days-before-blaze",
+          "supports": true,
+          "note": "FOX 9 Minneapolis (AP wire content): removal April 11, 2019; 16 copper statues representing 12 Apostles + four Evangelists; taken down for a state-financed restoration; sent to a restorer in the Dordogne; 'just four days before' the April 15, 2019 fire. Note: this is the same wire story as KTVU FOX 2, so the two count as one source. Minor unrelated error in the article (calls the spire '13th-century'; it was actually 19th-century Viollet-le-Duc) does not affect this claim."
+        }
+      ],
+      "reasoning": "I attempted to refute the claim but every component is independently corroborated. (1) Sixteen statues: confirmed by The Art Newspaper, Friends of Notre-Dame de Paris, Malay Mail/AFP, and AP — all agree on 16 (the Twelve Apostles plus four Evangelists). (2) Removal on 11 April 2019: confirmed by the Friends of Notre-Dame foundation and, crucially, by Malay Mail/AFP which was published 12 April 2019 — BEFORE the fire — so the date is fixed by contemporaneous reporting, not retrospective narrative. (3) Four days before the 15 April 2019 fire: 11 April to 15 April is exactly four days; AP and The Art Newspaper both use the 'four days' framing. (4) For restoration: all sources confirm conservation/restoration (firm Socra, Dordogne/Périgueux workshop). (5) Originals survived: unanimously confirmed; the statues had already been craned down and trucked to southwest France before the blaze. These sources are genuinely independent of each other and of Wikipedia: an art-trade publication, the cathedral's own support foundation, an AFP wire report, and an AP wire report — not mirrors of one another. The AFP pre-fire article is the decisive piece because it cannot be contaminated by post-fire hindsight. The only discrepancies I found in the sources are unrelated to this claim (e.g., one AP article mislabels the spire as '13th-century' when it was 19th-century). Verdict: stands, high confidence."
+    }
+  ]
+}

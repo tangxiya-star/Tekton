@@ -1,0 +1,4 @@
+{"seq":0,"type":"phase_start","phase":"6T","name":"TOWERS — v2 west-towers + façade tier: derive→verify, gated on its own report (additive)"}
+{"seq":1,"type":"towers_gate","derive":true,"verify_exit":0,"summary":{"total":15,"pass":15,"fail":0,"critical_failures":[]}}
+{"seq":2,"type":"gate","phase":"6T","name":"TOWERS","ok":true,"derive":true,"checks":"15/15","critical_failures":[],"soft":true}
+{"seq":3,"type":"finalize","verdict":"RED","rubric":{"green":27,"total":30,"required_green":19,"required_total":22,"critical_fails":["goal_green","v08_guard","live_url"]}}

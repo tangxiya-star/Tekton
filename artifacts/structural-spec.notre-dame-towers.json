@@ -1,0 +1,3409 @@
+{
+  "meta": {
+    "building": "Façade occidentale et tours de Notre-Dame de Paris",
+    "building_en": "West facade & towers of Notre-Dame de Paris",
+    "building_key": "notre-dame-towers",
+    "tier": "v2",
+    "build_state": "The 'harmonic facade' (c.1200–1250), restored by Viollet-le-Duc & Lassus (1844–64); cleaned 1990s; post-2019-fire restoration completed 2024. The two towers were never given their planned spires.",
+    "generated_by": "scripts/derive-notre-dame-towers.mjs (Yingzao Rule Engine — west towers & facade)",
+    "canonical_source": "data/notre-dame-towers-canonical.json"
+  },
+  "units": {
+    "scene_scale": 1,
+    "unit": "metre",
+    "pied_du_roi_mm": 324.8,
+    "note": "All positions/dimensions in metres. Facade in the X–Y plane facing +Z; ground at y=0."
+  },
+  "provenance_colors": {
+    "measured": "#d9a843",
+    "reconstructed_design": "#a3812f",
+    "rule_derived": "#5e6ca8",
+    "conjecture": "#b34a38"
+  },
+  "phases": [
+    "facade",
+    "tower",
+    "buttress",
+    "portal",
+    "king",
+    "rose",
+    "gargoyle",
+    "pinnacle"
+  ],
+  "key_dimensions": {
+    "facade_width_m": 43.5,
+    "facade_body_height_m": 45,
+    "tower_height_m": 69,
+    "north_tower_width_m": 14.91,
+    "south_tower_width_m": 13.69,
+    "rose_diameter_m": 9.6,
+    "rose_rays": 24,
+    "buttress_count": 4,
+    "king_count": 28,
+    "portal_count": 3,
+    "centre_portal_widest": true
+  },
+  "category_counts": {
+    "facade": 2,
+    "tower": 4,
+    "buttress": 4,
+    "portal": 6,
+    "king": 56,
+    "rose": 26,
+    "gargoyle": 8,
+    "pinnacle": 16
+  },
+  "components": [
+    {
+      "id": "facade-body",
+      "name_fr": "corps de la façade occidentale",
+      "name_en": "West facade body",
+      "phase": "facade",
+      "category": "facade",
+      "role": "The harmonic-facade body below the towers — the measured 43.5 m width is the verifier's primary anchor (T01).",
+      "geometry": {
+        "type": "box",
+        "w": 43.5,
+        "h": 45,
+        "d": 11
+      },
+      "position": [
+        0,
+        22.5,
+        -5.5
+      ],
+      "provenance": "measured",
+      "source": "FRIENDS-WEST-FACADE",
+      "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/west-facade/",
+      "material": "limestone",
+      "width_m": 43.5,
+      "note": "Width 43.5 m multiply confirmed (FRIENDS-WEST-FACADE + TECHNO-SCIENCE + BNF). Body height 45 m. Stone TYPE measured (Lutetian limestone); exact colour is conjecture/GAP — not invented.",
+      "rights": "facts_uncopyrightable",
+      "seq": 0
+    },
+    {
+      "id": "facade-cornice",
+      "name_fr": "corniche de la galerie des chimères",
+      "name_en": "Chimera-gallery cornice (facade top)",
+      "phase": "facade",
+      "category": "facade",
+      "role": "The horizontal colonnade course (Galerie des Chimères level) linking the two towers across the facade top.",
+      "geometry": {
+        "type": "box",
+        "w": 43.5,
+        "h": 2.2,
+        "d": 11.6
+      },
+      "position": [
+        0,
+        43.9,
+        -5.5
+      ],
+      "provenance": "reconstructed_design",
+      "source": "DEHIO-BEZOLD",
+      "material": "limestone",
+      "note": "Register course form scaled off the Dehio-Bezold PD section (reconstructed_design); the gallery's exact height above ground is a GAP.",
+      "url": "https://digi.ub.uni-heidelberg.de/diglit/dehio1887ga",
+      "rights": "public_domain",
+      "seq": 1
+    },
+    {
+      "id": "tower-north",
+      "name_fr": "tour nord",
+      "name_en": "North tower (square belfry)",
+      "phase": "tower",
+      "category": "tower",
+      "role": "Square belfry tower culminating at the measured 69 m; flat-topped — the intended spire was never built.",
+      "geometry": {
+        "type": "box",
+        "w": 14.91,
+        "h": 24,
+        "d": 11
+      },
+      "position": [
+        -14.265,
+        57,
+        -5.5
+      ],
+      "provenance": "reconstructed_design",
+      "source": "EN-WIKI-NDP",
+      "url": "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris",
+      "material": "limestone",
+      "width_m": 14.91,
+      "note": "Top at 69 m (MEASURED, T02). Width 14.91 m is single-source → reconstructed_design. N≠S asymmetry preserved.",
+      "rights": "facts_uncopyrightable",
+      "seq": 2
+    },
+    {
+      "id": "tower-north-parapet",
+      "name_fr": "couronnement plat (tour nord)",
+      "name_en": "North tower flat parapet (no spire)",
+      "phase": "tower",
+      "category": "tower",
+      "role": "Flat belfry parapet — the documented fact that the towers were never given their planned spires.",
+      "geometry": {
+        "type": "box",
+        "w": 15.71,
+        "h": 1.6,
+        "d": 11.8
+      },
+      "position": [
+        -14.265,
+        69.8,
+        -5.5
+      ],
+      "provenance": "measured",
+      "source": "BNF-FACADE-9POINTS",
+      "url": "https://passerelles.essentiels.bnf.fr/fr/article/e854492c-8458-4685-9bd0-d211156adb0f-facade-notre-dame-paris-en-9-points",
+      "material": "limestone",
+      "note": "Flat top is the MEASURED fact (spires_never_built); top edge marks the 69 m culmination.",
+      "rights": "facts_uncopyrightable",
+      "seq": 3
+    },
+    {
+      "id": "tower-south",
+      "name_fr": "tour sud",
+      "name_en": "South tower (square belfry)",
+      "phase": "tower",
+      "category": "tower",
+      "role": "Square belfry tower culminating at the measured 69 m; flat-topped — the intended spire was never built.",
+      "geometry": {
+        "type": "box",
+        "w": 13.69,
+        "h": 24,
+        "d": 11
+      },
+      "position": [
+        14.265,
+        57,
+        -5.5
+      ],
+      "provenance": "reconstructed_design",
+      "source": "EN-WIKI-NDP",
+      "url": "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris",
+      "material": "limestone",
+      "width_m": 13.69,
+      "note": "Top at 69 m (MEASURED, T02). Width 13.69 m is single-source → reconstructed_design. N≠S asymmetry preserved.",
+      "rights": "facts_uncopyrightable",
+      "seq": 4
+    },
+    {
+      "id": "tower-south-parapet",
+      "name_fr": "couronnement plat (tour sud)",
+      "name_en": "South tower flat parapet (no spire)",
+      "phase": "tower",
+      "category": "tower",
+      "role": "Flat belfry parapet — the documented fact that the towers were never given their planned spires.",
+      "geometry": {
+        "type": "box",
+        "w": 14.49,
+        "h": 1.6,
+        "d": 11.8
+      },
+      "position": [
+        14.265,
+        69.8,
+        -5.5
+      ],
+      "provenance": "measured",
+      "source": "BNF-FACADE-9POINTS",
+      "url": "https://passerelles.essentiels.bnf.fr/fr/article/e854492c-8458-4685-9bd0-d211156adb0f-facade-notre-dame-paris-en-9-points",
+      "material": "limestone",
+      "note": "Flat top is the MEASURED fact (spires_never_built); top edge marks the 69 m culmination.",
+      "rights": "facts_uncopyrightable",
+      "seq": 5
+    },
+    {
+      "id": "buttress-0",
+      "name_fr": "contrefort 1",
+      "name_en": "Buttress 1",
+      "phase": "buttress",
+      "category": "buttress",
+      "role": "One of the four vertical buttresses dividing the facade into its tripartite bays.",
+      "geometry": {
+        "type": "box",
+        "w": 2.4,
+        "h": 45,
+        "d": 12.2
+      },
+      "position": [
+        -20.55,
+        22.5,
+        -4.9
+      ],
+      "provenance": "measured",
+      "source": "FRIENDS-WEST-FACADE",
+      "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/west-facade/",
+      "material": "limestone",
+      "note": "Buttress count = 4 MEASURED (FRIENDS-WEST-FACADE + EN-WIKI-NDP). Thickness 2.4 m is rule_derived massing.",
+      "rights": "facts_uncopyrightable",
+      "seq": 6
+    },
+    {
+      "id": "buttress-1",
+      "name_fr": "contrefort 2",
+      "name_en": "Buttress 2",
+      "phase": "buttress",
+      "category": "buttress",
+      "role": "One of the four vertical buttresses dividing the facade into its tripartite bays.",
+      "geometry": {
+        "type": "box",
+        "w": 2.4,
+        "h": 45,
+        "d": 12.2
+      },
+      "position": [
+        -7.98,
+        22.5,
+        -4.9
+      ],
+      "provenance": "measured",
+      "source": "FRIENDS-WEST-FACADE",
+      "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/west-facade/",
+      "material": "limestone",
+      "note": "Buttress count = 4 MEASURED (FRIENDS-WEST-FACADE + EN-WIKI-NDP). Thickness 2.4 m is rule_derived massing.",
+      "rights": "facts_uncopyrightable",
+      "seq": 7
+    },
+    {
+      "id": "buttress-2",
+      "name_fr": "contrefort 3",
+      "name_en": "Buttress 3",
+      "phase": "buttress",
+      "category": "buttress",
+      "role": "One of the four vertical buttresses dividing the facade into its tripartite bays.",
+      "geometry": {
+        "type": "box",
+        "w": 2.4,
+        "h": 45,
+        "d": 12.2
+      },
+      "position": [
+        7.98,
+        22.5,
+        -4.9
+      ],
+      "provenance": "measured",
+      "source": "FRIENDS-WEST-FACADE",
+      "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/west-facade/",
+      "material": "limestone",
+      "note": "Buttress count = 4 MEASURED (FRIENDS-WEST-FACADE + EN-WIKI-NDP). Thickness 2.4 m is rule_derived massing.",
+      "rights": "facts_uncopyrightable",
+      "seq": 8
+    },
+    {
+      "id": "buttress-3",
+      "name_fr": "contrefort 4",
+      "name_en": "Buttress 4",
+      "phase": "buttress",
+      "category": "buttress",
+      "role": "One of the four vertical buttresses dividing the facade into its tripartite bays.",
+      "geometry": {
+        "type": "box",
+        "w": 2.4,
+        "h": 45,
+        "d": 12.2
+      },
+      "position": [
+        20.55,
+        22.5,
+        -4.9
+      ],
+      "provenance": "measured",
+      "source": "FRIENDS-WEST-FACADE",
+      "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/west-facade/",
+      "material": "limestone",
+      "note": "Buttress count = 4 MEASURED (FRIENDS-WEST-FACADE + EN-WIKI-NDP). Thickness 2.4 m is rule_derived massing.",
+      "rights": "facts_uncopyrightable",
+      "seq": 9
+    },
+    {
+      "id": "portal-left",
+      "name_fr": "portail de la Vierge",
+      "name_en": "Portal of the Virgin (north/left)",
+      "phase": "portal",
+      "category": "portal",
+      "role": "Lateral west portal at the facade base.",
+      "geometry": {
+        "type": "box",
+        "w": 6.305399999999999,
+        "h": 6.620669999999999,
+        "d": 2.2
+      },
+      "position": [
+        -14.265,
+        3.31,
+        0.4
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "provenance": "rule_derived",
+      "source": "TWO-CENTRED-ARCH",
+      "material": "limestone",
+      "portal_is_widest": false,
+      "opening_width_m": 6.305,
+      "note": "Per-portal width is a GAP (canonical _GAP_portal_widths_m); opening rule_derived from the bay width. Centre opening widest (FRIENDS-PORTALS confirms centre widest, gives no metric).",
+      "url": "https://www.brick.org.uk/uploads/downloads/d-brick-arch.pdf",
+      "rights": "rule",
+      "seq": 10
+    },
+    {
+      "id": "portal-left-arch",
+      "name_fr": "arc brisé (portail de la Vierge)",
+      "name_en": "Pointed (two-centred) arch — Portal of the Virgin (north/left)",
+      "phase": "portal",
+      "category": "portal",
+      "role": "The pointed arch head struck by the two-centred-arch rule from the two springing points.",
+      "geometry": {
+        "type": "poly",
+        "pts": [
+          [
+            -17.418,
+            6.621,
+            0.4
+          ],
+          [
+            -11.112,
+            6.621,
+            0.4
+          ],
+          [
+            -14.265,
+            9.351,
+            0.4
+          ]
+        ]
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "provenance": "rule_derived",
+      "source": "TWO-CENTRED-ARCH",
+      "material": "limestone",
+      "note": "Two-centred (equilateral) Gothic arch — pure geometry struck from the springing points; rise = halfwidth × √3 (rule_derived, not surveyed).",
+      "url": "https://www.brick.org.uk/uploads/downloads/d-brick-arch.pdf",
+      "rights": "rule",
+      "seq": 11
+    },
+    {
+      "id": "portal-centre",
+      "name_fr": "portail du Jugement dernier",
+      "name_en": "Portal of the Last Judgment (centre, widest)",
+      "phase": "portal",
+      "category": "portal",
+      "role": "The central Portal of the Last Judgment — the widest of the three, per the cited record.",
+      "geometry": {
+        "type": "box",
+        "w": 8.4072,
+        "h": 8.82756,
+        "d": 2.2
+      },
+      "position": [
+        0,
+        4.414,
+        0.4
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "provenance": "rule_derived",
+      "source": "TWO-CENTRED-ARCH",
+      "material": "limestone",
+      "portal_is_widest": true,
+      "opening_width_m": 8.407,
+      "note": "Per-portal width is a GAP (canonical _GAP_portal_widths_m); opening rule_derived from the bay width. Centre opening widest (FRIENDS-PORTALS confirms centre widest, gives no metric).",
+      "url": "https://www.brick.org.uk/uploads/downloads/d-brick-arch.pdf",
+      "rights": "rule",
+      "seq": 12
+    },
+    {
+      "id": "portal-centre-arch",
+      "name_fr": "arc brisé (portail du Jugement dernier)",
+      "name_en": "Pointed (two-centred) arch — Portal of the Last Judgment (centre, widest)",
+      "phase": "portal",
+      "category": "portal",
+      "role": "The pointed arch head struck by the two-centred-arch rule from the two springing points.",
+      "geometry": {
+        "type": "poly",
+        "pts": [
+          [
+            -4.204,
+            8.828,
+            0.4
+          ],
+          [
+            4.204,
+            8.828,
+            0.4
+          ],
+          [
+            0,
+            12.468,
+            0.4
+          ]
+        ]
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "provenance": "rule_derived",
+      "source": "TWO-CENTRED-ARCH",
+      "material": "limestone",
+      "note": "Two-centred (equilateral) Gothic arch — pure geometry struck from the springing points; rise = halfwidth × √3 (rule_derived, not surveyed).",
+      "url": "https://www.brick.org.uk/uploads/downloads/d-brick-arch.pdf",
+      "rights": "rule",
+      "seq": 13
+    },
+    {
+      "id": "portal-right",
+      "name_fr": "portail Sainte-Anne",
+      "name_en": "Portal of St-Anne (south/right)",
+      "phase": "portal",
+      "category": "portal",
+      "role": "Lateral west portal at the facade base.",
+      "geometry": {
+        "type": "box",
+        "w": 6.305399999999999,
+        "h": 6.620669999999999,
+        "d": 2.2
+      },
+      "position": [
+        14.265,
+        3.31,
+        0.4
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "provenance": "rule_derived",
+      "source": "TWO-CENTRED-ARCH",
+      "material": "limestone",
+      "portal_is_widest": false,
+      "opening_width_m": 6.305,
+      "note": "Per-portal width is a GAP (canonical _GAP_portal_widths_m); opening rule_derived from the bay width. Centre opening widest (FRIENDS-PORTALS confirms centre widest, gives no metric).",
+      "url": "https://www.brick.org.uk/uploads/downloads/d-brick-arch.pdf",
+      "rights": "rule",
+      "seq": 14
+    },
+    {
+      "id": "portal-right-arch",
+      "name_fr": "arc brisé (portail Sainte-Anne)",
+      "name_en": "Pointed (two-centred) arch — Portal of St-Anne (south/right)",
+      "phase": "portal",
+      "category": "portal",
+      "role": "The pointed arch head struck by the two-centred-arch rule from the two springing points.",
+      "geometry": {
+        "type": "poly",
+        "pts": [
+          [
+            11.112,
+            6.621,
+            0.4
+          ],
+          [
+            17.418,
+            6.621,
+            0.4
+          ],
+          [
+            14.265,
+            9.351,
+            0.4
+          ]
+        ]
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "provenance": "rule_derived",
+      "source": "TWO-CENTRED-ARCH",
+      "material": "limestone",
+      "note": "Two-centred (equilateral) Gothic arch — pure geometry struck from the springing points; rise = halfwidth × √3 (rule_derived, not surveyed).",
+      "url": "https://www.brick.org.uk/uploads/downloads/d-brick-arch.pdf",
+      "rights": "rule",
+      "seq": 15
+    },
+    {
+      "id": "king-0",
+      "name_fr": "roi de Juda 1",
+      "name_en": "King of Judah 1",
+      "phase": "king",
+      "category": "king",
+      "role": "One of the 28 Kings of Judah on the Gallery of Kings — a 19th-c Viollet-le-Duc restoration (the medieval originals were decapitated in 1793).",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.455,
+        "h": 2.1
+      },
+      "position": [
+        -20.15,
+        21.505,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "PANORAMA-GALERIE-ROIS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "figure_height_m": 3.5,
+      "note": "Count 28 MEASURED (T03); figures reconstructed_design (19th-c VLD restoration, Geoffroi-Dechaume; 21 original heads at Cluny). Band height ~20 m is single-source → reconstructed_design placement, not surveyed.",
+      "rights": "facts_uncopyrightable",
+      "seq": 16
+    },
+    {
+      "id": "king-0-head",
+      "name_fr": "roi de Juda 1 · tête",
+      "name_en": "King of Judah 1 — head",
+      "phase": "king",
+      "category": "king",
+      "role": "Head of a Gallery-of-Kings figure (19th-c restoration; the 21 medieval heads are at the Musée de Cluny).",
+      "geometry": {
+        "type": "sphere",
+        "r": 0.385
+      },
+      "position": [
+        -20.15,
+        23.15,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "CLUNY-HEADS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "note": "Head top lands at band + 3.5 m (the measured figure height). Originals at the Musée de Cluny (CLUNY-HEADS).",
+      "rights": "facts_uncopyrightable",
+      "seq": 17
+    },
+    {
+      "id": "king-1",
+      "name_fr": "roi de Juda 2",
+      "name_en": "King of Judah 2",
+      "phase": "king",
+      "category": "king",
+      "role": "One of the 28 Kings of Judah on the Gallery of Kings — a 19th-c Viollet-le-Duc restoration (the medieval originals were decapitated in 1793).",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.455,
+        "h": 2.1
+      },
+      "position": [
+        -18.657,
+        21.505,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "PANORAMA-GALERIE-ROIS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "figure_height_m": 3.5,
+      "note": "Count 28 MEASURED (T03); figures reconstructed_design (19th-c VLD restoration, Geoffroi-Dechaume; 21 original heads at Cluny). Band height ~20 m is single-source → reconstructed_design placement, not surveyed.",
+      "rights": "facts_uncopyrightable",
+      "seq": 18
+    },
+    {
+      "id": "king-1-head",
+      "name_fr": "roi de Juda 2 · tête",
+      "name_en": "King of Judah 2 — head",
+      "phase": "king",
+      "category": "king",
+      "role": "Head of a Gallery-of-Kings figure (19th-c restoration; the 21 medieval heads are at the Musée de Cluny).",
+      "geometry": {
+        "type": "sphere",
+        "r": 0.385
+      },
+      "position": [
+        -18.657,
+        23.15,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "CLUNY-HEADS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "note": "Head top lands at band + 3.5 m (the measured figure height). Originals at the Musée de Cluny (CLUNY-HEADS).",
+      "rights": "facts_uncopyrightable",
+      "seq": 19
+    },
+    {
+      "id": "king-2",
+      "name_fr": "roi de Juda 3",
+      "name_en": "King of Judah 3",
+      "phase": "king",
+      "category": "king",
+      "role": "One of the 28 Kings of Judah on the Gallery of Kings — a 19th-c Viollet-le-Duc restoration (the medieval originals were decapitated in 1793).",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.455,
+        "h": 2.1
+      },
+      "position": [
+        -17.165,
+        21.505,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "PANORAMA-GALERIE-ROIS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "figure_height_m": 3.5,
+      "note": "Count 28 MEASURED (T03); figures reconstructed_design (19th-c VLD restoration, Geoffroi-Dechaume; 21 original heads at Cluny). Band height ~20 m is single-source → reconstructed_design placement, not surveyed.",
+      "rights": "facts_uncopyrightable",
+      "seq": 20
+    },
+    {
+      "id": "king-2-head",
+      "name_fr": "roi de Juda 3 · tête",
+      "name_en": "King of Judah 3 — head",
+      "phase": "king",
+      "category": "king",
+      "role": "Head of a Gallery-of-Kings figure (19th-c restoration; the 21 medieval heads are at the Musée de Cluny).",
+      "geometry": {
+        "type": "sphere",
+        "r": 0.385
+      },
+      "position": [
+        -17.165,
+        23.15,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "CLUNY-HEADS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "note": "Head top lands at band + 3.5 m (the measured figure height). Originals at the Musée de Cluny (CLUNY-HEADS).",
+      "rights": "facts_uncopyrightable",
+      "seq": 21
+    },
+    {
+      "id": "king-3",
+      "name_fr": "roi de Juda 4",
+      "name_en": "King of Judah 4",
+      "phase": "king",
+      "category": "king",
+      "role": "One of the 28 Kings of Judah on the Gallery of Kings — a 19th-c Viollet-le-Duc restoration (the medieval originals were decapitated in 1793).",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.455,
+        "h": 2.1
+      },
+      "position": [
+        -15.672,
+        21.505,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "PANORAMA-GALERIE-ROIS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "figure_height_m": 3.5,
+      "note": "Count 28 MEASURED (T03); figures reconstructed_design (19th-c VLD restoration, Geoffroi-Dechaume; 21 original heads at Cluny). Band height ~20 m is single-source → reconstructed_design placement, not surveyed.",
+      "rights": "facts_uncopyrightable",
+      "seq": 22
+    },
+    {
+      "id": "king-3-head",
+      "name_fr": "roi de Juda 4 · tête",
+      "name_en": "King of Judah 4 — head",
+      "phase": "king",
+      "category": "king",
+      "role": "Head of a Gallery-of-Kings figure (19th-c restoration; the 21 medieval heads are at the Musée de Cluny).",
+      "geometry": {
+        "type": "sphere",
+        "r": 0.385
+      },
+      "position": [
+        -15.672,
+        23.15,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "CLUNY-HEADS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "note": "Head top lands at band + 3.5 m (the measured figure height). Originals at the Musée de Cluny (CLUNY-HEADS).",
+      "rights": "facts_uncopyrightable",
+      "seq": 23
+    },
+    {
+      "id": "king-4",
+      "name_fr": "roi de Juda 5",
+      "name_en": "King of Judah 5",
+      "phase": "king",
+      "category": "king",
+      "role": "One of the 28 Kings of Judah on the Gallery of Kings — a 19th-c Viollet-le-Duc restoration (the medieval originals were decapitated in 1793).",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.455,
+        "h": 2.1
+      },
+      "position": [
+        -14.18,
+        21.505,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "PANORAMA-GALERIE-ROIS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "figure_height_m": 3.5,
+      "note": "Count 28 MEASURED (T03); figures reconstructed_design (19th-c VLD restoration, Geoffroi-Dechaume; 21 original heads at Cluny). Band height ~20 m is single-source → reconstructed_design placement, not surveyed.",
+      "rights": "facts_uncopyrightable",
+      "seq": 24
+    },
+    {
+      "id": "king-4-head",
+      "name_fr": "roi de Juda 5 · tête",
+      "name_en": "King of Judah 5 — head",
+      "phase": "king",
+      "category": "king",
+      "role": "Head of a Gallery-of-Kings figure (19th-c restoration; the 21 medieval heads are at the Musée de Cluny).",
+      "geometry": {
+        "type": "sphere",
+        "r": 0.385
+      },
+      "position": [
+        -14.18,
+        23.15,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "CLUNY-HEADS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "note": "Head top lands at band + 3.5 m (the measured figure height). Originals at the Musée de Cluny (CLUNY-HEADS).",
+      "rights": "facts_uncopyrightable",
+      "seq": 25
+    },
+    {
+      "id": "king-5",
+      "name_fr": "roi de Juda 6",
+      "name_en": "King of Judah 6",
+      "phase": "king",
+      "category": "king",
+      "role": "One of the 28 Kings of Judah on the Gallery of Kings — a 19th-c Viollet-le-Duc restoration (the medieval originals were decapitated in 1793).",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.455,
+        "h": 2.1
+      },
+      "position": [
+        -12.687,
+        21.505,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "PANORAMA-GALERIE-ROIS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "figure_height_m": 3.5,
+      "note": "Count 28 MEASURED (T03); figures reconstructed_design (19th-c VLD restoration, Geoffroi-Dechaume; 21 original heads at Cluny). Band height ~20 m is single-source → reconstructed_design placement, not surveyed.",
+      "rights": "facts_uncopyrightable",
+      "seq": 26
+    },
+    {
+      "id": "king-5-head",
+      "name_fr": "roi de Juda 6 · tête",
+      "name_en": "King of Judah 6 — head",
+      "phase": "king",
+      "category": "king",
+      "role": "Head of a Gallery-of-Kings figure (19th-c restoration; the 21 medieval heads are at the Musée de Cluny).",
+      "geometry": {
+        "type": "sphere",
+        "r": 0.385
+      },
+      "position": [
+        -12.687,
+        23.15,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "CLUNY-HEADS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "note": "Head top lands at band + 3.5 m (the measured figure height). Originals at the Musée de Cluny (CLUNY-HEADS).",
+      "rights": "facts_uncopyrightable",
+      "seq": 27
+    },
+    {
+      "id": "king-6",
+      "name_fr": "roi de Juda 7",
+      "name_en": "King of Judah 7",
+      "phase": "king",
+      "category": "king",
+      "role": "One of the 28 Kings of Judah on the Gallery of Kings — a 19th-c Viollet-le-Duc restoration (the medieval originals were decapitated in 1793).",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.455,
+        "h": 2.1
+      },
+      "position": [
+        -11.194,
+        21.505,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "PANORAMA-GALERIE-ROIS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "figure_height_m": 3.5,
+      "note": "Count 28 MEASURED (T03); figures reconstructed_design (19th-c VLD restoration, Geoffroi-Dechaume; 21 original heads at Cluny). Band height ~20 m is single-source → reconstructed_design placement, not surveyed.",
+      "rights": "facts_uncopyrightable",
+      "seq": 28
+    },
+    {
+      "id": "king-6-head",
+      "name_fr": "roi de Juda 7 · tête",
+      "name_en": "King of Judah 7 — head",
+      "phase": "king",
+      "category": "king",
+      "role": "Head of a Gallery-of-Kings figure (19th-c restoration; the 21 medieval heads are at the Musée de Cluny).",
+      "geometry": {
+        "type": "sphere",
+        "r": 0.385
+      },
+      "position": [
+        -11.194,
+        23.15,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "CLUNY-HEADS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "note": "Head top lands at band + 3.5 m (the measured figure height). Originals at the Musée de Cluny (CLUNY-HEADS).",
+      "rights": "facts_uncopyrightable",
+      "seq": 29
+    },
+    {
+      "id": "king-7",
+      "name_fr": "roi de Juda 8",
+      "name_en": "King of Judah 8",
+      "phase": "king",
+      "category": "king",
+      "role": "One of the 28 Kings of Judah on the Gallery of Kings — a 19th-c Viollet-le-Duc restoration (the medieval originals were decapitated in 1793).",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.455,
+        "h": 2.1
+      },
+      "position": [
+        -9.702,
+        21.505,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "PANORAMA-GALERIE-ROIS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "figure_height_m": 3.5,
+      "note": "Count 28 MEASURED (T03); figures reconstructed_design (19th-c VLD restoration, Geoffroi-Dechaume; 21 original heads at Cluny). Band height ~20 m is single-source → reconstructed_design placement, not surveyed.",
+      "rights": "facts_uncopyrightable",
+      "seq": 30
+    },
+    {
+      "id": "king-7-head",
+      "name_fr": "roi de Juda 8 · tête",
+      "name_en": "King of Judah 8 — head",
+      "phase": "king",
+      "category": "king",
+      "role": "Head of a Gallery-of-Kings figure (19th-c restoration; the 21 medieval heads are at the Musée de Cluny).",
+      "geometry": {
+        "type": "sphere",
+        "r": 0.385
+      },
+      "position": [
+        -9.702,
+        23.15,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "CLUNY-HEADS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "note": "Head top lands at band + 3.5 m (the measured figure height). Originals at the Musée de Cluny (CLUNY-HEADS).",
+      "rights": "facts_uncopyrightable",
+      "seq": 31
+    },
+    {
+      "id": "king-8",
+      "name_fr": "roi de Juda 9",
+      "name_en": "King of Judah 9",
+      "phase": "king",
+      "category": "king",
+      "role": "One of the 28 Kings of Judah on the Gallery of Kings — a 19th-c Viollet-le-Duc restoration (the medieval originals were decapitated in 1793).",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.455,
+        "h": 2.1
+      },
+      "position": [
+        -8.209,
+        21.505,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "PANORAMA-GALERIE-ROIS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "figure_height_m": 3.5,
+      "note": "Count 28 MEASURED (T03); figures reconstructed_design (19th-c VLD restoration, Geoffroi-Dechaume; 21 original heads at Cluny). Band height ~20 m is single-source → reconstructed_design placement, not surveyed.",
+      "rights": "facts_uncopyrightable",
+      "seq": 32
+    },
+    {
+      "id": "king-8-head",
+      "name_fr": "roi de Juda 9 · tête",
+      "name_en": "King of Judah 9 — head",
+      "phase": "king",
+      "category": "king",
+      "role": "Head of a Gallery-of-Kings figure (19th-c restoration; the 21 medieval heads are at the Musée de Cluny).",
+      "geometry": {
+        "type": "sphere",
+        "r": 0.385
+      },
+      "position": [
+        -8.209,
+        23.15,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "CLUNY-HEADS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "note": "Head top lands at band + 3.5 m (the measured figure height). Originals at the Musée de Cluny (CLUNY-HEADS).",
+      "rights": "facts_uncopyrightable",
+      "seq": 33
+    },
+    {
+      "id": "king-9",
+      "name_fr": "roi de Juda 10",
+      "name_en": "King of Judah 10",
+      "phase": "king",
+      "category": "king",
+      "role": "One of the 28 Kings of Judah on the Gallery of Kings — a 19th-c Viollet-le-Duc restoration (the medieval originals were decapitated in 1793).",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.455,
+        "h": 2.1
+      },
+      "position": [
+        -6.717,
+        21.505,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "PANORAMA-GALERIE-ROIS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "figure_height_m": 3.5,
+      "note": "Count 28 MEASURED (T03); figures reconstructed_design (19th-c VLD restoration, Geoffroi-Dechaume; 21 original heads at Cluny). Band height ~20 m is single-source → reconstructed_design placement, not surveyed.",
+      "rights": "facts_uncopyrightable",
+      "seq": 34
+    },
+    {
+      "id": "king-9-head",
+      "name_fr": "roi de Juda 10 · tête",
+      "name_en": "King of Judah 10 — head",
+      "phase": "king",
+      "category": "king",
+      "role": "Head of a Gallery-of-Kings figure (19th-c restoration; the 21 medieval heads are at the Musée de Cluny).",
+      "geometry": {
+        "type": "sphere",
+        "r": 0.385
+      },
+      "position": [
+        -6.717,
+        23.15,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "CLUNY-HEADS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "note": "Head top lands at band + 3.5 m (the measured figure height). Originals at the Musée de Cluny (CLUNY-HEADS).",
+      "rights": "facts_uncopyrightable",
+      "seq": 35
+    },
+    {
+      "id": "king-10",
+      "name_fr": "roi de Juda 11",
+      "name_en": "King of Judah 11",
+      "phase": "king",
+      "category": "king",
+      "role": "One of the 28 Kings of Judah on the Gallery of Kings — a 19th-c Viollet-le-Duc restoration (the medieval originals were decapitated in 1793).",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.455,
+        "h": 2.1
+      },
+      "position": [
+        -5.224,
+        21.505,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "PANORAMA-GALERIE-ROIS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "figure_height_m": 3.5,
+      "note": "Count 28 MEASURED (T03); figures reconstructed_design (19th-c VLD restoration, Geoffroi-Dechaume; 21 original heads at Cluny). Band height ~20 m is single-source → reconstructed_design placement, not surveyed.",
+      "rights": "facts_uncopyrightable",
+      "seq": 36
+    },
+    {
+      "id": "king-10-head",
+      "name_fr": "roi de Juda 11 · tête",
+      "name_en": "King of Judah 11 — head",
+      "phase": "king",
+      "category": "king",
+      "role": "Head of a Gallery-of-Kings figure (19th-c restoration; the 21 medieval heads are at the Musée de Cluny).",
+      "geometry": {
+        "type": "sphere",
+        "r": 0.385
+      },
+      "position": [
+        -5.224,
+        23.15,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "CLUNY-HEADS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "note": "Head top lands at band + 3.5 m (the measured figure height). Originals at the Musée de Cluny (CLUNY-HEADS).",
+      "rights": "facts_uncopyrightable",
+      "seq": 37
+    },
+    {
+      "id": "king-11",
+      "name_fr": "roi de Juda 12",
+      "name_en": "King of Judah 12",
+      "phase": "king",
+      "category": "king",
+      "role": "One of the 28 Kings of Judah on the Gallery of Kings — a 19th-c Viollet-le-Duc restoration (the medieval originals were decapitated in 1793).",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.455,
+        "h": 2.1
+      },
+      "position": [
+        -3.731,
+        21.505,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "PANORAMA-GALERIE-ROIS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "figure_height_m": 3.5,
+      "note": "Count 28 MEASURED (T03); figures reconstructed_design (19th-c VLD restoration, Geoffroi-Dechaume; 21 original heads at Cluny). Band height ~20 m is single-source → reconstructed_design placement, not surveyed.",
+      "rights": "facts_uncopyrightable",
+      "seq": 38
+    },
+    {
+      "id": "king-11-head",
+      "name_fr": "roi de Juda 12 · tête",
+      "name_en": "King of Judah 12 — head",
+      "phase": "king",
+      "category": "king",
+      "role": "Head of a Gallery-of-Kings figure (19th-c restoration; the 21 medieval heads are at the Musée de Cluny).",
+      "geometry": {
+        "type": "sphere",
+        "r": 0.385
+      },
+      "position": [
+        -3.731,
+        23.15,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "CLUNY-HEADS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "note": "Head top lands at band + 3.5 m (the measured figure height). Originals at the Musée de Cluny (CLUNY-HEADS).",
+      "rights": "facts_uncopyrightable",
+      "seq": 39
+    },
+    {
+      "id": "king-12",
+      "name_fr": "roi de Juda 13",
+      "name_en": "King of Judah 13",
+      "phase": "king",
+      "category": "king",
+      "role": "One of the 28 Kings of Judah on the Gallery of Kings — a 19th-c Viollet-le-Duc restoration (the medieval originals were decapitated in 1793).",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.455,
+        "h": 2.1
+      },
+      "position": [
+        -2.239,
+        21.505,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "PANORAMA-GALERIE-ROIS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "figure_height_m": 3.5,
+      "note": "Count 28 MEASURED (T03); figures reconstructed_design (19th-c VLD restoration, Geoffroi-Dechaume; 21 original heads at Cluny). Band height ~20 m is single-source → reconstructed_design placement, not surveyed.",
+      "rights": "facts_uncopyrightable",
+      "seq": 40
+    },
+    {
+      "id": "king-12-head",
+      "name_fr": "roi de Juda 13 · tête",
+      "name_en": "King of Judah 13 — head",
+      "phase": "king",
+      "category": "king",
+      "role": "Head of a Gallery-of-Kings figure (19th-c restoration; the 21 medieval heads are at the Musée de Cluny).",
+      "geometry": {
+        "type": "sphere",
+        "r": 0.385
+      },
+      "position": [
+        -2.239,
+        23.15,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "CLUNY-HEADS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "note": "Head top lands at band + 3.5 m (the measured figure height). Originals at the Musée de Cluny (CLUNY-HEADS).",
+      "rights": "facts_uncopyrightable",
+      "seq": 41
+    },
+    {
+      "id": "king-13",
+      "name_fr": "roi de Juda 14",
+      "name_en": "King of Judah 14",
+      "phase": "king",
+      "category": "king",
+      "role": "One of the 28 Kings of Judah on the Gallery of Kings — a 19th-c Viollet-le-Duc restoration (the medieval originals were decapitated in 1793).",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.455,
+        "h": 2.1
+      },
+      "position": [
+        -0.746,
+        21.505,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "PANORAMA-GALERIE-ROIS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "figure_height_m": 3.5,
+      "note": "Count 28 MEASURED (T03); figures reconstructed_design (19th-c VLD restoration, Geoffroi-Dechaume; 21 original heads at Cluny). Band height ~20 m is single-source → reconstructed_design placement, not surveyed.",
+      "rights": "facts_uncopyrightable",
+      "seq": 42
+    },
+    {
+      "id": "king-13-head",
+      "name_fr": "roi de Juda 14 · tête",
+      "name_en": "King of Judah 14 — head",
+      "phase": "king",
+      "category": "king",
+      "role": "Head of a Gallery-of-Kings figure (19th-c restoration; the 21 medieval heads are at the Musée de Cluny).",
+      "geometry": {
+        "type": "sphere",
+        "r": 0.385
+      },
+      "position": [
+        -0.746,
+        23.15,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "CLUNY-HEADS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "note": "Head top lands at band + 3.5 m (the measured figure height). Originals at the Musée de Cluny (CLUNY-HEADS).",
+      "rights": "facts_uncopyrightable",
+      "seq": 43
+    },
+    {
+      "id": "king-14",
+      "name_fr": "roi de Juda 15",
+      "name_en": "King of Judah 15",
+      "phase": "king",
+      "category": "king",
+      "role": "One of the 28 Kings of Judah on the Gallery of Kings — a 19th-c Viollet-le-Duc restoration (the medieval originals were decapitated in 1793).",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.455,
+        "h": 2.1
+      },
+      "position": [
+        0.746,
+        21.505,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "PANORAMA-GALERIE-ROIS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "figure_height_m": 3.5,
+      "note": "Count 28 MEASURED (T03); figures reconstructed_design (19th-c VLD restoration, Geoffroi-Dechaume; 21 original heads at Cluny). Band height ~20 m is single-source → reconstructed_design placement, not surveyed.",
+      "rights": "facts_uncopyrightable",
+      "seq": 44
+    },
+    {
+      "id": "king-14-head",
+      "name_fr": "roi de Juda 15 · tête",
+      "name_en": "King of Judah 15 — head",
+      "phase": "king",
+      "category": "king",
+      "role": "Head of a Gallery-of-Kings figure (19th-c restoration; the 21 medieval heads are at the Musée de Cluny).",
+      "geometry": {
+        "type": "sphere",
+        "r": 0.385
+      },
+      "position": [
+        0.746,
+        23.15,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "CLUNY-HEADS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "note": "Head top lands at band + 3.5 m (the measured figure height). Originals at the Musée de Cluny (CLUNY-HEADS).",
+      "rights": "facts_uncopyrightable",
+      "seq": 45
+    },
+    {
+      "id": "king-15",
+      "name_fr": "roi de Juda 16",
+      "name_en": "King of Judah 16",
+      "phase": "king",
+      "category": "king",
+      "role": "One of the 28 Kings of Judah on the Gallery of Kings — a 19th-c Viollet-le-Duc restoration (the medieval originals were decapitated in 1793).",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.455,
+        "h": 2.1
+      },
+      "position": [
+        2.239,
+        21.505,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "PANORAMA-GALERIE-ROIS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "figure_height_m": 3.5,
+      "note": "Count 28 MEASURED (T03); figures reconstructed_design (19th-c VLD restoration, Geoffroi-Dechaume; 21 original heads at Cluny). Band height ~20 m is single-source → reconstructed_design placement, not surveyed.",
+      "rights": "facts_uncopyrightable",
+      "seq": 46
+    },
+    {
+      "id": "king-15-head",
+      "name_fr": "roi de Juda 16 · tête",
+      "name_en": "King of Judah 16 — head",
+      "phase": "king",
+      "category": "king",
+      "role": "Head of a Gallery-of-Kings figure (19th-c restoration; the 21 medieval heads are at the Musée de Cluny).",
+      "geometry": {
+        "type": "sphere",
+        "r": 0.385
+      },
+      "position": [
+        2.239,
+        23.15,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "CLUNY-HEADS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "note": "Head top lands at band + 3.5 m (the measured figure height). Originals at the Musée de Cluny (CLUNY-HEADS).",
+      "rights": "facts_uncopyrightable",
+      "seq": 47
+    },
+    {
+      "id": "king-16",
+      "name_fr": "roi de Juda 17",
+      "name_en": "King of Judah 17",
+      "phase": "king",
+      "category": "king",
+      "role": "One of the 28 Kings of Judah on the Gallery of Kings — a 19th-c Viollet-le-Duc restoration (the medieval originals were decapitated in 1793).",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.455,
+        "h": 2.1
+      },
+      "position": [
+        3.731,
+        21.505,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "PANORAMA-GALERIE-ROIS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "figure_height_m": 3.5,
+      "note": "Count 28 MEASURED (T03); figures reconstructed_design (19th-c VLD restoration, Geoffroi-Dechaume; 21 original heads at Cluny). Band height ~20 m is single-source → reconstructed_design placement, not surveyed.",
+      "rights": "facts_uncopyrightable",
+      "seq": 48
+    },
+    {
+      "id": "king-16-head",
+      "name_fr": "roi de Juda 17 · tête",
+      "name_en": "King of Judah 17 — head",
+      "phase": "king",
+      "category": "king",
+      "role": "Head of a Gallery-of-Kings figure (19th-c restoration; the 21 medieval heads are at the Musée de Cluny).",
+      "geometry": {
+        "type": "sphere",
+        "r": 0.385
+      },
+      "position": [
+        3.731,
+        23.15,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "CLUNY-HEADS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "note": "Head top lands at band + 3.5 m (the measured figure height). Originals at the Musée de Cluny (CLUNY-HEADS).",
+      "rights": "facts_uncopyrightable",
+      "seq": 49
+    },
+    {
+      "id": "king-17",
+      "name_fr": "roi de Juda 18",
+      "name_en": "King of Judah 18",
+      "phase": "king",
+      "category": "king",
+      "role": "One of the 28 Kings of Judah on the Gallery of Kings — a 19th-c Viollet-le-Duc restoration (the medieval originals were decapitated in 1793).",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.455,
+        "h": 2.1
+      },
+      "position": [
+        5.224,
+        21.505,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "PANORAMA-GALERIE-ROIS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "figure_height_m": 3.5,
+      "note": "Count 28 MEASURED (T03); figures reconstructed_design (19th-c VLD restoration, Geoffroi-Dechaume; 21 original heads at Cluny). Band height ~20 m is single-source → reconstructed_design placement, not surveyed.",
+      "rights": "facts_uncopyrightable",
+      "seq": 50
+    },
+    {
+      "id": "king-17-head",
+      "name_fr": "roi de Juda 18 · tête",
+      "name_en": "King of Judah 18 — head",
+      "phase": "king",
+      "category": "king",
+      "role": "Head of a Gallery-of-Kings figure (19th-c restoration; the 21 medieval heads are at the Musée de Cluny).",
+      "geometry": {
+        "type": "sphere",
+        "r": 0.385
+      },
+      "position": [
+        5.224,
+        23.15,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "CLUNY-HEADS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "note": "Head top lands at band + 3.5 m (the measured figure height). Originals at the Musée de Cluny (CLUNY-HEADS).",
+      "rights": "facts_uncopyrightable",
+      "seq": 51
+    },
+    {
+      "id": "king-18",
+      "name_fr": "roi de Juda 19",
+      "name_en": "King of Judah 19",
+      "phase": "king",
+      "category": "king",
+      "role": "One of the 28 Kings of Judah on the Gallery of Kings — a 19th-c Viollet-le-Duc restoration (the medieval originals were decapitated in 1793).",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.455,
+        "h": 2.1
+      },
+      "position": [
+        6.717,
+        21.505,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "PANORAMA-GALERIE-ROIS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "figure_height_m": 3.5,
+      "note": "Count 28 MEASURED (T03); figures reconstructed_design (19th-c VLD restoration, Geoffroi-Dechaume; 21 original heads at Cluny). Band height ~20 m is single-source → reconstructed_design placement, not surveyed.",
+      "rights": "facts_uncopyrightable",
+      "seq": 52
+    },
+    {
+      "id": "king-18-head",
+      "name_fr": "roi de Juda 19 · tête",
+      "name_en": "King of Judah 19 — head",
+      "phase": "king",
+      "category": "king",
+      "role": "Head of a Gallery-of-Kings figure (19th-c restoration; the 21 medieval heads are at the Musée de Cluny).",
+      "geometry": {
+        "type": "sphere",
+        "r": 0.385
+      },
+      "position": [
+        6.717,
+        23.15,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "CLUNY-HEADS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "note": "Head top lands at band + 3.5 m (the measured figure height). Originals at the Musée de Cluny (CLUNY-HEADS).",
+      "rights": "facts_uncopyrightable",
+      "seq": 53
+    },
+    {
+      "id": "king-19",
+      "name_fr": "roi de Juda 20",
+      "name_en": "King of Judah 20",
+      "phase": "king",
+      "category": "king",
+      "role": "One of the 28 Kings of Judah on the Gallery of Kings — a 19th-c Viollet-le-Duc restoration (the medieval originals were decapitated in 1793).",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.455,
+        "h": 2.1
+      },
+      "position": [
+        8.209,
+        21.505,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "PANORAMA-GALERIE-ROIS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "figure_height_m": 3.5,
+      "note": "Count 28 MEASURED (T03); figures reconstructed_design (19th-c VLD restoration, Geoffroi-Dechaume; 21 original heads at Cluny). Band height ~20 m is single-source → reconstructed_design placement, not surveyed.",
+      "rights": "facts_uncopyrightable",
+      "seq": 54
+    },
+    {
+      "id": "king-19-head",
+      "name_fr": "roi de Juda 20 · tête",
+      "name_en": "King of Judah 20 — head",
+      "phase": "king",
+      "category": "king",
+      "role": "Head of a Gallery-of-Kings figure (19th-c restoration; the 21 medieval heads are at the Musée de Cluny).",
+      "geometry": {
+        "type": "sphere",
+        "r": 0.385
+      },
+      "position": [
+        8.209,
+        23.15,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "CLUNY-HEADS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "note": "Head top lands at band + 3.5 m (the measured figure height). Originals at the Musée de Cluny (CLUNY-HEADS).",
+      "rights": "facts_uncopyrightable",
+      "seq": 55
+    },
+    {
+      "id": "king-20",
+      "name_fr": "roi de Juda 21",
+      "name_en": "King of Judah 21",
+      "phase": "king",
+      "category": "king",
+      "role": "One of the 28 Kings of Judah on the Gallery of Kings — a 19th-c Viollet-le-Duc restoration (the medieval originals were decapitated in 1793).",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.455,
+        "h": 2.1
+      },
+      "position": [
+        9.702,
+        21.505,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "PANORAMA-GALERIE-ROIS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "figure_height_m": 3.5,
+      "note": "Count 28 MEASURED (T03); figures reconstructed_design (19th-c VLD restoration, Geoffroi-Dechaume; 21 original heads at Cluny). Band height ~20 m is single-source → reconstructed_design placement, not surveyed.",
+      "rights": "facts_uncopyrightable",
+      "seq": 56
+    },
+    {
+      "id": "king-20-head",
+      "name_fr": "roi de Juda 21 · tête",
+      "name_en": "King of Judah 21 — head",
+      "phase": "king",
+      "category": "king",
+      "role": "Head of a Gallery-of-Kings figure (19th-c restoration; the 21 medieval heads are at the Musée de Cluny).",
+      "geometry": {
+        "type": "sphere",
+        "r": 0.385
+      },
+      "position": [
+        9.702,
+        23.15,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "CLUNY-HEADS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "note": "Head top lands at band + 3.5 m (the measured figure height). Originals at the Musée de Cluny (CLUNY-HEADS).",
+      "rights": "facts_uncopyrightable",
+      "seq": 57
+    },
+    {
+      "id": "king-21",
+      "name_fr": "roi de Juda 22",
+      "name_en": "King of Judah 22",
+      "phase": "king",
+      "category": "king",
+      "role": "One of the 28 Kings of Judah on the Gallery of Kings — a 19th-c Viollet-le-Duc restoration (the medieval originals were decapitated in 1793).",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.455,
+        "h": 2.1
+      },
+      "position": [
+        11.194,
+        21.505,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "PANORAMA-GALERIE-ROIS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "figure_height_m": 3.5,
+      "note": "Count 28 MEASURED (T03); figures reconstructed_design (19th-c VLD restoration, Geoffroi-Dechaume; 21 original heads at Cluny). Band height ~20 m is single-source → reconstructed_design placement, not surveyed.",
+      "rights": "facts_uncopyrightable",
+      "seq": 58
+    },
+    {
+      "id": "king-21-head",
+      "name_fr": "roi de Juda 22 · tête",
+      "name_en": "King of Judah 22 — head",
+      "phase": "king",
+      "category": "king",
+      "role": "Head of a Gallery-of-Kings figure (19th-c restoration; the 21 medieval heads are at the Musée de Cluny).",
+      "geometry": {
+        "type": "sphere",
+        "r": 0.385
+      },
+      "position": [
+        11.194,
+        23.15,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "CLUNY-HEADS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "note": "Head top lands at band + 3.5 m (the measured figure height). Originals at the Musée de Cluny (CLUNY-HEADS).",
+      "rights": "facts_uncopyrightable",
+      "seq": 59
+    },
+    {
+      "id": "king-22",
+      "name_fr": "roi de Juda 23",
+      "name_en": "King of Judah 23",
+      "phase": "king",
+      "category": "king",
+      "role": "One of the 28 Kings of Judah on the Gallery of Kings — a 19th-c Viollet-le-Duc restoration (the medieval originals were decapitated in 1793).",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.455,
+        "h": 2.1
+      },
+      "position": [
+        12.687,
+        21.505,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "PANORAMA-GALERIE-ROIS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "figure_height_m": 3.5,
+      "note": "Count 28 MEASURED (T03); figures reconstructed_design (19th-c VLD restoration, Geoffroi-Dechaume; 21 original heads at Cluny). Band height ~20 m is single-source → reconstructed_design placement, not surveyed.",
+      "rights": "facts_uncopyrightable",
+      "seq": 60
+    },
+    {
+      "id": "king-22-head",
+      "name_fr": "roi de Juda 23 · tête",
+      "name_en": "King of Judah 23 — head",
+      "phase": "king",
+      "category": "king",
+      "role": "Head of a Gallery-of-Kings figure (19th-c restoration; the 21 medieval heads are at the Musée de Cluny).",
+      "geometry": {
+        "type": "sphere",
+        "r": 0.385
+      },
+      "position": [
+        12.687,
+        23.15,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "CLUNY-HEADS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "note": "Head top lands at band + 3.5 m (the measured figure height). Originals at the Musée de Cluny (CLUNY-HEADS).",
+      "rights": "facts_uncopyrightable",
+      "seq": 61
+    },
+    {
+      "id": "king-23",
+      "name_fr": "roi de Juda 24",
+      "name_en": "King of Judah 24",
+      "phase": "king",
+      "category": "king",
+      "role": "One of the 28 Kings of Judah on the Gallery of Kings — a 19th-c Viollet-le-Duc restoration (the medieval originals were decapitated in 1793).",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.455,
+        "h": 2.1
+      },
+      "position": [
+        14.18,
+        21.505,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "PANORAMA-GALERIE-ROIS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "figure_height_m": 3.5,
+      "note": "Count 28 MEASURED (T03); figures reconstructed_design (19th-c VLD restoration, Geoffroi-Dechaume; 21 original heads at Cluny). Band height ~20 m is single-source → reconstructed_design placement, not surveyed.",
+      "rights": "facts_uncopyrightable",
+      "seq": 62
+    },
+    {
+      "id": "king-23-head",
+      "name_fr": "roi de Juda 24 · tête",
+      "name_en": "King of Judah 24 — head",
+      "phase": "king",
+      "category": "king",
+      "role": "Head of a Gallery-of-Kings figure (19th-c restoration; the 21 medieval heads are at the Musée de Cluny).",
+      "geometry": {
+        "type": "sphere",
+        "r": 0.385
+      },
+      "position": [
+        14.18,
+        23.15,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "CLUNY-HEADS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "note": "Head top lands at band + 3.5 m (the measured figure height). Originals at the Musée de Cluny (CLUNY-HEADS).",
+      "rights": "facts_uncopyrightable",
+      "seq": 63
+    },
+    {
+      "id": "king-24",
+      "name_fr": "roi de Juda 25",
+      "name_en": "King of Judah 25",
+      "phase": "king",
+      "category": "king",
+      "role": "One of the 28 Kings of Judah on the Gallery of Kings — a 19th-c Viollet-le-Duc restoration (the medieval originals were decapitated in 1793).",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.455,
+        "h": 2.1
+      },
+      "position": [
+        15.672,
+        21.505,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "PANORAMA-GALERIE-ROIS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "figure_height_m": 3.5,
+      "note": "Count 28 MEASURED (T03); figures reconstructed_design (19th-c VLD restoration, Geoffroi-Dechaume; 21 original heads at Cluny). Band height ~20 m is single-source → reconstructed_design placement, not surveyed.",
+      "rights": "facts_uncopyrightable",
+      "seq": 64
+    },
+    {
+      "id": "king-24-head",
+      "name_fr": "roi de Juda 25 · tête",
+      "name_en": "King of Judah 25 — head",
+      "phase": "king",
+      "category": "king",
+      "role": "Head of a Gallery-of-Kings figure (19th-c restoration; the 21 medieval heads are at the Musée de Cluny).",
+      "geometry": {
+        "type": "sphere",
+        "r": 0.385
+      },
+      "position": [
+        15.672,
+        23.15,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "CLUNY-HEADS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "note": "Head top lands at band + 3.5 m (the measured figure height). Originals at the Musée de Cluny (CLUNY-HEADS).",
+      "rights": "facts_uncopyrightable",
+      "seq": 65
+    },
+    {
+      "id": "king-25",
+      "name_fr": "roi de Juda 26",
+      "name_en": "King of Judah 26",
+      "phase": "king",
+      "category": "king",
+      "role": "One of the 28 Kings of Judah on the Gallery of Kings — a 19th-c Viollet-le-Duc restoration (the medieval originals were decapitated in 1793).",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.455,
+        "h": 2.1
+      },
+      "position": [
+        17.165,
+        21.505,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "PANORAMA-GALERIE-ROIS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "figure_height_m": 3.5,
+      "note": "Count 28 MEASURED (T03); figures reconstructed_design (19th-c VLD restoration, Geoffroi-Dechaume; 21 original heads at Cluny). Band height ~20 m is single-source → reconstructed_design placement, not surveyed.",
+      "rights": "facts_uncopyrightable",
+      "seq": 66
+    },
+    {
+      "id": "king-25-head",
+      "name_fr": "roi de Juda 26 · tête",
+      "name_en": "King of Judah 26 — head",
+      "phase": "king",
+      "category": "king",
+      "role": "Head of a Gallery-of-Kings figure (19th-c restoration; the 21 medieval heads are at the Musée de Cluny).",
+      "geometry": {
+        "type": "sphere",
+        "r": 0.385
+      },
+      "position": [
+        17.165,
+        23.15,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "CLUNY-HEADS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "note": "Head top lands at band + 3.5 m (the measured figure height). Originals at the Musée de Cluny (CLUNY-HEADS).",
+      "rights": "facts_uncopyrightable",
+      "seq": 67
+    },
+    {
+      "id": "king-26",
+      "name_fr": "roi de Juda 27",
+      "name_en": "King of Judah 27",
+      "phase": "king",
+      "category": "king",
+      "role": "One of the 28 Kings of Judah on the Gallery of Kings — a 19th-c Viollet-le-Duc restoration (the medieval originals were decapitated in 1793).",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.455,
+        "h": 2.1
+      },
+      "position": [
+        18.657,
+        21.505,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "PANORAMA-GALERIE-ROIS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "figure_height_m": 3.5,
+      "note": "Count 28 MEASURED (T03); figures reconstructed_design (19th-c VLD restoration, Geoffroi-Dechaume; 21 original heads at Cluny). Band height ~20 m is single-source → reconstructed_design placement, not surveyed.",
+      "rights": "facts_uncopyrightable",
+      "seq": 68
+    },
+    {
+      "id": "king-26-head",
+      "name_fr": "roi de Juda 27 · tête",
+      "name_en": "King of Judah 27 — head",
+      "phase": "king",
+      "category": "king",
+      "role": "Head of a Gallery-of-Kings figure (19th-c restoration; the 21 medieval heads are at the Musée de Cluny).",
+      "geometry": {
+        "type": "sphere",
+        "r": 0.385
+      },
+      "position": [
+        18.657,
+        23.15,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "CLUNY-HEADS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "note": "Head top lands at band + 3.5 m (the measured figure height). Originals at the Musée de Cluny (CLUNY-HEADS).",
+      "rights": "facts_uncopyrightable",
+      "seq": 69
+    },
+    {
+      "id": "king-27",
+      "name_fr": "roi de Juda 28",
+      "name_en": "King of Judah 28",
+      "phase": "king",
+      "category": "king",
+      "role": "One of the 28 Kings of Judah on the Gallery of Kings — a 19th-c Viollet-le-Duc restoration (the medieval originals were decapitated in 1793).",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.455,
+        "h": 2.1
+      },
+      "position": [
+        20.15,
+        21.505,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "PANORAMA-GALERIE-ROIS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "figure_height_m": 3.5,
+      "note": "Count 28 MEASURED (T03); figures reconstructed_design (19th-c VLD restoration, Geoffroi-Dechaume; 21 original heads at Cluny). Band height ~20 m is single-source → reconstructed_design placement, not surveyed.",
+      "rights": "facts_uncopyrightable",
+      "seq": 70
+    },
+    {
+      "id": "king-27-head",
+      "name_fr": "roi de Juda 28 · tête",
+      "name_en": "King of Judah 28 — head",
+      "phase": "king",
+      "category": "king",
+      "role": "Head of a Gallery-of-Kings figure (19th-c restoration; the 21 medieval heads are at the Musée de Cluny).",
+      "geometry": {
+        "type": "sphere",
+        "r": 0.385
+      },
+      "position": [
+        20.15,
+        23.15,
+        0.7
+      ],
+      "provenance": "reconstructed_design",
+      "source": "CLUNY-HEADS",
+      "url": "https://www.musee-moyenage.fr/en/collection/heads-of-the-kings-of-judah.html",
+      "material": "limestone",
+      "note": "Head top lands at band + 3.5 m (the measured figure height). Originals at the Musée de Cluny (CLUNY-HEADS).",
+      "rights": "facts_uncopyrightable",
+      "seq": 71
+    },
+    {
+      "id": "rose-outer-ring",
+      "name_fr": "rose occidentale — cercle extérieur",
+      "name_en": "West rose — outer ring",
+      "phase": "rose",
+      "category": "rose",
+      "role": "The outer ring of the west rose window — its 9.6 m diameter is the verifier's rose anchor (T05).",
+      "geometry": {
+        "type": "torus",
+        "r": 4.6,
+        "rt": 0.3
+      },
+      "position": [
+        0,
+        30.3,
+        0.5
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "provenance": "measured",
+      "source": "FRIENDS-ROSE-WINDOWS",
+      "url": "https://www.friendsofnotredamedeparis.org/cathedral/artifacts/rose-windows/",
+      "material": "limestone",
+      "diameter_m": 9.6,
+      "note": "Diameter 9.6 m MEASURED (FRIENDS-ROSE-WINDOWS + TECHNO-SCIENCE + BNF). Radial geometry below is rule_derived from the cited 24-ray count.",
+      "rights": "facts_uncopyrightable",
+      "seq": 72
+    },
+    {
+      "id": "rose-hub",
+      "name_fr": "rose occidentale — moyeu",
+      "name_en": "West rose — hub",
+      "phase": "rose",
+      "category": "rose",
+      "role": "Central hub of the radial wheel from which the spokes radiate.",
+      "geometry": {
+        "type": "cylinder",
+        "r": 0.55,
+        "h": 0.4,
+        "axis": "z"
+      },
+      "position": [
+        0,
+        30.3,
+        0.5
+      ],
+      "provenance": "rule_derived",
+      "source": "ROSE-RADIAL",
+      "material": "limestone",
+      "note": "Radial wheel hub — pure rose-radial geometry.",
+      "url": "https://en.wikipedia.org/wiki/Rose_window",
+      "rights": "rule",
+      "seq": 73
+    },
+    {
+      "id": "rose-ray-0",
+      "name_fr": "rose occidentale — rayon 1",
+      "name_en": "West rose — spoke 1",
+      "phase": "rose",
+      "category": "rose",
+      "role": "One radial spoke of the wheel tracery — radial geometry from the centre.",
+      "geometry": {
+        "type": "box",
+        "w": 0.12,
+        "h": 4.3999999999999995,
+        "d": 0.18
+      },
+      "position": [
+        2.6,
+        30.3,
+        0.5
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -90
+      ],
+      "provenance": "rule_derived",
+      "source": "ROSE-RADIAL",
+      "material": "limestone",
+      "note": "Spoke 1 of 24 — rule_derived radial geometry (the ray count is the cited tracery datum; the diameter is measured).",
+      "url": "https://en.wikipedia.org/wiki/Rose_window",
+      "rights": "rule",
+      "seq": 74
+    },
+    {
+      "id": "rose-ray-1",
+      "name_fr": "rose occidentale — rayon 2",
+      "name_en": "West rose — spoke 2",
+      "phase": "rose",
+      "category": "rose",
+      "role": "One radial spoke of the wheel tracery — radial geometry from the centre.",
+      "geometry": {
+        "type": "box",
+        "w": 0.12,
+        "h": 4.3999999999999995,
+        "d": 0.18
+      },
+      "position": [
+        2.511,
+        30.973,
+        0.5
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -75
+      ],
+      "provenance": "rule_derived",
+      "source": "ROSE-RADIAL",
+      "material": "limestone",
+      "note": "Spoke 2 of 24 — rule_derived radial geometry (the ray count is the cited tracery datum; the diameter is measured).",
+      "url": "https://en.wikipedia.org/wiki/Rose_window",
+      "rights": "rule",
+      "seq": 75
+    },
+    {
+      "id": "rose-ray-2",
+      "name_fr": "rose occidentale — rayon 3",
+      "name_en": "West rose — spoke 3",
+      "phase": "rose",
+      "category": "rose",
+      "role": "One radial spoke of the wheel tracery — radial geometry from the centre.",
+      "geometry": {
+        "type": "box",
+        "w": 0.12,
+        "h": 4.3999999999999995,
+        "d": 0.18
+      },
+      "position": [
+        2.252,
+        31.6,
+        0.5
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -60
+      ],
+      "provenance": "rule_derived",
+      "source": "ROSE-RADIAL",
+      "material": "limestone",
+      "note": "Spoke 3 of 24 — rule_derived radial geometry (the ray count is the cited tracery datum; the diameter is measured).",
+      "url": "https://en.wikipedia.org/wiki/Rose_window",
+      "rights": "rule",
+      "seq": 76
+    },
+    {
+      "id": "rose-ray-3",
+      "name_fr": "rose occidentale — rayon 4",
+      "name_en": "West rose — spoke 4",
+      "phase": "rose",
+      "category": "rose",
+      "role": "One radial spoke of the wheel tracery — radial geometry from the centre.",
+      "geometry": {
+        "type": "box",
+        "w": 0.12,
+        "h": 4.3999999999999995,
+        "d": 0.18
+      },
+      "position": [
+        1.838,
+        32.138,
+        0.5
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -45
+      ],
+      "provenance": "rule_derived",
+      "source": "ROSE-RADIAL",
+      "material": "limestone",
+      "note": "Spoke 4 of 24 — rule_derived radial geometry (the ray count is the cited tracery datum; the diameter is measured).",
+      "url": "https://en.wikipedia.org/wiki/Rose_window",
+      "rights": "rule",
+      "seq": 77
+    },
+    {
+      "id": "rose-ray-4",
+      "name_fr": "rose occidentale — rayon 5",
+      "name_en": "West rose — spoke 5",
+      "phase": "rose",
+      "category": "rose",
+      "role": "One radial spoke of the wheel tracery — radial geometry from the centre.",
+      "geometry": {
+        "type": "box",
+        "w": 0.12,
+        "h": 4.3999999999999995,
+        "d": 0.18
+      },
+      "position": [
+        1.3,
+        32.552,
+        0.5
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -30
+      ],
+      "provenance": "rule_derived",
+      "source": "ROSE-RADIAL",
+      "material": "limestone",
+      "note": "Spoke 5 of 24 — rule_derived radial geometry (the ray count is the cited tracery datum; the diameter is measured).",
+      "url": "https://en.wikipedia.org/wiki/Rose_window",
+      "rights": "rule",
+      "seq": 78
+    },
+    {
+      "id": "rose-ray-5",
+      "name_fr": "rose occidentale — rayon 6",
+      "name_en": "West rose — spoke 6",
+      "phase": "rose",
+      "category": "rose",
+      "role": "One radial spoke of the wheel tracery — radial geometry from the centre.",
+      "geometry": {
+        "type": "box",
+        "w": 0.12,
+        "h": 4.3999999999999995,
+        "d": 0.18
+      },
+      "position": [
+        0.673,
+        32.811,
+        0.5
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        -15
+      ],
+      "provenance": "rule_derived",
+      "source": "ROSE-RADIAL",
+      "material": "limestone",
+      "note": "Spoke 6 of 24 — rule_derived radial geometry (the ray count is the cited tracery datum; the diameter is measured).",
+      "url": "https://en.wikipedia.org/wiki/Rose_window",
+      "rights": "rule",
+      "seq": 79
+    },
+    {
+      "id": "rose-ray-6",
+      "name_fr": "rose occidentale — rayon 7",
+      "name_en": "West rose — spoke 7",
+      "phase": "rose",
+      "category": "rose",
+      "role": "One radial spoke of the wheel tracery — radial geometry from the centre.",
+      "geometry": {
+        "type": "box",
+        "w": 0.12,
+        "h": 4.3999999999999995,
+        "d": 0.18
+      },
+      "position": [
+        0,
+        32.9,
+        0.5
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "provenance": "rule_derived",
+      "source": "ROSE-RADIAL",
+      "material": "limestone",
+      "note": "Spoke 7 of 24 — rule_derived radial geometry (the ray count is the cited tracery datum; the diameter is measured).",
+      "url": "https://en.wikipedia.org/wiki/Rose_window",
+      "rights": "rule",
+      "seq": 80
+    },
+    {
+      "id": "rose-ray-7",
+      "name_fr": "rose occidentale — rayon 8",
+      "name_en": "West rose — spoke 8",
+      "phase": "rose",
+      "category": "rose",
+      "role": "One radial spoke of the wheel tracery — radial geometry from the centre.",
+      "geometry": {
+        "type": "box",
+        "w": 0.12,
+        "h": 4.3999999999999995,
+        "d": 0.18
+      },
+      "position": [
+        -0.673,
+        32.811,
+        0.5
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        15
+      ],
+      "provenance": "rule_derived",
+      "source": "ROSE-RADIAL",
+      "material": "limestone",
+      "note": "Spoke 8 of 24 — rule_derived radial geometry (the ray count is the cited tracery datum; the diameter is measured).",
+      "url": "https://en.wikipedia.org/wiki/Rose_window",
+      "rights": "rule",
+      "seq": 81
+    },
+    {
+      "id": "rose-ray-8",
+      "name_fr": "rose occidentale — rayon 9",
+      "name_en": "West rose — spoke 9",
+      "phase": "rose",
+      "category": "rose",
+      "role": "One radial spoke of the wheel tracery — radial geometry from the centre.",
+      "geometry": {
+        "type": "box",
+        "w": 0.12,
+        "h": 4.3999999999999995,
+        "d": 0.18
+      },
+      "position": [
+        -1.3,
+        32.552,
+        0.5
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        30
+      ],
+      "provenance": "rule_derived",
+      "source": "ROSE-RADIAL",
+      "material": "limestone",
+      "note": "Spoke 9 of 24 — rule_derived radial geometry (the ray count is the cited tracery datum; the diameter is measured).",
+      "url": "https://en.wikipedia.org/wiki/Rose_window",
+      "rights": "rule",
+      "seq": 82
+    },
+    {
+      "id": "rose-ray-9",
+      "name_fr": "rose occidentale — rayon 10",
+      "name_en": "West rose — spoke 10",
+      "phase": "rose",
+      "category": "rose",
+      "role": "One radial spoke of the wheel tracery — radial geometry from the centre.",
+      "geometry": {
+        "type": "box",
+        "w": 0.12,
+        "h": 4.3999999999999995,
+        "d": 0.18
+      },
+      "position": [
+        -1.838,
+        32.138,
+        0.5
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        45
+      ],
+      "provenance": "rule_derived",
+      "source": "ROSE-RADIAL",
+      "material": "limestone",
+      "note": "Spoke 10 of 24 — rule_derived radial geometry (the ray count is the cited tracery datum; the diameter is measured).",
+      "url": "https://en.wikipedia.org/wiki/Rose_window",
+      "rights": "rule",
+      "seq": 83
+    },
+    {
+      "id": "rose-ray-10",
+      "name_fr": "rose occidentale — rayon 11",
+      "name_en": "West rose — spoke 11",
+      "phase": "rose",
+      "category": "rose",
+      "role": "One radial spoke of the wheel tracery — radial geometry from the centre.",
+      "geometry": {
+        "type": "box",
+        "w": 0.12,
+        "h": 4.3999999999999995,
+        "d": 0.18
+      },
+      "position": [
+        -2.252,
+        31.6,
+        0.5
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        60
+      ],
+      "provenance": "rule_derived",
+      "source": "ROSE-RADIAL",
+      "material": "limestone",
+      "note": "Spoke 11 of 24 — rule_derived radial geometry (the ray count is the cited tracery datum; the diameter is measured).",
+      "url": "https://en.wikipedia.org/wiki/Rose_window",
+      "rights": "rule",
+      "seq": 84
+    },
+    {
+      "id": "rose-ray-11",
+      "name_fr": "rose occidentale — rayon 12",
+      "name_en": "West rose — spoke 12",
+      "phase": "rose",
+      "category": "rose",
+      "role": "One radial spoke of the wheel tracery — radial geometry from the centre.",
+      "geometry": {
+        "type": "box",
+        "w": 0.12,
+        "h": 4.3999999999999995,
+        "d": 0.18
+      },
+      "position": [
+        -2.511,
+        30.973,
+        0.5
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        75
+      ],
+      "provenance": "rule_derived",
+      "source": "ROSE-RADIAL",
+      "material": "limestone",
+      "note": "Spoke 12 of 24 — rule_derived radial geometry (the ray count is the cited tracery datum; the diameter is measured).",
+      "url": "https://en.wikipedia.org/wiki/Rose_window",
+      "rights": "rule",
+      "seq": 85
+    },
+    {
+      "id": "rose-ray-12",
+      "name_fr": "rose occidentale — rayon 13",
+      "name_en": "West rose — spoke 13",
+      "phase": "rose",
+      "category": "rose",
+      "role": "One radial spoke of the wheel tracery — radial geometry from the centre.",
+      "geometry": {
+        "type": "box",
+        "w": 0.12,
+        "h": 4.3999999999999995,
+        "d": 0.18
+      },
+      "position": [
+        -2.6,
+        30.3,
+        0.5
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        90
+      ],
+      "provenance": "rule_derived",
+      "source": "ROSE-RADIAL",
+      "material": "limestone",
+      "note": "Spoke 13 of 24 — rule_derived radial geometry (the ray count is the cited tracery datum; the diameter is measured).",
+      "url": "https://en.wikipedia.org/wiki/Rose_window",
+      "rights": "rule",
+      "seq": 86
+    },
+    {
+      "id": "rose-ray-13",
+      "name_fr": "rose occidentale — rayon 14",
+      "name_en": "West rose — spoke 14",
+      "phase": "rose",
+      "category": "rose",
+      "role": "One radial spoke of the wheel tracery — radial geometry from the centre.",
+      "geometry": {
+        "type": "box",
+        "w": 0.12,
+        "h": 4.3999999999999995,
+        "d": 0.18
+      },
+      "position": [
+        -2.511,
+        29.627,
+        0.5
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        105
+      ],
+      "provenance": "rule_derived",
+      "source": "ROSE-RADIAL",
+      "material": "limestone",
+      "note": "Spoke 14 of 24 — rule_derived radial geometry (the ray count is the cited tracery datum; the diameter is measured).",
+      "url": "https://en.wikipedia.org/wiki/Rose_window",
+      "rights": "rule",
+      "seq": 87
+    },
+    {
+      "id": "rose-ray-14",
+      "name_fr": "rose occidentale — rayon 15",
+      "name_en": "West rose — spoke 15",
+      "phase": "rose",
+      "category": "rose",
+      "role": "One radial spoke of the wheel tracery — radial geometry from the centre.",
+      "geometry": {
+        "type": "box",
+        "w": 0.12,
+        "h": 4.3999999999999995,
+        "d": 0.18
+      },
+      "position": [
+        -2.252,
+        29,
+        0.5
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        120
+      ],
+      "provenance": "rule_derived",
+      "source": "ROSE-RADIAL",
+      "material": "limestone",
+      "note": "Spoke 15 of 24 — rule_derived radial geometry (the ray count is the cited tracery datum; the diameter is measured).",
+      "url": "https://en.wikipedia.org/wiki/Rose_window",
+      "rights": "rule",
+      "seq": 88
+    },
+    {
+      "id": "rose-ray-15",
+      "name_fr": "rose occidentale — rayon 16",
+      "name_en": "West rose — spoke 16",
+      "phase": "rose",
+      "category": "rose",
+      "role": "One radial spoke of the wheel tracery — radial geometry from the centre.",
+      "geometry": {
+        "type": "box",
+        "w": 0.12,
+        "h": 4.3999999999999995,
+        "d": 0.18
+      },
+      "position": [
+        -1.838,
+        28.462,
+        0.5
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        135
+      ],
+      "provenance": "rule_derived",
+      "source": "ROSE-RADIAL",
+      "material": "limestone",
+      "note": "Spoke 16 of 24 — rule_derived radial geometry (the ray count is the cited tracery datum; the diameter is measured).",
+      "url": "https://en.wikipedia.org/wiki/Rose_window",
+      "rights": "rule",
+      "seq": 89
+    },
+    {
+      "id": "rose-ray-16",
+      "name_fr": "rose occidentale — rayon 17",
+      "name_en": "West rose — spoke 17",
+      "phase": "rose",
+      "category": "rose",
+      "role": "One radial spoke of the wheel tracery — radial geometry from the centre.",
+      "geometry": {
+        "type": "box",
+        "w": 0.12,
+        "h": 4.3999999999999995,
+        "d": 0.18
+      },
+      "position": [
+        -1.3,
+        28.048,
+        0.5
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        150
+      ],
+      "provenance": "rule_derived",
+      "source": "ROSE-RADIAL",
+      "material": "limestone",
+      "note": "Spoke 17 of 24 — rule_derived radial geometry (the ray count is the cited tracery datum; the diameter is measured).",
+      "url": "https://en.wikipedia.org/wiki/Rose_window",
+      "rights": "rule",
+      "seq": 90
+    },
+    {
+      "id": "rose-ray-17",
+      "name_fr": "rose occidentale — rayon 18",
+      "name_en": "West rose — spoke 18",
+      "phase": "rose",
+      "category": "rose",
+      "role": "One radial spoke of the wheel tracery — radial geometry from the centre.",
+      "geometry": {
+        "type": "box",
+        "w": 0.12,
+        "h": 4.3999999999999995,
+        "d": 0.18
+      },
+      "position": [
+        -0.673,
+        27.789,
+        0.5
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        165
+      ],
+      "provenance": "rule_derived",
+      "source": "ROSE-RADIAL",
+      "material": "limestone",
+      "note": "Spoke 18 of 24 — rule_derived radial geometry (the ray count is the cited tracery datum; the diameter is measured).",
+      "url": "https://en.wikipedia.org/wiki/Rose_window",
+      "rights": "rule",
+      "seq": 91
+    },
+    {
+      "id": "rose-ray-18",
+      "name_fr": "rose occidentale — rayon 19",
+      "name_en": "West rose — spoke 19",
+      "phase": "rose",
+      "category": "rose",
+      "role": "One radial spoke of the wheel tracery — radial geometry from the centre.",
+      "geometry": {
+        "type": "box",
+        "w": 0.12,
+        "h": 4.3999999999999995,
+        "d": 0.18
+      },
+      "position": [
+        0,
+        27.7,
+        0.5
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        180
+      ],
+      "provenance": "rule_derived",
+      "source": "ROSE-RADIAL",
+      "material": "limestone",
+      "note": "Spoke 19 of 24 — rule_derived radial geometry (the ray count is the cited tracery datum; the diameter is measured).",
+      "url": "https://en.wikipedia.org/wiki/Rose_window",
+      "rights": "rule",
+      "seq": 92
+    },
+    {
+      "id": "rose-ray-19",
+      "name_fr": "rose occidentale — rayon 20",
+      "name_en": "West rose — spoke 20",
+      "phase": "rose",
+      "category": "rose",
+      "role": "One radial spoke of the wheel tracery — radial geometry from the centre.",
+      "geometry": {
+        "type": "box",
+        "w": 0.12,
+        "h": 4.3999999999999995,
+        "d": 0.18
+      },
+      "position": [
+        0.673,
+        27.789,
+        0.5
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        195
+      ],
+      "provenance": "rule_derived",
+      "source": "ROSE-RADIAL",
+      "material": "limestone",
+      "note": "Spoke 20 of 24 — rule_derived radial geometry (the ray count is the cited tracery datum; the diameter is measured).",
+      "url": "https://en.wikipedia.org/wiki/Rose_window",
+      "rights": "rule",
+      "seq": 93
+    },
+    {
+      "id": "rose-ray-20",
+      "name_fr": "rose occidentale — rayon 21",
+      "name_en": "West rose — spoke 21",
+      "phase": "rose",
+      "category": "rose",
+      "role": "One radial spoke of the wheel tracery — radial geometry from the centre.",
+      "geometry": {
+        "type": "box",
+        "w": 0.12,
+        "h": 4.3999999999999995,
+        "d": 0.18
+      },
+      "position": [
+        1.3,
+        28.048,
+        0.5
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        210
+      ],
+      "provenance": "rule_derived",
+      "source": "ROSE-RADIAL",
+      "material": "limestone",
+      "note": "Spoke 21 of 24 — rule_derived radial geometry (the ray count is the cited tracery datum; the diameter is measured).",
+      "url": "https://en.wikipedia.org/wiki/Rose_window",
+      "rights": "rule",
+      "seq": 94
+    },
+    {
+      "id": "rose-ray-21",
+      "name_fr": "rose occidentale — rayon 22",
+      "name_en": "West rose — spoke 22",
+      "phase": "rose",
+      "category": "rose",
+      "role": "One radial spoke of the wheel tracery — radial geometry from the centre.",
+      "geometry": {
+        "type": "box",
+        "w": 0.12,
+        "h": 4.3999999999999995,
+        "d": 0.18
+      },
+      "position": [
+        1.838,
+        28.462,
+        0.5
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        225
+      ],
+      "provenance": "rule_derived",
+      "source": "ROSE-RADIAL",
+      "material": "limestone",
+      "note": "Spoke 22 of 24 — rule_derived radial geometry (the ray count is the cited tracery datum; the diameter is measured).",
+      "url": "https://en.wikipedia.org/wiki/Rose_window",
+      "rights": "rule",
+      "seq": 95
+    },
+    {
+      "id": "rose-ray-22",
+      "name_fr": "rose occidentale — rayon 23",
+      "name_en": "West rose — spoke 23",
+      "phase": "rose",
+      "category": "rose",
+      "role": "One radial spoke of the wheel tracery — radial geometry from the centre.",
+      "geometry": {
+        "type": "box",
+        "w": 0.12,
+        "h": 4.3999999999999995,
+        "d": 0.18
+      },
+      "position": [
+        2.252,
+        29,
+        0.5
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        240
+      ],
+      "provenance": "rule_derived",
+      "source": "ROSE-RADIAL",
+      "material": "limestone",
+      "note": "Spoke 23 of 24 — rule_derived radial geometry (the ray count is the cited tracery datum; the diameter is measured).",
+      "url": "https://en.wikipedia.org/wiki/Rose_window",
+      "rights": "rule",
+      "seq": 96
+    },
+    {
+      "id": "rose-ray-23",
+      "name_fr": "rose occidentale — rayon 24",
+      "name_en": "West rose — spoke 24",
+      "phase": "rose",
+      "category": "rose",
+      "role": "One radial spoke of the wheel tracery — radial geometry from the centre.",
+      "geometry": {
+        "type": "box",
+        "w": 0.12,
+        "h": 4.3999999999999995,
+        "d": 0.18
+      },
+      "position": [
+        2.511,
+        29.627,
+        0.5
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        255
+      ],
+      "provenance": "rule_derived",
+      "source": "ROSE-RADIAL",
+      "material": "limestone",
+      "note": "Spoke 24 of 24 — rule_derived radial geometry (the ray count is the cited tracery datum; the diameter is measured).",
+      "url": "https://en.wikipedia.org/wiki/Rose_window",
+      "rights": "rule",
+      "seq": 97
+    },
+    {
+      "id": "chimera-0",
+      "name_fr": "chimère 1 (galerie des chimères, 19e s.)",
+      "name_en": "Chimera 1 (Gallery of Chimeras, 19th-c)",
+      "phase": "gargoyle",
+      "category": "gargoyle",
+      "role": "A representative chimera on the 19th-c Galerie des Chimères — a Viollet-le-Duc/Lassus invention; a FEW are shown, never a sourced total.",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.45,
+        "h": 1
+      },
+      "position": [
+        -18.75,
+        46.7,
+        0.9
+      ],
+      "rotation_deg": [
+        18,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "VLD-FACADE",
+      "material": "limestone",
+      "note": "Form reconstructed_design from the PD VLD drawings; rendered count is a representative FEW flagged CONJECTURE (no reliable published total — _GAP_gargoyle_count). Never presented as a sourced count.",
+      "url": "https://commons.wikimedia.org/wiki/Category:Drawings_by_Eug%C3%A8ne_Viollet-le-Duc",
+      "rights": "public_domain",
+      "seq": 98
+    },
+    {
+      "id": "chimera-1",
+      "name_fr": "chimère 2 (galerie des chimères, 19e s.)",
+      "name_en": "Chimera 2 (Gallery of Chimeras, 19th-c)",
+      "phase": "gargoyle",
+      "category": "gargoyle",
+      "role": "A representative chimera on the 19th-c Galerie des Chimères — a Viollet-le-Duc/Lassus invention; a FEW are shown, never a sourced total.",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.45,
+        "h": 1
+      },
+      "position": [
+        -11.25,
+        46.7,
+        0.9
+      ],
+      "rotation_deg": [
+        18,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "VLD-FACADE",
+      "material": "limestone",
+      "note": "Form reconstructed_design from the PD VLD drawings; rendered count is a representative FEW flagged CONJECTURE (no reliable published total — _GAP_gargoyle_count). Never presented as a sourced count.",
+      "url": "https://commons.wikimedia.org/wiki/Category:Drawings_by_Eug%C3%A8ne_Viollet-le-Duc",
+      "rights": "public_domain",
+      "seq": 99
+    },
+    {
+      "id": "chimera-2",
+      "name_fr": "chimère 3 (galerie des chimères, 19e s.)",
+      "name_en": "Chimera 3 (Gallery of Chimeras, 19th-c)",
+      "phase": "gargoyle",
+      "category": "gargoyle",
+      "role": "A representative chimera on the 19th-c Galerie des Chimères — a Viollet-le-Duc/Lassus invention; a FEW are shown, never a sourced total.",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.45,
+        "h": 1
+      },
+      "position": [
+        -3.75,
+        46.7,
+        0.9
+      ],
+      "rotation_deg": [
+        18,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "VLD-FACADE",
+      "material": "limestone",
+      "note": "Form reconstructed_design from the PD VLD drawings; rendered count is a representative FEW flagged CONJECTURE (no reliable published total — _GAP_gargoyle_count). Never presented as a sourced count.",
+      "url": "https://commons.wikimedia.org/wiki/Category:Drawings_by_Eug%C3%A8ne_Viollet-le-Duc",
+      "rights": "public_domain",
+      "seq": 100
+    },
+    {
+      "id": "chimera-3",
+      "name_fr": "chimère 4 (galerie des chimères, 19e s.)",
+      "name_en": "Chimera 4 (Gallery of Chimeras, 19th-c)",
+      "phase": "gargoyle",
+      "category": "gargoyle",
+      "role": "A representative chimera on the 19th-c Galerie des Chimères — a Viollet-le-Duc/Lassus invention; a FEW are shown, never a sourced total.",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.45,
+        "h": 1
+      },
+      "position": [
+        3.75,
+        46.7,
+        0.9
+      ],
+      "rotation_deg": [
+        18,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "VLD-FACADE",
+      "material": "limestone",
+      "note": "Form reconstructed_design from the PD VLD drawings; rendered count is a representative FEW flagged CONJECTURE (no reliable published total — _GAP_gargoyle_count). Never presented as a sourced count.",
+      "url": "https://commons.wikimedia.org/wiki/Category:Drawings_by_Eug%C3%A8ne_Viollet-le-Duc",
+      "rights": "public_domain",
+      "seq": 101
+    },
+    {
+      "id": "chimera-4",
+      "name_fr": "chimère 5 (galerie des chimères, 19e s.)",
+      "name_en": "Chimera 5 (Gallery of Chimeras, 19th-c)",
+      "phase": "gargoyle",
+      "category": "gargoyle",
+      "role": "A representative chimera on the 19th-c Galerie des Chimères — a Viollet-le-Duc/Lassus invention; a FEW are shown, never a sourced total.",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.45,
+        "h": 1
+      },
+      "position": [
+        11.25,
+        46.7,
+        0.9
+      ],
+      "rotation_deg": [
+        18,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "VLD-FACADE",
+      "material": "limestone",
+      "note": "Form reconstructed_design from the PD VLD drawings; rendered count is a representative FEW flagged CONJECTURE (no reliable published total — _GAP_gargoyle_count). Never presented as a sourced count.",
+      "url": "https://commons.wikimedia.org/wiki/Category:Drawings_by_Eug%C3%A8ne_Viollet-le-Duc",
+      "rights": "public_domain",
+      "seq": 102
+    },
+    {
+      "id": "chimera-5",
+      "name_fr": "chimère 6 (galerie des chimères, 19e s.)",
+      "name_en": "Chimera 6 (Gallery of Chimeras, 19th-c)",
+      "phase": "gargoyle",
+      "category": "gargoyle",
+      "role": "A representative chimera on the 19th-c Galerie des Chimères — a Viollet-le-Duc/Lassus invention; a FEW are shown, never a sourced total.",
+      "geometry": {
+        "type": "capsule",
+        "r": 0.45,
+        "h": 1
+      },
+      "position": [
+        18.75,
+        46.7,
+        0.9
+      ],
+      "rotation_deg": [
+        18,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "VLD-FACADE",
+      "material": "limestone",
+      "note": "Form reconstructed_design from the PD VLD drawings; rendered count is a representative FEW flagged CONJECTURE (no reliable published total — _GAP_gargoyle_count). Never presented as a sourced count.",
+      "url": "https://commons.wikimedia.org/wiki/Category:Drawings_by_Eug%C3%A8ne_Viollet-le-Duc",
+      "rights": "public_domain",
+      "seq": 103
+    },
+    {
+      "id": "gargoyle-north",
+      "name_fr": "gargouille (tour nord, 19e s.)",
+      "name_en": "Gargoyle waterspout (north tower, 19th-c)",
+      "phase": "gargoyle",
+      "category": "gargoyle",
+      "role": "A projecting gargoyle waterspout (functional) — the ones seen today are largely 19th-c replacements.",
+      "geometry": {
+        "type": "cone",
+        "r": 0.3,
+        "rTop": 0.06,
+        "h": 1.8,
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "position": [
+        -17.265,
+        49,
+        2
+      ],
+      "rotation_deg": [
+        70,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "VLD-FACADE",
+      "material": "limestone",
+      "note": "Representative gargoyle (19th-c replacement). Form reconstructed_design from VLD; rendered as a flagged conjecture, never a sourced count.",
+      "url": "https://commons.wikimedia.org/wiki/Category:Drawings_by_Eug%C3%A8ne_Viollet-le-Duc",
+      "rights": "public_domain",
+      "seq": 104
+    },
+    {
+      "id": "gargoyle-south",
+      "name_fr": "gargouille (tour sud, 19e s.)",
+      "name_en": "Gargoyle waterspout (south tower, 19th-c)",
+      "phase": "gargoyle",
+      "category": "gargoyle",
+      "role": "A projecting gargoyle waterspout (functional) — the ones seen today are largely 19th-c replacements.",
+      "geometry": {
+        "type": "cone",
+        "r": 0.3,
+        "rTop": 0.06,
+        "h": 1.8,
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "position": [
+        17.265,
+        49,
+        2
+      ],
+      "rotation_deg": [
+        70,
+        0,
+        0
+      ],
+      "provenance": "conjecture",
+      "source": "VLD-FACADE",
+      "material": "limestone",
+      "note": "Representative gargoyle (19th-c replacement). Form reconstructed_design from VLD; rendered as a flagged conjecture, never a sourced count.",
+      "url": "https://commons.wikimedia.org/wiki/Category:Drawings_by_Eug%C3%A8ne_Viollet-le-Duc",
+      "rights": "public_domain",
+      "seq": 105
+    },
+    {
+      "id": "pinnacle-north-0",
+      "name_fr": "pinacle (tour nord)",
+      "name_en": "Tower pinnacle (Roriczer rule) — north",
+      "phase": "pinnacle",
+      "category": "pinnacle",
+      "role": "Corner pinnacle on the tower parapet, set out by the 1486 Roriczer rule.",
+      "geometry": {
+        "type": "box",
+        "w": 0.7,
+        "h": 4.199999999999999,
+        "d": 0.7
+      },
+      "position": [
+        -21.22,
+        72.7,
+        -10.5
+      ],
+      "provenance": "rule_derived",
+      "source": "AD-QUADRATUM",
+      "material": "limestone",
+      "note": "Roriczer pinnacle: base square → 45°-rotated inscribed squares (ad quadratum, 1/√2). Dimensions are a GAP (_GAP_pinnacle_dims) → proportions rule_derived, not surveyed.",
+      "url": "https://www.researchgate.net/publication/304352380",
+      "rights": "rule",
+      "seq": 106
+    },
+    {
+      "id": "pinnacle-north-0-cap",
+      "name_fr": "amortissement du pinacle (tour nord)",
+      "name_en": "Pinnacle cap — north",
+      "phase": "pinnacle",
+      "category": "pinnacle",
+      "role": "Tapering cap of the tower pinnacle.",
+      "geometry": {
+        "type": "cone",
+        "r": 0.5,
+        "rTop": 0.02,
+        "h": 2.2
+      },
+      "position": [
+        -21.22,
+        75.9,
+        -10.5
+      ],
+      "provenance": "rule_derived",
+      "source": "AD-QUADRATUM",
+      "material": "limestone",
+      "note": "Pinnacle cap — Roriczer/ad-quadratum geometry; proportions conjecture (_GAP_pinnacle_dims).",
+      "url": "https://www.researchgate.net/publication/304352380",
+      "rights": "rule",
+      "seq": 107
+    },
+    {
+      "id": "pinnacle-north-1",
+      "name_fr": "pinacle (tour nord)",
+      "name_en": "Tower pinnacle (Roriczer rule) — north",
+      "phase": "pinnacle",
+      "category": "pinnacle",
+      "role": "Corner pinnacle on the tower parapet, set out by the 1486 Roriczer rule.",
+      "geometry": {
+        "type": "box",
+        "w": 0.7,
+        "h": 4.199999999999999,
+        "d": 0.7
+      },
+      "position": [
+        -7.31,
+        72.7,
+        -10.5
+      ],
+      "provenance": "rule_derived",
+      "source": "AD-QUADRATUM",
+      "material": "limestone",
+      "note": "Roriczer pinnacle: base square → 45°-rotated inscribed squares (ad quadratum, 1/√2). Dimensions are a GAP (_GAP_pinnacle_dims) → proportions rule_derived, not surveyed.",
+      "url": "https://www.researchgate.net/publication/304352380",
+      "rights": "rule",
+      "seq": 108
+    },
+    {
+      "id": "pinnacle-north-1-cap",
+      "name_fr": "amortissement du pinacle (tour nord)",
+      "name_en": "Pinnacle cap — north",
+      "phase": "pinnacle",
+      "category": "pinnacle",
+      "role": "Tapering cap of the tower pinnacle.",
+      "geometry": {
+        "type": "cone",
+        "r": 0.5,
+        "rTop": 0.02,
+        "h": 2.2
+      },
+      "position": [
+        -7.31,
+        75.9,
+        -10.5
+      ],
+      "provenance": "rule_derived",
+      "source": "AD-QUADRATUM",
+      "material": "limestone",
+      "note": "Pinnacle cap — Roriczer/ad-quadratum geometry; proportions conjecture (_GAP_pinnacle_dims).",
+      "url": "https://www.researchgate.net/publication/304352380",
+      "rights": "rule",
+      "seq": 109
+    },
+    {
+      "id": "pinnacle-north-2",
+      "name_fr": "pinacle (tour nord)",
+      "name_en": "Tower pinnacle (Roriczer rule) — north",
+      "phase": "pinnacle",
+      "category": "pinnacle",
+      "role": "Corner pinnacle on the tower parapet, set out by the 1486 Roriczer rule.",
+      "geometry": {
+        "type": "box",
+        "w": 0.7,
+        "h": 4.199999999999999,
+        "d": 0.7
+      },
+      "position": [
+        -21.22,
+        72.7,
+        -0.5
+      ],
+      "provenance": "rule_derived",
+      "source": "AD-QUADRATUM",
+      "material": "limestone",
+      "note": "Roriczer pinnacle: base square → 45°-rotated inscribed squares (ad quadratum, 1/√2). Dimensions are a GAP (_GAP_pinnacle_dims) → proportions rule_derived, not surveyed.",
+      "url": "https://www.researchgate.net/publication/304352380",
+      "rights": "rule",
+      "seq": 110
+    },
+    {
+      "id": "pinnacle-north-2-cap",
+      "name_fr": "amortissement du pinacle (tour nord)",
+      "name_en": "Pinnacle cap — north",
+      "phase": "pinnacle",
+      "category": "pinnacle",
+      "role": "Tapering cap of the tower pinnacle.",
+      "geometry": {
+        "type": "cone",
+        "r": 0.5,
+        "rTop": 0.02,
+        "h": 2.2
+      },
+      "position": [
+        -21.22,
+        75.9,
+        -0.5
+      ],
+      "provenance": "rule_derived",
+      "source": "AD-QUADRATUM",
+      "material": "limestone",
+      "note": "Pinnacle cap — Roriczer/ad-quadratum geometry; proportions conjecture (_GAP_pinnacle_dims).",
+      "url": "https://www.researchgate.net/publication/304352380",
+      "rights": "rule",
+      "seq": 111
+    },
+    {
+      "id": "pinnacle-north-3",
+      "name_fr": "pinacle (tour nord)",
+      "name_en": "Tower pinnacle (Roriczer rule) — north",
+      "phase": "pinnacle",
+      "category": "pinnacle",
+      "role": "Corner pinnacle on the tower parapet, set out by the 1486 Roriczer rule.",
+      "geometry": {
+        "type": "box",
+        "w": 0.7,
+        "h": 4.199999999999999,
+        "d": 0.7
+      },
+      "position": [
+        -7.31,
+        72.7,
+        -0.5
+      ],
+      "provenance": "rule_derived",
+      "source": "AD-QUADRATUM",
+      "material": "limestone",
+      "note": "Roriczer pinnacle: base square → 45°-rotated inscribed squares (ad quadratum, 1/√2). Dimensions are a GAP (_GAP_pinnacle_dims) → proportions rule_derived, not surveyed.",
+      "url": "https://www.researchgate.net/publication/304352380",
+      "rights": "rule",
+      "seq": 112
+    },
+    {
+      "id": "pinnacle-north-3-cap",
+      "name_fr": "amortissement du pinacle (tour nord)",
+      "name_en": "Pinnacle cap — north",
+      "phase": "pinnacle",
+      "category": "pinnacle",
+      "role": "Tapering cap of the tower pinnacle.",
+      "geometry": {
+        "type": "cone",
+        "r": 0.5,
+        "rTop": 0.02,
+        "h": 2.2
+      },
+      "position": [
+        -7.31,
+        75.9,
+        -0.5
+      ],
+      "provenance": "rule_derived",
+      "source": "AD-QUADRATUM",
+      "material": "limestone",
+      "note": "Pinnacle cap — Roriczer/ad-quadratum geometry; proportions conjecture (_GAP_pinnacle_dims).",
+      "url": "https://www.researchgate.net/publication/304352380",
+      "rights": "rule",
+      "seq": 113
+    },
+    {
+      "id": "pinnacle-south-0",
+      "name_fr": "pinacle (tour sud)",
+      "name_en": "Tower pinnacle (Roriczer rule) — south",
+      "phase": "pinnacle",
+      "category": "pinnacle",
+      "role": "Corner pinnacle on the tower parapet, set out by the 1486 Roriczer rule.",
+      "geometry": {
+        "type": "box",
+        "w": 0.7,
+        "h": 4.199999999999999,
+        "d": 0.7
+      },
+      "position": [
+        7.92,
+        72.7,
+        -10.5
+      ],
+      "provenance": "rule_derived",
+      "source": "AD-QUADRATUM",
+      "material": "limestone",
+      "note": "Roriczer pinnacle: base square → 45°-rotated inscribed squares (ad quadratum, 1/√2). Dimensions are a GAP (_GAP_pinnacle_dims) → proportions rule_derived, not surveyed.",
+      "url": "https://www.researchgate.net/publication/304352380",
+      "rights": "rule",
+      "seq": 114
+    },
+    {
+      "id": "pinnacle-south-0-cap",
+      "name_fr": "amortissement du pinacle (tour sud)",
+      "name_en": "Pinnacle cap — south",
+      "phase": "pinnacle",
+      "category": "pinnacle",
+      "role": "Tapering cap of the tower pinnacle.",
+      "geometry": {
+        "type": "cone",
+        "r": 0.5,
+        "rTop": 0.02,
+        "h": 2.2
+      },
+      "position": [
+        7.92,
+        75.9,
+        -10.5
+      ],
+      "provenance": "rule_derived",
+      "source": "AD-QUADRATUM",
+      "material": "limestone",
+      "note": "Pinnacle cap — Roriczer/ad-quadratum geometry; proportions conjecture (_GAP_pinnacle_dims).",
+      "url": "https://www.researchgate.net/publication/304352380",
+      "rights": "rule",
+      "seq": 115
+    },
+    {
+      "id": "pinnacle-south-1",
+      "name_fr": "pinacle (tour sud)",
+      "name_en": "Tower pinnacle (Roriczer rule) — south",
+      "phase": "pinnacle",
+      "category": "pinnacle",
+      "role": "Corner pinnacle on the tower parapet, set out by the 1486 Roriczer rule.",
+      "geometry": {
+        "type": "box",
+        "w": 0.7,
+        "h": 4.199999999999999,
+        "d": 0.7
+      },
+      "position": [
+        20.61,
+        72.7,
+        -10.5
+      ],
+      "provenance": "rule_derived",
+      "source": "AD-QUADRATUM",
+      "material": "limestone",
+      "note": "Roriczer pinnacle: base square → 45°-rotated inscribed squares (ad quadratum, 1/√2). Dimensions are a GAP (_GAP_pinnacle_dims) → proportions rule_derived, not surveyed.",
+      "url": "https://www.researchgate.net/publication/304352380",
+      "rights": "rule",
+      "seq": 116
+    },
+    {
+      "id": "pinnacle-south-1-cap",
+      "name_fr": "amortissement du pinacle (tour sud)",
+      "name_en": "Pinnacle cap — south",
+      "phase": "pinnacle",
+      "category": "pinnacle",
+      "role": "Tapering cap of the tower pinnacle.",
+      "geometry": {
+        "type": "cone",
+        "r": 0.5,
+        "rTop": 0.02,
+        "h": 2.2
+      },
+      "position": [
+        20.61,
+        75.9,
+        -10.5
+      ],
+      "provenance": "rule_derived",
+      "source": "AD-QUADRATUM",
+      "material": "limestone",
+      "note": "Pinnacle cap — Roriczer/ad-quadratum geometry; proportions conjecture (_GAP_pinnacle_dims).",
+      "url": "https://www.researchgate.net/publication/304352380",
+      "rights": "rule",
+      "seq": 117
+    },
+    {
+      "id": "pinnacle-south-2",
+      "name_fr": "pinacle (tour sud)",
+      "name_en": "Tower pinnacle (Roriczer rule) — south",
+      "phase": "pinnacle",
+      "category": "pinnacle",
+      "role": "Corner pinnacle on the tower parapet, set out by the 1486 Roriczer rule.",
+      "geometry": {
+        "type": "box",
+        "w": 0.7,
+        "h": 4.199999999999999,
+        "d": 0.7
+      },
+      "position": [
+        7.92,
+        72.7,
+        -0.5
+      ],
+      "provenance": "rule_derived",
+      "source": "AD-QUADRATUM",
+      "material": "limestone",
+      "note": "Roriczer pinnacle: base square → 45°-rotated inscribed squares (ad quadratum, 1/√2). Dimensions are a GAP (_GAP_pinnacle_dims) → proportions rule_derived, not surveyed.",
+      "url": "https://www.researchgate.net/publication/304352380",
+      "rights": "rule",
+      "seq": 118
+    },
+    {
+      "id": "pinnacle-south-2-cap",
+      "name_fr": "amortissement du pinacle (tour sud)",
+      "name_en": "Pinnacle cap — south",
+      "phase": "pinnacle",
+      "category": "pinnacle",
+      "role": "Tapering cap of the tower pinnacle.",
+      "geometry": {
+        "type": "cone",
+        "r": 0.5,
+        "rTop": 0.02,
+        "h": 2.2
+      },
+      "position": [
+        7.92,
+        75.9,
+        -0.5
+      ],
+      "provenance": "rule_derived",
+      "source": "AD-QUADRATUM",
+      "material": "limestone",
+      "note": "Pinnacle cap — Roriczer/ad-quadratum geometry; proportions conjecture (_GAP_pinnacle_dims).",
+      "url": "https://www.researchgate.net/publication/304352380",
+      "rights": "rule",
+      "seq": 119
+    },
+    {
+      "id": "pinnacle-south-3",
+      "name_fr": "pinacle (tour sud)",
+      "name_en": "Tower pinnacle (Roriczer rule) — south",
+      "phase": "pinnacle",
+      "category": "pinnacle",
+      "role": "Corner pinnacle on the tower parapet, set out by the 1486 Roriczer rule.",
+      "geometry": {
+        "type": "box",
+        "w": 0.7,
+        "h": 4.199999999999999,
+        "d": 0.7
+      },
+      "position": [
+        20.61,
+        72.7,
+        -0.5
+      ],
+      "provenance": "rule_derived",
+      "source": "AD-QUADRATUM",
+      "material": "limestone",
+      "note": "Roriczer pinnacle: base square → 45°-rotated inscribed squares (ad quadratum, 1/√2). Dimensions are a GAP (_GAP_pinnacle_dims) → proportions rule_derived, not surveyed.",
+      "url": "https://www.researchgate.net/publication/304352380",
+      "rights": "rule",
+      "seq": 120
+    },
+    {
+      "id": "pinnacle-south-3-cap",
+      "name_fr": "amortissement du pinacle (tour sud)",
+      "name_en": "Pinnacle cap — south",
+      "phase": "pinnacle",
+      "category": "pinnacle",
+      "role": "Tapering cap of the tower pinnacle.",
+      "geometry": {
+        "type": "cone",
+        "r": 0.5,
+        "rTop": 0.02,
+        "h": 2.2
+      },
+      "position": [
+        20.61,
+        75.9,
+        -0.5
+      ],
+      "provenance": "rule_derived",
+      "source": "AD-QUADRATUM",
+      "material": "limestone",
+      "note": "Pinnacle cap — Roriczer/ad-quadratum geometry; proportions conjecture (_GAP_pinnacle_dims).",
+      "url": "https://www.researchgate.net/publication/304352380",
+      "rights": "rule",
+      "seq": 121
+    }
+  ]
+}

@@ -5,7 +5,7 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { OrbitControls, useGLTF, Environment, useTexture } from "@react-three/drei";
 import * as THREE from "three";
 import spec from "../artifacts/structural-spec.json";
-import PlaybackControls, { PlaybackControlsProps } from "./PlaybackControls";
+import PlaybackControls, { PlaybackControlsProps } from "./PlaybackControlsNanchan";
 import { AnnotationPanel, AnnotationData } from "./AnnotationPanel";
 import { ClickHandler } from "./ClickHandler";
 
@@ -255,9 +255,11 @@ function GltfMember({ c, mode }: { c: Component; mode: ViewMode }) {
         mesh.castShadow = mesh.receiveShadow = true;
         mesh.userData.componentId = c.id;
         if (provMode) {
-          mesh.material = new THREE.MeshStandardMaterial({
+          // unlit + tone-mapping off → the pixel equals PROV_COLORS exactly,
+          // so the render matches the legend swatches (and the vision verifier).
+          mesh.material = new THREE.MeshBasicMaterial({
             color: PROV_COLORS[c.provenance],
-            roughness: 1,
+            toneMapped: false,
             side: THREE.DoubleSide,
           });
         } else {
@@ -379,8 +381,13 @@ function Member({
   }, [provMode, mode, c.provenance, c.material, c.phase, c.id, tintKey]);
 
   const isReconWhiteWall = mode === "recon" && c.material === "bai" && !provMode;
+  const side = g.type === "poly" ? THREE.DoubleSide : THREE.FrontSide;
 
-  const mat = (
+  // provenance mode: unlit + tone-mapping off so the rendered pixel equals
+  // PROV_COLORS exactly, matching the legend swatches and the vision verifier.
+  const mat = provMode ? (
+    <meshBasicMaterial key={`${mode}-${c.material ?? c.phase}`} color={color} toneMapped={false} side={side} />
+  ) : (
     <meshStandardMaterial
       key={`${mode}-${c.material ?? c.phase}`}
       color={color}
@@ -390,9 +397,9 @@ function Member({
       aoMap={isReconWhiteWall ? null : set?.arm ?? null}
       roughnessMap={isReconWhiteWall ? null : set?.arm ?? null}
       metalness={0}
-      roughness={isReconWhiteWall ? 0.5 : provMode ? 1 : 0.97}
+      roughness={isReconWhiteWall ? 0.5 : 0.97}
       envMapIntensity={0.35}
-      side={g.type === "poly" ? THREE.DoubleSide : THREE.FrontSide}
+      side={side}
     />
   );
 
@@ -630,9 +637,16 @@ const MODE_BLURB: Record<ViewMode, string> = {
 export default function Viewer() {
   const [mode, setMode] = useState<ViewMode>("today");
   const [firstPerson, setFirstPerson] = useState(false);
-  const [playbackMode, setPlaybackMode] = useState(false);
+  // Start by CONSTRUCTING the hall from step 0 on mount: playback on + playing.
+  // BuildingRouter remounts via key={building}, so these initial values ARE the
+  // entry state for every fresh load / building switch — no reset effect needed.
+  // Guard on ?cam: headless verifier captures must show the COMPLETE static spec,
+  // so when a cam is present we skip playback (full build, paused).
+  const isHeadless = () =>
+    typeof window !== "undefined" && new URLSearchParams(window.location.search).has("cam");
+  const [playbackMode, setPlaybackMode] = useState(() => !isHeadless());
   const [playbackIndex, setPlaybackIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(() => !isHeadless());
   const [playbackSpeed, setPlaybackSpeed] = useState(1);
   const [loadedSpec, setLoadedSpec] = useState<typeof spec>(spec);
   const [playbackMeta, setPlaybackMeta] = useState<any>(null);
@@ -745,7 +759,7 @@ export default function Viewer() {
         )}
         {firstPerson && <FirstPersonController enabled={firstPerson} />}
         <CameraRig goal={goal} entered={entered} doorRefs={doorRefs} flyingRef={flyingRef} />
-        <ClickHandler raycaster={raycasterRef} mouse={mouseRef} onComponentClick={handleComponentClick} />
+        {/* ClickHandler is mounted once inside <Scene> — do not duplicate here or clicks double-fire */}
       </Canvas>
 
       {/* enter / exit the hall + first-person toggle + playback mode */}
@@ -802,7 +816,7 @@ export default function Viewer() {
       </div>
 
       {/* header */}
-      <div style={{ position: "absolute", top: 24, left: 28, pointerEvents: "none" }}>
+      <div style={{ position: "absolute", top: 58, left: 28, pointerEvents: "none" }}>
         <div style={{ fontSize: 30, letterSpacing: 6 }}>南禅寺大殿</div>
         <div style={{ fontSize: 13, color: "var(--ink-dim)", marginTop: 4 }}>
           Nanchan Temple Main Hall · 唐建中三年 (782 CE) · derived from ZHANG2022 + 营造法式

@@ -1,0 +1,31 @@
+{
+  "step": 6,
+  "total": 12,
+  "phase": "armature",
+  "visible_component_ids": [
+    "spire-tabouret",
+    "spire-souche",
+    "spire-fut",
+    "spire-gallery1",
+    "spire-gallery2",
+    "spire-aiguille",
+    "ring-souche",
+    "ring-fut",
+    "ring-gallery1",
+    "ring-gallery2",
+    "ring-aiguille"
+  ],
+  "added_ids": [
+    "ring-souche",
+    "ring-fut",
+    "ring-gallery1",
+    "ring-gallery2",
+    "ring-aiguille"
+  ],
+  "counts": {
+    "measured": 0,
+    "reconstructed_design": 5,
+    "rule_derived": 5,
+    "conjecture": 1
+  }
+}
