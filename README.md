@@ -1,8 +1,33 @@
-# Tekton
+# Tekton 营造
 
-Evidence-based 3D reconstruction of Tang timber architecture. Every component can prove where it came from.
+### Evidence-based 3D reconstruction of historic architecture — *nothing renders without a cited source.*
 
-Tekton is a browser-based reconstruction engine for historic architecture. The current build reconstructs the Main Hall of Nanchan Temple, 南禅寺大殿, a 782 CE Tang timber building in Shanxi and the oldest surviving wooden building in China. The project turns survey data, modular construction rules, and provenance constraints into a navigable 3D scene: not "AI makes an old-looking building," but "a model is allowed to render only what it can cite."
+> # 🏆 First Place — Claude Build Day Hackathon 🎉
+> **Tekton won 1st place** at the Claude Build Day hackathon (Cerebral Valley), winning **$100K in Claude credits**.
+> *— per the official Cerebral Valley winners announcement.*
+
+**▶ Live demo: https://tekton-build.vercel.app**
+
+Built for **Claude Build Day** — an autonomous build pipeline that takes a historic building from *cited research → parametric geometry → live, navigable 3D*, with every element labelled by how strongly it's known (measured / rule-derived / reconstructed / conjecture) and a verifier that refuses anything unsourced.
+
+| Notre-Dame · Spire | Notre-Dame · Towers | Whole Cathedral | Nanchan Temple |
+|:--:|:--:|:--:|:--:|
+| ![Spire](artifacts/preview-nd-front.png) | ![Towers](artifacts/preview-ndt-front.png) | ![Cathedral](artifacts/preview-nd-default.png) | ![Nanchan](artifacts/preview-default.png) |
+
+Four recreations behind one selector: **Notre-Dame de Paris** (the Viollet-le-Duc flèche · west towers & façade · whole-cathedral massing) and **南禅寺大殿 Nanchan Temple Main Hall** (782 CE, the oldest surviving wooden building in China).
+
+#### How the 3D is generated — *not "AI makes an old-looking building"*
+A parametric **rule engine** reads a cited data corpus and computes geometry from real architectural rules (e.g. the 1486 Roriczer pinnacle rule, *ad-quadratum* octagon geometry, the Tang *cai-fen* module), emitting a structural spec where **every component carries its provenance + source**. A procedural renderer (React Three Fiber) turns that spec into live Three.js geometry — no imported meshes for Notre-Dame. An independent **verifier recomputes the dimensions from the component coordinates** (never trusting the engine's own claims) and checks them against measured anchors, so the build can't drift toward an idealized rulebook.
+
+| Provenance toggle (colour = evidence class) | Detail fidelity |
+|:--:|:--:|
+| ![Provenance](artifacts/preview-nd-provenance.png) | ![Detail](artifacts/preview-ndt-detail.png) |
+
+---
+
+## About Tekton
+
+Tekton is a browser-based reconstruction engine for historic architecture. The original build reconstructs the Main Hall of Nanchan Temple, 南禅寺大殿, a 782 CE Tang timber building in Shanxi and the oldest surviving wooden building in China. The project turns survey data, modular construction rules, and provenance constraints into a navigable 3D scene: not "AI makes an old-looking building," but "a model is allowed to render only what it can cite."
 
 ![Default view](artifacts/preview-default.png)
 
